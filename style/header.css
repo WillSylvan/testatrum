@@ -1,0 +1,92 @@
+ul, li{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+	margin: 0;
+}
+@media screen and (max-width: 900px){
+}
+
+
+.header{
+    width: 90%!important;
+    margin-left: 10vw;
+}
+
+.button {
+    border-style: solid;
+    border-width: 2px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50px;
+    /* width: 70%; */
+    width: 90px;
+    height: 10px;
+}
+
+.my_nav{
+    margin-left: 6vw;
+    margin-top: 2vw;
+    width: 44vw;
+}
+.menu{
+    width: auto;
+}
+
+.my_nav ul li {
+    display: inline;
+    margin-right: 2vw;
+    font-weight: 900;
+    font-family: 'Noto Serif', serif;
+    
+}
+
+.my_nav ul li a{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    vertical-align: middle;
+    text-align: justify;
+}
+
+.my_nav ul li a:hover{
+    color: #212121;
+    text-decoration: underline;
+}
+
+.block{
+    margin-right: 2%;
+    text-align: justify;
+}
+
+.block2{
+   
+}
+
+
+.header{
+    display: inline-flex;
+}
+
+.atribut{
+    display: -webkit-inline-box;
+    margin-top: 35px;
+}
+
+.login{
+    margin-right: 30%;
+}
+
+.logo-img{
+    margin-right: 5%;
+}

@@ -1,0 +1,28 @@
+@media screen and (max-width: 900px){
+}
+
+.block{
+    margin-right: 2%;
+    text-align: justify;
+}
+
+
+.inline{
+    width: 75%;
+    display: inline-flex;
+}
+.phone{
+    margin-left: 8%;
+    width: 21%;
+}
+
+.footer{
+    background-image: url("img/footer_background_istermina.jpg");
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #D23E40;
+    color: #000000;
+    text-align: center;
+}
