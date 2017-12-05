@@ -3,10 +3,23 @@ html{
 	overflow-x: hidden;
 }
 body{
-	max-width: 100%;
+	/* max-width: 100%; */
 	margin: 0;
-    overflow-x: hidden;
+	overflow-x: hidden;
+	height: auto;
+	background-color: grey;
+
+
 }
+
+.container{
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: white;
+	height: auto;
+}
+
 ul, li{
 	margin: 0;
 	padding: 0;
@@ -21,4 +34,151 @@ button:focus{
 }
 input:focus{
 	outline: none;
+}
+/* IKONAS */
+.icons_block{
+	width: 100%;
+	height: auto;
+	display: flex;
+	margin-left: 24%;
+}
+
+.icon_border{
+	border-style: solid;
+	border-radius: 15px;
+	margin-right: 25px;
+	width: 12%;
+}
+
+.icon_border h3{
+	text-align: center;
+}
+
+.icon_border img{
+	margin-left: 20%;
+}
+
+
+/* -------------------------------- */
+.icons_block_sec{
+	width: 100%;
+	height: auto;
+	display: flex;
+	margin-left: 25%;
+	margin-left: 18%;
+}
+
+.icons_block_sec .icon_border_sec{
+	margin-right: 25px;
+	width: 15%;
+}
+
+.icons_block_sec .icon_border_sec p{
+	text-align: center;
+}
+
+.icons_block_sec .icon_border_sec h3{
+	text-align: center;
+}
+
+.icons_block_sec .icon_border_sec img{
+	margin-left: 24%;
+	
+}
+
+/* --------------------------------- */
+
+.three_icons_block{
+	width: 100%;
+	height: auto;
+	display: flex;
+	margin-left: 16%;
+}
+
+.tree_icon_border{
+	border-style: solid;
+	border-radius: 15px;
+	margin-right: 4%;
+	width: 12%;
+}
+
+.tree_icon_border h3{
+	text-align: center;
+}
+
+.three_icons_block{
+	margin-left: 28%;
+}
+
+.tree_icon_border img{
+	margin-left: 20%;
+}
+
+/* beigas*/
+
+.headline h1{
+	margin-bottom: 5%;
+	margin-top: 10%;
+}
+
+.headline h1{
+	text-align: center;
+}
+
+.apply_credit{
+	margin-left: 10%;
+	margin-bottom: 10%;
+}
+
+
+/* TABS */
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+	border: 1px solid #ccc;
+	border-bottom: none;
+	background-color: #f1f1f1;
+	width: 40%;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+	background-color: #ccc;
+	
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+	border: 1px solid #ccc;
+	width: 50%;
+}
+
+.tabcontent :first-child{
+	display: block;
+}
+
+/* Tab ends */
+
+.bank_rekv{
+	margin-left: 30%;
 }
