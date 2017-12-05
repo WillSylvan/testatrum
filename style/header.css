@@ -7,36 +7,47 @@ a{
 	color: inherit;
 	margin: 0;
 }
-@media screen and (max-width: 900px){
-}
-
 
 .header{
-    width: 90%!important;
-    margin-left: 10vw;
+	display: flex;
+	display: -webkit-flex;
+    justify-content: space-around;
+    width: 100%;
+	position: relative;
+	z-index: 2;
 }
-
+.head{
+	height: 4vw;
+    display: flex;
+	display: -webkit-flex;
+    align-items: center;
+}
+.head h3{
+	margin: 0;
+    font-size: 1vw;
+    font-weight: 500;
+	margin-left: 1vw;
+}
+.login{
+    display: flex;
+	display: -webkit-flex;
+    align-items: center;	
+}
 .button {
-    border-style: solid;
-    border-width: 2px;
-    color: black;
-    padding: 15px 32px;
+	color: black;
+    padding: 0.3vw 2vw;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-size: 0.7vw;
     cursor: pointer;
     border-radius: 50px;
-    /* width: 70%; */
-    width: 90px;
-    height: 10px;
+    border: 2px solid black;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .my_nav{
-    margin-left: 6vw;
-    margin-top: 2vw;
-    width: 44vw;
 }
 .menu{
     width: auto;
@@ -46,7 +57,6 @@ a{
     display: inline;
     margin-right: 2vw;
     font-weight: 900;
-    font-family: 'Noto Serif', serif;
     
 }
 
@@ -54,9 +64,10 @@ a{
     color: black;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 0.7vw;
     vertical-align: middle;
     text-align: justify;
+	letter-spacing: 0.05vw;
 }
 
 .my_nav ul li a:hover{
@@ -73,14 +84,8 @@ a{
    
 }
 
-
-.header{
-    display: inline-flex;
-}
-
 .atribut{
     display: -webkit-inline-box;
-    margin-top: 35px;
 }
 
 .login{
@@ -89,4 +94,27 @@ a{
 
 .logo-img{
     margin-right: 5%;
+}
+.logo-img img{
+	width: 8vw;
+}
+.header-background{
+	position: absolute;
+	height: 40vw;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+	width: 100%;
+	top: 0;
+    z-index: 0;
+}
+@media screen and (max-width: 1300px){
+.my_nav ul li a{
+    font-size: 1vw;
+}
+.button {
+    font-size: 1vw;
+}
+}
+@media screen and (max-width: 900px){
 }

@@ -1,8 +1,6 @@
 <html>
     <head>     
-		<!--<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">-->
-		<link rel="stylesheet" type="text/css" href="style/index.css">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">	<link rel="stylesheet" type="text/css" href="style/index.css">
 		<link rel="stylesheet" type="text/css" href="style/style.css">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
 		<title></title>
@@ -13,12 +11,11 @@
     </head>
 
 	<body>
-		<div class="container">
-			<?php include 'assets/header.php'; ?>
 
-
+		<?php include 'assets/header.php'; ?>
 			<div class="two_forms">
 
+			<!--
 				<form action="index.php" method="post">
 
 					<div class="short_range_form">
@@ -59,27 +56,28 @@
 
 					<input type="submit">
 				</form>
-
+			-->
+			<div id="first_form" style="height: 40vw; width: 100%;"></div>
 
 				<div class="icons_block">
 
 					<div class="icon_border">
-						<img src="img/grey_icons/home/1.svg" alt="Smiley face" height="120" width="120">
+						<img src="img/grey_icons/home/1.svg" alt="Smiley face">
 						<h3>Pirmais kredīts bez komisijas!</h3>
 					</div>
 
 					<div class="icon_border">
-						<img src="img/grey_icons/home/2.svg" alt="Smiley face" height="120" width="120">
+						<img src="img/grey_icons/home/2.svg" alt="Smiley face">
 						<h3>Neizejot ārā no mājām</h3>
 					</div>
 
 					<div class="icon_border">
-						<img src="img/grey_icons/home/3.svg" alt="Smiley face" height="120" width="120">
+						<img src="img/grey_icons/home/3.svg" alt="Smiley face">
 						<h3>15 minūšu laikā</h3>
 					</div>
 
 					<div class="icon_border">
-						<img src="img/grey_icons/home/4.svg" alt="Smiley face" height="120" width="120">
+						<img src="img/grey_icons/home/4.svg" alt="Smiley face">
 						<h3>Minimālas formalitātes</h3>
 					</div>
 
@@ -115,25 +113,25 @@
 			<div class="icons_block_sec">
 
 				<div class="icon_border_sec">
-					<img src="img/grey_icons/credit_icons/5.svg" alt="Smiley face" height="120" width="120">
+					<img src="img/grey_icons/credit_icons/6.svg" alt="Smiley face">
 					<h3>Piesakiet kredītu internetā</h3>
 					<p>Izvēlieties kretīta summu un termiņu.</p>
 				</div>
 
 				<div class="icon_border_sec">
-					<img src="img/grey_icons/credit_icons/6.svg" alt="Smiley face" height="120" width="120">
+					<img src="img/grey_icons/credit_icons/7.svg" alt="Smiley face">
 					<h3>Reģistrējies</h3>
 					<p>Aizpildiet reģistrācijas anketu.</p>
 				</div>
 
 				<div class="icon_border_sec">
-					<img src="img/grey_icons/credit_icons/7.svg" alt="Smiley face" height="120" width="120">
+					<img src="img/grey_icons/credit_icons/5.svg" alt="Smiley face">
 					<h3>Apstipriniet reģistrāciju</h3>
-					<p>Pārskaities no savas bankas reģistrācijas maksu EUR 0.01, maksājuma mērķī norādot: Piekrītu AS Lateko Līzings līguma noteikumiem. Nepieciešamā informācija <li><a href="Jaieliek links">šeit.</a></li>  </p>
+					<p>Pārskaities no savas bankas reģistrācijas maksu EUR 0.01, maksājuma mērķī norādot: Piekrītu AS Lateko Līzings līguma noteikumiem. Nepieciešamā informācija <a href="Jaieliek links">šeit.</a></p>
 				</div>
 
 				<div class="icon_border_sec">
-					<img src="img/grey_icons/credit_icons/8.svg" alt="Smiley face" height="120" width="120">
+					<img src="img/grey_icons/credit_icons/8.svg" alt="Smiley face">
 					<h3>Saņemiet naudu 15 minūšu laikā</h3>
 					<p>Saņemiet naudu 15 minūšu laikā Jūs saņemsiet uz tālruni 15 minūšu laikā.</p>
 				</div>
@@ -141,14 +139,13 @@
 			</div>
 
 			<div class="headline">
-				<h1>Atkārtots Aizdevums</h1>
+				<h1>Atkārtots aizdevums</h1>
 			</div>
 			<!--  PC BILDE -->
 			<div class="apply_credit">
-				<h1>Piesakiet kredītu internetā</h1>
-
-				<div class="login">
-					<a href="#" class="button">Pieteikties</a>
+				<div class="apply">
+					<div><h1>Piesakiet kredītu internetā</h1></div>
+					<div><button class="button_sanemt">Saņēmt kredītu</button></div>
 				</div>
 
 				<img src="img/atrum_pc.svg" alt="pc" height="700" width="700">
@@ -388,10 +385,7 @@
 				}
 			</script>
 
-			<?php include 'assets/footer.php'; ?>
-		</div>
-
-		
+			<?php include 'assets/footer.php'; ?>	
 		
 	</body>
 </html>

@@ -2,12 +2,244 @@ body{
 	margin: 0;
     overflow-x: hidden;
 }
-.wrap{
+.flex{
 	display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+}
+
+
+.container{
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+	height: auto;
+	position: relative;
+}
+/* IKONAS */
+.icons_block{
+	width: 100%;
+    height: auto;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+}
+
+.icon_border{
+	width: 10vw;
+    height: 10vw;
+    text-align: center;
+    margin: 1vw;
+    padding: 2vw;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.icon_border h3{
+	text-align: center;
+    font-size: 1.2vw;
+    font-weight: 500;
+    color: grey;
+    margin: 0;
+    line-height: 1.5vw;
+}
+
+.icon_border img{
+	width: 8vw;
+}
+
+
+/* -------------------------------- */
+.icons_block_sec{
+	width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.icons_block_sec .icon_border_sec{
+	width: 15%;
+}
+
+.icons_block_sec .icon_border_sec p{
+    text-align: left;
+    margin: 0;
+    font-size: 1vw;
+}
+
+.icons_block_sec .icon_border_sec h3{
+	text-align: left;
+    margin: 0;
+    font-size: 1.2vw;
+    line-height: 1.5vw;
+	height: 4vw;
+}
+
+.icons_block_sec .icon_border_sec img{
+    width: 8vw;
+	
+}
+
+/* --------------------------------- */
+
+.three_icons_block{
+	width: 100%;
+	height: auto;
+	display: flex;
+	margin-left: 16%;
+}
+
+.tree_icon_border{
+	border-style: solid;
+	border-radius: 15px;
+	margin-right: 4%;
+	width: 12%;
+}
+
+.tree_icon_border h3{
+	text-align: center;
+}
+
+.three_icons_block{
+	margin-left: 28%;
+}
+
+.tree_icon_border img{
+	margin-left: 20%;
+}
+
+/* beigas*/
+
+.headline h1{
+	text-align: center;
+    font-size: 1.8vw;
+    margin: 0;
+    font-weight: 400;
+    color: grey;
+	margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+
+.apply_credit{
+
+}
+
+
+/* TABS */
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+	border: 1px solid #ccc;
+	border-bottom: none;
+	background-color: #f1f1f1;
+	width: 40%;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+	background-color: #ccc;
+	
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+	border: 1px solid #ccc;
+	width: 50%;
+}
+
+.tabcontent :first-child{
+	display: block;
+}
+
+/* Tab ends */
+
+.bank_rekv{
+	margin-left: 30%;
+}
+
+
+/* ---------------------- */
+
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ccc;
+}
+
+button.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+
+.apply h1{
+	margin: 0;
+    font-weight: 600;
+    color: grey;
+    margin-bottom: 1vw;
+}
+.button_sanemt{
+    color: black;
+    padding: 0.6vw 1.5vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1vw;
+    cursor: pointer;
+    border-radius: 50px;
+    border: 1px solid black;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 0.1vw;
 }
 @media screen and (max-width: 900px){
 }
