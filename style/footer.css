@@ -1,28 +1,87 @@
-@media screen and (max-width: 900px){
+.flex{
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
 }
-
-.block{
-    margin-right: 2%;
-    text-align: justify;
-}
-
-
-.inline{
-    width: 75%;
-    display: inline-flex;
-}
-.phone{
-    margin-left: 8%;
-    width: 21%;
-}
-
-.footer{
-    background-image: url("img/footer_background_istermina.jpg");
+#footer{
+    background-image: url(../img/backgound-footer.jpg);
     position: relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #D23E40;
     color: #000000;
-    text-align: center;
+    height: 20vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+	padding-top: 3vw;
+}
+.top-f{
+	width: 80%;
+    margin: auto;
+	justify-content: space-between;
+}
+.top-f img{
+	width: 2vw;
+    height: 2vw;
+    padding-right: 0.5vw;
+}
+.top-f h1{
+	margin:0;
+	font-size: 1.5vw;
+}
+.inline{
+	width: 80%;
+    margin: auto;
+	margin-top: 2vw;
+}
+.blockf{
+	width: 20%;
+}
+.blockf h3{
+	margin: 0;
+    font-size: 1vw;
+    text-transform: uppercase;
+    padding-bottom: 0.5vw;
+
+}
+.blockf a{
+	margin: 0;
+    font-size: 1vw;
+	cursor: pointer;
+}
+.blockf p{
+	margin: 0;
+    font-size: 1vw;
+}
+.blockf img{
+	width: 1vw;
+	padding-right: 0.3vw;
+}
+.laiks{
+	margin-left: 15vw;
+	width: 17vw;
+}
+.laiks span{
+	font-size: 0.8vw;
+}
+.ssl{
+	align-items: center;
+	margin-top: 1vw !important;
+	margin-bottom: 1vw !important;
+}
+.ssl img{
+	width: 1.7vw;
+	height: 2vw;
+}
+#socials{
+    width: 14vw;
+    justify-content: space-between;
+}
+#socials img{
+	cursor: pointer;
+    width: 1.7vw;
+    height: 1.7vw;
+    margin-right: 0.2vw;
+}
+@media screen and (max-width: 900px){
 }
