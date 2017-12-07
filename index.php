@@ -12,48 +12,47 @@
 		<?php include 'assets/header.php'; ?>
 		<div class="header-background"></div>
 
-			<!--
-				<form action="index.php" method="post">
+			<form action="index.php" method="post">
 
-					<div class="short_range_form">
-						<h1>Īstermiņa aizdevums</h1>
+				<div class="short_range_form">
+					<h1>Īstermiņa aizdevums</h1>
 
-						<div class="inputs">
-							<div id="short_echo_money_cont">
+					<div class="inputs">
+						<div id="short_echo_money_cont">
 
-								<h3> Cik vēlies aizņemties?</h3>
-								<p>Aizdevums: <span id="short_echo_money_val"></span></p>
+							<h3> Cik vēlies aizņemties?</h3>
+							<p>Aizdevums: <span id="short_echo_money_val"></span></p>
 
-								<input type="range" name="tickmarks" min="50" max="500" value="250" class="slider" id="short_range_money">
-							</div>
-
-							<div id="short_echo_days_cont">
-
-								<h3>Uz cik ilgu laiku?</h3>
-								<p>Dienas: <span id="short_echo_days_val"></span></p>
-
-								<input type="range" min="10" max="30" value="10" class="slider" id="short_range_days">							
-							</div>
-
-							<p>Summa: 0.00</p>
-							<p>Kopā: 100.00</p>
-							<p>Komisija: 0.00</p>
-							<p>GPL: 0.00</p>
+							<input type="range" name="tickmarks" min="50" max="500" value="250" class="slider" id="short_range_money">
 						</div>
 
-						<div class="info_block">
-							<p>Atmaksāt: 20.20.20</p>
+						<div id="short_echo_days_cont">
 
-							<p> Kredīta pagarināšana par 30 dienām <br> 22.20$</p>
+							<h3>Uz cik ilgu laiku?</h3>
+							<p>Dienas: <span id="short_echo_days_val"></span></p>
 
-							<a href="jauzliek links">*Standarta informācija</a>
-														
-						</div>	
+							<input type="range" min="10" max="30" value="10" class="slider" id="short_range_days">							
+						</div>
+
+						<p>Summa: <span id="summa"> 0.00 </span></p>
+						<p>Kopā:<span id="kopa">100.00</span></p>
+						<p>Komisija: 0.00 (15.00%)</p>
+						<p>GPL: 0.00</p>
 					</div>
 
-					<input type="submit">
-				</form>
-			-->
+					<div class="info_block">
+						<p>Atmaksāt: 20.20.20</p>
+
+						<p> Kredīta pagarināšana par 30 dienām <br> 22.20$</p>
+
+						<a href="jauzliek links">*Standarta informācija</a>
+													
+					</div>	
+				</div>
+
+				<input type="submit">
+			</form>
+			
 			<div id="first_form" style="height: 35vw; width: 100%;"></div>
 
 			<div class="icons_block flex">
@@ -82,10 +81,27 @@
 				// 1.
 				var slider_money = document.getElementById("short_range_money");
 				var output_money = document.getElementById("short_echo_money_val");
+				var div_summa = document.getElementById("summa");
+				var div_kopa = document.getElementById('kopa');
 					output_money.innerHTML = slider_money.value;
+
+				precent = 1;
+				days = 30;
+				gpl = 15
+
+
 
 				slider_money.oninput = function() {
 					output_money.innerHTML = this.value;
+					div_summa.innerHTML = this.value;
+					summa = parseInt(this.value);
+					let kopa_raw =  summa;
+
+					for(i=0;days>i;i++){
+						kopa_raw+=(summa / 100) * precent
+					}
+					let kopa = kopa_raw.toFixed(2)
+					div_kopa.innerHTML = kopa
 				}
 
 				// 2.
@@ -97,6 +113,8 @@
 					output_days.innerHTML = this.value;
 				}
 			</script>
+
+
 
 			<div class="headline">
 				<h1>Pirmais aizdevums</h1>
