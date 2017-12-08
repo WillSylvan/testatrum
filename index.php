@@ -6,6 +6,10 @@
 		<title></title>
 		<link rel="icon" href="img/logo.svg">
 		<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+		
+				<!--<script type="text/javascript">
+		function color(c) {document.body.style.backgroundColor=c}
+		</script>onclick='color("red")' -->
     </head>
 
 	<body>
