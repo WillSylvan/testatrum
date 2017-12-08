@@ -12,49 +12,148 @@
 		<?php include 'assets/header.php'; ?>
 		<div class="header-background"></div>
 
-			<form action="index.php" method="post">
+		<div id="top-forms" class="flex">
+			<div class="form_">
+				<div id="first-form" class="flex">
+					<form action="index.php" method="post">
 
-				<div class="short_range_form">
-					<h1>Īstermiņa aizdevums</h1>
+						<div class="short_range_form flex">
+							<div class="inputs">
+								<h1><span class="pink">Īstermiņa</span> aizdevums</h1>
+								<div id="short_echo_money_cont">
 
-					<div class="inputs">
-						<div id="short_echo_money_cont">
+									<h3> Cik vēlies aizņemties?</h3>
+									<p>Aizdevums: <span id="short_echo_money_val"></span></p>
 
-							<h3> Cik vēlies aizņemties?</h3>
-							<p>Aizdevums: <span id="short_echo_money_val"></span></p>
+									<input type="range" name="tickmarks" min="50" max="500" value="250" class="slider" id="short_range_money">
+								</div>
 
-							<input type="range" name="tickmarks" min="50" max="500" value="250" class="slider" id="short_range_money">
+								<div id="short_echo_days_cont">
+
+									<h3>Uz cik ilgu laiku?</h3>
+									<p>Dienas: <span id="short_echo_days_val"></span></p>
+
+									<input type="range" min="10" max="30" value="10" class="slider" id="short_range_days">							
+								</div>
+							
+								<div class="flex formulas">
+									<div>
+										<h2>Summa:<span id="summa"> 0.00 </span></h2>
+										<h2>Kopā:<span id="kopa">100.00</span></h2>
+									</div>
+									<div>
+										<h2>Komisija: <span id="komisija">0.00 (15.00%)</span></h2>
+										<h2>GPL: <span id="gpl">0.00</span></h2>
+									</div>
+								</div>
+							</div>
+
+							<div class="info_block">
+								<h5>Atmaksāt līdz: <span class="pink">20.20.20</span></h5>
+
+								<h4>Kredīta pagarināšana par 30 dienām:<br><b>22.20$</b></h4>
+
+								<a href="jauzliek links" class="links">*Standarta informācija</a>
+								<input type="submit" value="SAŅEMT NAUDU" class="rose-button">
+							</div>
 						</div>
 
-						<div id="short_echo_days_cont">
-
-							<h3>Uz cik ilgu laiku?</h3>
-							<p>Dienas: <span id="short_echo_days_val"></span></p>
-
-							<input type="range" min="10" max="30" value="10" class="slider" id="short_range_days">							
-						</div>
-
-						<p>Summa: <span id="summa"> 0.00 </span></p>
-						<p>Kopā:<span id="kopa">100.00</span></p>
-						<p>Komisija: 0.00 (15.00%)</p>
-						<p>GPL: 0.00</p>
-					</div>
-
-					<div class="info_block">
-						<p>Atmaksāt: 20.20.20</p>
-
-						<p> Kredīta pagarināšana par 30 dienām <br> 22.20$</p>
-
-						<a href="jauzliek links">*Standarta informācija</a>
-													
-					</div>	
+					</form>
 				</div>
-
-				<input type="submit">
-			</form>
+			</div>
 			
-			<div id="first_form" style="height: 35vw; width: 100%;"></div>
+			<div class="form_">
+				<!--<div id="second-form">
+					<form action="index.php" method="post">
 
+						<div class="short_range_form">
+							<h1>Ilgtermiņa aizdevums</h1>
+
+							<div class="inputs">
+								<div id="short_echo_money_cont">
+
+									<h3> Cik vēlies aizņemties?</h3>
+									<p>Aizdevums: <span id="short_echo_money_val"></span></p>
+
+									<input type="range" name="tickmarks" min="50" max="500" value="250" class="slider" id="short_range_money">
+								</div>
+
+								<div id="short_echo_days_cont">
+
+									<h3>Uz cik ilgu laiku?</h3>
+									<p>Dienas: <span id="short_echo_days_val"></span></p>
+
+									<input type="range" min="10" max="30" value="10" class="slider" id="short_range_days">							
+								</div>
+
+								<p>Summa: <span id="summa"> 0.00 </span></p>
+								<p>Kopā:<span id="kopa">100.00</span></p>
+								<p>Komisija: 0.00 (15.00%)</p>
+								<p>GPL: 0.00</p>
+							</div>
+
+							<div class="info_block">
+								<p>Atmaksāt: 20.20.20</p>
+
+								<p> Kredīta pagarināšana par 30 dienām <br> 22.20$</p>
+
+								<a href="jauzliek links">*Standarta informācija</a>
+
+							</div>	
+						</div>
+
+						<input type="submit">
+					</form>
+				</div>-->
+				<div id="second-form" class="flex">
+					<form action="index.php" method="post">
+
+						<div class="short_range_form flex">
+							<div class="inputs">
+								<h1><span class="violet">Ilgtermiņa</span> aizdevums</h1>
+								<div id="short_echo_money_cont">
+
+									<h3> Cik vēlies aizņemties?</h3>
+									<p>Aizdevums: <span id="short_echo_money_val"></span></p>
+
+									<input type="range" name="tickmarks" min="50" max="500" value="250" class="slider" id="short_range_money">
+								</div>
+
+								<div id="short_echo_days_cont">
+
+									<h3>Uz cik ilgu laiku?</h3>
+									<p>Dienas: <span id="short_echo_days_val"></span></p>
+
+									<input type="range" min="10" max="30" value="10" class="slider" id="short_range_days">							
+								</div>
+							
+								<div class="flex formulas">
+									<div>
+										<h2>Summa:<span id="summa"> 0.00 </span></h2>
+										<h2>Kopā:<span id="kopa">100.00</span></h2>
+									</div>
+									<div>
+										<h2>Komisija: <span id="komisija">0.00 (15.00%)</span></h2>
+										<h2>GPL: <span id="gpl">0.00</span></h2>
+									</div>
+								</div>
+							</div>
+
+							<div class="info_block">
+								<h5>Atmaksāt līdz: <span class="violet">20.20.20</span></h5>
+
+								<h4>Kredīta pagarināšana par 30 dienām:<br><b>22.20$</b></h4>
+
+								<a href="jauzliek links" class="links">*Standarta informācija</a>
+								<input type="submit" value="SAŅEMT NAUDU" class="violet-button">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			
+			</div>
+			
 			<div class="icons_block flex">
 				<div class="icon_border">
 					<img src="img/grey_icons/home/1.svg" alt="Smiley face">

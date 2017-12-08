@@ -422,7 +422,7 @@ button.accordion {
     width: 100%;
     text-align: left;
     outline: none;
-    font-size: 1.3vw;
+    font-size: 1vw;
     transition: 0.4s;
     border-radius: 1vw;
     border: 1px solid rgba(0,0,0,0.1);
@@ -450,11 +450,141 @@ button.accordion.active:after {
     transition: max-height 0.2s ease-out;
 }
 #questions{
-	width: 60%;
+	width: 50%;
 	margin: auto;
 }
 #questions p{
-	font-size: 1vw;
+	font-size: 0.8vw;
+}
+/*FORMAS*/
+.form_{
+	width: 50%;
+    height: 33vw;
+	margin-bottom:4vw
+}
+.form_ form{
+	width: 100%;
+    height: 65%;
+    margin: 5vw;
+}
+.form_ h1{
+	margin: 0;
+    font-size: 1.7vw;
+    margin-bottom: 1vw;
+}
+.form_ h2{
+    margin: 0;
+    font-size: 0.8vw;
+    width: 10vw;
+}
+.form_ h3{
+	margin: 0;
+    font-size: 1vw;
+	letter-spacing: 0.01vw;
+}
+.form_ h4{
+    margin: 0;
+    font-size: 1vw;
+    font-weight: 400;
+}
+.form_ h4 b{
+	margin-top: 0.5vw;
+	font-size: 1.2vw;
+}
+.form_ h5{
+    margin: 0;
+    font-size: 0.8vw;
+    margin-bottom: 1vw;
+}
+.form_ p{
+	margin: 0;
+    font-size: 0.8vw;
+}
+.form_ a{
+    margin: 0;
+    text-decoration: underline;
+    font-size: 0.7vw;
+	cursor: pointer;
+}
+.form_ input{
+	width: 85%;
+}
+.inputs{
+	width: 70%
+}
+.info_block{
+	width: 30%;
+	margin-top: 3vw;
+}
+.formulas div{
+	margin: 1vw;
+}
+.pink{color:rgb(255, 117, 130)}
+.violet{color:rgb(133, 106, 214);}
+#summa, #kopa, #komisija, #gpl{
+	font-weight: 500;
+    opacity: 0.7;
+    float: right;
+}
+.formulas{}
+.rose-button{
+	background-image: -moz-linear-gradient( 180deg, rgb(255,116,131) 0%, rgb(253,158,98) 100%);
+	background-image: -webkit-linear-gradient( 180deg, rgb(255,116,131) 0%, rgb(253,158,98) 100%);
+	background-image: -ms-linear-gradient( 180deg, rgb(255,116,131) 0%, rgb(253,158,98) 100%);
+	margin: 3vw 0vw 0vw 1vw;
+    padding: 0.6vw 1vw;
+    border: none;
+    border-radius: 1vw;
+	font-size: 0.9vw;
+    font-weight: 700;
+    color: white;
+}
+.violet-button{
+	background-image: -moz-linear-gradient( -177deg, rgb(173,74,202) 0%, rgb(117,119,219) 100%);
+	background-image: -webkit-linear-gradient( -177deg, rgb(173,74,202) 0%, rgb(117,119,219) 100%);
+	background-image: -ms-linear-gradient( -177deg, rgb(173,74,202) 0%, rgb(117,119,219) 100%);
+	margin: 3vw 0vw 0vw 1vw;
+    padding: 0.6vw 1vw;
+    border: none;
+    border-radius: 1vw;
+	font-size: 0.9vw;
+    font-weight: 700;
+    color: white;
+}
+/*FIRST FORM*/
+#first-form{
+    background-image: url(../img/form1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 2.5vw;
+	z-index: 2;
+	align-items: center;
+    justify-content: center;
+	padding-top: 3vw;
+	cursor:pointer;
+}
+#first-form:focus{
+	z-index: 2;
+}
+/*SECOND FORM*/
+#second-form{
+	background-image: url(../img/form2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	position: relative;
+    right: 2.5vw;
+	top: 3vw;
+	align-items: center;
+    justify-content: center;
+	cursor:pointer;
+}
+#second-form:focus{
+	z-index: 3;
 }
 @media screen and (max-width: 900px){
 }
