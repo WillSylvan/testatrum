@@ -9,7 +9,7 @@
 
 		<!--<script type="text/javascript">
 		function color(c) {document.body.style.backgroundColor=c}
-		</script>onclick='color("red")'-->
+		</script>onclick='color("red")' -->
 
    </head>
 
@@ -70,7 +70,147 @@
 					</div>
 				</form>
 				
-				<button>Turpināt</button>
+				<!--CETURTA FORMA-->
+				
+				<div id="four-form">
+				
+					<div class="bank_rekv">
+						<div class="tab">
+							<button class="tablinks active" onclick="openCity(event, 'swed')"><img src="img/bank/swedbank.png"></button>
+							<button class="tablinks" onclick="openCity(event, 'citadele')"><img src="img/bank/citadele.png"></button>
+							<button class="tablinks" onclick="openCity(event, 'luminor')"><img src="img/bank/luminor.png"></button>
+							<button class="tablinks" onclick="openCity(event, 'another_b')"><h2>Cita banka</h2></button>
+						</div>
+						
+						<!-- SWEDBANKA -->
+						<div id="swed" class="tabcontent" style="display: block;">
+							<div class="saturs">
+								<h1>Saņēmējs</h1>
+								<p>Lateco līzings as</p>
+							</div>
+							<div class="saturs">
+								<h1>Reģ.Nr.</h1>
+								<p>40003366651</p>
+							</div>
+							<div class="saturs">
+								<h1>Konta numurs:</h1>
+								<p>LV67HABA0551033353134</p>
+							</div>
+							<div class="saturs">
+								<h1>Maksājuma mērķis kredīta atmaksai:</h1>
+								<p>Līguma Nr. SMXXXXXX pagarinājums</p>
+							</div>
+							<div class="saturs">
+								<h1>Maksājuma mērķis kredīta atmaksai:</h1>
+								<p>Līguma Nr. SMXXXXXX atmaksa</p>
+							</div>
+						</div>
+						
+						<!-- CITADELE -->
+						<div id="citadele" class="tabcontent" style="display: none;">
+							<div class="saturs">
+								<h1>2Saņēmējs</h1>
+								<p>Lateco līzings as</p>
+							</div>
+							<div class="saturs">
+								<h1>Reģ.Nr.</h1>
+								<p>40003366651</p>
+							</div>
+							<div class="saturs">
+								<h1>Konta numurs:</h1>
+								<p>LV67HABA0551033353134</p>
+							</div>
+							<div class="saturs">
+								<h1>Maksājuma mērķis kredīta atmaksai:</h1>
+								<p>Līguma Nr. SMXXXXXX pagarinājums</p>
+							</div>
+							<div class="saturs">
+								<h1>Maksājuma mērķis kredīta atmaksai:</h1>
+								<p>Līguma Nr. SMXXXXXX atmaksa</p>
+							</div>
+						</div>
+
+						<div id="luminor" class="tabcontent" style="display: none;">
+							<div class="saturs">
+								<h1>3Saņēmējs</h1>
+								<p>Lateco līzings as</p>
+							</div>
+							<div class="saturs">
+								<h1>Reģ.Nr.</h1>
+								<p>40003366651</p>
+							</div>
+							<div class="saturs">
+								<h1>Konta numurs:</h1>
+								<p>LV67HABA0551033353134</p>
+							</div>
+							<div class="saturs">
+								<h1>Maksājuma mērķis kredīta atmaksai:</h1>
+								<p>Līguma Nr. SMXXXXXX pagarinājums</p>
+							</div>
+							<div class="saturs">
+								<h1>Maksājuma mērķis kredīta atmaksai:</h1>
+								<p>Līguma Nr. SMXXXXXX atmaksa</p>
+							</div>
+						</div>
+
+						<div id="another_b" class="tabcontent" style="display: none;">
+							<div class="saturs">
+								<h1>4Saņēmējs</h1>
+								<p>Lateco līzings as</p>
+							</div>
+							<div class="saturs">
+								<h1>Reģ.Nr.</h1>
+								<p>40003366651</p>
+							</div>
+							<div class="saturs">
+								<h1>Konta numurs:</h1>
+								<p>LV67HABA0551033353134</p>
+							</div>
+							<div class="saturs">
+								<h1>Maksājuma mērķis kredīta atmaksai:</h1>
+								<p>Līguma Nr. SMXXXXXX pagarinājums</p>
+							</div>
+							<div class="saturs">
+								<h1>Maksājuma mērķis kredīta atmaksai:</h1>
+								<p>Līguma Nr. SMXXXXXX atmaksa</p>
+							</div>
+						</div>
+					</div>
+				<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+				<script>
+					function openCity(evt, cityName) {
+						var i, tabcontent, tablinks;
+						tabcontent = document.getElementsByClassName("tabcontent");
+						for (i = 0; i < tabcontent.length; i++) {
+							tabcontent[i].style.display = "none";
+						}
+						tablinks = document.getElementsByClassName("tablinks");
+						for (i = 0; i < tablinks.length; i++) {
+							tablinks[i].className = tablinks[i].className.replace(" active", "");
+						}
+						document.getElementById(cityName).style.display = "block";
+						evt.currentTarget.className += " active";
+					}
+				</script>
+					<button class="veikt">Veikt maksajumu</button>
+				</div>
+				
+				<!--PIEKTA FORMA-->
+				
+				<div id="five-form">
+					<img src="img/ok.png">
+					<h6>Paldies!</h6>
+				</div>
+				
+				<!--SESTA FORMA-->
+				
+				<div id="six-form">
+					<img src="img/ok.png">
+					<h6>Jūsu pieteikums ir nosūtīts!</h6>
+				</div>
+				
+				
+				<button class="turpinat">Turpināt</button>
 			</div>
 		</div>	
 		<?php include 'assets/footer.php'; ?>	
