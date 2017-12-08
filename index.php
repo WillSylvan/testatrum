@@ -7,9 +7,19 @@
 		<link rel="icon" href="img/logo.svg">
 		<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
 		
-				<!--<script type="text/javascript">
+		<!--<script type="text/javascript">
 		function color(c) {document.body.style.backgroundColor=c}
-		</script>onclick='color("red")' -->
+		</script>-->
+		<script>
+		function pinkColor(){
+			$("#first-form").css({"left":"4vw","zoom":"1.1","width":"120%","height":"105%","background-image":"img/form3.png"});
+		}
+	   </script>
+	   	<script>
+		function violetColor(){
+			$("#second-form").css({"right":"6vw","z-index":"200","zoom":"1.1","width":"120%","height":"105%","background-image":"img/form3.png"});
+		}
+	   </script>
     </head>
 
 	<body>
@@ -17,8 +27,8 @@
 		<div class="header-background"></div>
 
 		<div id="top-forms" class="flex">
-			<div class="form_">
-				<div id="first-form" class="flex">
+			<div class="form_ f1">
+				<div id="first-form" class="flex" onclick='pinkColor()'>
 					<form action="index.php" method="post">
 
 						<div class="short_range_form flex">
@@ -66,50 +76,8 @@
 				</div>
 			</div>
 			
-			<div class="form_">
-				<!--<div id="second-form">
-					<form action="index.php" method="post">
-
-						<div class="short_range_form">
-							<h1>Ilgtermiņa aizdevums</h1>
-
-							<div class="inputs">
-								<div id="short_echo_money_cont">
-
-									<h3> Cik vēlies aizņemties?</h3>
-									<p>Aizdevums: <span id="short_echo_money_val"></span></p>
-
-									<input type="range" name="tickmarks" min="50" max="500" value="250" class="slider" id="short_range_money">
-								</div>
-
-								<div id="short_echo_days_cont">
-
-									<h3>Uz cik ilgu laiku?</h3>
-									<p>Dienas: <span id="short_echo_days_val"></span></p>
-
-									<input type="range" min="10" max="30" value="10" class="slider" id="short_range_days">							
-								</div>
-
-								<p>Summa: <span id="summa"> 0.00 </span></p>
-								<p>Kopā:<span id="kopa">100.00</span></p>
-								<p>Komisija: 0.00 (15.00%)</p>
-								<p>GPL: 0.00</p>
-							</div>
-
-							<div class="info_block">
-								<p>Atmaksāt: 20.20.20</p>
-
-								<p> Kredīta pagarināšana par 30 dienām <br> 22.20$</p>
-
-								<a href="jauzliek links">*Standarta informācija</a>
-
-							</div>	
-						</div>
-
-						<input type="submit">
-					</form>
-				</div>-->
-				<div id="second-form" class="flex">
+			<div class="form_ f2">
+				<div id="second-form" class="flex" onclick='violetColor()'>
 					<form action="index.php" method="post">
 
 						<div class="short_range_form flex">
