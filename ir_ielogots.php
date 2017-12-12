@@ -12,6 +12,36 @@
 	<body>
 		<?php include 'assets/header.php'; ?>
 		
+		<div id="profils">
+			<div class="flex bt"><button class="div"></button><p>Mani dati</p></div>
+			<div class="flex bt"><button class="div"></button><p>Mainit paroli</p></div>
+			<div class="flex bt"><button class="div"></button><p>Mani krediti</p></div>
+		</div>
+		<script>
+			$(document).ready(function(){
+				$('#profils .bt').click(function(){
+					id = $(this).index()
+					$('#sadalas .sadalas').css('display','none')
+						$('#sadalas .sadalas:eq('+id+')').fadeIn(300)
+				})
+			});
+		</script>
+		
+		<div id="sadalas">
+		
+			<div class="sadalas mani_dati">
+				MANI DATI
+			</div>
+			
+			<div class="sadalas mainit_paroli">
+				MAINIT PAROLI
+			</div>
+			
+			<div class="sadalas mani_krediti">
+				MANI KREDITI
+			</div>
+		
+		</div>
 		
 		<?php include 'assets/footer.php'; ?>	
 	</body>

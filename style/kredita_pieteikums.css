@@ -6,6 +6,8 @@
 #form-5{display:none}
 #form-6{display:none}
 
+.mainit_paroli, .mani_krediti{display:none}
+
 .klients{display:none}
 .turpinat{}
 .veikt{margin-top: 1vw}
@@ -223,6 +225,12 @@ input[type=radio]:checked{
 .ielogoties-buttons button{
 	padding: 0.5vw 0vw;
     width: 10vw;
+}
+/**/
+#profils{}
+#profils p{
+	margin: 0;
+    font-size: 1vw;
 }
 @media screen and (max-width: 1300px){
 
