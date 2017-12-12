@@ -461,7 +461,8 @@ button.accordion.active:after {
 .form_{
 	width: 50%;
     height: 33vw;
-	margin-bottom:4vw
+	margin-bottom:4vw;
+	cursor: pointer;
 }
 .form_ form{
 	width: 100%;
