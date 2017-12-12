@@ -1,7 +1,7 @@
 <html>
     <head>     
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">	
-		<link rel="stylesheet" type="text/css" href="style/jauns_lietotajs.css">
+		<link rel="stylesheet" type="text/css" href="style/kredita_pieteikums.css">
 		<link rel="stylesheet" type="text/css" href="style/style.css">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
 		<title></title>
@@ -14,22 +14,46 @@
 		<div id="page-form-content">
 			<div id="page-content-1">
 				<h2><span>Kredīta</span> pieteikums</h2>
+
+				<!--ESOSS KLIENTS-->
+			<div id="form-0">
 				<div class="flex klients">
 					<div class="flex">
 						<div class="flex izvelne">
-							<div class="div" style="background-color:rgb(250, 142, 109)"></div>
+							<button class="div" style="background-color:grey"></button>
 							<p>Jauns klients</p>
 						</div>
 						<div class="flex izvelne">
-							<div class="div" style="background-color:grey"></div>
+							<button class="div" style="background-color:rgb(250, 142, 109)"></button>
+							<p>Esošs klients</p>
+						</div>
+					</div>
+				</div>
+				<div id="zero-form">
+					<div><input placeholder="E-pasts:"></div>
+					<div><input placeholder="Parole:" type="password"></div>
+				</div>
+				<div class="flex ielogoties-buttons">
+					<a href="ir_ielogots.php"><button class="turpinat">Ienākt</button></a>
+					<button class="turpinat">Reģistrēties</button>
+				</div>
+			</div>
+				
+				<!--PIRMA FORMA-->
+			<div id="form-1">
+				<div class="flex klients">
+					<div class="flex">
+						<div class="flex izvelne">
+							<button class="div" style="background-color:rgb(250, 142, 109)"></button>
+							<p>Jauns klients</p>
+						</div>
+						<div class="flex izvelne">
+							<button class="div" style="background-color:grey"></button>
 							<p>Esošs klients</p>
 						</div>
 					</div>
 					<div class="izvelne" style="margin:0;"><img src="img/back.png"></div>
 				</div>
-				
-				<!--PIRMA FORMA-->
-				
 				<form id="one-form">
 					<div><input placeholder="Vārds, Uzvārds"></div>
 					<div><input placeholder="Personas kods"></div>
@@ -42,9 +66,24 @@
 					<div><input placeholder="Ikmēneša ienākumi:"></div>
 					<div><input placeholder="Ikmēneša izdevumi:"></div>
 				</form>
+				<button class="turpinat">Turpināt</button>
+			</div>
 
 				<!--OTRA FORMA-->
-				
+			<div id="form-2">
+				<div class="flex klients">
+					<div class="flex">
+						<div class="flex izvelne">
+							<button class="div" style="background-color:rgb(250, 142, 109)"></button>
+							<p>Jauns klients</p>
+						</div>
+						<div class="flex izvelne">
+							<button class="div" style="background-color:grey"></button>
+							<p>Esošs klients</p>
+						</div>
+					</div>
+					<div class="izvelne" style="margin:0;"><img src="img/back.png"></div>
+				</div>
 				<form id="two-form">
 					<div><input placeholder="Pilsēta:"></div>
 					<div><input placeholder="Iela:"></div>
@@ -54,9 +93,24 @@
 					</div>
 					<div><input placeholder="Pasta indekss:"></div>
 				</form>
-				
+				<button class="turpinat">Turpināt</button>
+			</div>
+			
 				<!--TREŠA FORMA-->
-				
+			<div id="form-3">
+				<div class="flex klients">
+					<div class="flex">
+						<div class="flex izvelne">
+							<button class="div" style="background-color:rgb(250, 142, 109)"></button>
+							<p>Jauns klients</p>
+						</div>
+						<div class="flex izvelne">
+							<button class="div" style="background-color:grey"></button>
+							<p>Esošs klients</p>
+						</div>
+					</div>
+					<div class="izvelne" style="margin:0;"><img src="img/back.png"></div>
+				</div>
 				<form id="three-form">
 					<div><input placeholder="Parole:" type="password"></div>
 					<div><input placeholder="Parole atkārtoti:" type="password"></div>
@@ -65,11 +119,15 @@
 						<p>Piekrītu līguma nosacījumiem, atļauju apstrādāt savus personas datus un apliecinu, ka sniegtā informācija ir patiesa.</p>
 					</div>
 				</form>
+				<button class="turpinat">Turpināt</button>
+			</div>
 				
 				<!--CETURTA FORMA-->
-				
+			<div id="form-4">	
 				<div id="four-form">
-				
+					<div style="text-align:left ">
+						<p>Lai pabeigtu reģistrāciju, veiciet reģistrācijas maksas<br> <b>EUR 0.01</b> pārskaitījumu</p>
+					</div>
 					<div class="bank_rekv">
 						<div class="tab">
 							<button class="tablinks active" onclick="openCity(event, 'swed')"><img src="img/bank/swedbank.png"></button>
@@ -190,23 +248,25 @@
 				</script>
 					<button class="veikt">Veikt maksajumu</button>
 				</div>
-				
+			</div>
+			
 				<!--PIEKTA FORMA-->
-				
+			<div id="form-5">	
 				<div id="five-form">
 					<img src="img/ok.png">
 					<h6>Paldies!</h6>
 				</div>
-				
+			</div>
+			
 				<!--SESTA FORMA-->
-				
+			
+			<div id="form-6">
 				<div id="six-form">
 					<img src="img/ok.png">
 					<h6>Jūsu pieteikums ir nosūtīts!</h6>
 				</div>
+			</div>	
 				
-				
-				<button class="turpinat">Turpināt</button>
 			</div>
 		</div>	
 		<?php include 'assets/footer.php'; ?>	

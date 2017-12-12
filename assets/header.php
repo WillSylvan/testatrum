@@ -3,7 +3,7 @@
 
 <div class="header">
 	<div class="logo-img head">
-		<img src="img/logo.svg" alt="logo">
+		<a href="index.php"><img src="img/logo.svg" alt="logo"></a>
 	</div>
 	<div class="my_nav head">
 		<ul>
@@ -16,7 +16,7 @@
 	</div>	
 	<div class="atribut head">
 		<div class="login">
-			<a href="#" class="button">Ienākt</a>
+			<a href="nav_ielogots.php" class="button">Ienākt</a>
 			<h3>RU</h3>
 		</div>
 	</div>

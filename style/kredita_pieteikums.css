@@ -1,12 +1,14 @@
-#one-form{}
-#two-form{display:none}
-#three-form{display:none}
-#four-form{margin-bottom:3vw;display:none}
-#five-form{display:none}
-#six-form{display:none}
+#form-0{}
+#form-1{display:none}
+#form-2{display:none}
+#form-3{display:none}
+#form-4{display:none}
+#form-5{display:none}
+#form-6{display:none}
 
 .klients{display:none}
 .turpinat{}
+.veikt{margin-top: 1vw}
 
 body{
     background-repeat: no-repeat;
@@ -91,6 +93,8 @@ input:focus:-ms-input-placeholder      {font-size:0.6vw;position:relative;top:-1
     height: 1.2vw;
     margin-right: 0.5vw;
     border-radius: 0.3vw;
+	border: none;
+	cursor: pointer;
 }
 .turpinat, .veikt{
 	background-image: -moz-linear-gradient( 180deg, rgb(255,116,131) 0%, rgb(253,158,98) 100%);
@@ -212,6 +216,13 @@ input[type=radio]:checked{
 #five-form img, #six-form img{
 	width: 4vw;
 	margin-top: 3vw;
+}
+.ielogoties-buttons{
+	justify-content: space-evenly;
+}
+.ielogoties-buttons button{
+	padding: 0.5vw 0vw;
+    width: 10vw;
 }
 @media screen and (max-width: 1300px){
 
