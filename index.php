@@ -12,12 +12,64 @@
 		</script>-->
 		<script>
 		function pinkColor(){
-			$("#first-form").css({"left":"4vw","zoom":"1.1","width":"120%","height":"105%","background-image":"img/form3.png"});
+			$("#first-form").css({"left":"4vw","zoom":"1.1","width":"120%","height":"105%","background-image":"url(img/form3.png)"});
+			$("#second-form").css({"background-image":"none","zoom":"0.9","z-index":"-1"});
+			
+			$("#icons_block_sec").css({"background-image":"url(img/pink/pinkfons.png","color":"white"});
+			$("#icons_block_sec2").css({"background-image":"url(img/pink/pinkfons2.png","color":"white"});
+			$("#footer").css("background-image","url(img/pink/footer_background_istermina.jpg)");
+			
+			$("#important").css("width","60%");
+			$("#important2").css("width","50%");
+			
+			$("#f-button").css({"color":"white","border":"none","background-color":"rgb(255,116,131)"});
+			$("#s-button").css({"color":"white","border":"none","background-color":"rgb(255,116,131)"});
+			
+			$("#img-1").attr("src","img/pink/ico/1.svg");
+			$("#img-2").attr("src","img/pink/ico/2.svg");
+			$("#img-3").attr("src","img/pink/ico/3.svg");
+			$("#img-4").attr("src","img/pink/ico/4.svg");
+			
+			$("#img-5").attr("src","img/pink/ico/5.svg");
+			$("#img-6").attr("src","img/pink/ico/6.svg");
+			$("#img-7").attr("src","img/pink/ico/7.svg");
+			$("#img-8").attr("src","img/pink/ico/8.svg");
 		}
-	   </script>
+		</script>
 	   	<script>
 		function violetColor(){
-			$("#second-form").css({"right":"6vw","z-index":"200","zoom":"1.1","width":"120%","height":"105%","background-image":"img/form3.png"});
+			$("#second-form").css({"right":"16vw","z-index":"200","zoom":"1.1","width":"120%","height":"125%","background-image":"url(img/form4.png)","top":"0vw"});
+			$("#first-form").css({"background-image":"none","zoom":"0.9","z-index":"-1"});
+			
+			$("#icons_block_sec").css({"background-image":"url(img/violet/violetfons.png","color":"white"});
+			$("#icons_block_sec2").css({"background-image":"url(img/violet/violetfons2.png","color":"white"});
+			$("#footer").css("background-image","url(img/violet/backgound-footer-violet.jpg)");
+			
+			$("#important").css("margin-left","8vw");
+			
+			$("#f-button").css({"color":"white","border":"none","background-color":"rgb(173,74,202)"});
+			$("#s-button").css({"color":"white","border":"none","background-color":"rgb(173,74,202)"});
+			
+			$("#raditajs-img").attr("src","img/violet/violet-bulta.png");
+			$("#violet-mob").attr("src","img/violet/tel-violet.png");
+			
+			$("#img-1").attr("src","img/violet/ico/9.svg");
+			$("#img-2").attr("src","img/violet/ico/10.svg");
+			$("#img-3").attr("src","img/violet/ico/11.svg");
+			$("#img-4").attr("src","img/violet/ico/12.svg");
+			
+			$("#img-5").attr("src","img/ico/5.svg");
+			$("#img-6").attr("src","img/ico/6.svg");
+			$("#img-7").attr("src","img/ico/7.svg");
+			$("#img-8").attr("src","img/ico/8.svg");
+			
+			$("#img-9").attr("src","img/violet/ico/13.png");
+			$("#img-10").attr("src","img/violet/ico/17.png");
+			$("#img-11").attr("src","img/violet/ico/18.png");
+			
+			$("#img-12").attr("src","img/violet/ico/16.png");
+			$("#img-13").attr("src","img/violet/ico/17.png");
+			$("#img-14").attr("src","img/violet/ico/18.png");
 		}
 	   </script>
     </head>
@@ -32,7 +84,7 @@
 					<form action="index.php" method="post">
 
 						<div class="short_range_form flex">
-							<div class="inputs">
+							<div class="inputs" id="important">
 								<h1><span class="pink">Īstermiņa</span> aizdevums</h1>
 								<div id="short_echo_money_cont">
 
@@ -81,7 +133,7 @@
 					<form action="index.php" method="post">
 
 						<div class="short_range_form flex">
-							<div class="inputs">
+							<div class="inputs" id="important2">
 								<h1><span class="violet">Ilgtermiņa</span> aizdevums</h1>
 								<div id="short_echo_money_cont">
 
@@ -128,22 +180,22 @@
 			
 			<div class="icons_block flex">
 				<div class="icon_border">
-					<img src="img/grey_icons/home/1.svg" alt="Smiley face">
+					<img id="img-1" src="img/grey_icons/home/1.svg" alt="Smiley face">
 					<h3>Pirmais kredīts bez komisijas!</h3>
 				</div>
 
 				<div class="icon_border">
-					<img src="img/grey_icons/home/2.svg" alt="Smiley face">
+					<img id="img-2" src="img/grey_icons/home/2.svg" alt="Smiley face">
 					<h3>Neizejot ārā no mājām</h3>
 				</div>
 
 				<div class="icon_border">
-					<img src="img/grey_icons/home/3.svg" alt="Smiley face">
+					<img id="img-3" src="img/grey_icons/home/3.svg" alt="Smiley face">
 					<h3>15 minūšu laikā</h3>
 				</div>
 
 				<div class="icon_border">
-					<img src="img/grey_icons/home/4.svg" alt="Smiley face">
+					<img id="img-4" src="img/grey_icons/home/4.svg" alt="Smiley face">
 					<h3>Minimālas formalitātes</h3>
 				</div>
 			</div>
@@ -185,8 +237,6 @@
 				}
 			</script>
 
-
-
 			<div class="headline">
 				<h1>Pirmais aizdevums</h1>
 			</div>
@@ -194,25 +244,25 @@
 			<div id="icons_block_sec">
 				<div class="icons_block_sec flex">
 					<div class="icon_border_sec b1">
-						<img src="img/grey_icons/credit_icons/6.svg" alt="Smiley face">
+						<img id="img-5" src="img/grey_icons/credit_icons/6.svg" alt="Smiley face">
 						<h3>Piesakiet kredītu internetā</h3>
 						<p>Izvēlieties kredīta summu un termiņu.</p>
 					</div>
 
 					<div class="icon_border_sec b2">
-						<img src="img/grey_icons/credit_icons/7.svg" alt="Smiley face">
+						<img id="img-6" src="img/grey_icons/credit_icons/7.svg" alt="Smiley face">
 						<h3>Reģistrējies</h3>
 						<p>Aizpildiet reģistrācijas anketu.</p>
 					</div>
 
 					<div class="icon_border_sec b3">
-						<img src="img/grey_icons/credit_icons/5.svg" alt="Smiley face">
+						<img id="img-7" src="img/grey_icons/credit_icons/5.svg" alt="Smiley face">
 						<h3>Apstipriniet reģistrāciju</h3>
 						<p>Pārskaities no savas bankas reģistrācijas maksu EUR 0.01, maksājuma mērķī norādot: Piekrītu AS Lateko Līzings līguma noteikumiem. Nepieciešamā informācija <a href="Jaieliek links">šeit.</a></p>
 					</div>
 
 					<div class="icon_border_sec b4">
-						<img src="img/grey_icons/credit_icons/8.svg" alt="Smiley face">
+						<img id="img-8" src="img/grey_icons/credit_icons/8.svg" alt="Smiley face">
 						<h3>Saņemiet naudu 15 minūšu laikā</h3>
 						<p>Saņemiet naudu 15 minūšu laikā Jūs saņemsiet uz tālruni 15 minūšu laikā.</p>
 					</div>
@@ -227,26 +277,26 @@
 				</div>
 
 				<div class="apply_credit">
-					<div class="img-apply-credit"><img src="img/atrum_pc.svg" alt="pc"></div>
+					<div class="img-apply-credit"><img src="img/pink/atrum_pc.svg" alt="pc"></div>
 					<div class="apply">
 						<div><h1>Piesakiet kredītu internetā!</h1></div>
-						<div><button class="button_sanemt">Saņēmt kredītu</button></div>
+						<div><button class="button_sanemt" id="f-button">Saņēmt kredītu</button></div>
 					</div>
 				</div>
 			
-				<div id="raditajs"><img src="img/ico/pink.png"></div>
+				<div id="raditajs"><img id="raditajs-img" src="img/pink/pink.png"></div>
 				
 				<div class="three_icons_block flex">
 					<div class="tree_icon_border">
-						<img src="img/ico/1.png" alt="Smiley face">
+						<img id="img-9" src="img/ico/1.png" alt="Smiley face">
 						<h3>Ieejiet savā profilā</h3>
 					</div>
 					<div class="tree_icon_border">
-						<img src="img/ico/2.png" alt="Smiley face">
+						<img id="img-10" src="img/ico/2.png" alt="Smiley face">
 						<h3>Izvēlieties summu un savu kredīta termiņu</h3>
 					</div>
 					<div class="tree_icon_border">
-						<img src="img/ico/3.png" alt="Smiley face">
+						<img id="img-11" src="img/ico/3.png" alt="Smiley face">
 						<h3>Saņemiet kredītu</h3>
 					</div>
 				</div>
@@ -256,24 +306,24 @@
 				<div class="piesakies-background-2"></div>
 
 				<div class="apply_credit-2">
-					<div class="img-apply-credit-2"><img src="img/ico/iphone.png" alt=""></div>
+					<div class="img-apply-credit-2"><img id="violet-mob" src="img/pink/iphone.png" alt=""></div>
 					<div class="apply-2">
 						<div><h1>Piesakies kredītam caur telefonu!</h1></div>
-						<div><button class="button_sanemt-2">Zvanīt</button></div>
+						<div><button class="button_sanemt-2" id="s-button">Zvanīt</button></div>
 					</div>
 				</div>
 				
 				<div class="three_icons_block-2 flex">
 					<div class="tree_icon_border-2">
-						<img src="img/ico/4.png" alt="Smiley face">
+						<img id="img-12" src="img/ico/4.png" alt="Smiley face">
 						<h3>Zvani mums:<br>+37122334455 </h3>
 					</div>
 					<div class="tree_icon_border-2">
-						<img src="img/ico/2.png" alt="Smiley face">
+						<img id="img-13" src="img/ico/2.png" alt="Smiley face">
 						<h3>Izvēlieties summu un savu kredīta termiņu</h3>
 					</div>
 					<div class="tree_icon_border-2">
-						<img src="img/ico/3.png" alt="Smiley face">
+						<img id="img-14" src="img/ico/3.png" alt="Smiley face">
 						<h3>Saņemiet kredītu</h3>
 					</div>
 				</div>

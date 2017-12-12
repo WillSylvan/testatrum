@@ -54,7 +54,8 @@ body{
     line-height: 1.5vw;
 }
 .icon_border img{
-	width: 6vw;
+	/*width: 6vw;*/
+	height: 5vw;
 }
 /**/
 #icons_block_sec{
