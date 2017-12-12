@@ -567,9 +567,6 @@ button.accordion.active:after {
 	padding-top: 3vw;
 	cursor:pointer;
 }
-#first-form:focus{
-	z-index: 100;
-}
 /*SECOND FORM*/
 #second-form{
 	background-image: url(../img/form2.png);
@@ -583,9 +580,6 @@ button.accordion.active:after {
 	align-items: center;
     justify-content: center;
 	cursor:pointer;
-}
-#second-form:focus{
-	z-index: 100;
 }
 @media screen and (max-width: 900px){
 }
