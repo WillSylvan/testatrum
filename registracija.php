@@ -42,10 +42,8 @@
 					<div><input placeholder="Ikmēneša ienākumi:"></div>
 					<div><input placeholder="Ikmēneša izdevumi:"></div>
 
-                    <div><input type="submit" value="Turpināt"></div>
+                    <div><input class="turpinat" type="submit" value="Turpināt"></div>
 				</form>
-               
-				<!-- <button class="turpinat">Turpināt</button> -->
 			</div>
 
 				<!--OTRA FORMA-->
@@ -72,9 +70,8 @@
 					</div>
 					<div><input placeholder="Pasta indekss:"></div>
 
-                    <div><input type="submit" value="Turpināt"></div>
+                    <div><input class="turpinat" type="submit" value="Turpināt"></div>
 				</form>
-				<button class="turpinat">Turpināt</button>
 			</div>
 			
 				<!--TREŠA FORMA-->
@@ -100,9 +97,9 @@
 						<p>Piekrītu līguma nosacījumiem, atļauju apstrādāt savus personas datus un apliecinu, ka sniegtā informācija ir patiesa.</p>
 					</div>
 
-                    <div><input type="submit" value="Turpināt"></div>
+                    <div><input class="turpinat" type="submit" value="Turpināt"></div>
 				</form>
-				<!-- <button class="turpinat">Turpināt</button> -->
+
 			</div>
 				
 				<!--CETURTA FORMA-->
@@ -231,25 +228,7 @@
 				</script>
 					<button class="veikt">Veikt maksajumu</button>
 				</div>
-			</div>
-			
-				<!--PIEKTA FORMA-->
-			<div id="form-5">	
-				<div id="five-form">
-					<img src="img/ok.png">
-					<h6>Paldies!</h6>
-				</div>
-			</div>
-			
-				<!--SESTA FORMA-->
-			
-			<div id="form-6">
-				<div id="six-form">
-					<img src="img/ok.png">
-					<h6>Jūsu pieteikums ir nosūtīts!</h6>
-				</div>
 			</div>	
-				
 			</div>
 		</div>	
 		<?php include 'assets/footer.php'; ?>	
