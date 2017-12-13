@@ -34,7 +34,7 @@
 					<div><input placeholder="Parole:" type="password"></div>
 				</div>
 				<div class="flex ielogoties-buttons">
-					<a href="ir_ielogots.php"><button class="turpinat">Ienākt</button></a>
+					<a href="mani_dati.php"><button class="turpinat">Ienākt</button></a>
 					<button class="turpinat">Reģistrēties</button>
 				</div>
 			</div>

@@ -3,13 +3,14 @@
 #form-2{display:none}
 #form-3{display:none}
 #form-4{display:none}
+#form-5{display:none}
+#form-6{display:none}
 
+#first-step-user-check{display:none}
+#second-step-user-check{display:none}
+#third-step-user-check{display:none}
 
-.mainit_paroli, .mani_krediti{display:none}
-
-.klients{display:none}
-.turpinat{}
-.veikt{margin-top: 1vw}
+#change-pass-2{display:none}
 
 body{
     background-repeat: no-repeat;
@@ -225,11 +226,205 @@ input[type=radio]:checked{
 	padding: 0.5vw 0vw;
     width: 10vw;
 }
+#four-form p{
+	font-size: 1.1vw;
+}
+.klients{display:none}
+.turpinat{}
+.veikt{margin-top: 1vw}
+
 /**/
 #profils{}
 #profils p{
 	margin: 0;
     font-size: 1vw;
+}
+
+#main-id{
+	background-image: url(../img/form5.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25vw;
+    height: 22vw;
+    position: absolute;
+    top: 8vw;
+    left: 6vw;
+	align-items: center;
+	justify-content: center;
+}
+.profil-header{
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+    margin-bottom: 1vw;
+    width: 13vw;
+}
+#main-id h1{
+	margin: 0;
+	font-weight: 600;
+	color: grey;
+	font-size: 1.7vw;
+}
+#sadalas{
+    width: 35%;
+    margin: auto;
+    text-align: center;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+}
+#ielogots-header h2{
+	font-size: 2vw;
+    margin: 0;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 1vw;
+}
+#ielogots-header p{
+	margin: 0;
+	font-size: 1.1vw;
+	text-align: left;
+}
+.user-check{
+	text-align: left;
+	margin-bottom: 2vw;
+}
+.user-check p{
+	margin: 0;
+    font-size: 1vw;
+	font-weight: 500;
+}
+.user-check span{
+	font-weight: 400;
+    font-size: 0.8vw;
+}
+.user-check button{
+	border: 1px solid rgb(251, 137, 112);
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.9vw;
+    font-weight: 600;
+    padding: 0.3vw 1vw;
+    background-color: transparent;
+    border-radius: 0.5vw;
+    margin-left: 3vw;
+    cursor: pointer;
+}
+.number-info{
+	width: 100%;
+    margin: 0.9vw;
+    margin-right: 0;
+    margin-left: 0;
+    height: auto;
+    padding: 0.8vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    border-radius: 0.7vw;
+    border: 1px solid rgba(0,0,0,0.1);
+    background-color: rgb(246, 247, 249);
+	justify-content: space-around;
+}
+.number-info span{
+	color: rgb(251, 137, 112);
+    font-size: 1.1vw;
+    font-weight: 600;
+}
+.x{
+	align-items: center;
+}
+.x div:first-child{
+	width: 55%;
+}
+.koda-parbaude{}
+.kods{}
+.kods input{
+	margin: 0;
+	width: 2.5vw;
+    height: 2.5vw;
+    padding: 0;
+    margin-right: 0.3vw;
+    font-size: 2vw;
+    text-align: center;
+}
+.apstiprinajums{
+	width: 11.5vw;
+}
+.user-check h6{
+	font-size: 1.5vw;
+    font-family: "Poppins", sans-serif;
+    color: rgb(51, 51, 51);
+    font-weight: 400;
+    margin: 0;
+    margin-left: 1.5vw;
+}
+.user-check img{
+	width: 3vw;
+}
+.border-pink{
+	text-align: left;
+}
+.border-pink button{
+    border: 1px solid rgb(251, 137, 112);
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 1vw;
+    font-weight: 600;
+    padding: 0.5vw 2vw;
+    background-color: transparent;
+    border-radius: 0.5vw;
+    cursor: pointer;
+}
+.alerts p{
+    margin: 0;
+    margin-left: 0.5vw;
+    margin-right: 2vw;
+    font-size: 1vw;	
+}
+.p-b{
+background-color: rgb(251, 137, 112);
+    width: 1vw;
+    height: 1vw;
+    border-radius: 5vw;
+}
+
+#change-pass-2{
+	text-align: center;
+	margin-top: 5vw;
+	margin-bottom: 20vw;
+}
+#change-pass-2 img{
+	width: 4vw;
+    margin-top: 3vw;
+}
+#change-pass-2 h6{
+	margin: 3vw;
+    font-size: 1.5vw;
+    font-family: "Poppins", sans-serif;
+    color: rgb(51, 51, 51);
+    font-weight: 400;
+}
+/**/
+#main-content-credit{width:100%}
+#pos{width:30%}
+#main-content-credit-izvelne{width:70%}
+/*FORM FORM FORM*/
+#first-form {
+    left: 1vw;
+	padding-top: 0;
+}
+.form_ {
+    height: 24vw;
+}
+.form_ form {
+    width: 100%;
+    height: 75%;
+    margin: 5vw;
+}
+.short_range_form{
+	transform: scale(0.8);
+}
+.rose-button, .violet-button{
+	margin: 1vw !important;
+    width: 100%;
+    font-size: 0.8vw !important;
+    padding: 0.5vw 0.5vw !important;
 }
 @media screen and (max-width: 1300px){
 
