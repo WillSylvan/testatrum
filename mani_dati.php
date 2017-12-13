@@ -12,25 +12,7 @@
 	<body>
 		<?php include 'assets/header.php'; ?>
 		
-		<div id="main-id" class="flex">
-			<div id="main-id-content">
-				<div class="profil-header"><h1>Mans profils</h1></div>
-				<div id="profils">
-					<div class="flex bt"><button class="div"></button><p>Mani dati</p></div>
-					<div class="flex bt"><button class="div"></button><p>Mainit paroli</p></div>
-					<div class="flex bt"><button class="div"></button><p>Mani krediti</p></div>
-				</div>
-			</div>
-		</div>
-		<script>
-			$(document).ready(function(){
-				$('#profils .bt').click(function(){
-					id = $(this).index()
-					$('#sadalas .sadalas').css('display','none')
-						$('#sadalas .sadalas:eq('+id+')').fadeIn(300)
-				})
-			});
-		</script>
+		<?php include 'assets/profile-form.php'; ?>
 		
 		<div id="sadalas">
 		
@@ -117,55 +99,7 @@
 				</script>
 				<!--DEMO DEMO DEMO DEMO DEMO-->
 					
-			</div>
-		
-		<!--MAINIT PAROLI-->
-			<div class="sadalas mainit_paroli">
-			
-				<div id="change-pass">
-					<div id="ielogots-header">
-						<h2>Mainīt paroli</h2>
-					</div>
-					<form id="three-form">
-						<div><input placeholder="Pašreizējā parole:" type="password"></div>
-						<div><input placeholder="Jaunā parole:" type="password"></div>
-						<div class="flex alerts">
-							<div class="flex">
-								<div class="p-b"></div>
-								<div><p>5 simboli gara</p></div>
-							</div>
-							<div class="flex">
-								<div class="p-b"></div>
-								<div><p>Vismaz 1 cipars</p></div>
-							</div>
-						</div>
-						<div><input placeholder="Jaunā parole atkārtoti:" type="password"></div>
-					</form>
-					<div class="border-pink"><button id="passw">Mainīt paroli</button></div>
-				</div>
-				
-				<div id="change-pass-2">
-					<img src="img/ok.png">
-					<h6>Jūsu parole nomainīta!</h6>
-				</div>
-				
-				<!--DEMO DEMO DEMO DEMO DEMO-->
-				<script>
-				$(document).ready(function(){
-					$("#passw").click(function () {
-						$("#change-pass-2").css("display","block");
-						$("#change-pass").css("display","none");
-					});
-				});
-				</script>
-				<!--DEMO DEMO DEMO DEMO DEMO-->
-				
-			</div>
-		
-		<!--MANI KREDITI-->
-			<div class="sadalas mani_krediti">
-				MANI KREDITI
-			</div>
+			</div>	
 		
 		</div>
 		
