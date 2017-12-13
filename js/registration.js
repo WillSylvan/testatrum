@@ -2,9 +2,24 @@ $(function() {
     //step-1
   $(document).on('submit','form#one-form',function(){
       let data = $('#one-form').serializeArray()
+
+
+
       console.log(data);
 
-    // validācija
+
+
+      // function showValues() {
+      //   var fields = $( ":input" ).serializeArray();
+      //   $( "#results" ).empty();
+      //   jQuery.each( fields, function( i, field ) {
+      //   $( "#results" ).append( field.value + " " );
+      // });
+  // }
+    arr.forEach(function(data) {
+    console.log(data);
+    });
+   
 
     // on succuess
     $('#form-1').hide();
@@ -31,6 +46,15 @@ $(function() {
     $('#form-4').hide();
     $('#form-5').show();
   });
+
+  
+
+
+  
+
+
+
+  
 
 });
 

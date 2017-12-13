@@ -31,16 +31,16 @@
 					<div class="izvelne" style="margin:0;"><img src="img/back.png"></div>
 				</div>
 				<form id="one-form" action="javascript:void(0)">
-					<div><input name="name" placeholder="Vārds, Uzvārds" onclick="function()"></div>
-					<div><input name="p_code" placeholder="Personas kods"></div>
+					<div><input name="name" class="input" placeholder="Vārds, Uzvārds" onclick="function()"></div>
+					<div><input name="p_code" class="input" placeholder="Personas kods" data-mask="000000-00000"></div>
 					<div class="flex info">
-						<div><input name="phone" placeholder="Tel."></div>
-						<div><input name="e_mail" placeholder="Epasts:"></div>
+						<div><input name="phone" class="input" placeholder="Tel."></div>
+						<div><input name="e_mail" class="input" placeholder="Epasts:"></div>
 					</div>
-					<div><input name="place_of_job" placeholder="Darba vieta:"></div>
-					<div><input name="position" placeholder="Ieņemamais amats"></div>
-					<div><input name="m_income" placeholder="Ikmēneša ienākumi:"></div>
-					<div><input name="m_expenses" placeholder="Ikmēneša izdevumi:"></div>
+					<div><input name="place_of_job" class="input" placeholder="Darba vieta:"></div>
+					<div><input name="position" class="input" placeholder="Ieņemamais amats"></div>
+					<div><input name="m_income" class="input" placeholder="Ikmēneša ienākumi:"></div>
+					<div><input name="m_expenses" class="input" placeholder="Ikmēneša izdevumi:"></div>
 
                     <div><input class="turpinat" type="submit" value="Turpināt"></div>
 				</form>
@@ -62,11 +62,11 @@
 					<div class="izvelne" style="margin:0;"><img src="img/back.png"></div>
 				</div>
 				<form id="two-form" action="javascript:void(0)">
-					<div><input name="city" placeholder="Pilsēta:"></div>
-					<div><input name="street" placeholder="Iela:"></div>
+					<div><input name="city" class="input" placeholder="Pilsēta:"></div>
+					<div><input name="street" class="input" placeholder="Iela:"></div>
 					<div class="flex info">
-						<div><input name="home_nr" placeholder="Mājas nr."></div>
-						<div><input name="flat_nr" placeholder="Dzīvokļa nr.:"></div>
+						<div><input name="home_nr" class="input" placeholder="Mājas nr."></div>
+						<div><input name="flat_nr" class="input" placeholder="Dzīvokļa nr.:"></div>
 					</div>
 					<div><input name="index" placeholder="Pasta indekss:"></div>
 
@@ -90,10 +90,10 @@
 					<div class="izvelne" style="margin:0;"><img src="img/back.png"></div>
 				</div>
 				<form id="three-form" action="javascript:void(0)">
-					<div><input name="pass" placeholder="Parole:" type="password"></div>
-					<div><input name="re_pass" placeholder="Parole atkārtoti:" type="password"></div>
+					<div><input name="pass" class="input" placeholder="Parole:" type="password"></div>
+					<div><input name="re_pass" class="input" placeholder="Parole atkārtoti:" type="password"></div>
 					<div class="flex check">
-						<input name="check" type="radio" class="radio">
+						<input name="check" class="input" type="radio" class="radio">
 						<p>Piekrītu līguma nosacījumiem, atļauju apstrādāt savus personas datus un apliecinu, ka sniegtā informācija ir patiesa.</p>
 					</div>
 
