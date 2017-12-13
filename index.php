@@ -194,7 +194,7 @@
 				</div>
 			</div>
 			
-			</div>
+		</div>
 			
 			<div class="icons_block flex">
 				<div class="icon_border">

@@ -7,11 +7,11 @@
 	</div>
 	<div class="my_nav head">
 		<ul>
-		  <li><a href="">Kā saņemt?</a></li>
-		  <li><a href="">Kā atmaksāt?</a></li>
-		  <li><a href="">Jautājumi un Atbildes</a></li>
+		  <li><a href="#icons_block_sec">Kā saņemt?</a></li>
+		  <li><a href="#block-atmaksat">Kā atmaksāt?</a></li>
+		  <li><a href="#questions">Jautājumi un Atbildes</a></li>
 		  <li><a href="">Līgums</a></li>
-		  <li><a href="">Kontakti</a></li>
+		  <li><a href="#footer">Kontakti</a></li>
 		</ul>
 	</div>	
 	<div class="atribut head">
