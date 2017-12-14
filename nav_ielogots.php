@@ -35,7 +35,7 @@
 				</div>
 				<div class="flex ielogoties-buttons">
 					<a href="mani_dati.php"><button class="turpinat">Ienākt</button></a>
-					<button class="turpinat">Reģistrēties</button>
+					<a href="registracija.php"><button class="turpinat">Registrācija</button></a>
 				</div>
 			</div>
 				
