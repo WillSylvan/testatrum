@@ -2,24 +2,22 @@ $(function() {
     //step-1
   $(document).on('submit','form#one-form',function(){
       let data = $('#one-form').serializeArray()
-
-
-
       console.log(data);
 
+    data.forEach(function(element){
+      console.log(element);
 
+      if(element.value==''){
 
-      // function showValues() {
-      //   var fields = $( ":input" ).serializeArray();
-      //   $( "#results" ).empty();
-      //   jQuery.each( fields, function( i, field ) {
-      //   $( "#results" ).append( field.value + " " );
-      // });
-  // }
-    arr.forEach(function(data) {
-    console.log(data);
+        $('#form-1').hide();
+        $('#form-2').show();  
+        
+        }else{
+          alert("BOx Empty");
+      }
     });
-   
+      
+  
 
     // on succuess
     $('#form-1').hide();
@@ -46,15 +44,6 @@ $(function() {
     $('#form-4').hide();
     $('#form-5').show();
   });
-
-  
-
-
-  
-
-
-
-  
 
 });
 
