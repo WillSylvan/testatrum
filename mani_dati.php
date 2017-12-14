@@ -13,6 +13,7 @@
 		<?php include 'assets/header.php'; ?>
 		
 		<?php include 'assets/profile-form.php'; ?>
+		<style>.bt1 button{background-color:rgb(255, 117, 130)}</style>
 		
 		<div id="sadalas">
 		
@@ -23,7 +24,7 @@
 					<p>Lūdzu apstipriniet zemāk norādīto telefona nr.!</p>
 					<div class="flex x">
 						<div class="number-info flex"><p>Mobilais talrunis:</p><p><span>+371 22334455</span></p></div>
-						<div><button>Nosūtīt kodu</button></div>
+						<div><button id="nosutit-kodu">Nosūtīt kodu</button></div>
 					</div>
 					<p><span>Uz augstāk minēto tel.nr. tiks nosūtīts apstiprinājuma kods.</span></p>
 				</div>
@@ -32,7 +33,7 @@
 					<p>Lūdzu apstipriniet zemāk norādīto telefona nr.!</p>
 					<div class="flex x">
 						<div class="number-info flex"><p>Mobilais talrunis:</p><p><span>+371 22334455</span></p></div>
-						<div><button>Kods nosūtīts</button></div>
+						<div><button id="kods-nosutits">Kods nosūtīts</button></div>
 					</div>
 					<div class="flex koda-parbaude">
 						<div class="flex">
@@ -42,7 +43,7 @@
 							<div class="kods"><input></div>
 							<div class="kods"><input></div>
 						</div>
-						<div><button>Apstiprināt</button></div>
+						<div><button id="aps">Apstiprināt</button></div>
 					</div>
 				</div>
 				
@@ -68,32 +69,22 @@
 				
 				<!--DEMO DEMO DEMO DEMO DEMO-->
 				<div style="position: absolute; top: 10vw; right: 20vw;">
-					<button id="a">1</button>
-					<button id="b">2</button>
-					<button id="c">3</button>
-					<button id="null">-</button>
+					<button id="a">Tel. apst.</button>
 				</div>
 				<script>
 				$(document).ready(function(){
 					$("#a").click(function () {
 						$("#first-step-user-check").css("display","block");
-						$("#second-step-user-check").css("display","none");
-						$("#third-step-user-check").css("display","none");
 					});
-					$("#b").click(function () {
+					$("#nosutit-kodu").click(function () {
 						$("#first-step-user-check").css("display","none");
 						$("#second-step-user-check").css("display","block");
 						$("#third-step-user-check").css("display","none");
 					});
-					$("#c").click(function () {
+					$("#aps").click(function () {
 						$("#first-step-user-check").css("display","none");
 						$("#second-step-user-check").css("display","none");
 						$("#third-step-user-check").css("display","flex");
-					});
-					$("#null").click(function () {
-						$("#first-step-user-check").css("display","none");
-						$("#second-step-user-check").css("display","none");
-						$("#third-step-user-check").css("display","none");
 					});
 				});
 				</script>

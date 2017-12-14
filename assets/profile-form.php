@@ -7,9 +7,9 @@
 	<div id="main-id-content">
 		<div class="profil-header"><h1>Mans profils</h1></div>
 		<div id="profils">
-			<a href="mani_dati.php"><div class="flex bt"><button class="div"></button><p>Mani dati</p></div></a>
-			<a href="mainit_paroli.php"><div class="flex bt"><button class="div"></button><p>Mainit paroli</p></div></a>
-			<a href="mani_krediti.php"><div class="flex bt"><button class="div"></button><p>Mani krediti</p></div></a>
+			<a href="mani_dati.php"><div class="flex bt1"><button class="div"></button><p>Mani dati</p></div></a>
+			<a href="mainit_paroli.php"><div class="flex bt2"><button class="div"></button><p>Mainit paroli</p></div></a>
+			<a href="mani_krediti.php"><div class="flex bt3"><button class="div"></button><p>Mani krediti</p></div></a>
 		</div>
 	</div>
 </div>

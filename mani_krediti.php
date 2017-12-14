@@ -12,7 +12,10 @@
 
 	<body>
 		<?php include 'assets/header.php'; ?>
+		
 		<?php include 'assets/profile-form.php'; ?>
+		<style>.bt3 button{background-color:rgb(255, 117, 130)}</style>
+		
 	<!--MANI KREDITI-->
 	<div id="main-content-credit" class="flex">
 	
@@ -119,11 +122,55 @@
 			</div>
 			
 		</div>
+	
+		<div id="nakamais-aizdevums">
+			<h1>Piesakies nākamajam aizdevumam šodien un saņem atlaidi komisijas maksai!</h1>
+			<p>Lai saņemtu atlaidi, ieraksti vārdu <b>KLIENTS</b> atlaižu lauciņā, noformējot kredītu.</p>
+			
+			<div class="flex atlaides">
+				<div>
+					<p>Summai virs <b>$200:</b> 20% atlaide</p>
+					<p>Summai virs <b>$300:</b> 30% atlaide</p>
+				</div>
+				<div>
+					<button id="sms-ligums">Pieteikties</button>
+				</div>
+			</div>
+			
+		</div>
 	</div>
 	
+	<div id="main-content-credit-izvelne-2">
 	
+		<div>
+			<p>Līguma nr.</p>
+			<h2>SM4590</h2>
+		</div>
+		
+		<div class="flex borders">
+			<div></div>
+			<div></div>
+		</div>
+		
+		<div></div>
+		
+		<div></div>
+		
+	</div>
 	
 	</div>
+	
+	<!--DEMO DEMO DEMO DEMO DEMO-->
+	<script>
+	$(document).ready(function(){
+		$("#sms-ligums").click(function () {
+			$("#main-content-credit-izvelne").css("display","none");
+			$("#main-content-credit-izvelne-2").css("display","block");
+		});
+	});
+	</script>
+	<!--DEMO DEMO DEMO DEMO DEMO-->
+	
 		
 		<?php include 'assets/footer.php'; ?>	
 	</body>
