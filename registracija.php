@@ -31,16 +31,16 @@
 					<div class="izvelne" style="margin:0;"><img src="img/back.png"></div>
 				</div>
 				<form id="one-form" action="javascript:void(0)">
-					<div><input name="name" id="name" class="input" placeholder="Vārds, Uzvārds" onclick="function()"></div>
-					<div><input name="p_code" id="p_code" class="input" placeholder="Personas kods" data-mask="000000-00000"></div>
+					<div><input name="name" id="name" class="input" placeholder="Vārds, Uzvārds" onclick="function()" onkeyup="checkk($(this))"></div>
+					<div><input name="p_code" id="p_code" class="input" placeholder="Personas kods" data-mask="000000-00000" onkeyup="checkk($(this))"></div>
 					<div class="flex info">
-						<div><input name="phone" id="phone" class="input" placeholder="Tel."></div>
-						<div><input name="e_mail" id="email" class="input" placeholder="Epasts:"></div>
+						<div><input name="phone" id="phone" class="input" placeholder="Tel." onkeyup="checkk($(this))"></div>
+						<div><input name="e_mail" id="email" class="input" placeholder="Epasts:" onkeyup="checkk($(this))"></div>
 					</div>
-					<div><input name="place_of_job" id="place_of_job" class="input" placeholder="Darba vieta:"></div>
-					<div><input name="position" id="position" class="input" placeholder="Ieņemamais amats"></div>
-					<div><input name="m_income" id="m_income" class="input" placeholder="Ikmēneša ienākumi:"></div>
-					<div><input name="m_expenses" id="m_expenses" class="input" placeholder="Ikmēneša izdevumi:"></div>
+					<div><input name="place_of_job" id="place_of_job" class="input" placeholder="Darba vieta:" onkeyup="checkk($(this))"></div>
+					<div><input name="position" id="position" class="input" placeholder="Ieņemamais amats" onkeyup="checkk($(this))"></div>
+					<div><input name="m_income" id="m_income" class="input" placeholder="Ikmēneša ienākumi:" onkeyup="checkk($(this))"></div>
+					<div><input name="m_expenses" id="m_expenses" class="input" placeholder="Ikmēneša izdevumi:" onkeyup="checkk($(this))"></div>
 
                     <div><input class="turpinat" type="submit" value="Turpināt"></div>
 				</form>
