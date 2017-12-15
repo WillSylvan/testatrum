@@ -7,17 +7,38 @@
 		<title></title>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
 
+		<!--DEMO DEMO DEMO DEMO DEMO-->
+		<div style="position: absolute; top: 10vw; right: 20vw;">
+			<button id="a">Tel. apst.</button>
+		</div>
+		<script>
+		$(document).ready(function(){
+			$("#a").click(function () {
+				$("#first-step-user-check").css("display","block");
+			});
+			$("#nosutit-kodu").click(function () {
+				$("#first-step-user-check").css("display","none");
+				$("#second-step-user-check").css("display","block");
+				$("#third-step-user-check").css("display","none");
+			});
+			$("#aps").click(function () {
+				$("#first-step-user-check").css("display","none");
+				$("#second-step-user-check").css("display","none");
+				$("#third-step-user-check").css("display","flex");
+			});
+		});
+		</script>
+		<!--DEMO DEMO DEMO DEMO DEMO-->
+		
    </head>
 
 	<body>
 		<?php include 'assets/header.php'; ?>
-		
 		<?php include 'assets/profile-form.php'; ?>
 		<style>.bt1 button{background-color:rgb(255, 117, 130)}</style>
 		
 		<div id="sadalas">
-		
-		<!--MANI DATI-->
+
 			<div class="sadalas mani_dati">
 			
 				<div class="user-check" id="first-step-user-check">
@@ -66,32 +87,8 @@
 						<div><input placeholder="Deklarētā adrese:"></div>
 					</form>
 				</div>
-				
-				<!--DEMO DEMO DEMO DEMO DEMO-->
-				<div style="position: absolute; top: 10vw; right: 20vw;">
-					<button id="a">Tel. apst.</button>
-				</div>
-				<script>
-				$(document).ready(function(){
-					$("#a").click(function () {
-						$("#first-step-user-check").css("display","block");
-					});
-					$("#nosutit-kodu").click(function () {
-						$("#first-step-user-check").css("display","none");
-						$("#second-step-user-check").css("display","block");
-						$("#third-step-user-check").css("display","none");
-					});
-					$("#aps").click(function () {
-						$("#first-step-user-check").css("display","none");
-						$("#second-step-user-check").css("display","none");
-						$("#third-step-user-check").css("display","flex");
-					});
-				});
-				</script>
-				<!--DEMO DEMO DEMO DEMO DEMO-->
-					
-			</div>	
-		
+	
+			</div>
 		</div>
 		
 		<?php include 'assets/footer.php'; ?>	

@@ -510,7 +510,7 @@ button.accordion.active:after {
 }
 .form_ input{
 	width: 85%;
-	
+	cursor: pointer;
 	margin: unset;
     margin-right: unset;
     margin-left: unset;
