@@ -1,12 +1,12 @@
-// var checkk = function(){}
+var checkk = function(){}
 
 $(function() {
     //step-1
 
-   checkk=function(){
-// alert(1231212)
+  checkk=function(){
+    // alert(1231212)
     let couner =0
-    let approved = [false, false, false, false, false, false,false, false ]
+    let approved = [false, false, false, false, false, false, false, false ]
     
     let data = $('#one-form').serializeArray()
     // console.log(data);
@@ -19,18 +19,35 @@ $(function() {
       }else{
         approved[couner]=true
       }
+
       couner++
       
-
     });
+
     console.log(approved) 
+    // var value = ""
+      $(document).ready(function(){
+        $('.input').blur(function(){
+            // var value = $(this).value
+            // var value = $("#name").val();
+            console.log(value)
 
-    if( approved.indexOf(false)== -1){
-      alert(1)
-    }
+          if (value.length < 3) {
 
+            alert(false)
+            return false; // keep form from submitting
+          }else{
 
+            alert(true)
+            return true
+          }
+        });
+      });
   }
+
+  
+
+
 
   $(document).on('submit','form#one-form',function(){
 
@@ -39,7 +56,7 @@ $(function() {
     $('#form-2').show();
   });
 
-// ---------
+  // ---------
 
   $(document).on('submit','form#two-form',function(){
       let data = $('#two-form').serializeArray()

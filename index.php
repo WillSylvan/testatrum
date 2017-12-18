@@ -12,7 +12,7 @@
 		</script>-->
 		<script>
 		var checkk = function(){
-			
+	
 		}
 		function pinkColor(){
 			$("#first-form").css({"background-image":"url(img/form3.png)","z-index":"200"});
