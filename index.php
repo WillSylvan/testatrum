@@ -15,6 +15,9 @@
 	
 		}
 		function pinkColor(){
+			
+		if ($('body').width() >= 900) {
+		
 			$("#first-form").css({"background-image":"url(img/form3.png)","z-index":"200"});
 			$("#second-form").css({"background-image":"none","z-index":"-1"});
 			
@@ -52,9 +55,13 @@
 			$("#img-13").attr("src","img/ico/2.png");
 			$("#img-14").attr("src","img/ico/3.png");
 		}
+		}
 		</script>
 	   	<script>
 		function violetColor(){
+		if ($('body').width() >= 900) {
+		
+		
 			$("#first-form").css({"background-image":"none","z-index":"-1"});
 			$("#second-form").css({"background-image":"url(img/form4.png)","z-index":"200"});
 			
@@ -91,6 +98,7 @@
 			$("#img-12").attr("src","img/violet/ico/16.png");
 			$("#img-13").attr("src","img/violet/ico/17.png");
 			$("#img-14").attr("src","img/violet/ico/18.png");
+		}
 		}
 	   </script>
     </head>
@@ -198,6 +206,21 @@
 			</div>
 			
 		</div>
+		
+		<div id="round-buttons" class="flex">
+			<button id="butt1"></button>
+			<button id="butt2"></button>
+		</div>
+		
+		<script>
+			$(document).ready(function(){
+				$('#round-buttons button').click(function(){
+					id = $(this).index()
+					$('#top-forms .form_').css('display','none')
+						$('#top-forms .form_:eq('+id+')').fadeIn(300)
+				})
+			});
+		</script>
 			
 			<div class="icons_block flex">
 				<div class="icon_border">
