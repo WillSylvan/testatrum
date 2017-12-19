@@ -9,10 +9,10 @@ $(function() {
     let approved = [false, false, false, false, false, false, false, false ]
     
     let data = $('#one-form').serializeArray()
-    // console.log(data);
+    console.log(data);
 
     data.forEach(function(element){
-      // console.log(element);
+      console.log(element);
 
       if(element.value==''){
         approved[couner]=false
@@ -24,30 +24,27 @@ $(function() {
       
     });
 
-    console.log(approved) 
+    // console.log(approved) 
+
     // var value = ""
-      $(document).ready(function(){
-        $('.input').blur(function(){
-            // var value = $(this).value
-            // var value = $("#name").val();
-            console.log(value)
+    $(document).ready(function(){
+      $('.input').blur(function(){
+          // var value = $(this).value
+          // var value = $("#name").val();
+          // console.log(value)
 
-          if (value.length < 3) {
+        if (value.length < 3) {
 
-            alert(false)
-            return false; // keep form from submitting
-          }else{
+          alert(false)
+          return false; // keep form from submitting
+        }else{
 
-            alert(true)
-            return true
-          }
-        });
+          alert(true)
+          return true
+        }
       });
+    });
   }
-
-  
-
-
 
   $(document).on('submit','form#one-form',function(){
 
