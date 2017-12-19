@@ -596,4 +596,35 @@ button.accordion.active:after {
 	cursor:pointer;
 }
 @media screen and (max-width: 900px){
+#top-forms{
+	flex-wrap: wrap;
+}
+.form_ {
+    width: 100%;
+    height: 140vw;
+    margin-bottom: 4vw;
+    cursor: pointer;
+}
+#first-form, #second-form {
+    background-image: url(../img/form-mobile.png);
+	left: 0;
+	right: 0;
+	top: 0;
+}
+.short_range_form{
+	display: block !important;
+}
+.inputs {
+    width: 100%;
+}
+.info_block {
+    width: 100%;
+    margin-top: 3vw;
+}
+.form_ form {
+    width: 100%;
+    height: 65%;
+    margin: 12vw;
+}
+
 }

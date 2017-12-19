@@ -263,9 +263,9 @@ input[type=radio]:checked{
 	margin: 0;
     font-size: 1vw;
 }
-#profils-added{
-	position: absolute;
-    top: 29vw;
+#profils-added {
+    position: absolute;
+    top: 35vw;
     left: 12vw;
 }
 #profils-added p{

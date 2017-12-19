@@ -27,7 +27,22 @@
 	<body>
 		<?php include 'assets/header.php'; ?>
 		<?php include 'assets/profile-form.php'; ?>
-		<style>.bt3 button{background-color:rgb(255, 117, 130)}</style>
+		<style>
+		.bt3 button{background-color:rgb(255, 117, 130)}
+		#main-id-content{
+			position: relative;
+			top: 10vw;
+		}
+		#main-id {
+			background-image: url(img/form7.png) !important;
+			height: 43vw;
+			position: absolute;
+			top: 8vw;
+			left: 6vw;
+			align-items: unset !important;
+			justify-content: center;
+		}
+		</style>
 		
 		<div id="profils-added">
 			<a href="esosie_krediti.php"><div class="flex bt4"><button class="div"></button><p>Esošie kredīti</p></div></a>
