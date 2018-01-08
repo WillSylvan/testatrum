@@ -64,10 +64,10 @@
 
 								<div class="short_range_form flex">
 									<div class="inputs" id="important">
-										<h1><span class="pink">Īstermiņa</span> aizdevums</h1>
+										<h1><span class="pink">Īstermiņa</span> kredīts</h1>
 										<div id="short_echo_money_cont">
 
-											<h3> Cik vēlies aizņemties?</h3>
+											<h3> Cik vēlaties aizņemties</h3>
 											<p>Aizdevums: <span id="short_echo_money_val"></span></p>
 
 											<input type="range" name="tickmarks" min="50" max="500" value="250" class="slider" id="short_range_money">
@@ -76,14 +76,14 @@
 										<div id="short_echo_days_cont">
 
 											<h3>Uz cik ilgu laiku?</h3>
-											<p>Dienas: <span id="short_echo_days_val"></span></p>
+											<p>Mēneši: <span id="short_echo_days_val"></span></p>
 
 											<input type="range" min="10" max="30" value="10" class="slider" id="short_range_days">							
 										</div>
 									
 										<div class="flex formulas">
 											<div>
-												<h2>Summa:<span id="summa"> 0.00 </span></h2>
+												<h2>Kredīts:<span id="summa"> 0.00 </span></h2>
 												<h2>Kopā:<span id="kopa">100.00</span></h2>
 											</div>
 											<div>
@@ -94,11 +94,11 @@
 									</div>
 
 									<div class="info_block">
-										<h5>Atmaksāt līdz: <span class="pink">20.20.20</span></h5>
+										<h5>Atmaksas datums: <span class="pink">20.20.2020</span></h5>
 
-										<h4>Kredīta pagarināšana par 30 dienām:<br><b>22.20$</b></h4>
+										<h4>Kredīta pagarināšana uz 30 dienām:<br><b>22.20 EUR</b></h4>
 
-										<a href="jauzliek links" class="links">*Standarta informācija</a>
+										<a href="jauzliek links" class="links">*Standartinformācija</a>
 										<input type="button" value="SAŅEMT NAUDU" class="rose-button button-submit">
 									</div>
 								</div>
@@ -113,10 +113,10 @@
 
 								<div class="short_range_form flex">
 									<div class="inputs" id="important2">
-										<h1><span class="violet">Ilgtermiņa</span> aizdevums</h1>
+										<h1><span class="violet">Ilgtermiņa</span> kredīts</h1>
 										<div id="short_echo_money_cont">
 
-											<h3> Cik vēlies aizņemties?</h3>
+											<h3> Cik vēlaties aizņemties</h3>
 											<p>Aizdevums: <span id="short_echo_money_val"></span></p>
 
 											<input type="range" name="tickmarks" min="50" max="500" value="250" class="slider" id="short_range_money">
@@ -125,14 +125,14 @@
 										<div id="short_echo_days_cont">
 
 											<h3>Uz cik ilgu laiku?</h3>
-											<p>Dienas: <span id="short_echo_days_val"></span></p>
+											<p>Mēneši: <span id="short_echo_days_val"></span></p>
 
 											<input type="range" min="10" max="30" value="10" class="slider" id="short_range_days">							
 										</div>
 									
 										<div class="flex formulas">
 											<div>
-												<h2>Summa:<span id="summa"> 0.00 </span></h2>
+												<h2>Kredīts:<span id="summa"> 1000.00 </span></h2>
 												<h2>Kopā:<span id="kopa">100.00</span></h2>
 											</div>
 											<div>
@@ -143,12 +143,13 @@
 									</div>
 
 									<div class="info_block">
-										<h5>Atmaksāt līdz: <span class="violet">20.20.20</span></h5>
-
-										<h4>Kredīta pagarināšana par 30 dienām:<br><b>22.20$</b></h4>
-
-										<a href="jauzliek links" class="links">*Standarta informācija</a>
+										<h5>Kredīts jāatmaksā līdz<br>   <span class="violet">01.09.2018</span></h5>
+										<h5>Ikmēneša maksājums<br> <span class="violet">158.15 EUR</span></h5>
+										<h5>Pirmā maksājuma datums<br>   <span class="violet">19.01.2018</span></h5>
+										
+										<a href="jauzliek links" class="links">*Standartinformācija</a>
 										<input type="button" value="SAŅEMT NAUDU" class="violet-button button-submit">
+										
 									</div>
 								</div>
 							</form>

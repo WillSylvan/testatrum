@@ -12,6 +12,14 @@ body{
 #round-buttons{
 	display:none;
 }
+#grafiks{
+	position: absolute;
+    width: 55% !important;
+    left: 4vw;
+    bottom: 7.5vw;
+}
+
+
 /*GENERAL-HEADLINE*/
 .headline h1{
 	text-align: center;
@@ -499,7 +507,7 @@ button.accordion.active:after {
 .form_ h5{
     margin: 0;
     font-size: 0.8vw;
-    margin-bottom: 1vw;
+    margin-bottom: 0.5vw;
 }
 .form_ p{
 	margin: 0;
@@ -891,4 +899,5 @@ button.accordion {
     border: none;
 	cursor: pointer;
 }
+#grafiks{display:none}
 }

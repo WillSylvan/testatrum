@@ -42,7 +42,7 @@
 			<div id="istermina">
 			
 				<h2>
-					<span>Īstermiņā</span> aizdevumi
+					<span>Īstermiņā</span> kredīts
 				</h2>
 				
 				<p>
@@ -126,7 +126,7 @@
 			
 			<div id="ilgtermina">
 				<h2>
-					<span>Ilgtermiņa</span> aizdevumi
+					<span>Ilgtermiņa</span> kredīts
 				</h2>
 				
 				<p>
