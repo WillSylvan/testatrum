@@ -20,6 +20,7 @@
    </head>
 
 	<body>
+		<?php include 'assets/profile-menu.php'; ?>
 		<?php include 'assets/header.php'; ?>
 		<?php include 'assets/profile-form.php'; ?>
 		<style>.bt2 button{background-color:rgb(255, 117, 130)}</style>

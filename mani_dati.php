@@ -8,7 +8,7 @@
 		<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 		<!--DEMO DEMO DEMO DEMO DEMO-->
-		<div style="position: absolute; top: 10vw; right: 20vw;">
+		<div style="position: absolute; top: 10vw; right: 20vw;" class="testbutton">
 			<button id="a">Tel. apst.</button>
 		</div>
 		<script>
@@ -33,6 +33,7 @@
    </head>
 
 	<body>
+		<?php include 'assets/profile-menu.php'; ?>
 		<?php include 'assets/header.php'; ?>
 		<?php include 'assets/profile-form.php'; ?>
 		<style>.bt1 button{background-color:rgb(255, 117, 130)}</style>
@@ -57,7 +58,7 @@
 						<div><button id="kods-nosutits">Kods nosūtīts</button></div>
 					</div>
 					<div class="flex koda-parbaude">
-						<div class="flex">
+						<div class="flex kodam">
 							<p class="apstiprinajums"><span>Ievadiet uz telefona numuru<br>atsutīto četrciparu kodu:</span></p>
 							<div class="kods"><input></div>
 							<div class="kods"><input></div>

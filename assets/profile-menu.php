@@ -6,12 +6,12 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
 		<title></title>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
-	    <script type="text/javascript" src="js/testjs.js"></script>
+	    <script type="text/javascript" src="js/profile-animate.js"></script>
    </head>
 
 	<body>
-		<?php include 'assets/header.php'; ?>
 		
+		<div id="profile-menu"><img src="img/profile.png"></div>
 
 
 
@@ -21,7 +21,5 @@
 
 
 
-
-		<?php include 'assets/footer.php'; ?>	
 	</body>
 </html>

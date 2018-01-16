@@ -1,6 +1,7 @@
 <html>
     <head>     
-		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">	<link rel="stylesheet" type="text/css" href="style/index.css">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">	
+		<link rel="stylesheet" type="text/css" href="style/index.css">
 		<link rel="stylesheet" type="text/css" href="style/style.css">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
 		<title></title>

@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <div id="menu-mobile"><img src="img/burgers.png"></div>
-<div id="logo-mobile"><img src="img/logo.svg" alt="logo"></div>
+<div id="logo-mobile"><a href="index.php"><img src="img/logo.svg" alt="logo"></a></div>
 <script>
 $(document).ready(function(){
 	if ($('body').width() <= 900) {
@@ -32,11 +32,11 @@ $(document).ready(function(){
 	</div>
 	<div class="my_nav head">
 		<ul>
-		  <li><a href="#icons_block_sec">Kā saņemt?</a></li>
-		  <li><a href="#block-atmaksat">Kā atmaksāt?</a></li>
-		  <li><a href="#questions">Jautājumi un Atbildes</a></li>
+		  <li><a href="index.php#icons_block_sec">Kā saņemt?</a></li>
+		  <li><a href="index.php#block-atmaksat">Kā atmaksāt?</a></li>
+		  <li><a href="index.php#questions">Jautājumi un Atbildes</a></li>
 		  <li><a href="">Līgums</a></li>
-		  <li><a href="#footer">Kontakti</a></li>
+		  <li><a href="index.php#footer">Kontakti</a></li>
 		</ul>
 	</div>	
 	<div class="atribut head">

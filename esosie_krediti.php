@@ -11,6 +11,7 @@
    </head>
 
 	<body>
+		<?php include 'assets/profile-menu.php'; ?>
 		<?php include 'assets/header.php'; ?>
 		<?php include 'assets/profile-form.php'; ?>
 		<style>
@@ -27,6 +28,32 @@
 			left: 6vw;
 			align-items: unset !important;
 			justify-content: center;
+		}
+		
+		@media screen and (max-width: 900px){
+		#main-id, #profile-added {
+			width: 100% !important;
+			height: 130vw !important;
+			position: fixed !important;
+			top: 0 !important;
+			left: 0 !important;
+			align-items: center !important;
+			justify-content: center;
+			background-image: -moz-linear-gradient( 180deg, rgba(255,116,131,0.9) 0%, rgba(253,158,98,0.9) 100%) !important;
+			background-image: -webkit-linear-gradient( 180deg, rgba(255,116,131,0.9) 0%, rgba(253,158,98,0.9) 100%) !important;
+			background-image: -ms-linear-gradient( 180deg, rgba(255,116,131,0.9) 0%, rgba(253,158,98,0.9) 100%) !important;
+			z-index:2
+		}
+		#main-id-content{
+			position: relative;
+			top: 20vw;
+		}
+		#profils-added {
+			position: fixed;
+			top: 60vw;
+			left: 30vw;
+			z-index: 2;
+		}
 		}
 		</style>
 		
@@ -54,62 +81,62 @@
 				
 					<div>
 						<div><h1>Kredīta nr.</h1></div>
-						<div><h1>Statuss</h1></div>
+						<div class="statuss"><h1>Statuss</h1></div>
 						<div class="money"><h1>Kredīts</h1></div>
-						<div class="money"><h1>Komisija</h1></div>
-						<div><h1>Dienu skaits</h1></div>
+						<div class="money komisija"><h1>Komisija</h1></div>
+						<div class="dienu-skaits"><h1>Dienu skaits</h1></div>
 						<div><h1>Atmaksāt līdz</h1></div>
-						<div><h1>Kopā atmaksāt</h1></div>
+						<div class="kopa-atm"><h1>Kopā atmaksāt</h1></div>
 					</div>
 					
 					<div class="with-borders">
 						<div class="nr"><h3>5647-0</h3><p>20.12.2017</p></div>
-						<div class="nr"><h3><span class="green">Aktīvs</span></h3><p>20.12.2017</p></div>
+						<div class="nr statuss"><h3><span class="green">Aktīvs</span></h3><p>20.12.2017</p></div>
 						<div class="money"><p>$200</p></div>
-						<div class="money"><p>$20.00</p></div>
-						<div><p>30 dienas</p></div>
+						<div class="money komisija"><p>$20.00</p></div>
+						<div class="dienu-skaits"><p>30 dienas</p></div>
 						<div><p>20.12.2017</p></div>
-						<div><p><b>$220.00</b></p></div>
+						<div class="kopa-atm"><p><b>$220.00</b></p></div>
 					</div>
 					
 					<div class="with-borders">
 						<div class="nr"><h3>5647-0</h3><p>20.12.2017</p></div>
-						<div class="nr"><h3><span class="yellow">Pieprasīts</span></h3><p>20.12.2017</p></div>
+						<div class="nr statuss"><h3><span class="yellow">Pieprasīts</span></h3><p>20.12.2017</p></div>
 						<div class="money"><p>$200</p></div>
-						<div class="money"><p>$20.00</p></div>
-						<div><p>30 dienas</p></div>
+						<div class="money komisija"><p>$20.00</p></div>
+						<div class="dienu-skaits"><p>30 dienas</p></div>
 						<div><p>20.12.2017</p></div>
-						<div><p><b>$220.00</b></p></div>
+						<div class="kopa-atm"><p><b>$220.00</b></p></div>
 					</div>
 					
 					<div class="with-borders">
 						<div class="nr"><h3>5647-0</h3><p>20.12.2017</p></div>
-						<div class="nr"><h3><span class="violetc">Pagarināts</span></h3><p>20.12.2017</p></div>
+						<div class="nr statuss"><h3><span class="violetc">Pagarināts</span></h3><p>20.12.2017</p></div>
 						<div class="money"><p>$200</p></div>
-						<div class="money"><p>$20.00</p></div>
-						<div><p>30 dienas</p></div>
+						<div class="money komisija"><p>$20.00</p></div>
+						<div class="dienu-skaits"><p>30 dienas</p></div>
 						<div><p>20.12.2017</p></div>
-						<div><p><b>$220.00</b></p></div>
+						<div class="kopa-atm"><p><b>$220.00</b></p></div>
 					</div>
 					
 					<div class="with-borders">
 						<div class="nr"><h3>5647-0</h3><p>20.12.2017</p></div>
-						<div class="nr"><h3><span class="light-green">Apstiprināts</span></h3><p>20.12.2017</p></div>
+						<div class="nr statuss"><h3><span class="light-green">Apstiprināts</span></h3><p>20.12.2017</p></div>
 						<div class="money"><p>$200</p></div>
-						<div class="money"><p>$20.00</p></div>
-						<div><p>30 dienas</p></div>
+						<div class="money komisija"><p>$20.00</p></div>
+						<div class="dienu-skaits"><p>30 dienas</p></div>
 						<div><p>20.12.2017</p></div>
-						<div><p><b>$220.00</b></p></div>
+						<div class="kopa-atm"><p><b>$220.00</b></p></div>
 					</div>
 					
 					<div class="with-borders">
 						<div class="nr"><h3>5647-0</h3><p>20.12.2017</p></div>
-						<div class="nr"><h3><span class="red">Kavēts</span></h3><p>20.12.2017</p></div>
+						<div class="nr statuss"><h3><span class="red">Kavēts</span></h3><p>20.12.2017</p></div>
 						<div class="money"><p>$200</p></div>
-						<div class="money"><p>$20.00</p></div>
-						<div><p>30 dienas</p></div>
+						<div class="money komisija"><p>$20.00</p></div>
+						<div class="dienu-skaits"><p>30 dienas</p></div>
 						<div><p>20.12.2017</p></div>
-						<div><p><b>$220.00</b></p></div>
+						<div class="kopa-atm"><p><b>$220.00</b></p></div>
 					</div>
 					
 				</div>
@@ -138,32 +165,32 @@
 				
 					<div>
 						<div><h1>Kredīta nr.</h1></div>
-						<div><h1>Statuss</h1></div>
+						<div class="statuss"><h1>Statuss</h1></div>
 						<div class="money"><h1>Kredīts</h1></div>
-						<div class="money"><h1>Komisija</h1></div>
-						<div><h1>Dienu skaits</h1></div>
+						<div class="money komisija"><h1>Komisija</h1></div>
+						<div class="dienu-skaits"><h1>Dienu skaits</h1></div>
 						<div><h1>Atmaksāt līdz</h1></div>
-						<div><h1>Kopā atmaksāt</h1></div>
+						<div class="kopa-atm"><h1>Kopā atmaksāt</h1></div>
 					</div>
 					
 					<div class="with-borders">
 						<div class="nr"><h3>5647-0</h3><p>20.12.2017</p></div>
-						<div class="nr"><h3><span class="pinkc">Anulēts</span></h3><p>20.12.2017</p></div>
+						<div class="nr statuss"><h3><span class="pinkc">Anulēts</span></h3><p>20.12.2017</p></div>
 						<div class="money"><p>$200</p></div>
-						<div class="money"><p>$20.00</p></div>
-						<div><p>30 dienas</p></div>
+						<div class="money komisija"><p>$20.00</p></div>
+						<div class="dienu-skaits"><p>30 dienas</p></div>
 						<div><p>20.12.2017</p></div>
-						<div><p><b>$220.00</b></p></div>
+						<div class="kopa-atm"><p><b>$220.00</b></p></div>
 					</div>
 					
 					<div class="with-borders">
 						<div class="nr"><h3>5647-0</h3><p>20.12.2017</p></div>
-						<div class="nr"><h3><span class="greyc">Atmaksāts</span></h3><p>20.12.2017</p></div>
+						<div class="nr statuss"><h3><span class="greyc">Atmaksāts</span></h3><p>20.12.2017</p></div>
 						<div class="money"><p>$200</p></div>
-						<div class="money"><p>$20.00</p></div>
-						<div><p>30 dienas</p></div>
+						<div class="money komisija"><p>$20.00</p></div>
+						<div class="dienu-skaits"><p>30 dienas</p></div>
 						<div><p>20.12.2017</p></div>
-						<div><p><b>$220.00</b></p></div>
+						<div class="kopa-atm"><p><b>$220.00</b></p></div>
 					</div>
 					
 				</div>

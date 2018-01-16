@@ -25,6 +25,7 @@
    </head>
 
 	<body>
+		<?php include 'assets/profile-menu.php'; ?>
 		<?php include 'assets/header.php'; ?>
 		<?php include 'assets/profile-form.php'; ?>
 		<style>
@@ -68,7 +69,7 @@
 										<div id="short_echo_money_cont">
 
 											<h3> Cik vēlaties aizņemties</h3>
-											<p>Aizdevums: <span id="short_echo_money_val"></span></p>
+											<p>Kredīts: <span id="short_echo_money_val"></span></p>
 
 											<input type="range" name="tickmarks" min="50" max="500" value="250" class="slider" id="short_range_money">
 										</div>
@@ -117,7 +118,7 @@
 										<div id="short_echo_money_cont">
 
 											<h3> Cik vēlaties aizņemties</h3>
-											<p>Aizdevums: <span id="short_echo_money_val"></span></p>
+											<p>Kredīts: <span id="short_echo_money_val"></span></p>
 
 											<input type="range" name="tickmarks" min="50" max="500" value="250" class="slider" id="short_range_money">
 										</div>
