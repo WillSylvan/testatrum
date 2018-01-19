@@ -43,6 +43,32 @@
 			align-items: unset !important;
 			justify-content: center;
 		}
+
+		@media screen and (max-width: 900px){
+		#main-id, #profile-added {
+			width: 100% !important;
+			height: 150vw !important;
+			position: fixed !important;
+			top: 0 !important;
+			left: 0 !important;
+			align-items: center !important;
+			justify-content: center;
+			background-image: -moz-linear-gradient( 180deg, rgba(255,116,131,0.9) 0%, rgba(253,158,98,0.9) 100%) !important;
+			background-image: -webkit-linear-gradient( 180deg, rgba(255,116,131,0.9) 0%, rgba(253,158,98,0.9) 100%) !important;
+			background-image: -ms-linear-gradient( 180deg, rgba(255,116,131,0.9) 0%, rgba(253,158,98,0.9) 100%) !important;
+			z-index:2
+		}
+		#main-id-content{
+			position: relative;
+			top: 20vw;
+		}
+		#profils-added {
+			position: fixed;
+			top: 60vw;
+			left: 30vw;
+			z-index: 2;
+		}
+		}
 		</style>
 		
 		<div id="profils-added">

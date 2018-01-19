@@ -33,7 +33,7 @@
 		@media screen and (max-width: 900px){
 		#main-id, #profile-added {
 			width: 100% !important;
-			height: 130vw !important;
+			height: 150vw !important;
 			position: fixed !important;
 			top: 0 !important;
 			left: 0 !important;
