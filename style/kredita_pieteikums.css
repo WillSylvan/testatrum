@@ -693,6 +693,14 @@ background-color: rgb(251, 137, 112);
 .red{color: #db5852 !important}
 .pinkc{color: #cd7aca !important}
 .greyc{color: #bebebe !important}
+
+
+
+/*PARKREDITACIJA*/
+#parkreditacija{
+	min-height: 42vw;
+}
+
 @media screen and (max-width: 1300px){
 
 }
