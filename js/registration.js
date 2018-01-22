@@ -1,80 +1,65 @@
-var checkk = function(){}
+//////////////////////////////////////////
+// Start executing code, when page loads.
+//////////////////////////////////////////
 
-$(function() {
-    //step-1
+$(document).ready(function() {
 
-  checkk=function(){
-    // alert(1231212)
-    let couner =0
-    let approved = [false, false, false, false, false, false, false, false ]
-    
-    let data = $('#one-form').serializeArray()
-    console.log(data);
+  //////////////////////////////////////////
+  // Mask for inputs.
+  //////////////////////////////////////////
 
-    data.forEach(function(element){
-      console.log(element);
+  $('input[name="p_code"]').mask('000000-00000');
+  $('input[name="phone"]').mask('00000000');
 
-      if(element.value==''){
-        approved[couner]=false
-      }else{
-        approved[couner]=true
-      }
+  //////////////////////////////////////////
+  // Translation. (Going to be as separate files lv and ru)
+  //////////////////////////////////////////
 
-      couner++
-      
-    });
-
-    // console.log(approved) 
-
-    // var value = ""
-    $(document).ready(function(){
-      $('.input').blur(function(){
-          // var value = $(this).value
-          // var value = $("#name").val();
-          // console.log(value)
-
-        if (value.length < 3) {
-
-          alert(false)
-          return false; // keep form from submitting
-        }else{
-
-          alert(true)
-          return true
-        }
-      });
-    });
-  }
-
-  $(document).on('submit','form#one-form',function(){
-
-    // on succuess
-    $('#form-1').hide();
-    $('#form-2').show();
-  });
-
-  // ---------
-
-  $(document).on('submit','form#two-form',function(){
-      let data = $('#two-form').serializeArray()
-      console.log(data);
-    $('#form-2').hide();
-    $('#form-3').show();
-  });
-
-  $(document).on('submit','form#three-form',function(){
-      let data = $('#three-form').serializeArray()
-      console.log(data);
-    $('#form-3').hide();
-    $('#form-4').show();
-  });
-
-  $(document).on('submit','form#four-form',function(){
-      let data = $('#four-form').serializeArray()
-      console.log(data);
-    $('#form-4').hide();
-    $('#form-5').show();
-  });
-
+  var mylanguage = {
+          errorTitle: 'Form submission failed!',
+          requiredFields: 'You have not answered all required fields',
+          badEmail: 'You have not given a correct e-mail address',
+          badTelephone: 'You have not given a correct phone number',
+          badSecurityAnswer: 'You have not given a correct answer to the security question',
+          lengthBadStart: 'The input value must be between ',
+          lengthBadEnd: ' characters',
+          lengthTooLongStart: 'The input value is longer than ',
+          lengthTooShortStart: 'The input value is shorter than ',
+          notConfirmed: 'Input values could not be confirmed',
+          badCustomVal: 'The input value is incorrect',
+          andSpaces: ' and spaces ',
+          badInt: 'The input value was not a correct number',
+          badStrength: 'The password isn\'t strong enough',
+          min : 'min',
+          max : 'max'
+      };
+  //////////////////////////////////////////
+  // Form navigation & validation.
+  //////////////////////////////////////////
+  $.validate({
+  form : '#form-1 , #form-2 , #form-3',
+  lang: 'mylanguage'
 });
 
+  var currentForm = '1';
+  $("#form-" + currentForm).show();
+
+  var nextStep = function() {
+    $("#form-" + currentForm).hide();
+    currentForm++
+    $("#form-" + currentForm).show();
+  }
+
+  var prevStep = function() {
+    if (currentForm > 1) {
+      $("#form-" + currentForm).hide();
+      currentForm--
+      $("#form-" + currentForm).show();
+    }
+  }
+
+  $(document).on('submit', nextStep);
+  $(".izvelne").click(prevStep);
+
+
+});
