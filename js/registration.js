@@ -45,9 +45,11 @@ $(document).ready(function() {
   $("#form-" + currentForm).show();
 
   var nextStep = function() {
+    if (currentForm < 3) {
     $("#form-" + currentForm).hide();
     currentForm++
     $("#form-" + currentForm).show();
+  }
   }
 
   var prevStep = function() {
