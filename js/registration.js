@@ -37,10 +37,16 @@ $(document).ready(function() {
   // Form navigation & validation.
   //////////////////////////////////////////
   $.validate({
+    modules : 'security, toggleDisabled',
   form : '#form-1 , #form-2 , #form-3',
   lang: 'mylanguage'
 });
 
+$('input')
+  .on('beforeValidation', function(value, lang, config) {
+    console.log('Input "'+this.name+'" is about to become validated');
+    // Call $(this).attr('data-validation-skipped', 1); to prevent validation
+  });
   var currentForm = '1';
   $("#form-" + currentForm).show();
 
