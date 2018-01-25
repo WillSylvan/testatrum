@@ -1,527 +1,683 @@
-#form-0{}
-#form-1{display:none}
-#form-2{display:none}
-#form-3{display:none}
-#form-4{display:none}
-#form-5{display:none}
-#form-6{display:none}
-
-#first-step-user-check{display:none}
-#second-step-user-check{display:none}
-#third-step-user-check{display:none;}
-
-#main-content-credit-izvelne-2{display:none}
-#main-content-credit-izvelne-3{display:none}
-
-#change-pass-2{display:none}
-
-.klients{display:none}
-
-#profile-menu{display:none;}
-
-body{
-    background-repeat: no-repeat;
-    background-image: url(../img/atrum-logo-liels.png);
-    background-position: -190% 50%;
-    background-size: 90%;
+#form-1 {
+  display: none;
 }
-input{
-	width: 100%;
-    margin: 0.9vw;
-	margin-right: 0;
-	margin-left: 0;
-    height: auto;
-    padding: 0.8vw;
-    padding-left: 2vw;
-    padding-right: 2vw;
-    font-size: 1vw;
-    border-radius: 0.7vw;
-    border: 1px solid rgba(0,0,0,0.1);
-    font-family: "Poppins", sans-serif;
-	background-color: rgb(246, 247, 249);
+
+#form-2 {
+  display: none
 }
-input:focus{
-	background-color: white;
+
+#form-3 {
+  display: none
 }
-input:focus::-webkit-input-placeholder {font-size:0.6vw;position:relative;top:-1.1vw}
-input:focus::-moz-placeholder          {font-size:0.6vw;position:relative;top:-1.1vw}/* Firefox 19+ */
-input:focus:-moz-placeholder           {font-size:0.6vw;position:relative;top:-1.1vw}/* Firefox 18- */
-input:focus:-ms-input-placeholder      {font-size:0.6vw;position:relative;top:-1.1vw}
+
+#form-4 {
+  display: none
+}
+
+#form-5 {
+  display: none
+}
+
+#form-6 {
+  display: none
+}
+
+#first-step-user-check {
+  display: none
+}
+
+#second-step-user-check {
+  display: none
+}
+
+#third-step-user-check {
+  display: none;
+}
+
+#main-content-credit-izvelne-2 {
+  display: none
+}
+
+#main-content-credit-izvelne-3 {
+  display: none
+}
+
+#change-pass-2 {
+  display: none
+}
+
+.klients {
+  display: none
+}
+
+#profile-menu {
+  display: none;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-image: url(../img/atrum-logo-liels.png);
+  background-position: -190% 50%;
+  background-size: 90%;
+}
+
+input {
+  width: 100%;
+  margin: 0.9vw;
+  margin-right: 0;
+  margin-left: 0;
+  height: auto;
+  padding: 0.8vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  font-size: 1vw;
+  border-radius: 0.7vw;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(246, 247, 249);
+}
+
+input:focus {
+  background-color: white;
+}
+
+input:focus::-webkit-input-placeholder {
+  font-size: 0.6vw;
+  position: relative;
+  top: -1.1vw
+}
+
+input:focus::-moz-placeholder {
+  font-size: 0.6vw;
+  position: relative;
+  top: -1.1vw
+}
+
+/* Firefox 19+ */
+
+input:focus:-moz-placeholder {
+  font-size: 0.6vw;
+  position: relative;
+  top: -1.1vw
+}
+
+/* Firefox 18- */
+
+input:focus:-ms-input-placeholder {
+  font-size: 0.6vw;
+  position: relative;
+  top: -1.1vw
+}
+
 .flex {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
 }
 
 /*KREDITI*/
-#main-id-2{
-    background-image: url(../img/form6.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 28vw;
-    height: 34vw;
-    position: absolute;
-    top: 10vw;
-    right: 2vw;
-    align-items: center;
-    justify-content: center;
+
+#main-id-2 {
+  background-image: url(../img/form6.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 28vw;
+  height: 34vw;
+  position: absolute;
+  top: 10vw;
+  right: 2vw;
+  align-items: center;
+  justify-content: center;
 }
-#main-id-2 h1{
-	margin: 0;
-	font-weight: 600;
-	color: black;
-	font-size: 1.7vw;
+
+#main-id-2 h1 {
+  margin: 0;
+  font-weight: 600;
+  color: black;
+  font-size: 1.7vw;
 }
 
 /*NAV IELOGTS*/
-#page-form-content{
-	margin-top: 5vw;
-	margin-bottom: 10vw;
-}
-#page-content-1{
-	width: 35%;
-    margin: auto;
-	text-align: center;
-}
-#page-content-1 h2{
-	font-size: 2vw;
-    margin: 0;
-	font-weight: 600;
-	text-align: left;
-	margin-bottom: 1vw;
-}
-#page-content-1 span{
-	color: rgb(250, 142, 109);
-}
-.info{
-	width: 100%;
-}
-.info div{
-	width: 50%;
-}
-.info div:first-child{
-	margin-right:1vw;
-}
-.info div:last-child{
-	margin-left:1vw;
-}
-.izvelne{
-	align-items: center;
-	margin-right: 1vw;
-}
-.izvelne p{
-	margin: 0;
-    font-size: 1.2vw;
-}
-.izvelne input{
-	width: unset;
-	height: unset;
-}
-.div{
-    width: 1.2vw;
-    height: 1.2vw;
-    margin-right: 0.5vw;
-    border-radius: 0.3vw;
-	border: none;
-	cursor: pointer;
-}
-.turpinat, .veikt{
-	background-image: -moz-linear-gradient( 180deg, rgb(255,116,131) 0%, rgb(253,158,98) 100%);
-	background-image: -webkit-linear-gradient( 180deg, rgb(255,116,131) 0%, rgb(253,158,98) 100%);
-	background-image: -ms-linear-gradient( 180deg, rgb(255,116,131) 0%, rgb(253,158,98) 100%);
-	border: none;
-    color: white;
-    font-family: "Poppins", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.1vw;
-    font-size: 0.9vw;
-    padding: 0.5vw 2.5vw;
-    border-radius: 1vw;
-	cursor:pointer;
-}
-.izvelne img{
-	width: 3vw;
-	cursor: pointer;
-}
-.klients{
-	justify-content: space-between;
-}
-.check{
-	width:60%;
-	margin:auto;
-}
-.check p{
-	margin: 0;
-    text-align: left;
-    font-size: 1vw;
-	line-height: 1.2vw;
-}
-.radio{
-	margin:0;
-	height: unset;
-	width: unset;
-	margin-right: 1vw;
-}
-input[type=radio]:not{
 
-}
-input[type=radio]:checked{
-	background-color: rgb(250, 142, 109);
+#page-form-content {
+  margin-top: 5vw;
+  margin-bottom: 10vw;
 }
 
-.saturs{
-	display: -webkit-flex;
-    display: flex;
-	text-align: left !important;
+#page-content-1 {
+  width: 35%;
+  margin: auto;
+  text-align: center;
 }
-.saturs h1{
-	margin: 0;
-    font-size: 0.9vw;
-	width: 50%;
-	padding: 0.5vw;
+
+#page-content-1 h2 {
+  font-size: 2vw;
+  margin: 0;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 1vw;
 }
-.saturs p{
-	margin: 0;
-    font-size: 0.9vw;
-    text-transform: uppercase;
-    color: grey;
-	width: 50%;
-	padding: 0.5vw;
+
+#page-content-1 span {
+  color: rgb(250, 142, 109);
 }
-.tab img{
-	width: 80%;
+
+.info {
+  width: 100%;
 }
-.tab h2{
-	margin: 0 !important;
-    font-size: 1.1vw !important;
-    font-weight: 700 !important;
-    font-family: "Poppins", sans-serif !important;
-	text-align: center !important;
+
+.info div {
+  width: 50%;
 }
+
+.info div:first-child {
+  margin-right: 1vw;
+}
+
+.info div:last-child {
+  margin-left: 1vw;
+}
+
+.izvelne {
+  align-items: center;
+  margin-right: 1vw;
+}
+
+.izvelne p {
+  margin: 0;
+  font-size: 1.2vw;
+}
+
+.izvelne input {
+  width: unset;
+  height: unset;
+}
+
+.div {
+  width: 1.2vw;
+  height: 1.2vw;
+  margin-right: 0.5vw;
+  border-radius: 0.3vw;
+  border: none;
+  cursor: pointer;
+}
+
+.turpinat, .veikt {
+  background-image: -moz-linear-gradient( 180deg, rgb(255, 116, 131) 0%, rgb(253, 158, 98) 100%);
+  background-image: -webkit-linear-gradient( 180deg, rgb(255, 116, 131) 0%, rgb(253, 158, 98) 100%);
+  background-image: -ms-linear-gradient( 180deg, rgb(255, 116, 131) 0%, rgb(253, 158, 98) 100%);
+  border: none;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1vw;
+  font-size: 0.9vw;
+  padding: 0.5vw 2.5vw;
+  border-radius: 1vw;
+  cursor: pointer;
+}
+
+.izvelne img {
+  width: 3vw;
+  cursor: pointer;
+}
+
+.klients {
+  justify-content: space-between;
+}
+
+.check {
+  width: 60%;
+  margin: auto;
+}
+
+.check p {
+  margin: 0;
+  text-align: left;
+  font-size: 1vw;
+  line-height: 1.2vw;
+}
+
+.radio {
+  margin: 0;
+  height: unset;
+  width: unset;
+  margin-right: 1vw;
+}
+
+input[type=radio]:not {}
+
+input[type=radio]:checked {
+  background-color: rgb(250, 142, 109);
+}
+
+.saturs {
+  display: -webkit-flex;
+  display: flex;
+  text-align: left !important;
+}
+
+.saturs h1 {
+  margin: 0;
+  font-size: 0.9vw;
+  width: 50%;
+  padding: 0.5vw;
+}
+
+.saturs p {
+  margin: 0;
+  font-size: 0.9vw;
+  text-transform: uppercase;
+  color: grey;
+  width: 50%;
+  padding: 0.5vw;
+}
+
+.tab img {
+  width: 80%;
+}
+
+.tab h2 {
+  margin: 0 !important;
+  font-size: 1.1vw !important;
+  font-weight: 700 !important;
+  font-family: "Poppins", sans-serif !important;
+  text-align: center !important;
+}
+
 .tab {
-    overflow: hidden;
-	border: 1px solid #ccc;
-	border-bottom: none;
-	background-color: #f1f1f1;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  background-color: #f1f1f1;
 }
+
 .tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    transition: 0.3s;
-	width: 25%;
-	height: 4vw;
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 25%;
+  height: 4vw;
 }
+
 .tab button:hover {
-    background-color: #ddd;
+  background-color: #ddd;
 }
+
 .tab button.active {
-	background-color: #ccc;	
+  background-color: #ccc;
 }
+
 .tabcontent {
-    display: none;
-    padding: 6px 12px;
-	border: 1px solid #ccc;
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
 }
-.tabcontent :first-child{
-	display: flex;
+
+.tabcontent :first-child {
+  display: flex;
 }
-.bank_rekv{
-    width: 100%;
-    margin: auto;
+
+.bank_rekv {
+  width: 100%;
+  margin: auto;
 }
-#five-form, #six-form{
-	text-align: center;
+
+#five-form, #six-form {
+  text-align: center;
 }
-#five-form h6, #six-form h6{
-	margin: 3vw;
-    font-size: 1.5vw;
-    font-family: "Poppins", sans-serif;
-    color: rgb(51, 51, 51);
-    font-weight: 400;
+
+#five-form h6, #six-form h6 {
+  margin: 3vw;
+  font-size: 1.5vw;
+  font-family: "Poppins", sans-serif;
+  color: rgb(51, 51, 51);
+  font-weight: 400;
 }
-#five-form img, #six-form img{
-	width: 4vw;
-	margin-top: 3vw;
+
+#five-form img, #six-form img {
+  width: 4vw;
+  margin-top: 3vw;
 }
-.ielogoties-buttons{
-	justify-content: space-evenly;
+
+.ielogoties-buttons {
+  justify-content: space-evenly;
 }
-.ielogoties-buttons button{
-	padding: 0.5vw 0vw;
-    width: 10vw;
+
+.ielogoties-buttons button {
+  padding: 0.5vw 0vw;
+  width: 10vw;
 }
-#four-form p{
-	font-size: 1.1vw;
+
+#four-form p {
+  font-size: 1.1vw;
 }
-.veikt{margin-top: 1vw}
+
+.veikt {
+  margin-top: 1vw
+}
 
 /**/
-#profils p{
-	margin: 0;
-    font-size: 1vw;
-}
-#profils-added {
-    position: absolute;
-    top: 35vw;
-    left: 12vw;
-}
-#profils-added p{
-	margin: 0;
-    font-size: 1vw;
-}
-#main-id{
-	background-image: url(../img/form5.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 25vw;
-    height: 22vw;
-    position: absolute;
-    top: 8vw;
-    left: 6vw;
-	align-items: center;
-	justify-content: center;
-}
-.profil-header{
-	border-bottom: 1px solid rgba(0,0,0,0.1);
-    margin-bottom: 1vw;
-    width: 13vw;
-}
-#main-id h1{
-	margin: 0;
-	font-weight: 600;
-	color: grey;
-	font-size: 1.7vw;
-}
-#sadalas{
-    width: 35%;
-    margin: auto;
-    text-align: center;
-    margin-top: 5vw;
-    margin-bottom: 5vw;
-}
-#ielogots-header h2{
-	font-size: 2vw;
-    margin: 0;
-    font-weight: 600;
-    text-align: left;
-    margin-bottom: 1vw;
-}
-#ielogots-header p{
-	margin: 0;
-	font-size: 1.1vw;
-	text-align: left;
-}
-.user-check{
-	text-align: left;
-	margin-bottom: 2vw;
-}
-.user-check p{
-	margin: 0;
-    font-size: 1vw;
-	font-weight: 500;
-}
-.user-check span{
-	font-weight: 400;
-    font-size: 0.8vw;
-}
-.user-check button{
-	border: 1px solid rgb(251, 137, 112);
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
-    font-size: 0.9vw;
-    font-weight: 600;
-    padding: 0.3vw 1vw;
-    background-color: transparent;
-    border-radius: 0.5vw;
-    margin-left: 3vw;
-    cursor: pointer;
-}
-.number-info{
-	width: 100%;
-    margin: 0.9vw;
-    margin-right: 0;
-    margin-left: 0;
-    height: auto;
-    padding: 0.8vw;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    border-radius: 0.7vw;
-    border: 1px solid rgba(0,0,0,0.1);
-    background-color: rgb(246, 247, 249);
-	justify-content: space-around;
-}
-.number-info span{
-	color: rgb(251, 137, 112);
-    font-size: 1.1vw;
-    font-weight: 600;
-}
-.x{
-	align-items: center;
-}
-.x div:first-child{
-	width: 55%;
-}
-.kods input{
-	margin: 0;
-	width: 2.5vw;
-    height: 2.5vw;
-    padding: 0;
-    margin-right: 0.3vw;
-    font-size: 2vw;
-    text-align: center;
-}
-.apstiprinajums{
-	width: 11.5vw;
-}
-.user-check h6{
-	font-size: 1.5vw;
-    font-family: "Poppins", sans-serif;
-    color: rgb(51, 51, 51);
-    font-weight: 400;
-    margin: 0;
-    margin-left: 1.5vw;
-}
-.user-check img{
-	width: 3vw;
-}
-.border-pink{
-	text-align: left;
-}
-.border-pink button{
-    border: 1px solid rgb(251, 137, 112);
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
-    font-size: 1vw;
-    font-weight: 600;
-    padding: 0.5vw 2vw;
-    background-color: transparent;
-    border-radius: 0.5vw;
-    cursor: pointer;
-}
-.alerts p{
-    margin: 0;
-    margin-left: 0.5vw;
-    margin-right: 2vw;
-    font-size: 1vw;	
-}
-.p-b{
-background-color: rgb(251, 137, 112);
-    width: 1vw;
-    height: 1vw;
-    border-radius: 5vw;
+
+#profils p {
+  margin: 0;
+  font-size: 1vw;
 }
 
-#change-pass-2{
-	text-align: center;
-	margin-top: 5vw;
-	margin-bottom: 20vw;
+#profils-added {
+  position: absolute;
+  top: 35vw;
+  left: 12vw;
 }
-#change-pass-2 img{
-	width: 4vw;
-    margin-top: 3vw;
+
+#profils-added p {
+  margin: 0;
+  font-size: 1vw;
 }
-#change-pass-2 h6{
-	margin: 3vw;
-    font-size: 1.5vw;
-    font-family: "Poppins", sans-serif;
-    color: rgb(51, 51, 51);
-    font-weight: 400;
+
+#main-id {
+  background-image: url(../img/form5.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 25vw;
+  height: 22vw;
+  position: absolute;
+  top: 8vw;
+  left: 6vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.profil-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 1vw;
+  width: 13vw;
+}
+
+#main-id h1 {
+  margin: 0;
+  font-weight: 600;
+  color: grey;
+  font-size: 1.7vw;
+}
+
+#sadalas {
+  width: 35%;
+  margin: auto;
+  text-align: center;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+}
+
+#ielogots-header h2 {
+  font-size: 2vw;
+  margin: 0;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 1vw;
+}
+
+#ielogots-header p {
+  margin: 0;
+  font-size: 1.1vw;
+  text-align: left;
+}
+
+.user-check {
+  text-align: left;
+  margin-bottom: 2vw;
+}
+
+.user-check p {
+  margin: 0;
+  font-size: 1vw;
+  font-weight: 500;
+}
+
+.user-check span {
+  font-weight: 400;
+  font-size: 0.8vw;
+}
+
+.user-check button {
+  border: 1px solid rgb(251, 137, 112);
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.9vw;
+  font-weight: 600;
+  padding: 0.3vw 1vw;
+  background-color: transparent;
+  border-radius: 0.5vw;
+  margin-left: 3vw;
+  cursor: pointer;
+}
+
+.number-info {
+  width: 100%;
+  margin: 0.9vw;
+  margin-right: 0;
+  margin-left: 0;
+  height: auto;
+  padding: 0.8vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  border-radius: 0.7vw;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgb(246, 247, 249);
+  justify-content: space-around;
+}
+
+.number-info span {
+  color: rgb(251, 137, 112);
+  font-size: 1.1vw;
+  font-weight: 600;
+}
+
+.x {
+  align-items: center;
+}
+
+.x div:first-child {
+  width: 55%;
+}
+
+.kods input {
+  margin: 0;
+  width: 2.5vw;
+  height: 2.5vw;
+  padding: 0;
+  margin-right: 0.3vw;
+  font-size: 2vw;
+  text-align: center;
+}
+
+.apstiprinajums {
+  width: 11.5vw;
+}
+
+.user-check h6 {
+  font-size: 1.5vw;
+  font-family: "Poppins", sans-serif;
+  color: rgb(51, 51, 51);
+  font-weight: 400;
+  margin: 0;
+  margin-left: 1.5vw;
+}
+
+.user-check img {
+  width: 3vw;
+}
+
+.border-pink {
+  text-align: left;
+}
+
+.border-pink button {
+  border: 1px solid rgb(251, 137, 112);
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  font-size: 1vw;
+  font-weight: 600;
+  padding: 0.5vw 2vw;
+  background-color: transparent;
+  border-radius: 0.5vw;
+  cursor: pointer;
+}
+
+.alerts p {
+  margin: 0;
+  margin-left: 0.5vw;
+  margin-right: 2vw;
+  font-size: 1vw;
+}
+
+.p-b {
+  background-color: rgb(251, 137, 112);
+  width: 1vw;
+  height: 1vw;
+  border-radius: 5vw;
+}
+
+#change-pass-2 {
+  text-align: center;
+  margin-top: 5vw;
+  margin-bottom: 20vw;
+}
+
+#change-pass-2 img {
+  width: 4vw;
+  margin-top: 3vw;
+}
+
+#change-pass-2 h6 {
+  margin: 3vw;
+  font-size: 1.5vw;
+  font-family: "Poppins", sans-serif;
+  color: rgb(51, 51, 51);
+  font-weight: 400;
 }
 
 /*KREDITI*/
-.main-content-credit{
-	width:100%;
-	margin-bottom: 5vw;
-}
-.main-content-credit #first-form, .main-content-credit #second-form{
-	cursor: context-menu !important;
-}
-#pos{width:30%}
-#main-content-credit-izvelne{width:70%}
-/*FORM FORM FORM*/
-#first-form {
-    left: 1vw;
-	padding-top: 0;
-}
-.form_ {
-    height: 24vw;
-}
-.form_ form {
-    width: 100%;
-    height: 75%;
-    margin: 5vw;
-}
-.short_range_form{
-	transform: scale(0.8);
-}
-.rose-button, .violet-button{
-	margin: 1vw !important;
-    width: 100%;
-    font-size: 0.8vw !important;
-    padding: 0.5vw 0.5vw !important;
-}
-/**/
-#nakamais-aizdevums{
-	margin-left: 3vw;
-}
-#nakamais-aizdevums h1{
-	margin: 0;
-    font-size: 1.4vw;
-}
-#nakamais-aizdevums p{
-	margin: 0;
-    font-size: 1.2vw;
-}
-.atlaides{
-	width: 70%;
-	align-items: center;
-}
-.atlaides div:first-child{
-    width: 40%;
-    margin: 1vw;
-    padding: 1vw 3vw 1vw 3vw;
-    border: 1px solid rgba(0,0,0,0.1);
-    border-radius: 1vw;
-}
-.atlaides p{
-	font-size: 1.3vw;
-}
-.atlaides button{
-	font-size: 1vw;
-    text-transform: uppercase;
-    font-weight: 700;
-    background-color: transparent;
-    border: 1px solid rgb(255, 117, 130);
-    border-radius: 0.5vw;
-    padding: 0.5vw 1.5vw;
-    margin-left: 1vw;
-	cursor: pointer;
-}
-/**/
-#main-content-credit-izvelne-2{
-	margin-top: 5vw;
-    margin-bottom: 3vw;
-    width: 30vw;
-    position: relative;
-    left: 35vw;
-}
-#main-content-credit-izvelne-2 p{
-	color: grey;
-    font-size: 1.2vw;
-    margin: 0;
-}
-#main-content-credit-izvelne-2 h2{
-    margin: 0;
-    color: grey;
-    font-size: 2vw;
-    font-weight: 600;
+
+.main-content-credit {
+  width: 100%;
+  margin-bottom: 5vw;
 }
 
+.main-content-credit #first-form, .main-content-credit #second-form {
+  cursor: context-menu !important;
+}
+
+#pos {
+  width: 30%
+}
+
+#main-content-credit-izvelne {
+  width: 70%
+}
+
+/*FORM FORM FORM*/
+
+#first-form {
+  left: 1vw;
+  padding-top: 0;
+}
+
+.form_ {
+  height: 24vw;
+}
+
+.form_ form {
+  width: 100%;
+  height: 75%;
+  margin: 5vw;
+}
+
+.short_range_form {
+  transform: scale(0.8);
+}
+
+.rose-button, .violet-button {
+  margin: 1vw !important;
+  width: 100%;
+  font-size: 0.8vw !important;
+  padding: 0.5vw 0.5vw !important;
+}
+
+/**/
+
+#nakamais-aizdevums {
+  margin-left: 3vw;
+}
+
+#nakamais-aizdevums h1 {
+  margin: 0;
+  font-size: 1.4vw;
+}
+
+#nakamais-aizdevums p {
+  margin: 0;
+  font-size: 1.2vw;
+}
+
+.atlaides {
+  width: 70%;
+  align-items: center;
+}
+
+.atlaides div:first-child {
+  width: 40%;
+  margin: 1vw;
+  padding: 1vw 3vw 1vw 3vw;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 1vw;
+}
+
+.atlaides p {
+  font-size: 1.3vw;
+}
+
+.atlaides button {
+  font-size: 1vw;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: transparent;
+  border: 1px solid rgb(255, 117, 130);
+  border-radius: 0.5vw;
+  padding: 0.5vw 1.5vw;
+  margin-left: 1vw;
+  cursor: pointer;
+}
+
+/**/
+
+#main-content-credit-izvelne-2 {
+  margin-top: 5vw;
+  margin-bottom: 3vw;
+  width: 30vw;
+  position: relative;
+  left: 35vw;
+}
+
+#main-content-credit-izvelne-2 p {
+  color: grey;
+  font-size: 1.2vw;
+  margin: 0;
+}
+
+#main-content-credit-izvelne-2 h2 {
+  margin: 0;
+  color: grey;
+  font-size: 2vw;
+  font-weight: 600;
+}
+
+<<<<<<< HEAD
 #main-content-credit-izvelne-parkreditacija{
 	margin-top: 5vw;
     margin-bottom: 3vw;
@@ -544,167 +700,231 @@ background-color: rgb(251, 137, 112);
 .borders{
 	border-top: 1px solid rgba(0,0,0,0.1);
 	border-bottom: 1px solid rgba(0,0,0,0.1);
+=======
+.borders {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+>>>>>>> 668724085babc03da4ef576103fdb88df7565768
 }
-.statuss{width: 20vw;}
-.s2{width:10vw}
-.statuss div{
-	margin-top: 1vw;
-    margin-bottom: 1vw;
+
+.statuss {
+  width: 20vw;
 }
-.statuss p{
-	color: black !important;
+
+.s2 {
+  width: 10vw
 }
+<<<<<<< HEAD
 .statuss span{
 	/*color: #92d63c !important;*/
 	font-weight: 600;
+=======
+
+.statuss div {
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+>>>>>>> 668724085babc03da4ef576103fdb88df7565768
 }
 
-.border-2{
-	margin-top: 1vw;
-    margin-bottom: 2vw;
-	width: 100%;
+.statuss p {
+  color: black !important;
 }
-.border-2 p{
-	color: black !important;
-	font-size: 1vw !important;
+
+.statuss span {
+  color: #92d63c !important;
+  font-weight: 600;
 }
-.border-2-1{width:20%}
-.border-2-2{width:80%}
-.kredita-buttons{
-	justify-content: space-around;
+
+.border-2 {
+  margin-top: 1vw;
+  margin-bottom: 2vw;
+  width: 100%;
 }
-.kredita-buttons button{
-	font-size: 0.8vw;
-	text-transform: uppercase;
-	background-color: transparent;
-    padding: 0.5vw 1vw;
-    border-radius: 1vw;
-    font-weight: 600;
-    letter-spacing: 0.1vw;
-	cursor: pointer;
-	width: 13vw;
+
+.border-2 p {
+  color: black !important;
+  font-size: 1vw !important;
 }
+<<<<<<< HEAD
 .kredita-buttons button:first-child{
 	color: black !important;
 	border: 1px solid rgb(255, 117, 130) !important;
-}
-.kredita-buttons button:last-child{
-	color: grey;
-	border: 1px solid grey;
+=======
+
+.border-2-1 {
+  width: 20%
+>>>>>>> 668724085babc03da4ef576103fdb88df7565768
 }
 
-#main-content-credit-izvelne-3{
-	left: 5vw;
-    position: relative;
+.border-2-2 {
+  width: 80%
 }
-#main-content-credit-izvelne-3 p{
-	font-size: 0.9vw !important;
+
+.kredita-buttons {
+  justify-content: space-around;
 }
-#main-content-credit-izvelne-3 .bank_rekv{
-	width:40%;
+
+.kredita-buttons button {
+  font-size: 0.8vw;
+  text-transform: uppercase;
+  background-color: transparent;
+  padding: 0.5vw 1vw;
+  border-radius: 1vw;
+  font-weight: 600;
+  letter-spacing: 0.1vw;
+  cursor: pointer;
+  width: 13vw;
+}
+
+.kredita-buttons button:first-child {
+  color: black;
+  border: 1px solid rgb(255, 117, 130);
+}
+
+.kredita-buttons button:last-child {
+  color: grey;
+  border: 1px solid grey;
+}
+
+#main-content-credit-izvelne-3 {
+  left: 5vw;
+  position: relative;
+}
+
+#main-content-credit-izvelne-3 p {
+  font-size: 0.9vw !important;
+}
+
+#main-content-credit-izvelne-3 .bank_rekv {
+  width: 40%;
 }
 
 /*ESOSIE KREDITI*/
-#aizdevumi{
-    width: 56%;
-    position: relative;
-    left: 32%;
-    margin-top: 5vw;
-	margin-bottom: 10vw;
-}
-#aizdevumi h2{
-	font-size: 2vw;
-    margin: 0;
-    font-weight: 600;
-    text-align: left;
-    margin-bottom: 1vw;
-}
-#aizdevumi p{
-	margin: 0;
-    font-size: 1.2vw;
-    margin-bottom: 1vw;
-}
-#istermina{
-	margin-bottom:5vw;
-}
-#istermina span{
-	color: rgb(250, 142, 109);
-}
-#ilgtermina{
-	margin-bottom:5vw;
-}
-#ilgtermina span{
-	color: rgb(133, 106, 214);
-}
-.table-aizdevumi div{
-	display: -webkit-flex;
-    display: flex;
-	justify-content: space-between;
-	padding: 0.2vw;
-}
-.table-aizdevumi div div{
-	width: 15vw;
-	justify-content: center;
-	display: -webkit-flex;
-    display: flex;
-	align-items: center;
-}
-.money{
-	width: 12vw !important;
-}
-.table-aizdevumi h1{
-    margin: 0;
-    font-size: 0.9vw;
-    text-transform: uppercase;
-}
-.table-aizdevumi h3{
-	margin:0;
-	font-size: 1vw;
-}
-.table-aizdevumi p{
-	margin:0 !important;
-	font-size:0.9vw;
-}
-.nr{
-	flex-direction: column;
-	text-align: center;
-}
-.nr p{font-size: 0.8vw !important}
-.with-borders{
-	border: 1px solid rgba(0,0,0,0.1);
-	border-radius: 1vw;
-	margin-bottom:1vw;
-}
-.additional-info{
-	align-items: center;
-}
-.additional-info p{
-	font-size: 0.8vw !important;
-    color: black !important;
-}
-.additional-info span{
-	text-decoration: underline;
-	color: black !important;
-}
-.additional-info button{
-	margin-left: 8vw;
-    color: black;
-    text-transform: uppercase;
-    font-size: 0.9vw;
-    letter-spacing: 0.05vw;
-    font-weight: 600;
-    padding: 0.4vw 1.5vw;
-    background-color: transparent;
-    border-radius: 1vw;
-	cursor: pointer;
-}
-#istermina .additional-info button{
-	border: 1px solid rgb(250, 142, 109);
-}
-#ilgtermina .additional-info button{
-	border: 1px solid rgb(133, 106, 214);	
+
+#aizdevumi {
+  width: 56%;
+  position: relative;
+  left: 32%;
+  margin-top: 5vw;
+  margin-bottom: 10vw;
 }
 
+#aizdevumi h2 {
+  font-size: 2vw;
+  margin: 0;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 1vw;
+}
+
+#aizdevumi p {
+  margin: 0;
+  font-size: 1.2vw;
+  margin-bottom: 1vw;
+}
+
+#istermina {
+  margin-bottom: 5vw;
+}
+
+#istermina span {
+  color: rgb(250, 142, 109);
+}
+
+#ilgtermina {
+  margin-bottom: 5vw;
+}
+
+#ilgtermina span {
+  color: rgb(133, 106, 214);
+}
+
+.table-aizdevumi div {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2vw;
+}
+
+.table-aizdevumi div div {
+  width: 15vw;
+  justify-content: center;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+}
+
+.money {
+  width: 12vw !important;
+}
+
+.table-aizdevumi h1 {
+  margin: 0;
+  font-size: 0.9vw;
+  text-transform: uppercase;
+}
+
+.table-aizdevumi h3 {
+  margin: 0;
+  font-size: 1vw;
+}
+
+.table-aizdevumi p {
+  margin: 0 !important;
+  font-size: 0.9vw;
+}
+
+.nr {
+  flex-direction: column;
+  text-align: center;
+}
+
+.nr p {
+  font-size: 0.8vw !important
+}
+
+.with-borders {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 1vw;
+  margin-bottom: 1vw;
+}
+
+.additional-info {
+  align-items: center;
+}
+
+.additional-info p {
+  font-size: 0.8vw !important;
+  color: black !important;
+}
+
+.additional-info span {
+  text-decoration: underline;
+  color: black !important;
+}
+
+.additional-info button {
+  margin-left: 8vw;
+  color: black;
+  text-transform: uppercase;
+  font-size: 0.9vw;
+  letter-spacing: 0.05vw;
+  font-weight: 600;
+  padding: 0.4vw 1.5vw;
+  background-color: transparent;
+  border-radius: 1vw;
+  cursor: pointer;
+}
+
+#istermina .additional-info button {
+  border: 1px solid rgb(250, 142, 109);
+}
+
+<<<<<<< HEAD
+#ilgtermina .additional-info button {
+  border: 1px solid rgb(133, 106, 214);
+}
+=======
 .green{color: #70c600 !important}
 .yellow{color: #edcc14 !important}
 .violetc{color: #838ad4 !important}
@@ -725,143 +945,190 @@ background-color: rgb(251, 137, 112);
 }
 
 @media screen and (max-width: 1300px){
+>>>>>>> d90922adfb20709d150b48f3a06070e0d15f2b4f
 
+.green {
+  color: #70c600 !important
 }
-@media screen and (max-width: 900px){
-#page-content-1 {
+
+.yellow {
+  color: #edcc14 !important
+}
+
+.violetc {
+  color: #838ad4 !important
+}
+
+.light-green {
+  color: #b9d521 !important
+}
+
+.red {
+  color: #db5852 !important
+}
+
+.pinkc {
+  color: #cd7aca !important
+}
+
+.greyc {
+  color: #bebebe !important
+}
+
+@media screen and (max-width: 1300px) {}
+
+@media screen and (max-width: 900px) {
+  #page-content-1 {
     width: 80%;
-}
-#page-content-1 h2 {
+  }
+  #page-content-1 h2 {
     font-size: 5vw;
     text-align: center;
     margin-bottom: 10vw;
     margin-top: 10vw;
-}
-.klients{display:none !important}
-input {
+  }
+  .klients {
+    display: none !important
+  }
+  input {
     margin: 2vw;
     padding: 3vw;
     font-size: 3vw;
     border-radius: 0.8vw;
-}
-input:focus::-webkit-input-placeholder {font-size:2vw;position:relative;top:-3.3vw}
-input:focus::-moz-placeholder          {font-size:2vw;position:relative;top:-3.3vw}/* Firefox 19+ */
-input:focus:-moz-placeholder           {font-size:2vw;position:relative;top:-3.3vw}/* Firefox 18- */
-input:focus:-ms-input-placeholder      {font-size:2vw;position:relative;top:-3.3vw}
-.ielogoties-buttons button {
+  }
+  input:focus::-webkit-input-placeholder {
+    font-size: 2vw;
+    position: relative;
+    top: -3.3vw
+  }
+  input:focus::-moz-placeholder {
+    font-size: 2vw;
+    position: relative;
+    top: -3.3vw
+  }
+  /* Firefox 19+ */
+  input:focus:-moz-placeholder {
+    font-size: 2vw;
+    position: relative;
+    top: -3.3vw
+  }
+  /* Firefox 18- */
+  input:focus:-ms-input-placeholder {
+    font-size: 2vw;
+    position: relative;
+    top: -3.3vw
+  }
+  .ielogoties-buttons button {
     padding: 1vw 2vw;
     width: 30vw;
     margin: 2vw;
     font-size: 3vw;
-}
-.ielogoties-buttons {
+  }
+  .ielogoties-buttons {
     flex-direction: column;
-}
-.turpinat, .veikt {
+  }
+  .turpinat, .veikt {
     font-size: 3vw;
     padding: 1vw 2vw;
-}
-.check {
+  }
+  .check {
     width: 100%;
-}
-.check p {
+  }
+  .check p {
     font-size: 3vw;
     line-height: 3vw;
-}
-#four-form p {
+  }
+  #four-form p {
     font-size: 3vw;
-}
-
-.tab button {
+  }
+  .tab button {
     height: 12vw;
-}
-.tab img {
+  }
+  .tab img {
     width: 100%;
-}
-.tab h2 {
+  }
+  .tab h2 {
     font-size: 3vw !important;
-}
-.saturs {
+  }
+  .saturs {
     display: block;
     text-align: center !important;
-}
-.tabcontent :first-child {
+  }
+  .tabcontent :first-child {
     display: block;
-}
-.saturs h1 {
+  }
+  .saturs h1 {
     font-size: 3vw;
     width: 100%;
-}
-.saturs p {
+  }
+  .saturs p {
     font-size: 3vw;
     width: 100%;
-}
-
-#change-pass-2{
-	margin-top:40vw;
-	margin-bottom:40vw;
-}
-#five-form img, #six-form img, #change-pass-2 img {
+  }
+  #change-pass-2 {
+    margin-top: 40vw;
+    margin-bottom: 40vw;
+  }
+  #five-form img, #six-form img, #change-pass-2 img {
     width: 10vw;
-}
-#five-form h6, #six-form h6, #change-pass-2 h6 {
+  }
+  #five-form h6, #six-form h6, #change-pass-2 h6 {
     font-size: 5vw;
     font-weight: 300;
-}
-
-#sadalas {
+  }
+  #sadalas {
     width: 70%;
-}
-#ielogots-header h2 {
+  }
+  #ielogots-header h2 {
     font-size: 4vw;
     margin: 0;
     font-weight: 600;
     text-align: center;
     margin-bottom: 1vw;
-	margin-top: 3vw;
-}
-#ielogots-header p {
+    margin-top: 3vw;
+  }
+  #ielogots-header p {
     margin: 2vw;
     font-size: 3vw;
     text-align: left;
-}
-.user-check {
+  }
+  .user-check {
     margin: 10vw;
-}
-.user-check p {
+  }
+  .user-check p {
     font-size: 3vw;
     text-align: center;
     width: 100%;
-}
-.user-check span{
-	font-size: 2vw;
-	text-align: center;
-}
-.x{
-	flex-direction: column;
-}
-.x div:first-child {
+  }
+  .user-check span {
+    font-size: 2vw;
+    text-align: center;
+  }
+  .x {
+    flex-direction: column;
+  }
+  .x div:first-child {
     width: 100%;
-	align-items: center;
-}
-.user-check button, .border-pink button {
-	font-size: 2.5vw;
+    align-items: center;
+  }
+  .user-check button, .border-pink button {
+    font-size: 2.5vw;
     margin: 0;
     margin-top: 5vw;
     margin-bottom: 5vw;
     padding: 2vw 5vw;
-}
-.number-info p:first-child{
-	width: 25%;
-}
-.koda-parbaude{
-	flex-direction: column;
-}
-.kodam{
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-}
-.kods input {
+  }
+  .number-info p:first-child {
+    width: 25%;
+  }
+  .koda-parbaude {
+    flex-direction: column;
+  }
+  .kodam {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .kods input {
     margin-top: 4vw;
     width: 7vw;
     height: 7vw;
@@ -869,101 +1136,103 @@ input:focus:-ms-input-placeholder      {font-size:2vw;position:relative;top:-3.3
     margin-right: 0.3vw;
     font-size: 3vw;
     text-align: center;
-}
-.user-check {
+  }
+  .user-check {
     text-align: center;
-}
-.alerts{
-	margin: 3vw;
-	text-align: center;
-	justify-content: center;
-}
-.alerts p {
+  }
+  .alerts {
+    margin: 3vw;
+    text-align: center;
+    justify-content: center;
+  }
+  .alerts p {
     margin: 0;
     margin-left: 0.5vw;
     margin-right: 2vw;
     font-size: 2.5vw;
-}
-.p-b {
+  }
+  .p-b {
     background-color: rgb(251, 137, 112);
     width: 3vw;
     height: 3vw;
     border-radius: 1vw;
-}
-.border-pink {
+  }
+  .border-pink {
     text-align: center;
-}
-#third-step-user-check{flex-direction: column;}
-.user-check img {
+  }
+  #third-step-user-check {
+    flex-direction: column;
+  }
+  .user-check img {
     width: 15vw;
     margin-bottom: 10vw;
-}
-.user-check h6 {
+  }
+  .user-check h6 {
     font-size: 5vw;
-}
-#aizdevumi {
-	width: 85%;
+  }
+  #aizdevumi {
+    width: 85%;
     position: relative;
     left: 0;
     margin: auto;
     margin-top: 15vw;
     margin-bottom: 0;
-}
-#aizdevumi h2 {
+  }
+  #aizdevumi h2 {
     font-size: 6vw;
     text-align: center;
     margin-bottom: 4vw;
     margin-top: 4vw;
-}
-#aizdevumi p {
+  }
+  #aizdevumi p {
     margin: auto;
     font-size: 3vw;
     margin-bottom: 3vw;
     text-align: center;
     width: 60vw;
-}
-.table-aizdevumi p{
-	width: unset !important;
-	font-size: 3vw !important;
-}
-.table-aizdevumi h1 {
+  }
+  .table-aizdevumi p {
+    width: unset !important;
+    font-size: 3vw !important;
+  }
+  .table-aizdevumi h1 {
     font-size: 2vw;
-	text-align: center;
-}
-.statuss, .kopa-atm{
-	display:none !important
-}
-.table-aizdevumi h3 {
+    text-align: center;
+  }
+  .statuss, .kopa-atm {
+    display: none !important
+  }
+  .table-aizdevumi h3 {
     margin: 0;
     font-size: 2vw;
-}
-.additional-info {
+  }
+  .additional-info {
     flex-direction: column;
-}
-.additional-info p {
+  }
+  .additional-info p {
     font-size: 3vw !important;
     color: black !important;
     margin: 3vw !important;
-}
-.additional-info button {
+  }
+  .additional-info button {
     margin-left: 0;
     padding: 1vw 2vw;
     width: 30vw;
     margin: 2vw;
     font-size: 3vw;
-}
-#pos {
-    display:none;
-}
-#main-content-credit-izvelne {
+  }
+  #pos {
+    display: none;
+  }
+  #main-content-credit-izvelne {
     width: 100%;
     height: 340vw;
-	position: relative
-}
-.f2 {
+    position: relative
+  }
+  .f2 {
     display: block !important;
-}
-#nakamais-aizdevums {
+  }
+  #nakamais-aizdevums {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -971,79 +1240,75 @@ input:focus:-ms-input-placeholder      {font-size:2vw;position:relative;top:-3.3
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-	width: 70vw;
-}
-#nakamais-aizdevums h1,
-#nakamais-aizdevums p {
+    width: 70vw;
+  }
+  #nakamais-aizdevums h1, #nakamais-aizdevums p {
     font-size: 3vw;
-}
-.atlaides {
+  }
+  .atlaides {
     width: 100%;
     flex-wrap: wrap;
-	flex-wrap: wrap;
+    flex-wrap: wrap;
     justify-content: center;
-}
-.atlaides div:first-child {
+  }
+  .atlaides div:first-child {
     width: 100%;
     margin: 5vw;
-}
-.atlaides button{
-	padding: 1vw 2vw;
+  }
+  .atlaides button {
+    padding: 1vw 2vw;
     width: 30vw;
     margin: 2vw;
     font-size: 3vw;
-}
-#first-form, #second-form {
+  }
+  #first-form, #second-form {
     background-image: url(../img/form-mobile.png)!important;
     left: 0!important;
     right: 0!important;
     top: 0 !important
-}
-.form_ {
+  }
+  .form_ {
     width: 100% !important;
     height: 140vw !important;
     margin-bottom: 4vw !important;
     cursor: pointer !important;
-}
-.form_ h1 {
+  }
+  .form_ h1 {
     font-size: 5vw !important;
     margin-bottom: 3vw !important;
     text-align: center !important;
-}
-.short_range_form {
+  }
+  .short_range_form {
     transform: unset;
-}
-.form_ form {
+  }
+  .form_ form {
     width: 100% !important;
     height: 65% !important;
     margin: 12vw !important;
-}
-.rose-button, .violet-button {
+  }
+  .rose-button, .violet-button {
     border-radius: 2vw !important;
     font-size: 4vw !important;
-}
-
-
-.testbutton{display:none}
-#main-id, #profils-added{display:none}
-
-
-
-
-/*PROFILE MENU*/
-#profile-menu{
-	display:block;
+  }
+  .testbutton {
+    display: none
+  }
+  #main-id, #profils-added {
+    display: none
+  }
+  /*PROFILE MENU*/
+  #profile-menu {
+    display: block;
     position: fixed;
     left: 5vw;
     top: 3vw;
     cursor: pointer;
     z-index: 100;
-}
-#profile-menu img {
+  }
+  #profile-menu img {
     width: 7vw;
-}
-
-#main-id, #profile-added {
+  }
+  #main-id, #profile-added {
     width: 100% !important;
     height: 150vw !important;
     position: fixed !important;
@@ -1051,25 +1316,25 @@ input:focus:-ms-input-placeholder      {font-size:2vw;position:relative;top:-3.3
     left: 0 !important;
     align-items: center !important;
     justify-content: center;
-    background-image: -moz-linear-gradient( 180deg, rgba(255,116,131,0.9) 0%, rgba(253,158,98,0.9) 100%) !important;
-    background-image: -webkit-linear-gradient( 180deg, rgba(255,116,131,0.9) 0%, rgba(253,158,98,0.9) 100%) !important;
-    background-image: -ms-linear-gradient( 180deg, rgba(255,116,131,0.9) 0%, rgba(253,158,98,0.9) 100%) !important;
-	z-index:2
-}
-#main-id-content{
-	width: 100%;
+    background-image: -moz-linear-gradient( 180deg, rgba(255, 116, 131, 0.9) 0%, rgba(253, 158, 98, 0.9) 100%) !important;
+    background-image: -webkit-linear-gradient( 180deg, rgba(255, 116, 131, 0.9) 0%, rgba(253, 158, 98, 0.9) 100%) !important;
+    background-image: -ms-linear-gradient( 180deg, rgba(255, 116, 131, 0.9) 0%, rgba(253, 158, 98, 0.9) 100%) !important;
+    z-index: 2
+  }
+  #main-id-content {
+    width: 100%;
     position: relative;
     top: 20vw;
     text-align: center;
-}
-.profil-header {
+  }
+  .profil-header {
     width: 100%;
-}
-#main-id h1 {
+  }
+  #main-id h1 {
     font-size: 5vw;
-	color: white;
-}
-.div {
+    color: white;
+  }
+  .div {
     width: 5vw;
     height: 5vw;
     margin-right: 0;
@@ -1077,14 +1342,14 @@ input:focus:-ms-input-placeholder      {font-size:2vw;position:relative;top:-3.3
     border: none;
     cursor: pointer;
     margin-top: 3vw;
-}
-#profils p, #profils-added p {
+  }
+  #profils p, #profils-added p {
     margin: 0;
     font-size: 4vw;
     margin-top: 3vw;
-	color: white
-}
-.div {
+    color: white
+  }
+  .div {
     width: 5vw;
     height: 5vw;
     margin-right: 2vw;
@@ -1092,7 +1357,13 @@ input:focus:-ms-input-placeholder      {font-size:2vw;position:relative;top:-3.3
     border: none;
     cursor: pointer;
     margin-top: 3vw;
+  }
+  #profils {
+    margin-left: 30vw;
+  }
 }
+<<<<<<< HEAD
+=======
 #profils{
 	margin-left: 30vw;
 }
@@ -1152,8 +1423,13 @@ input:focus:-ms-input-placeholder      {font-size:2vw;position:relative;top:-3.3
 .s2{
 	width: 35vw !important
 }
+<<<<<<< HEAD
 .parkreditacija h5 {
     margin: 0;
     font-size: 3.5vw;
 }
 }
+=======
+}
+>>>>>>> d90922adfb20709d150b48f3a06070e0d15f2b4f
+>>>>>>> 668724085babc03da4ef576103fdb88df7565768
