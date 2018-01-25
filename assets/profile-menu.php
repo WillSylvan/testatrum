@@ -13,13 +13,5 @@
 		
 		<div id="profile-menu"><img src="img/profile.png"></div>
 
-
-
-
-
-
-
-
-
 	</body>
 </html>

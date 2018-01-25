@@ -11,6 +11,7 @@
 		<?php include 'assets/profile-menu.php'; ?>
 		<?php include 'assets/header.php'; ?>
 		<?php include 'assets/profile-form.php'; ?>
+		<?php include 'assets/kredits.php'; ?>
 		<style>
 		.bt3 button{background-color:rgb(255, 117, 130)}
 		#main-id-content{
@@ -121,7 +122,6 @@
 
 		</div>
 		
-		<?php include 'assets/footer.php'; ?>
-		<?php include 'assets/help.php'; ?>		
+		<?php include 'assets/footer.php'; ?>	
 	</body>
 </html>

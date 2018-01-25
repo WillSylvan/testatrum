@@ -1,4 +1,42 @@
 <link rel="stylesheet" type="text/css" href="style/footer.css">
+<link rel="stylesheet" type="text/css" href="style/help.css">
+
+<script>
+
+$(function(){
+    $('#help').delay(5000)
+              .show(1000);
+});
+
+</script>
+
+<div id="help" class="pulse" style="display:none">
+	<div class="help">
+	
+		<div class="chat"><p>zendesck chat</p></div>
+		
+		<div><h1>Palīdzēt?</h1></div>
+		
+		<div class="work-time">
+			<div>
+				<p>P.-Pk. 08:00-22:00</p>
+				<p>S.-Sv. 10:00-20:00</p>
+			</div>
+			<div>
+				<img src="img/help/help-logo.png">
+			</div>
+		</div>
+
+		<div class="input-help">
+			<input placeholder="Ierakstiet Jūsu jautājumu šeit!">
+		</div>
+		
+		<div class="help-end"><img src="img/help/help-end.png"></div>	
+		
+	</div>
+</div>
+
+
 
 <div id="footer">
     <div class="top-f flex">
