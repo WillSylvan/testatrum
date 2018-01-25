@@ -62,7 +62,62 @@
 		<style>.bt6 button{background-color:rgb(255, 117, 130)}</style>
 
 		<div class="main-content-credit" id="parkreditacija">
-
+			
+			<div id="main-content-credit-izvelne-parkreditacija">
+				<div class="parkreditacija"><h5>Pieteikties pārkreditācijai</h5></div>
+					
+				<div>
+					<p>Līguma nr.</p>
+					<h2>SM4590</h2>
+				</div>
+				
+				<div class="flex borders">
+				
+					<div class="statuss">
+						<div>
+							<p>Statuss:</p>
+							<p>Kopēja summa atmaksai:</p>
+						</div>
+						
+						<div>
+							<p>Samaksa par pakalpojumu:</p>
+							<p>Jaunais termiņš:</p>
+						</div>
+					</div>
+					
+					<div class="statuss s2">
+						<div>
+							<p><span>Aktīvs</span></p>
+							<p>300.00 EUR</p>
+						</div>
+						
+						<div>
+							<p>30.00 EUR</p>
+							<p>20.12.2017</p>
+						</div>
+					</div>
+					
+				</div>
+				
+				<div class="flex border-2">
+					
+					<div class="border-2-1">
+						<p>20.12.2017</p>
+						<p>20.12.2017</p>
+					</div>
+					
+					<div class="border-2-2">
+						<p>Eiropas pateriņa kredīta standartinformācija</p>
+						<p>Visparīgie līguma noteikumi</p>
+					</div>
+					
+				</div>
+				
+				<div class="flex kredita-buttons">
+					<button>PIETEIKTIES</button>
+				</div>
+				
+			</div>
 
 		</div>
 

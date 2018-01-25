@@ -522,6 +522,25 @@ background-color: rgb(251, 137, 112);
     font-weight: 600;
 }
 
+#main-content-credit-izvelne-parkreditacija{
+	margin-top: 5vw;
+    margin-bottom: 3vw;
+    width: 30vw;
+    position: relative;
+    left: 35vw;
+}
+#main-content-credit-izvelne-parkreditacija p{
+	color: grey;
+    font-size: 1vw;
+    margin: 0;
+}
+#main-content-credit-izvelne-parkreditacija h2{
+    margin: 0;
+    color: grey;
+    font-size: 1.3vw;
+    font-weight: 600;
+}
+
 .borders{
 	border-top: 1px solid rgba(0,0,0,0.1);
 	border-bottom: 1px solid rgba(0,0,0,0.1);
@@ -536,7 +555,7 @@ background-color: rgb(251, 137, 112);
 	color: black !important;
 }
 .statuss span{
-	color: #92d63c !important;
+	/*color: #92d63c !important;*/
 	font-weight: 600;
 }
 
@@ -566,8 +585,8 @@ background-color: rgb(251, 137, 112);
 	width: 13vw;
 }
 .kredita-buttons button:first-child{
-	color: black;
-	border: 1px solid rgb(255, 117, 130);
+	color: black !important;
+	border: 1px solid rgb(255, 117, 130) !important;
 }
 .kredita-buttons button:last-child{
 	color: grey;
@@ -699,6 +718,10 @@ background-color: rgb(251, 137, 112);
 /*PARKREDITACIJA*/
 #parkreditacija{
 	min-height: 42vw;
+}
+.parkreditacija h5{
+	margin: 0;
+    font-size: 1.3vw;
 }
 
 @media screen and (max-width: 1300px){
@@ -1089,6 +1112,19 @@ input:focus:-ms-input-placeholder      {font-size:2vw;position:relative;top:-3.3
 #main-content-credit-izvelne-2 h2 {
     font-size: 4vw;
 }
+#main-content-credit-izvelne-parkreditacija {
+    margin: auto;
+    margin-top: 20vw;
+    margin-bottom: 30vw;
+    width: 70%;
+    left: 0;
+}
+#main-content-credit-izvelne-parkreditacija p {
+    font-size: 3vw;
+}
+#main-content-credit-izvelne-parkreditacija h2 {
+    font-size: 4vw;
+}
 .border-2-1 p{
 	font-size: 2.5vw !important;
 }
@@ -1109,7 +1145,15 @@ input:focus:-ms-input-placeholder      {font-size:2vw;position:relative;top:-3.3
 	display: block !important;
 	width: 100%;
 }
+#main-content-credit-izvelne-parkreditacija .statuss{
+	display: block !important;
+	width: 100%;
+}
 .s2{
 	width: 35vw !important
+}
+.parkreditacija h5 {
+    margin: 0;
+    font-size: 3.5vw;
 }
 }
