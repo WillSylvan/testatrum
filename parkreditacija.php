@@ -120,7 +120,8 @@
 			</div>
 
 		</div>
-
-		<?php include 'assets/footer.php'; ?>	
+		
+		<?php include 'assets/footer.php'; ?>
+		<?php include 'assets/help.php'; ?>		
 	</body>
 </html>
