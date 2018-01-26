@@ -3,8 +3,8 @@
     background-image: -webkit-linear-gradient( 180deg, rgba(255,116,131,1) 0%, rgba(253,158,98,1) 100%) !important;
     background-image: -ms-linear-gradient( 180deg, rgba(255,116,131,1) 0%, rgba(253,158,98,1) 100%) !important;
 	position: fixed;
-    width: 275px;
-    height: 180px;
+    width: 255px;
+    height: 165px;
     bottom: 7%;
     right: 3%;
     z-index: 1000;
@@ -32,10 +32,10 @@
 	margin: 7px 0px 0px 0px
 }
 .help-end{
-	position: fixed;
-    bottom: -30%;
+    position: fixed;
+    bottom: -25%;
     right: -5%;
-    width: 60px;
+    width: 45px;
 }
 .help-end img{
 	width: 100%;
@@ -61,6 +61,7 @@
     font-style: italic !important;
     border-bottom: 1px solid rgba(255,255,255,0.4) !important;
     border-radius: 0 !important;
+	width:100% !important;
 }
 .input-help input::-webkit-input-placeholder {color:white}
 .input-help input::-moz-placeholder          {color:white}/* Firefox 19+ */
