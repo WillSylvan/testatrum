@@ -420,7 +420,8 @@
 				<div class="tab">
 					<button class="tablinks" onclick="openCity(event, 'swed')"><img src="img/bank/swedbank.png"></button>
 					<button class="tablinks" onclick="openCity(event, 'citadele')"><img src="img/bank/citadele.png"></button>
-					<button class="tablinks" onclick="openCity(event, 'luminor')"><img src="img/bank/luminor.png"></button>
+					<button class="tablinks" onclick="openCity(event, 'dnb')"><img src="img/bank/dnb.png"></button>
+					<button class="tablinks" onclick="openCity(event, 'nordea')"><img src="img/bank/nordea.png"></button>
 					<button class="tablinks" onclick="openCity(event, 'another_b')"><h2>Cita banka</h2></button>
 				</div>
 				
@@ -472,27 +473,50 @@
 					</div>
 				</div>
 
-				<div id="luminor" class="tabcontent">
-					<div class="saturs">
-						<h1>3Saņēmējs</h1>
-						<p>Lateco līzings as</p>
-					</div>
-					<div class="saturs">
-						<h1>Reģ.Nr.</h1>
-						<p>40003366651</p>
-					</div>
-					<div class="saturs">
-						<h1>Konta numurs:</h1>
-						<p>LV67HABA0551033353134</p>
-					</div>
-					<div class="saturs">
-						<h1>Maksājuma mērķis kredīta atmaksai:</h1>
-						<p>Līguma Nr. SMXXXXXX pagarinājums</p>
-					</div>
-					<div class="saturs">
-						<h1>Maksājuma mērķis kredīta atmaksai:</h1>
-						<p>Līguma Nr. SMXXXXXX atmaksa</p>
-					</div>
+				<div id="dnb" class="tabcontent" style="display: none;">
+				  <div class="saturs">
+					<h1>3Saņēmējs</h1>
+					<p>Lateco līzings as</p>
+				  </div>
+				  <div class="saturs">
+					<h1>Reģ.Nr.</h1>
+					<p>40003366651</p>
+				  </div>
+				  <div class="saturs">
+					<h1>Konta numurs:</h1>
+					<p>LV67HABA0551033353134</p>
+				  </div>
+				  <div class="saturs">
+					<h1>Maksājuma mērķis kredīta atmaksai:</h1>
+					<p>Līguma Nr. SMXXXXXX pagarinājums</p>
+				  </div>
+				  <div class="saturs">
+					<h1>Maksājuma mērķis kredīta atmaksai:</h1>
+					<p>Līguma Nr. SMXXXXXX atmaksa</p>
+				  </div>
+				</div>
+				
+				<div id="nordea" class="tabcontent" style="display: none;">
+				  <div class="saturs">
+					<h1>4Saņēmējs</h1>
+					<p>Lateco līzings as</p>
+				  </div>
+				  <div class="saturs">
+					<h1>Reģ.Nr.</h1>
+					<p>40003366651</p>
+				  </div>
+				  <div class="saturs">
+					<h1>Konta numurs:</h1>
+					<p>LV67HABA0551033353134</p>
+				  </div>
+				  <div class="saturs">
+					<h1>Maksājuma mērķis kredīta atmaksai:</h1>
+					<p>Līguma Nr. SMXXXXXX pagarinājums</p>
+				  </div>
+				  <div class="saturs">
+					<h1>Maksājuma mērķis kredīta atmaksai:</h1>
+					<p>Līguma Nr. SMXXXXXX atmaksa</p>
+				  </div>
 				</div>
 
 				<div id="another_b" class="tabcontent">

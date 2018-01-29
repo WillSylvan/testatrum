@@ -6,29 +6,6 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
 		<title></title>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
-
-		<!--DEMO DEMO DEMO DEMO DEMO-->
-		<div style="position: absolute; top: 10vw; right: 20vw;" class="testbutton">
-			<button id="a">Tel. apst.</button>
-		</div>
-		<script>
-		$(document).ready(function(){
-			$("#a").click(function () {
-				$("#first-step-user-check").css("display","block");
-			});
-			$("#nosutit-kodu").click(function () {
-				$("#first-step-user-check").css("display","none");
-				$("#second-step-user-check").css("display","block");
-				$("#third-step-user-check").css("display","none");
-			});
-			$("#aps").click(function () {
-				$("#first-step-user-check").css("display","none");
-				$("#second-step-user-check").css("display","none");
-				$("#third-step-user-check").css("display","flex");
-			});
-		});
-		</script>
-		<!--DEMO DEMO DEMO DEMO DEMO-->
 		
    </head>
 
@@ -42,7 +19,7 @@
 
 			<div class="sadalas mani_dati">
 			
-				<div class="user-check" id="first-step-user-check">
+				<!--<div class="user-check" id="first-step-user-check">
 					<p>Lūdzu apstipriniet zemāk norādīto telefona nr.!</p>
 					<div class="flex x">
 						<div class="number-info flex"><p>Mobilais talrunis:</p><p><span>+371 22334455</span></p></div>
@@ -72,20 +49,21 @@
 				<div class="user-check flex" id="third-step-user-check">
 					<div><img src="img/ok.png"></div>
 					<h6>Paldies! Telefona numurs ir apstiprināts!</h6>
-				</div>
+				</div>-->
 				
 				<div id="main-info-about-user">
 					<div id="ielogots-header">
 						<h2>Mani dati</h2>
-						<p>Ja vēlies izmainīt savus datus, lūdzu rakstit uz <b>info@atrum.lv</b></p>
+						<p>Ja vēlaties nomainīt savus datus, sazinieties ar mums <b>info@atrum.lv</b></p>
 					</div>
 					<form id="">
-						<div><input placeholder="Vārds, Uzvārds"></div>
+						<div><input placeholder="Vārds"></div>
+						<div><input placeholder="Uzvārds"></div>
 						<div><input placeholder="Personas kods"></div>
-						<div><input placeholder="Mobilais talrunis:"></div>
-						<div><input placeholder="Epasta adrese:"></div>
-						<div><input placeholder="Faktiska adrese:"></div>
+						<div><input placeholder="Mobilais tālrunis:"></div>
+						<div><input placeholder="E-pasta adrese:"></div>
 						<div><input placeholder="Deklarētā adrese:"></div>
+						<div><input placeholder="Faktiska adrese:"></div>
 					</form>
 				</div>
 	

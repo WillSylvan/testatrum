@@ -58,9 +58,8 @@
 		</style>
 		
 		<div id="profils-added">
-			<a href="esosie_krediti.php"><div class="flex bt4"><button class="div"></button><p>Esošie kredīti</p></div></a>
-			<a href="jauns_kredits.php"><div class="flex bt5"><button class="div"></button><p>Jauns kredīts</p></div></a>
-			<a href="parkreditacija.php"><div class="flex bt6"><button class="div"></button><p>Pārkreditācija</p></div></a>
+			<a href="jauns_kredits.php"><div class="flex bt6"><button class="div"></button><p>Jauns kredīts</p></div></a>
+			<a href="kreditu_vesture.php"><div class="flex bt4"><button class="div"></button><p>Kredītu vēsture</p></div></a>
 		</div>
 		<style>.bt4 button{background-color:rgb(255, 117, 130)}</style>
 	
@@ -69,138 +68,112 @@
 			<div id="istermina">
 			
 				<h2>
-					<span>Īstermiņā</span> kredīts
+					<span>Īstermiņā</span> kredīti
 				</h2>
-				
-				<p>
-					Ja Jums ir radušies jautājumi par kredītiem vai atmaksu, lūdzam sūtīt ziņu<br>
-					uz <b> info@atrum.lv </b> minot kredīta Nr. un pieteikšanās datumu.
-				</p>
 				
 				<div class="table-aizdevumi">
 				
 					<div>
-						<div><h1>Kredīta nr.</h1></div>
+						<div><h1>Līguma nr.</h1></div>
 						<div class="statuss"><h1>Statuss</h1></div>
 						<div class="money"><h1>Kredīts</h1></div>
 						<div class="money komisija"><h1>Komisija</h1></div>
-						<div class="dienu-skaits"><h1>Dienu skaits</h1></div>
-						<div><h1>Atmaksāt līdz</h1></div>
-						<div class="kopa-atm"><h1>Kopā atmaksāt</h1></div>
+						<div class="dienu-skaits"><h1>Nokavējuma procenti</h1></div>
+						<div><h1>Atmaksas datums</h1></div>
+						<div class="kopa-atm"><h1>Kopējā summa</h1></div>
 					</div>
 					
 					<div class="with-borders">
-						<div class="nr"><h3>5647-0</h3><p>20.12.2017</p></div>
+						<div class="nr"><h3>SM123456</h3></div>
 						<div class="nr statuss"><h3><span class="green">Aktīvs</span></h3><p>20.12.2017</p></div>
 						<div class="money"><p>$200</p></div>
 						<div class="money komisija"><p>$20.00</p></div>
-						<div class="dienu-skaits"><p>30 dienas</p></div>
+						<div class="dienu-skaits"><p>30%</p></div>
 						<div><p>20.12.2017</p></div>
 						<div class="kopa-atm"><p><b>$220.00</b></p></div>
 					</div>
 					
 					<div class="with-borders">
-						<div class="nr"><h3>5647-0</h3><p>20.12.2017</p></div>
+						<div class="nr"><h3>SM123456</h3></div>
 						<div class="nr statuss"><h3><span class="yellow">Pieprasīts</span></h3><p>20.12.2017</p></div>
 						<div class="money"><p>$200</p></div>
 						<div class="money komisija"><p>$20.00</p></div>
-						<div class="dienu-skaits"><p>30 dienas</p></div>
+						<div class="dienu-skaits"><p>30%</p></div>
 						<div><p>20.12.2017</p></div>
 						<div class="kopa-atm"><p><b>$220.00</b></p></div>
 					</div>
 					
 					<div class="with-borders">
-						<div class="nr"><h3>5647-0</h3><p>20.12.2017</p></div>
+						<div class="nr"><h3>SM123456</h3></div>
 						<div class="nr statuss"><h3><span class="violetc">Pagarināts</span></h3><p>20.12.2017</p></div>
 						<div class="money"><p>$200</p></div>
 						<div class="money komisija"><p>$20.00</p></div>
-						<div class="dienu-skaits"><p>30 dienas</p></div>
+						<div class="dienu-skaits"><p>30%</p></div>
 						<div><p>20.12.2017</p></div>
 						<div class="kopa-atm"><p><b>$220.00</b></p></div>
 					</div>
 					
 					<div class="with-borders">
-						<div class="nr"><h3>5647-0</h3><p>20.12.2017</p></div>
+						<div class="nr"><h3>SM123456</h3></div>
 						<div class="nr statuss"><h3><span class="light-green">Apstiprināts</span></h3><p>20.12.2017</p></div>
 						<div class="money"><p>$200</p></div>
 						<div class="money komisija"><p>$20.00</p></div>
-						<div class="dienu-skaits"><p>30 dienas</p></div>
+						<div class="dienu-skaits"><p>30%</p></div>
 						<div><p>20.12.2017</p></div>
 						<div class="kopa-atm"><p><b>$220.00</b></p></div>
 					</div>
 					
 					<div class="with-borders">
-						<div class="nr"><h3>5647-0</h3><p>20.12.2017</p></div>
+						<div class="nr"><h3>SM123456</h3></div>
 						<div class="nr statuss"><h3><span class="red">Kavēts</span></h3><p>20.12.2017</p></div>
 						<div class="money"><p>$200</p></div>
 						<div class="money komisija"><p>$20.00</p></div>
-						<div class="dienu-skaits"><p>30 dienas</p></div>
+						<div class="dienu-skaits"><p>30%</p></div>
 						<div><p>20.12.2017</p></div>
 						<div class="kopa-atm"><p><b>$220.00</b></p></div>
 					</div>
 					
-				</div>
-				
-				<div class="additional-info flex">
-					<div>
-						<p>13.03.2017 12.23<br>
-						<span>Eiropas pateriņa kredīta standarinformācija</span></p>
-					</div>
-					<div><button>Skatīt visus</button></div>
 				</div>
 				
 			</div>
 			
 			<div id="ilgtermina">
 				<h2>
-					<span>Ilgtermiņa</span> kredīts
+					<span>Ilgtermiņa</span> kredīti
 				</h2>
-				
-				<p>
-					Ja Jums ir radušies jautājumi par kredītiem vai atmaksu, lūdzam sūtīt ziņu<br>
-					uz <b> info@atrum.lv </b> minot kredīta Nr. un pieteikšanās datumu.
-				</p>
 				
 				<div class="table-aizdevumi">
 				
 					<div>
-						<div><h1>Kredīta nr.</h1></div>
+						<div><h1>Līguma nr.</h1></div>
 						<div class="statuss"><h1>Statuss</h1></div>
 						<div class="money"><h1>Kredīts</h1></div>
-						<div class="money komisija"><h1>Komisija</h1></div>
-						<div class="dienu-skaits"><h1>Dienu skaits</h1></div>
-						<div><h1>Atmaksāt līdz</h1></div>
-						<div class="kopa-atm"><h1>Kopā atmaksāt</h1></div>
+						<div class="money komisija"><h1>Procenti</h1></div>
+						<div class="dienu-skaits"><h1>Nokavējuma procenti</h1></div>
+						<div><h1>Atmaksas datums</h1></div>
+						<div class="kopa-atm"><h1>Kopēja summa</h1></div>
 					</div>
 					
 					<div class="with-borders">
-						<div class="nr"><h3>5647-0</h3><p>20.12.2017</p></div>
+						<div class="nr"><h3>SM123456</h3></div>
 						<div class="nr statuss"><h3><span class="pinkc">Anulēts</span></h3><p>20.12.2017</p></div>
 						<div class="money"><p>$200</p></div>
-						<div class="money komisija"><p>$20.00</p></div>
-						<div class="dienu-skaits"><p>30 dienas</p></div>
+						<div class="money komisija"><p>2%</p></div>
+						<div class="dienu-skaits"><p>30%</p></div>
 						<div><p>20.12.2017</p></div>
 						<div class="kopa-atm"><p><b>$220.00</b></p></div>
 					</div>
 					
 					<div class="with-borders">
-						<div class="nr"><h3>5647-0</h3><p>20.12.2017</p></div>
+						<div class="nr"><h3>SM123456</h3></div>
 						<div class="nr statuss"><h3><span class="greyc">Atmaksāts</span></h3><p>20.12.2017</p></div>
 						<div class="money"><p>$200</p></div>
-						<div class="money komisija"><p>$20.00</p></div>
-						<div class="dienu-skaits"><p>30 dienas</p></div>
+						<div class="money komisija"><p>2%</p></div>
+						<div class="dienu-skaits"><p>30%</p></div>
 						<div><p>20.12.2017</p></div>
 						<div class="kopa-atm"><p><b>$220.00</b></p></div>
 					</div>
 					
-				</div>
-				
-				<div class="additional-info flex">
-					<div>
-						<p>13.03.2017 12.23<br>
-						<span>Eiropas pateriņa kredīta standarinformācija</span></p>
-					</div>
-					<div><button>Skatīt visus</button></div>
 				</div>
 				
 			</div>

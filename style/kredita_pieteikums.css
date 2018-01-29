@@ -1,10 +1,10 @@
 #form-0{}
-#form-1{display:none}
-#form-2{display:none}
-#form-3{display:none}
-#form-4{display:none}
-#form-5{display:none}
-#form-6{display:none}
+#form-1{display:non !important}
+#form-2{display:non}
+#form-3{display:non}
+#form-4{display:non}
+#form-5{display:non}
+#form-6{display:non}
 
 #first-step-user-check{display:none}
 #second-step-user-check{display:none}
@@ -18,6 +18,11 @@
 .klients{display:none}
 
 #profile-menu{display:none;}
+
+#two-form h1{
+	font-size: 1.5vw;
+	text-align: left;
+}
 
 body{
     background-repeat: no-repeat;
@@ -149,8 +154,16 @@ input:focus:-ms-input-placeholder      {font-size:0.6vw;position:relative;top:-1
 	justify-content: space-between;
 }
 .check{
-	width:60%;
+	width:100%;
 	margin:auto;
+}
+.check div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.check div:first-child{
+	width: 3vw;
 }
 .check p{
 	margin: 0;
@@ -213,7 +226,7 @@ input[type=radio]:checked{
     outline: none;
     cursor: pointer;
     transition: 0.3s;
-	width: 25%;
+	width: 20%;
 	height: 4vw;
 }
 .tab button:hover {
@@ -656,6 +669,7 @@ background-color: rgb(251, 137, 112);
     margin: 0;
     font-size: 0.9vw;
     text-transform: uppercase;
+	text-align: center;
 }
 .table-aizdevumi h3{
 	margin:0;
@@ -1156,4 +1170,23 @@ input:focus:-ms-input-placeholder      {font-size:2vw;position:relative;top:-3.3
     margin: 0;
     font-size: 3.5vw;
 }
+}
+
+/*FIXED*/
+.checks{
+	width: 100%;
+}
+.checks div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.checks div:first-child{
+	width: 2vw;
+}
+.checks p{
+	margin: 0;
+    text-align: left;
+    font-size: 1vw;
+    line-height: 1.2vw;
 }

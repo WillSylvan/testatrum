@@ -28,7 +28,7 @@ $(function(){
 		</div>
 
 		<div class="input-help">
-			<input placeholder="Ierakstiet Jūsu jautājumu šeit!">
+			<input placeholder="Ierakstiet Jūsu jautājumu šeit">
 		</div>
 		
 		<div class="help-end"><img src="img/help/help-end.png"></div>	
