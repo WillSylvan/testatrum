@@ -631,7 +631,7 @@ button.accordion.active:after {
     position: relative;
     font-size: 0.7vw;
 }
-
+ 
 .long_echo_money_cont .values_steps span:nth-child(2){
     left:-3%;
 }

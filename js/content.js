@@ -45,7 +45,7 @@ function pinkColor(){
 		
 		$("#grafiks").css("bottom","7.5vw");
 	}
-}
+} 
 
 function violetColor(){
 	if ($('body').width() >= 900) {

@@ -167,7 +167,7 @@
 						<p><b>Līguma Nr. SM123456 atmaksa</b></p>
 					</div>
 				</div>
-				
+				 
 				<!-- CITADELE -->
 				<div id="citadele" class="tabcontent">
 					<div class="saturs">
