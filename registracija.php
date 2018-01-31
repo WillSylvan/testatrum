@@ -87,7 +87,7 @@
           </div>
           <div><input name="index" data-validation="length" data-validation-length="min3" placeholder="Pasta indekss:"></div>
 		  <div class="flex checks">
-            <div><input name="check" class="input" type="radio" class="radio" data-validation="required"></div>
+            <div><input name="check" class="input" type="checkbox" class="radio" id="live_place_mach" data-validation=""></div>
             <div><p>Deklarēta adrese sakrīt ar faktisko dzīvesvietu</p></div>
           </div> 
 		  

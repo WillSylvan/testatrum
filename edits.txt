@@ -1,0 +1,6 @@
+index.php
+1)	line: 
+	126:  added <span id="repeated_loan" style="display: none">Atkārtots aizdevums</span> with in <p></p>
+	172: <div id="short_echo_money_cont"> 	change to =>	<div id="long_echo_money_cont">
+ 	175: <span id="short_echo_money_val"> 	change to => 	<span id="long_echo_money_val">
+	177: <input id="short_range_money"> 	change to => 	<input id="long_range_money">
