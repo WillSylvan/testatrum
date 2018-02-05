@@ -45,14 +45,15 @@
           <div class="izvelne" id="stepPrev" style="margin:0;"><img src="img/back.png"></div>
         </div>
         <form id="one-form" action="javascript:void(0)">
-          <div><input name="name" id="name" class="input" placeholder="Vārds, Uzvārds" data-validation="length" data-validation-length="min3" pattern="[a-zA-Z]+[ ][a-zA-Z]+" value=""></div>
-          <div><input name="p_code" id="p_code" class="input" placeholder="Personas kods" data-validation="number" data-mask="00-00" pattern="[0-9]{6}[-]{1}[0-9]{5}"> </div>
+          <div><input name="firstName" id="name" class="input" placeholder="Vārds" data-validation="length" data-validation-length="min3" pattern="[a-zA-Z]+" value=""></div>
+          <div><input name="lastName" id="lname" class="input" placeholder="Uzvārds" data-validation="length" data-validation-length="min3" pattern="[a-zA-Z]+" value=""></div>
+          <div><input name="identityCode" id="p_code" class="input" placeholder="Personas kods" data-validation="number" data-mask="00-00" pattern="[0-9]{6}[-]{1}[0-9]{5}"> </div>
           <div class="flex info">
             <div><input name="phone" id="phone" class="input" placeholder="Tel." data-validation="number" pattern="[0-9]{8}"></div>
-            <div><input name="e_mail" id="email" class="input" data-validation="email" placeholder="Epasts:" pattern="[a-zA-Z0-9]+[@]{1}[a-zA-Z0-9]+[.]{1}[a-z]+"></div>
+            <div><input name="email" id="email" class="input" data-validation="email" placeholder="Epasts:" pattern="[a-zA-Z0-9]+[@]{1}[a-zA-Z0-9]+[.]{1}[a-z]+"></div>
           </div>
-          <div><input name="place_of_job" id="place_of_job" class="input" data-validation="length" data-validation-length="min3" placeholder="Darba vieta:"></div>
-          <div><input name="position" id="position" class="input" data-validation="length" data-validation-length="min3" placeholder="Ieņemamais amats"></div>
+          <div><input name="workPlace" id="place_of_job" class="input" data-validation="length" data-validation-length="min3" placeholder="Darba vieta:"></div>
+          <div><input name="workPosition" id="position" class="input" data-validation="length" data-validation-length="min3" placeholder="Ieņemamais amats"></div>
           <div><input name="m_income" id="m_income" class="input" placeholder="Ikmēneša ienākumi:" data-validation="number" pattern="[0-9]+"></div>
           <div><input name="m_expenses" id="m_expenses" class="input" placeholder="Ikmēneša izdevumi:" pattern="[0-9]+"></div>
 
@@ -79,10 +80,10 @@
           <div><input name="city" class="input" data-validation="length" data-validation-length="min3" placeholder="Pilsēta:"></div>
           <div><input name="street" class="input" data-validation="length" data-validation-length="min3" placeholder="Iela:"></div>
           <div class="flex info">
-            <div><input name="home_nr" class="input" placeholder="Mājas nr."></div>
-            <div><input name="flat_nr" class="input" placeholder="Dzīvokļa nr.:"></div>
+            <div><input name="house" class="input" placeholder="Mājas nr."></div>
+            <div><input name="apartment" class="input" placeholder="Dzīvokļa nr.:"></div>
           </div>
-          <div><input name="index" data-validation="length" data-validation-length="min3" placeholder="Pasta indekss:"></div>
+          <div><input name="postalCode" data-validation="length" data-validation-length="min3" placeholder="Pasta indekss:"></div>
 
           <div><input class="turpinat" type="submit" value="Turpināt"></div>
         </form>
@@ -104,8 +105,8 @@
           <div class="izvelne" style="margin:0;"><img src="img/back.png"></div>
         </div>
         <form id="three-form" action="javascript:void(0)">
-          <div><input name="pass_confirmation" class="input" placeholder="Parole:" type="password"></div>
-          <div><input name="pass" class="input" placeholder="Parole atkārtoti:" type="password" data-validation="confirmation"></div>
+          <div><input name="password_confirmation" autocomplete="new-password" class="input" placeholder="Parole:" type="password"></div>
+          <div><input name="password" autocomplete="new-password" class="input" placeholder="Parole atkārtoti:" type="password" data-validation="confirmation"></div>
           <div class="flex check">
             <input name="check" class="input" type="radio" class="radio" data-validation="required">
             <p>Piekrītu līguma nosacījumiem, atļauju apstrādāt savus personas datus un apliecinu, ka sniegtā informācija ir patiesa.</p>
