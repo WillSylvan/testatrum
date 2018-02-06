@@ -1,0 +1,88 @@
+#help{
+	background-image: -moz-linear-gradient( 180deg, rgba(255,116,131,1) 0%, rgba(253,158,98,1) 100%) !important;
+    background-image: -webkit-linear-gradient( 180deg, rgba(255,116,131,1) 0%, rgba(253,158,98,1) 100%) !important;
+    background-image: -ms-linear-gradient( 180deg, rgba(255,116,131,1) 0%, rgba(253,158,98,1) 100%) !important;
+	position: fixed;
+    width: 255px;
+    height: 165px;
+    bottom: 7%;
+    right: 3%;
+    z-index: 1000;
+	border-radius: 15px;
+	color: white;
+	display: -webkit-flex;
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.help{
+	width: 210px;
+	margin: auto;
+}
+.chat{
+	text-align: center;
+	border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+#help p{
+	margin: 0;
+	font-size: 12px;
+}
+#help h1{
+	font-size: 24px;
+	margin: 7px 0px 0px 0px
+}
+.help-end{
+    position: fixed;
+    bottom: -25%;
+    right: -5%;
+    width: 45px;
+}
+.help-end img{
+	width: 100%;
+}
+.work-time{
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	margin: 5px 0px 10px 0px;
+}
+.work-time img{
+	width: 60px
+}
+.input-help input{
+	margin: 0 !important;
+    height: 10px !important;
+    padding: 10px !important;
+    font-size: 12px !important;
+    border: none !important;
+    background-color: transparent !important;
+    color: white !important;
+    font-style: italic !important;
+    border-bottom: 1px solid rgba(255,255,255,0.4) !important;
+    border-radius: 0 !important;
+	width:100% !important;
+}
+.input-help input::-webkit-input-placeholder {color:white}
+.input-help input::-moz-placeholder          {color:white}/* Firefox 19+ */
+.input-help input:-moz-placeholder           {color:white}/* Firefox 18- */
+.input-help input:-ms-input-placeholder      {color:white}
+
+
+@keyframes pulse_animation {
+	0% { transform: scale(1); }
+	30% { transform: scale(1); }
+	40% { transform: scale(1.08); }
+	50% { transform: scale(1); }
+	60% { transform: scale(1); }
+	70% { transform: scale(1.05); }
+	80% { transform: scale(1); }
+	100% { transform: scale(1); }
+}
+.pulse {
+	animation-name: pulse_animation;
+	animation-duration: 5000ms;
+	transform-origin:70% 70%;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}

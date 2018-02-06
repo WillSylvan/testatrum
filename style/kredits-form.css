@@ -1,0 +1,68 @@
+#kredits-forma{
+    background-image: url(../img/form6.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 24vw;
+    height: 29vw;
+    position: absolute;
+    top: 12vw;
+    right: 6vw;
+    align-items: center;
+    justify-content: center
+}
+#kredits-forma-content{
+    position: relative;
+    text-align: left;
+    margin: 4.7vw;
+}
+#kredits-forma h1 {
+    margin: 0;
+    font-weight: 600;
+    color: grey;
+    font-size: 1.4vw;
+}
+.kredits-forma-header {
+    width: 13vw;
+}
+.kredits-table{
+	display: -webkit-flex;
+    display: flex;
+	justify-content: space-between;
+}
+.kredits-table div{
+	display: -webkit-flex;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#kredits-forma p {
+    margin: 0;
+    font-size: 0.8vw;
+}
+#kredits-forma span{
+	margin: 0;
+    text-decoration: underline;
+    font-size: 0.7vw;
+    cursor: pointer;
+}
+#kredits-forma h2 {
+    margin: 0;
+    font-size: 0.8vw;
+}
+#kredits-forma-profils{
+	border-top: 1px solid rgba(0,0,0,0.1);
+	padding: 1vw 0 1vw 0
+}
+#kredits-forma button{
+	color: black;
+    padding: 0.3vw 2vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.7vw;
+    cursor: pointer;
+    border-radius: 50px;
+    border: 1px solid black;
+    font-weight: 700;
+	background-color: transparent;
+}
