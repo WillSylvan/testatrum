@@ -56,8 +56,8 @@
 							
 								<div class="flex formulas">
 									<div>
-										<h2>Kredīts:<span id="short_summa"> 0.00 </span></h2>
-										<h2>Kopā:<span id="short_kopa">100.00</span></h2>
+										<h2>Kredīts:<span id="short_summa"></span></h2>
+										<h2>Kopā:<span id="short_kopa"></span></h2>
 									</div>
 									<div>
 										<h2>Komisija: <span id="komisija">0.00 (15.00%)</span></h2>
@@ -109,8 +109,8 @@
 							
 								<div class="flex formulas">
 									<div>
-										<h2>Kredīts:<span id="long_summa"> 1000.00 </span></h2>
-										<h2>Kopā:<span id="long_kopa">100.00</span></h2>
+										<h2>Kredīts:<span id="long_summa"></span></h2>
+										<h2>Kopā:<span id="long_kopa"></span></h2>
 									</div>
 									<div>
 										<h2>Komisija: <span id="komisija">0.00 (15.00%)</span></h2>
