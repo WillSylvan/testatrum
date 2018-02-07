@@ -81,6 +81,7 @@
           <div class="izvelne" id="stepPrev" style="margin:0;"><img src="img/back.png"></div>
         </div>
         <form id="two-form" action="javascript:void(0)">
+          <h2><span>DEKLARĒTĀ</span> ADRESE</h2>
           <div><input name="city" class="input" data-validation="length" data-validation-length="min3" placeholder="Pilsēta:"></div>
           <div><input name="street" class="input" data-validation="length" data-validation-length="min3" placeholder="Iela:"></div>
           <div class="flex info">
@@ -95,6 +96,7 @@
         </form>
 
         <form id="two-form-second" action="javascript:void(0)">
+          <h2><span>Faktiskā</span> ADRESE</h2>
           <div><input name="city" class="input" data-validation="length" data-validation-length="min3" placeholder="Pilsēta:"></div>
           <div><input name="street" class="input" data-validation="length" data-validation-length="min3" placeholder="Iela:"></div>
           <div class="flex info">
