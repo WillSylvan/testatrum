@@ -17,6 +17,10 @@
       filter: grayscale(100%);
     }
 
+    #two-form-second {
+      display: none;
+    }
+
     .input:invalid {
       border: 2px solid red!important;
     }
@@ -84,6 +88,23 @@
             <div><input name="apartment" class="input" placeholder="Dzīvokļa nr.:"></div>
           </div>
           <div><input name="postalCode" data-validation="length" data-validation-length="min3" placeholder="Pasta indekss:"></div>
+          <div class="flex check">
+          <input name="check" id="declareChecking" class="input" type="checkbox" class="radio" onclick="declaredCheck()">
+          <p>Deklarētā dzīves vieta atšķiras no faktisko.</p>
+        </div>
+        </form>
+
+        <form id="two-form-second" action="javascript:void(0)">
+          <div><input name="city" class="input" data-validation="length" data-validation-length="min3" placeholder="Pilsēta:"></div>
+          <div><input name="street" class="input" data-validation="length" data-validation-length="min3" placeholder="Iela:"></div>
+          <div class="flex info">
+            <div><input name="house" class="input" placeholder="Mājas nr."></div>
+            <div><input name="apartment" class="input" placeholder="Dzīvokļa nr.:"></div>
+          </div>
+          <div><input name="postalCode" data-validation="length" data-validation-length="min3" placeholder="Pasta indekss:"></div>
+
+        </form>
+
 
           <div><input class="turpinat" type="submit" value="Turpināt"></div>
         </form>

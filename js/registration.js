@@ -1,3 +1,13 @@
+function declaredCheck() {
+  if ($("#declareChecking").is(':checked')){
+    $("#two-form-second").slideDown('slow');
+  } else{
+    $("#two-form-second").slideUp('slow');
+  }
+}
+
+
+
 //////////////////////////////////////////
 // Start executing code, when page loads.
 //////////////////////////////////////////
@@ -25,13 +35,13 @@ $(document).ready(function() {
   //////////////////////////////////////////
 
   // Creating some variables, such as first form to show, array for fully filled form.
-  var currentForm = 1;
+  var currentForm = 2;
   $("#form-" + currentForm).show();
   var allDataForm = [],
       declaredAdress = [],
       customerData = {},
       clientIp,
-      acceptTerms;
+      acceptTerms,
       actualResidenceSameAsDesclared = true,
       loanType = localStorage.getItem("loanType"),
       loanPrincip = localStorage.getItem("loanPrincipal"),
@@ -45,7 +55,7 @@ $(document).ready(function() {
   //////////////////////////////////////////
   // Function to push current form data in to global form data array.
   //////////////////////////////////////////
-console.log(loanInfo)
+
   var serializeForm = function() {
     if (currentForm === 1) {
       var firstForm = $("#one-form").serializeArray();
