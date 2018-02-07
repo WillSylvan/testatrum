@@ -21,6 +21,10 @@
       display: none;
     }
 
+    fieldset {
+      border : 0;
+    }
+
     .input:invalid {
       border: 2px solid red!important;
     }
@@ -81,6 +85,7 @@
           <div class="izvelne" id="stepPrev" style="margin:0;"><img src="img/back.png"></div>
         </div>
         <form id="two-form" action="javascript:void(0)">
+          <fieldset>
           <h2><span>DEKLARĒTĀ</span> ADRESE</h2>
           <div><input name="city" class="input" data-validation="length" data-validation-length="min3" placeholder="Pilsēta:"></div>
           <div><input name="street" class="input" data-validation="length" data-validation-length="min3" placeholder="Iela:"></div>
@@ -90,22 +95,22 @@
           </div>
           <div><input name="postalCode" data-validation="length" data-validation-length="min3" placeholder="Pasta indekss:"></div>
           <div class="flex check">
-          <input name="check" id="declareChecking" class="input" type="checkbox" class="radio" onclick="declaredCheck()">
+          <input name="adresCheck" id="declareChecking" class="input" type="checkbox" class="radio" onclick="declaredCheck()">
           <p>Deklarētā dzīves vieta atšķiras no faktisko.</p>
         </div>
-        </form>
+      </fieldset>
 
-        <form id="two-form-second" action="javascript:void(0)">
+        <fieldset id="two-form-second" action="javascript:void(0)">
           <h2><span>Faktiskā</span> ADRESE</h2>
-          <div><input name="city" class="input" data-validation="length" data-validation-length="min3" placeholder="Pilsēta:"></div>
-          <div><input name="street" class="input" data-validation="length" data-validation-length="min3" placeholder="Iela:"></div>
+          <div><input name="city" class="input" placeholder="Pilsēta:" ></div>
+          <div><input name="street" class="input" placeholder="Iela:"></div>
           <div class="flex info">
             <div><input name="house" class="input" placeholder="Mājas nr."></div>
             <div><input name="apartment" class="input" placeholder="Dzīvokļa nr.:"></div>
           </div>
-          <div><input name="postalCode" data-validation="length" data-validation-length="min3" placeholder="Pasta indekss:"></div>
+          <div><input name="postalCode" placeholder="Pasta indekss:"></div>
 
-        </form>
+        </fieldset>
 
 
           <div><input class="turpinat" type="submit" value="Turpināt"></div>

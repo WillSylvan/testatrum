@@ -35,14 +35,15 @@ $(document).ready(function() {
   //////////////////////////////////////////
 
   // Creating some variables, such as first form to show, array for fully filled form.
-  var currentForm = 2;
+  var currentForm = 1;
   $("#form-" + currentForm).show();
   var allDataForm = [],
       declaredAdress = [],
+      factAdress = [],
       customerData = {},
       clientIp,
       acceptTerms,
-      actualResidenceSameAsDesclared = true,
+      actualResidenceSameAsDesclared,
       loanType = localStorage.getItem("loanType"),
       loanPrincip = localStorage.getItem("loanPrincipal"),
       loanTerm = localStorage.getItem("loanTerms"),
@@ -63,6 +64,13 @@ $(document).ready(function() {
     } else if (currentForm === 2) {
       var secondForm = $("#two-form").serializeArray();
       declaredAdress.push.apply(declaredAdress, secondForm);
+      if ($("input[name=adresCheck]").is(":checked")) {
+        actualResidenceNSameAsDesclared = false;
+        var secondForm2 = $("#two-form-second").serializeArray();
+        factAdress.push.apply(factAdress, secondForm2);
+      } else {
+        actualResidenceNSameAsDesclared = true;
+      }
     } else if (currentForm === 3) {
       var thirdForm = $("input[name=password]").serializeArray();
       acceptTerms = $("input[name=check]").is(":checked");
@@ -139,13 +147,15 @@ var nextStep = function() {
     // Stop !
     customerData["customerData"] = arrayFormating(allDataForm);
     customerData["customerData"]["declaredResidence"] = arrayFormating(declaredAdress);
+    customerData["customerData"]["actualResidence"] = arrayFormating(factAdress);
     var acceptTerm = {};
     acceptTerm['acceptTerms'] = acceptTerms;
     customerData["conditionsData"] = acceptTerm;
     customerData['registrationIP'] = clientIp;
     customerData['customerData']['actualResidenceSameAsDesclared'] = actualResidenceSameAsDesclared;
     customerData['loanData'] = loanInfo;
-    sendToApi();
+    console.log(customerData);
+  //  sendToApi();
   }
 }
 
