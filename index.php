@@ -1,27 +1,14 @@
 <html>
-    <head>     
-		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">	
+    <head>
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="style/index.css">
 		<link rel="stylesheet" type="text/css" href="style/style.css">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title></title>
 		<link rel="icon" href="img/logo.svg">
 		<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
-		
-		<!--<script type="text/javascript">
-		function color(c) {document.body.style.backgroundColor=c}
-		</script>-->
-		<script>
-		var checkk = function(){
-	
-		}
-		
-		</script>
-	   	<script>
-		
-	   </script>
     </head>
- 
+
 	<body>
 		<?php include 'assets/header.php'; ?>
 		<div class="header-background"></div>
@@ -29,7 +16,7 @@
 		<div id="top-forms" class="flex">
 			<div class="form_ f1" onclick='pinkColor()'>
 				<div id="first-form" class="flex" >
-					<form action="index.php" method="post">
+					<form action="registracija.php" method="post">
 
 						<div class="short_range_form flex">
 							<div class="inputs" id="important">
@@ -39,7 +26,7 @@
 									<h3> Cik vēlaties aizņemties</h3>
 									<p>Kredīts: <span id="short_echo_money_val"></span> <span class="repeated_loan" id="short_repeated_loan" style="display: none">Atkārtots aizdevums</span></p>
 
-									<input type="range" name="tickmarks" step="5" min="50" max="500" value="250" class="slider" id="short_range_money">
+									<input type="range" name="stickmarks" step="5" min="50" max="500" value="250" class="slider" id="short_range_money">
 									<div class="values_steps"><span>50</span><span>100</span><span>200</span><span>300</span><span>400</span><span>500</span></div>
 
 								</div>
@@ -49,11 +36,11 @@
 									<h3>Uz cik ilgu laiku?</h3>
 									<p>Dienas: <span id="short_echo_days_val"></span></p>
 
-									<input type="range" min="10" max="30" value="10" class="slider" id="short_range_days">		
+									<input name="sloanTerms" type="range" min="10" max="30" value="10" class="slider" id="short_range_days">
 									<div class="values_steps"><span>10</span><span>15</span><span>20</span><span>25</span><span>30</span></div>
 
 								</div>
-							
+
 								<div class="flex formulas">
 									<div>
 										<h2>Kredīts:<span id="short_summa"></span></h2>
@@ -72,17 +59,17 @@
 								<h4>Kredīta pagarināšana uz 30 dienām:<br><b>22.20 EUR</b></h4>
 
 								<a href="jauzliek links" class="links">*Standartinformācija</a>
-								<input type="submit" value="SAŅEMT NAUDU" class="rose-button">
+								<input type="submit" value="SAŅEMT NAUDU" class="rose-button" onclick="creditInfo(1)">
 							</div>
 						</div>
 
 					</form>
 				</div>
 			</div>
-			
+
 			<div class="form_ f2" onclick='violetColor()'>
 				<div id="second-form" class="flex" >
-					<form action="index.php" method="post">
+					<form action="registracija.php" method="post">
 
 						<div class="long_range_form flex">
 							<div class="inputs" id="important2">
@@ -92,7 +79,7 @@
 									<h3> Cik vēlaties aizņemties</h3>
 									<p>Kredīts: <span id="long_echo_money_val"></span> <span class="repeated_loan" id="long_repeated_loan" style="display: none">Atkārtots aizdevums</span></p>
 
-									<input type="range" name="tickmarks" step="5" min="100" max="1000" value="250" class="slider" id="long_range_money">
+									<input type="range" name="btickmarks" step="5" min="100" max="1000" value="250" class="slider" id="long_range_money">
 									<div class="values_steps"><span>100</span><span>300</span><span>500</span><span>750</span><span>1000</span></div>
 								</div>
 
@@ -101,12 +88,12 @@
 									<h3>Uz cik ilgu laiku?</h3>
 									<p>Mēneši: <span id="long_echo_days_val"></span></p>
 
-									<input type="range" min="3" max="12" value="5" class="slider" id="long_range_days">	
+									<input name="bloanTerms" type="range" min="3" max="12" value="5" class="slider" id="long_range_days">
 									<div class="values_steps"><span>3</span><span>6</span><span>9</span><span>12</span></div>
 
 
 								</div>
-							
+
 								<div class="flex formulas">
 									<div>
 										<h2>Kredīts:<span id="long_summa"></span></h2>
@@ -123,29 +110,29 @@
 								<h5>Kredīts jāatmaksā līdz<br>   <span class="violet">01.09.2018</span></h5>
 								<h5>Ikmēneša maksājums<br> <span class="violet">158.15 EUR</span></h5>
 								<h5>Pirmā maksājuma datums<br>   <span class="violet">19.01.2018</span></h5>
-								
+
 
 								<a href="jauzliek links" class="links">*Standartinformācija</a>
 								<input type="button" value="APSKATĪT MAKSĀJUMU GRAFIKU" class="violet-button button-submit" id="grafiks">
-								<input type="submit" value="SAŅEMT NAUDU" class="violet-button">
-								
+								<input type="submit" value="SAŅEMT NAUDU" class="violet-button" onclick="creditInfo(2)">
+
 							</div>
 						</div>
 					</form>
 				</div>
 			</div>
-			
+
 		</div>
-		
+
 		<div id="round-buttons" class="flex">
 			<button id="butt1"></button>
 			<button id="butt2"></button>
 		</div>
-		
+
 		<script>
-		
+
 		</script>
-			
+
 			<div class="icons_block flex">
 				<div class="icon_border">
 					<img id="img-1" src="img/grey_icons/home/1.svg" alt="Smiley face">
@@ -168,15 +155,10 @@
 				</div>
 			</div>
 
-			<script>
-				// 1.
-			
-			</script>
-
 			<div class="headline">
 				<h1>Pirmais kredīts</h1>
 			</div>
-			
+
 			<div id="icons_block_sec">
 				<div class="icons_block_sec flex">
 					<div class="icon_border_sec b1">
@@ -207,7 +189,7 @@
 
 			<div id="block-piesakies">
 				<div class="piesakies-background"></div>
-				
+
 				<div class="headline">
 					<h1>Atkārtots kredīts</h1>
 				</div>
@@ -219,9 +201,9 @@
 						<div><button class="button_sanemt" id="f-button">Saņēmt kredītu</button></div>
 					</div>
 				</div>
-			
+
 				<div id="raditajs"><img id="raditajs-img" src="img/pink/pink.png"></div>
-				
+
 				<div class="three_icons_block flex">
 					<div class="tree_icon_border">
 						<img id="img-9" src="img/ico/1.png" alt="Smiley face">
@@ -237,7 +219,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div id="block-piesakies-mobile">
 				<div class="piesakies-background-2"></div>
 
@@ -248,7 +230,7 @@
 						<div><button class="button_sanemt-2" id="s-button">Zvanīt</button></div>
 					</div>
 				</div>
-				
+
 				<div class="three_icons_block-2 flex">
 					<div class="tree_icon_border-2">
 						<img id="img-12" src="img/ico/4.png" alt="Smiley face">
@@ -308,7 +290,7 @@
 					<button class="tablinks" onclick="openCity(event, 'nordea')"><img src="img/bank/nordea.png"></button>
 					<button class="tablinks" onclick="openCity(event, 'another_b')"><h2>Cita banka</h2></button>
 				</div>
-				
+
 				<!-- SWEDBANKA -->
 				<div id="swed" class="tabcontent" style="display: block;">
 					<div class="saturs">
@@ -332,7 +314,7 @@
 						<p>Līguma Nr. SMXXXXXX atmaksa</p>
 					</div>
 				</div>
-				
+
 				<!-- CITADELE -->
 				<div id="citadele" class="tabcontent">
 					<div class="saturs">
@@ -379,7 +361,7 @@
 					<p>Līguma Nr. SMXXXXXX atmaksa</p>
 				  </div>
 				</div>
-				
+
 				<div id="nordea" class="tabcontent" style="display: none;">
 				  <div class="saturs">
 					<h1>4Saņēmējs</h1>
@@ -427,9 +409,8 @@
 				</div>
 			</div>
 
-	
 			</div>
-			
+
 			<div class="headline">
 				<h1>Jautājumi un Atbildes</h1>
 			</div>
@@ -455,57 +436,57 @@
 				<div class="panel">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				
+
 				<button class="accordion">Cik ātri es saņemšu atbildi par kredīta piešķiršanu?</button>
 				<div class="panel">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				
+
 				<button class="accordion">Cik ātri es saņemšu naudu savā bankas kontā?</button>
 				<div class="panel">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				
+
 				<button class="accordion">Vai ir iespējams saņemt aizdevumu naktī vai brīvdienās?</button>
 				<div class="panel">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				
+
 				<button class="accordion">Kāpēc man tika atteikts kredīts?</button>
 				<div class="panel">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				
+
 				<button class="accordion">Kā man rīkoties, ja nevaru atmaksāt kredītu noteiktajā termiņā?</button>
 				<div class="panel">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				
+
 				<button class="accordion">Kā es varu nomainīt savu bankas konta numuru?</button>
 				<div class="panel">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				
+
 				<button class="accordion">Kā es varu nomainīt savu uzvārdu?</button>
 				<div class="panel">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				
+
 				<button class="accordion">Kā es varu nomainīt savu telefona numuru?</button>
 				<div class="panel">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				
+
 				<button class="accordion">Kā es varu nomainīt savu e-pasta adresi?</button>
 				<div class="panel">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				
+
 				<button class="accordion">Kā es varu nomainīt darba vietu, deklarēto vai faktisko adresi?</button>
 				<div class="panel">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
-				
+
 				<button class="accordion">Kā man rīkoties, ja aizmirsu savu profila paroli?</button>
 				<div class="panel">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -515,7 +496,7 @@
 			<div class="headline">
 				<h1>Kontakti</h1>
 			</div>
-		<?php include 'assets/footer.php'; ?>	
+		<?php include 'assets/footer.php'; ?>
 	</body>
 		<script type="text/javascript" src="js/content.js"></script>
 

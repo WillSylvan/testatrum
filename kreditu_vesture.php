@@ -50,7 +50,7 @@
 		}
 		#profils-added {
 			position: fixed;
-			top: 60vw;
+			top: 70vw;
 			left: 30vw;
 			z-index: 2;
 		}

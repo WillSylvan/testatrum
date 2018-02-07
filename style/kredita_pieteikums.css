@@ -1,23 +1,39 @@
 #form-0{}
-#form-1{display:non !important}
-#form-2{display:non}
-#form-3{display:non}
-#form-4{display:non}
-#form-5{display:non}
-#form-6{display:non}
+#form-1{}
+#form-2{display:none}
+#form-3{display:none}
+#form-4{display:none}
+#form-5{display:none}
+#form-6{display:none}
 
-#first-step-user-check{display:none}
-#second-step-user-check{display:none}
-#third-step-user-check{display:none;}
+#first-step-user-check{
+	display:none
+}
+#second-step-user-check{
+	display:none
+}
+#third-step-user-check{
+	display:none;
+}
 
-#main-content-credit-izvelne-2{display:none}
-#main-content-credit-izvelne-3{display:none}
+#main-content-credit-izvelne-2{
+	display:none
+}
+#main-content-credit-izvelne-3{
+	display:none
+}
 
-#change-pass-2{display:none}
+#change-pass-2{
+	display:none
+}
 
-.klients{display:none}
+.klients{
+	display:none
+}
 
-#profile-menu{display:none;}
+#profile-menu{
+	display:none;
+}
 
 #two-form h1{
 	font-size: 1.5vw;
@@ -145,6 +161,7 @@ input:focus:-ms-input-placeholder      {font-size:0.6vw;position:relative;top:-1
     padding: 0.5vw 2.5vw;
     border-radius: 1vw;
 	cursor:pointer;
+	    width: 30%;
 }
 .izvelne img{
 	width: 3vw;

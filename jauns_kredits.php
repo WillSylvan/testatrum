@@ -29,6 +29,7 @@
 		}
 
 		@media screen and (max-width: 900px){
+		#kredits-forma{display:none}
 		#main-id, #profile-added {
 			width: 100% !important;
 			height: 150vw !important;
@@ -48,7 +49,7 @@
 		}
 		#profils-added {
 			position: fixed;
-			top: 60vw;
+			top: 70vw;
 			left: 30vw;
 			z-index: 2;
 		}

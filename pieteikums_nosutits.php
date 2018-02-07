@@ -22,7 +22,7 @@
                 <div id="form-5">	
                     <div id="five-form">
                         <img src="img/ok.png">
-                        <h6>Paldies! Jūsu kredīta pieteikums ir saņemts.</h6>
+                        <h6>Paldies!</h6>
                     </div>
                 </div>
                 

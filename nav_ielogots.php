@@ -38,6 +38,7 @@
 					<a href="registracija.php"><button class="turpinat">Registrācija</button></a>
 				</div>
 			</div>
+	
 			</div>
 		</div>	
 		<?php include 'assets/footer.php'; ?>	
