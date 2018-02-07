@@ -161,6 +161,7 @@ input:focus:-ms-input-placeholder      {font-size:0.6vw;position:relative;top:-1
     padding: 0.5vw 2.5vw;
     border-radius: 1vw;
 	cursor:pointer;
+	    width: 30%;
 }
 .izvelne img{
 	width: 3vw;
