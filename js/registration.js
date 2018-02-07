@@ -154,8 +154,7 @@ var nextStep = function() {
     customerData['registrationIP'] = clientIp;
     customerData['customerData']['actualResidenceSameAsDesclared'] = actualResidenceSameAsDesclared;
     customerData['loanData'] = loanInfo;
-    console.log(customerData);
-  //  sendToApi();
+    sendToApi();
   }
 }
 
