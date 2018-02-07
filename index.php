@@ -7,107 +7,8 @@
 		<title></title>
 		<link rel="icon" href="img/logo.svg">
 		<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
-		
-		<!--<script type="text/javascript">
-		function color(c) {document.body.style.backgroundColor=c}
-		</script>-->
-		<script>
-		var checkk = function(){
-	
-		}
-		function pinkColor(){
-			
-		if ($('body').width() >= 900) {
-		
-			$("#first-form").css({"background-image":"url(img/form3.png)","z-index":"200"});
-			$("#second-form").css({"background-image":"none","z-index":"-1"});
-			
-			$("#first-form").animate({"left":"4vw","zoom":"1.1","width":"120%","height":"105%","z-index":"2"},800);
-			$("#second-form").animate({"zoom":"0.9","right":"2.5vw","width":"100%","height":"100%","top":"3vw"},800);
-			
-			$("#icons_block_sec").css({"background-image":"url(img/pink/pinkfons.png","color":"white"});
-			$("#icons_block_sec2").css({"background-image":"url(img/pink/pinkfons2.png","color":"white"});
-			$("#footer").css("background-image","url(img/pink/footer_background_istermina.jpg)");
-			
-			$("#important").css({"width":"60%","margin-left":"0"});
-			$("#important2").css("width","50%");
-			
-			$("#f-button").css({"color":"white","border":"none","background-color":"rgb(255,116,131)"});
-			$("#s-button").css({"color":"white","border":"none","background-color":"rgb(255,116,131)"});
-			
-			$("#raditajs-img").attr("src","img/pink/pink.png");
-			$("#violet-mob").attr("src","img/pink/iphone.png");
-			
-			$("#img-1").attr("src","img/pink/ico/1.svg");
-			$("#img-2").attr("src","img/pink/ico/2.svg");
-			$("#img-3").attr("src","img/pink/ico/3.svg");
-			$("#img-4").attr("src","img/pink/ico/4.svg");
-			
-			$("#img-5").attr("src","img/pink/ico/5.svg");
-			$("#img-6").attr("src","img/pink/ico/6.svg");
-			$("#img-7").attr("src","img/pink/ico/7.svg");
-			$("#img-8").attr("src","img/pink/ico/8.svg");
-			
-			$("#img-9").attr("src","img/ico/1.png");
-			$("#img-10").attr("src","img/ico/2.png");
-			$("#img-11").attr("src","img/ico/3.png");
-			
-			$("#img-12").attr("src","img/ico/4.png");
-			$("#img-13").attr("src","img/ico/2.png");
-			$("#img-14").attr("src","img/ico/3.png");
-			
-			$("#grafiks").css("bottom","7.5vw");
-		}
-		}
-		</script>
-	   	<script>
-		function violetColor(){
-		if ($('body').width() >= 900) {
-		
-		
-			$("#first-form").css({"background-image":"none","z-index":"-1"});
-			$("#second-form").css({"background-image":"url(img/form4.png)","z-index":"200"});
-			
-			$("#first-form").animate({"zoom":"0.9","z-index":"-1","left":"2.5vw","width":"100%","height":"100%"},800);
-			$("#second-form").animate({"right":"16vw","zoom":"1.1","width":"120%","height":"125%","top":"0vw"},800);
-			
-			$("#icons_block_sec").css({"background-image":"url(img/violet/violetfons.png","color":"white"});
-			$("#icons_block_sec2").css({"background-image":"url(img/violet/violetfons2.png","color":"white"});
-			$("#footer").css("background-image","url(img/violet/backgound-footer-violet.jpg)");
-			
-			$("#important").css({"margin-left":"8vw","width":"70%"});
-			$("#important2").css("width","70%");
-			
-			$("#f-button").css({"color":"white","border":"none","background-color":"rgb(173,74,202)"});
-			$("#s-button").css({"color":"white","border":"none","background-color":"rgb(173,74,202)"});
-			
-			$("#raditajs-img").attr("src","img/violet/violet-bulta.png");
-			$("#violet-mob").attr("src","img/violet/tel-violet.png");
-			
-			$("#img-1").attr("src","img/violet/ico/9.svg");
-			$("#img-2").attr("src","img/violet/ico/10.svg");
-			$("#img-3").attr("src","img/violet/ico/11.svg");
-			$("#img-4").attr("src","img/violet/ico/12.svg");
-			
-			$("#img-5").attr("src","img/pink/ico/5.svg");
-			$("#img-6").attr("src","img/pink/ico/6.svg");
-			$("#img-7").attr("src","img/pink/ico/7.svg");
-			$("#img-8").attr("src","img/pink/ico/8.svg");
-			
-			$("#img-9").attr("src","img/violet/ico/13.png");
-			$("#img-10").attr("src","img/violet/ico/17.png");
-			$("#img-11").attr("src","img/violet/ico/18.png");
-			
-			$("#img-12").attr("src","img/violet/ico/16.png");
-			$("#img-13").attr("src","img/violet/ico/17.png");
-			$("#img-14").attr("src","img/violet/ico/18.png");
-			
-			$("#grafiks").css("bottom","11.5vw");
-		}
-		}
-	   </script>
     </head>
-
+ 
 	<body>
 		<?php include 'assets/header.php'; ?>
 		<div class="header-background"></div>
@@ -123,23 +24,27 @@
 								<div id="short_echo_money_cont">
 
 									<h3> Cik vēlaties aizņemties</h3>
-									<p>Kredīts: <span id="short_echo_money_val"></span></p>
+									<p>Kredīts: <span id="short_echo_money_val"></span> <span class="repeated_loan" id="short_repeated_loan" style="display: none">Atkārtots aizdevums</span></p>
 
-									<input type="range" name="tickmarks" min="50" max="500" value="250" class="slider" id="short_range_money">
+									<input type="range" name="tickmarks" step="5" min="50" max="500" value="250" class="slider" id="short_range_money">
+									<div class="values_steps"><span>50</span><span>100</span><span>200</span><span>300</span><span>400</span><span>500</span></div>
+
 								</div>
 
 								<div id="short_echo_days_cont">
 
 									<h3>Uz cik ilgu laiku?</h3>
-									<p>Mēneši: <span id="short_echo_days_val"></span></p>
+									<p>Dienas: <span id="short_echo_days_val"></span></p>
 
-									<input type="range" min="10" max="30" value="10" class="slider" id="short_range_days">							
+									<input type="range" min="10" max="30" value="10" class="slider" id="short_range_days">		
+									<div class="values_steps"><span>10</span><span>15</span><span>20</span><span>25</span><span>30</span></div>
+
 								</div>
 							
 								<div class="flex formulas">
 									<div>
-										<h2>Kredīts:<span id="summa"> 0.00 </span></h2>
-										<h2>Kopā:<span id="kopa">100.00</span></h2>
+										<h2>Kredīts:<span id="short_summa"> 0.00 </span></h2>
+										<h2>Kopā:<span id="short_kopa">100.00</span></h2>
 									</div>
 									<div>
 										<h2>Komisija: <span id="komisija">0.00 (15.00%)</span></h2>
@@ -166,29 +71,33 @@
 				<div id="second-form" class="flex" >
 					<form action="index.php" method="post">
 
-						<div class="short_range_form flex">
+						<div class="long_range_form flex">
 							<div class="inputs" id="important2">
 								<h1><span class="violet">Ilgtermiņa</span> kredīts</h1>
-								<div id="short_echo_money_cont">
+								<div id="long_echo_money_cont">
 
 									<h3> Cik vēlaties aizņemties</h3>
-									<p>Kredīts: <span id="short_echo_money_val"></span></p>
+									<p>Kredīts: <span id="long_echo_money_val"></span> <span class="repeated_loan" id="long_repeated_loan" style="display: none">Atkārtots aizdevums</span></p>
 
-									<input type="range" name="tickmarks" min="50" max="500" value="250" class="slider" id="short_range_money">
+									<input type="range" name="tickmarks" step="5" min="100" max="1000" value="250" class="slider" id="long_range_money">
+									<div class="values_steps"><span>100</span><span>300</span><span>500</span><span>750</span><span>1000</span></div>
 								</div>
 
-								<div id="short_echo_days_cont">
+								<div id="long_echo_days_cont">
 
 									<h3>Uz cik ilgu laiku?</h3>
-									<p>Mēneši: <span id="short_echo_days_val"></span></p>
+									<p>Mēneši: <span id="long_echo_days_val"></span></p>
 
-									<input type="range" min="10" max="30" value="10" class="slider" id="short_range_days">							
+									<input type="range" min="3" max="12" value="5" class="slider" id="long_range_days">	
+									<div class="values_steps"><span>3</span><span>6</span><span>9</span><span>12</span></div>
+
+
 								</div>
 							
 								<div class="flex formulas">
 									<div>
-										<h2>Kredīts:<span id="summa"> 1000.00 </span></h2>
-										<h2>Kopā:<span id="kopa">100.00</span></h2>
+										<h2>Kredīts:<span id="long_summa"> 1000.00 </span></h2>
+										<h2>Kopā:<span id="long_kopa">100.00</span></h2>
 									</div>
 									<div>
 										<h2>Komisija: <span id="komisija">0.00 (15.00%)</span></h2>
@@ -221,13 +130,7 @@
 		</div>
 		
 		<script>
-			$(document).ready(function(){
-				$('#round-buttons button').click(function(){
-					id = $(this).index()
-					$('#top-forms .form_').css('display','none')
-						$('#top-forms .form_:eq('+id+')').fadeIn(300)
-				})
-			});
+		
 		</script>
 			
 			<div class="icons_block flex">
@@ -251,43 +154,6 @@
 					<h3>Minimālas formalitātes</h3>
 				</div>
 			</div>
-
-			<script>
-				// 1.
-				var slider_money = document.getElementById("short_range_money");
-				var output_money = document.getElementById("short_echo_money_val");
-				var div_summa = document.getElementById("summa");
-				var div_kopa = document.getElementById('kopa');
-					output_money.innerHTML = slider_money.value;
-
-				precent = 1;
-				days = 30;
-				gpl = 15
-
-
-
-				slider_money.oninput = function() {
-					output_money.innerHTML = this.value;
-					div_summa.innerHTML = this.value;
-					summa = parseInt(this.value);
-					let kopa_raw =  summa;
-
-					for(i=0;days>i;i++){
-						kopa_raw+=(summa / 100) * precent
-					}
-					let kopa = kopa_raw.toFixed(2)
-					div_kopa.innerHTML = kopa
-				}
-
-				// 2.
-				var slider_days = document.getElementById("short_range_days");
-				var output_days = document.getElementById("short_echo_days_val");
-				output_days.innerHTML = slider_days.value;
-
-				slider_days.oninput = function() {
-					output_days.innerHTML = this.value;
-				}
-			</script>
 
 			<div class="headline">
 				<h1>Pirmais kredīts</h1>
@@ -420,7 +286,8 @@
 				<div class="tab">
 					<button class="tablinks" onclick="openCity(event, 'swed')"><img src="img/bank/swedbank.png"></button>
 					<button class="tablinks" onclick="openCity(event, 'citadele')"><img src="img/bank/citadele.png"></button>
-					<button class="tablinks" onclick="openCity(event, 'luminor')"><img src="img/bank/luminor.png"></button>
+					<button class="tablinks" onclick="openCity(event, 'dnb')"><img src="img/bank/dnb.png"></button>
+					<button class="tablinks" onclick="openCity(event, 'nordea')"><img src="img/bank/nordea.png"></button>
 					<button class="tablinks" onclick="openCity(event, 'another_b')"><h2>Cita banka</h2></button>
 				</div>
 				
@@ -472,27 +339,50 @@
 					</div>
 				</div>
 
-				<div id="luminor" class="tabcontent">
-					<div class="saturs">
-						<h1>3Saņēmējs</h1>
-						<p>Lateco līzings as</p>
-					</div>
-					<div class="saturs">
-						<h1>Reģ.Nr.</h1>
-						<p>40003366651</p>
-					</div>
-					<div class="saturs">
-						<h1>Konta numurs:</h1>
-						<p>LV67HABA0551033353134</p>
-					</div>
-					<div class="saturs">
-						<h1>Maksājuma mērķis kredīta atmaksai:</h1>
-						<p>Līguma Nr. SMXXXXXX pagarinājums</p>
-					</div>
-					<div class="saturs">
-						<h1>Maksājuma mērķis kredīta atmaksai:</h1>
-						<p>Līguma Nr. SMXXXXXX atmaksa</p>
-					</div>
+				<div id="dnb" class="tabcontent" style="display: none;">
+				  <div class="saturs">
+					<h1>3Saņēmējs</h1>
+					<p>Lateco līzings as</p>
+				  </div>
+				  <div class="saturs">
+					<h1>Reģ.Nr.</h1>
+					<p>40003366651</p>
+				  </div>
+				  <div class="saturs">
+					<h1>Konta numurs:</h1>
+					<p>LV67HABA0551033353134</p>
+				  </div>
+				  <div class="saturs">
+					<h1>Maksājuma mērķis kredīta atmaksai:</h1>
+					<p>Līguma Nr. SMXXXXXX pagarinājums</p>
+				  </div>
+				  <div class="saturs">
+					<h1>Maksājuma mērķis kredīta atmaksai:</h1>
+					<p>Līguma Nr. SMXXXXXX atmaksa</p>
+				  </div>
+				</div>
+				
+				<div id="nordea" class="tabcontent" style="display: none;">
+				  <div class="saturs">
+					<h1>4Saņēmējs</h1>
+					<p>Lateco līzings as</p>
+				  </div>
+				  <div class="saturs">
+					<h1>Reģ.Nr.</h1>
+					<p>40003366651</p>
+				  </div>
+				  <div class="saturs">
+					<h1>Konta numurs:</h1>
+					<p>LV67HABA0551033353134</p>
+				  </div>
+				  <div class="saturs">
+					<h1>Maksājuma mērķis kredīta atmaksai:</h1>
+					<p>Līguma Nr. SMXXXXXX pagarinājums</p>
+				  </div>
+				  <div class="saturs">
+					<h1>Maksājuma mērķis kredīta atmaksai:</h1>
+					<p>Līguma Nr. SMXXXXXX atmaksa</p>
+				  </div>
 				</div>
 
 				<div id="another_b" class="tabcontent">
@@ -518,22 +408,7 @@
 					</div>
 				</div>
 			</div>
-
-			<script>
-				function openCity(evt, cityName) {
-					var i, tabcontent, tablinks;
-					tabcontent = document.getElementsByClassName("tabcontent");
-					for (i = 0; i < tabcontent.length; i++) {
-						tabcontent[i].style.display = "none";
-					}
-					tablinks = document.getElementsByClassName("tablinks");
-					for (i = 0; i < tablinks.length; i++) {
-						tablinks[i].className = tablinks[i].className.replace(" active", "");
-					}
-					document.getElementById(cityName).style.display = "block";
-					evt.currentTarget.className += " active";
-				}
-			</script>
+	
 			</div>
 			
 			<div class="headline">
@@ -618,26 +493,11 @@
 				</div>
 			</div>
 
-			<script>
-				var acc = document.getElementsByClassName("accordion");
-				var i;
-
-				for (i = 0; i < acc.length; i++) {
-					acc[i].onclick = function() {
-						this.classList.toggle("active");
-						var panel = this.nextElementSibling;
-						if (panel.style.maxHeight){
-						panel.style.maxHeight = null;
-						} else {
-						panel.style.maxHeight = panel.scrollHeight + "px";
-						} 
-					}
-				}
-			</script>
-
 			<div class="headline">
 				<h1>Kontakti</h1>
 			</div>
 		<?php include 'assets/footer.php'; ?>	
 	</body>
+		<script type="text/javascript" src="js/content.js"></script>
+
 </html>

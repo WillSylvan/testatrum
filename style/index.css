@@ -1,3 +1,5 @@
+
+
 body{
 	margin: 0;
     overflow-x: hidden;
@@ -406,7 +408,7 @@ body{
     outline: none;
     cursor: pointer;
     transition: 0.3s;
-	width: 25%;
+	width: 20%;
 	height: 4vw;
 }
 .tab button:hover {
@@ -577,6 +579,15 @@ button.accordion.active:after {
     font-weight: 700 !important;
     color: white !important;
 }
+#long_echo_money_cont p,#short_echo_money_cont p{
+    display: flex;
+    display: -webkit-flex;
+    width: 85%;
+}
+.repeated_loan {
+    margin-left: auto;
+}
+
 /*FIRST FORM*/
 #first-form{
     background-image: url(../img/form1.png);
@@ -592,6 +603,7 @@ button.accordion.active:after {
 	padding-top: 3vw;
 	cursor:pointer;
 }
+
 /*SECOND FORM*/
 #second-form{
 	background-image: url(../img/form2.png);
@@ -606,6 +618,58 @@ button.accordion.active:after {
     justify-content: center;
 	cursor:pointer;
 }
+.values_steps {
+    position: relative;
+    display: flex;
+    display: -webkit-flex;
+    width: 85%;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+
+}
+.values_steps span {
+    position: relative;
+    font-size: 0.7vw;
+}
+ 
+.long_echo_money_cont .values_steps span:nth-child(2){
+    left:-3%;
+}
+
+.long_echo_money_cont .values_steps span:nth-child(3){
+    left:-4.7%;
+}
+
+.long_echo_money_cont .values_steps span:nth-child(4){
+    left:-0.7%;
+}
+
+
+
+#short_echo_money_cont .values_steps span:nth-child(2){
+    left:-8%;
+}
+
+#short_echo_money_cont .values_steps span:nth-child(3){
+    left:-5%;
+}
+#short_echo_money_cont .values_steps span:nth-child(4){
+    left:-3%;
+}
+#short_echo_money_cont .values_steps span:nth-child(5){
+    left:-0;
+}
+#short_echo_days_cont .values_steps span:nth-child(2){
+    left:0.7%;
+}
+#short_echo_days_cont .values_steps span:nth-child(3){
+    left:0.7%;
+}
+#short_echo_days_cont .values_steps span:nth-child(4){
+    left:1%;
+}
+
+
 @media screen and (max-width: 900px){
 .f2{display:none}
 #top-forms{
