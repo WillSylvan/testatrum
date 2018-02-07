@@ -4,7 +4,6 @@
 
 $(document).ready(function() {
 
-
   //////////////////////////////////////////
   // Mask for inputs.
   //////////////////////////////////////////
@@ -33,16 +32,20 @@ $(document).ready(function() {
       customerData = {},
       clientIp,
       acceptTerms;
-      actualResidenceSameAsDesclared = true;
+      actualResidenceSameAsDesclared = true,
+      loanType = localStorage.getItem("loanType"),
+      loanPrincip = localStorage.getItem("loanPrincipal"),
+      loanTerm = localStorage.getItem("loanTerms"),
+      loanInfo = { type: loanType, principal: loanPrincip, term: loanTerm };
+
 
   $.getJSON('https://api.ipify.org?format=json', function(data){
     clientIp = data.ip;
-    console.log(clientIp)
   });
   //////////////////////////////////////////
   // Function to push current form data in to global form data array.
   //////////////////////////////////////////
-
+console.log(loanInfo)
   var serializeForm = function() {
     if (currentForm === 1) {
       var firstForm = $("#one-form").serializeArray();
@@ -76,7 +79,6 @@ $(document).ready(function() {
   //////////////////////////////////////////
 
   var sendToApi = function() {
-    console.log("sending to api");
     var createCORSRequest = function(method, url) {
       var xhr = new XMLHttpRequest();
       if ("withCredentials" in xhr) {
@@ -99,7 +101,6 @@ $(document).ready(function() {
     var xhr = createCORSRequest(method, url);
 
     xhr.onload = function(response) {
-      console.log(this.response);
     };
 
     xhr.onerror = function() {
@@ -112,7 +113,6 @@ $(document).ready(function() {
 
     xhr.withCredentials = true;
     xhr.send(JSON.stringify(customerData));
-    console.log(JSON.stringify(customerData));
 
   }
 
@@ -134,7 +134,7 @@ var nextStep = function() {
     customerData["conditionsData"] = acceptTerm;
     customerData['registrationIP'] = clientIp;
     customerData['customerData']['actualResidenceSameAsDesclared'] = actualResidenceSameAsDesclared;
-    console.log(customerData)
+    customerData['loanData'] = loanInfo;
     sendToApi();
   }
 }
