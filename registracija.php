@@ -26,6 +26,17 @@
 <body>
   <?php include 'assets/header.php'; ?>
   <div id="page-form-content">
+    <div class="credit_info">
+      <script type="text/javascript">
+        $(function(){
+          $('.credit_info')
+            let loanType = localStorage.getItem("loanType")
+            let loanPrincipal = localStorage.getItem("loanPrincipal")
+            let loanTerms = localStorage.getItem("loanTerms")
+            console.log(loanType, loanPrincipal, loanTerms)
+        })
+      </script>
+    </div>
     <div id="page-content-1">
       <h2><span>Kredīta</span> pieteikums</h2>
 
