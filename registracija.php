@@ -98,20 +98,20 @@
           </div>
           <div><input name="postalCode" data-validation="length" data-validation-length="min3" placeholder="Pasta indekss:"></div>
           <div class="flex check">
-          <input name="adresCheck" id="declareChecking" class="input" type="checkbox" class="radio" onclick="declaredCheck()">
+          <input name="adresCheck" id="declareChecking" class="input" type="checkbox" class="radio">
           <p>Deklarētā dzīves vieta atšķiras no faktisko.</p>
         </div>
       </fieldset>
 
         <fieldset id="two-form-second" action="javascript:void(0)">
           <h2><span>Faktiskā</span> ADRESE</h2>
-          <div><input name="city" class="input" placeholder="Pilsēta:" ></div>
-          <div><input name="street" class="input" placeholder="Iela:"></div>
+          <div><input name="city" class="input" data-validation-optional="true" data-validation="length" data-validation-length="min3" placeholder="Pilsēta:" ></div>
+          <div><input name="street" class="input" data-validation="length" data-validation-length="min3" data-validation-optional="true" placeholder="Iela:"></div>
           <div class="flex info">
             <div><input name="house" class="input" placeholder="Mājas nr."></div>
             <div><input name="apartment" class="input" placeholder="Dzīvokļa nr.:"></div>
           </div>
-          <div><input name="postalCode" placeholder="Pasta indekss:"></div>
+          <div><input name="postalCode" data-validation="length" data-validation-length="min3" data-validation-optional="true" placeholder="Pasta indekss:"></div>
 
         </fieldset>
 
