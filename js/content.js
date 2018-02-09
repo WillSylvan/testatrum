@@ -114,6 +114,8 @@ var div_kopa = {short:document.getElementById('short_kopa'),long:document.getEle
 var slider_days = {short:document.getElementById("short_range_days"),long:document.getElementById("long_range_days")};
 var output_days = {short:document.getElementById("short_echo_days_val"),long:document.getElementById("long_echo_days_val")};
 var repeated_loan = {short:document.getElementById("short_repeated_loan"),long:document.getElementById("long_repeated_loan")}
+var term_display = {short:document.getElementById("short_term_display"),long:document.getElementById('long_term_display')}
+
 
 output_money.short.innerHTML = slider_money.short.value+'€';
 output_days.short.innerHTML = slider_days.short.value;
@@ -125,6 +127,30 @@ output_days.long.innerHTML = slider_days.long.value;
 precent = 1;
 days = 30;
 gpl = 15
+
+
+
+
+
+function calc_term (type, length){
+
+	var today = new Date()
+	var priorDate
+
+	if (type === 'short') {
+		priorDate = new Date().setDate(today.getDate()+parseInt(length))
+	}
+
+	if (type==='long') {
+		priorDate = new Date().setMonth(today.getMonth()+length)
+	}
+
+	end_date = new Date(priorDate)
+
+	return ("0"+end_date.getDate()).slice(-2)+'.'+(end_date.getMonth()+1)+'.'+end_date.getFullYear()
+}
+
+
 
 
 
@@ -146,7 +172,11 @@ slider_money.short.oninput = function() {
 	div_kopa.short.innerHTML = kopa+'€'
 }
 slider_days.short.oninput = function() {
+
 	output_days.short.innerHTML = this.value;
+	term_display.short.innerHTML = calc_term('short',this.value)
+
+
 }
 
 slider_money.long.oninput = function() {

@@ -13,6 +13,9 @@ $(function(){
 	console.log(today,d)
 	$("#kredits-forma-profils .pay_till").text(d.getDate()+"/"+d.getMonth()+"/"+d.getFullYear())
 
-	let total = Math.pow((((loanPrincipal + commission + registrationFee) / loanPrincipal, 365 / loanTerms) - 1) * 100).toFixed(2)
-	console.log(total)
+	//let total = (((loanPrincipal + commission + registrationFee) / loanPrincipal/ 365 / loanTerms) - 1) * 100
+	//Math.pow((principal + commission + registrationFee) / principal, 365 / term) - 1) * 100).toFixed(2)
+	//console.log(total)
+	//console.log('((('+loanPrincipal +'+'+ commission +'+'+ registrationFee+') / '+loanPrincipal+'/ 365 /'+ loanTerms+') -'+ 1+') *'+ 100)
+
 	})

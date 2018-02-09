@@ -54,7 +54,7 @@
 							</div>
 
 							<div class="info_block">
-								<h5>Atmaksas datums: <span class="pink">20.20.2020</span></h5>
+								<h5>Atmaksas datums: <span class="pink" id="short_term_display"></span></h5>
 
 								<h4>Kredīta pagarināšana uz 30 dienām:<br><b>22.20 EUR</b></h4>
 
@@ -107,7 +107,7 @@
 							</div>
 
 							<div class="info_block">
-								<h5>Kredīts jāatmaksā līdz<br>   <span class="violet">01.09.2018</span></h5>
+								<h5>Kredīts jāatmaksā līdz<br>   <span class="violet" id="long_term_display">01.09.2018</span></h5>
 								<h5>Ikmēneša maksājums<br> <span class="violet">158.15 EUR</span></h5>
 								<h5>Pirmā maksājuma datums<br>   <span class="violet">19.01.2018</span></h5>
 
