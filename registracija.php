@@ -17,6 +17,14 @@
       filter: grayscale(100%);
     }
 
+    #two-form-second {
+      display: none;
+    }
+
+    fieldset {
+      border : 0;
+    }
+
     .input:invalid {
       border: 2px solid red!important;
     }
@@ -27,15 +35,7 @@
   <?php include 'assets/header.php'; ?>
   <div id="page-form-content">
     <div class="credit_info">
-      <script type="text/javascript">
-        $(function(){
-          $('.credit_info')
-            let loanType = localStorage.getItem("loanType")
-            let loanPrincipal = localStorage.getItem("loanPrincipal")
-            let loanTerms = localStorage.getItem("loanTerms")
-            console.log(loanType, loanPrincipal, loanTerms)
-        })
-      </script>
+      <?php include "assets/kredits.php"?>
     </div>
     <div id="page-content-1">
       <h2><span>Kredīta</span> pieteikums</h2>
@@ -88,6 +88,8 @@
           <div class="izvelne" id="stepPrev" style="margin:0;"><img src="img/back.png"></div>
         </div>
         <form id="two-form" action="javascript:void(0)">
+          <fieldset>
+          <h2><span>DEKLARĒTĀ</span> ADRESE</h2>
           <div><input name="city" class="input" data-validation="length" data-validation-length="min3" placeholder="Pilsēta:"></div>
           <div><input name="street" class="input" data-validation="length" data-validation-length="min3" placeholder="Iela:"></div>
           <div class="flex info">
@@ -95,6 +97,24 @@
             <div><input name="apartment" class="input" placeholder="Dzīvokļa nr.:"></div>
           </div>
           <div><input name="postalCode" data-validation="length" data-validation-length="min3" placeholder="Pasta indekss:"></div>
+          <div class="flex check">
+          <input name="adresCheck" id="declareChecking" class="input" type="checkbox" class="radio" onclick="declaredCheck()">
+          <p>Deklarētā dzīves vieta atšķiras no faktisko.</p>
+        </div>
+      </fieldset>
+
+        <fieldset id="two-form-second" action="javascript:void(0)">
+          <h2><span>Faktiskā</span> ADRESE</h2>
+          <div><input name="city" class="input" placeholder="Pilsēta:" ></div>
+          <div><input name="street" class="input" placeholder="Iela:"></div>
+          <div class="flex info">
+            <div><input name="house" class="input" placeholder="Mājas nr."></div>
+            <div><input name="apartment" class="input" placeholder="Dzīvokļa nr.:"></div>
+          </div>
+          <div><input name="postalCode" placeholder="Pasta indekss:"></div>
+
+        </fieldset>
+
 
           <div><input class="turpinat" type="submit" value="Turpināt"></div>
         </form>

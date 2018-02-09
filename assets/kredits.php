@@ -1,4 +1,6 @@
 <link rel="stylesheet" type="text/css" href="style/kredits-form.css">
+<script type="text/javascript" src="js/credit_info.js"></script> 
+
 
 <div id="kredits-forma">
 	<div id="kredits-forma-content">
@@ -12,7 +14,7 @@
 					<h2>Kredīts</h2>
 				</div>
 				<div>
-					<p>300.00 EUR</p>
+					<p class="amount">300.00 EUR</p>
 				</div>
 			</div>
 			
@@ -46,7 +48,7 @@
 		</div>
 		
 		<div id="kredits-forma-profils">
-			<p><b>Atmaksāt līdz:</b> 08.12.2017</p>
+			<p><b>Atmaksāt līdz:</b><i class="pay_till">08.12.2017</i></p>
 			<br>
 			<p>Kredīta pagarināšana<br>par 30 dienām:</p>
 			<p><b>22.50 EUR</b></p>

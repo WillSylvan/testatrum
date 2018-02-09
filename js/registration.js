@@ -1,3 +1,13 @@
+function declaredCheck() {
+  if ($("#declareChecking").is(':checked')){
+    $("#two-form-second").slideDown('slow');
+  } else{
+    $("#two-form-second").slideUp('slow');
+  }
+}
+
+
+
 //////////////////////////////////////////
 // Start executing code, when page loads.
 //////////////////////////////////////////
@@ -29,10 +39,11 @@ $(document).ready(function() {
   $("#form-" + currentForm).show();
   var allDataForm = [],
       declaredAdress = [],
+      factAdress = [],
       customerData = {},
       clientIp,
-      acceptTerms;
-      actualResidenceSameAsDesclared = true,
+      acceptTerms,
+      actualResidenceSameAsDesclared,
       loanType = localStorage.getItem("loanType"),
       loanPrincip = localStorage.getItem("loanPrincipal"),
       loanTerm = localStorage.getItem("loanTerms"),
@@ -45,7 +56,7 @@ $(document).ready(function() {
   //////////////////////////////////////////
   // Function to push current form data in to global form data array.
   //////////////////////////////////////////
-console.log(loanInfo)
+
   var serializeForm = function() {
     if (currentForm === 1) {
       var firstForm = $("#one-form").serializeArray();
@@ -53,6 +64,13 @@ console.log(loanInfo)
     } else if (currentForm === 2) {
       var secondForm = $("#two-form").serializeArray();
       declaredAdress.push.apply(declaredAdress, secondForm);
+      if ($("input[name=adresCheck]").is(":checked")) {
+        actualResidenceNSameAsDesclared = false;
+        var secondForm2 = $("#two-form-second").serializeArray();
+        factAdress.push.apply(factAdress, secondForm2);
+      } else {
+        actualResidenceNSameAsDesclared = true;
+      }
     } else if (currentForm === 3) {
       var thirdForm = $("input[name=password]").serializeArray();
       acceptTerms = $("input[name=check]").is(":checked");
@@ -129,6 +147,7 @@ var nextStep = function() {
     // Stop !
     customerData["customerData"] = arrayFormating(allDataForm);
     customerData["customerData"]["declaredResidence"] = arrayFormating(declaredAdress);
+    customerData["customerData"]["actualResidence"] = arrayFormating(factAdress);
     var acceptTerm = {};
     acceptTerm['acceptTerms'] = acceptTerms;
     customerData["conditionsData"] = acceptTerm;
