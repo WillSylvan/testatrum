@@ -45,8 +45,8 @@ $(document).ready(function(){
 		<div class="login">
 			<a href="nav_ielogots.php" class="button">Ienākt</a>
 			<form>
-				<input type="submit" value="lv" name="lang">
-				<input type="submit" value="ru" name="lang">
+				<input type="submit" value="lv" name="lang" class="languages">
+				<input type="submit" value="ru" name="lang" class="languages">
 			</form>
 		</div>
 	</div>

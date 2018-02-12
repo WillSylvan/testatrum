@@ -103,6 +103,7 @@ slider_days.long.oninput = function() {
 
 function openCity(evt, cityName) {
 	var i, tabcontent, tablinks;
+	var cityN;
 	tabcontent = document.getElementsByClassName("tabcontent");
 	for (i = 0; i < tabcontent.length; i++) {
 		tabcontent[i].style.display = "none";
@@ -111,7 +112,11 @@ function openCity(evt, cityName) {
 	for (i = 0; i < tablinks.length; i++) {
 		tablinks[i].className = tablinks[i].className.replace(" active", "");
 	}
-	document.getElementById(cityName).style.display = "block";
+	cityN = document.getElementsByClassName(cityName);
+	for (i = 0; i < cityN.length; i++) {
+		cityN[i].style.display = "block";
+	}
+	/*document.getElementsByClassName(cityName).style.display = "block";*/
 	evt.currentTarget.className += " active";
 }
 

@@ -7,6 +7,25 @@ a{
 	color: inherit;
 	margin: 0;
 }
+
+.languages{
+    width: 2vw !important;
+    margin: 0vw !important;
+    margin-right: 0vw !important;
+    margin-left: 1vw !important;
+    height: auto;
+    padding: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    font-size: 1vw;
+    border-radius: 0 !important;
+    border: none !important;
+    font-family: "Poppins", sans-serif;
+    background-color: transparent !important;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 1vw !important;
+}
 .header{
 	display: flex;
 	display: -webkit-flex;

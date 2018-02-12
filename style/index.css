@@ -13,10 +13,18 @@ body{
 	display:none;
 }
 #grafiks{
-	position: absolute;
-    width: 55% !important;
-    left: 4vw;
-    bottom: 7.5vw;
+    position: absolute;
+    width: 30% !important;
+    left: 9vw;
+    bottom: 8vw;
+    padding: 0.2vw;
+    border: 1px solid rgb(173,74,202) !important;
+    background-image: none !important;
+    color: rgb(173,74,202) !important;
+    font-size: 0.8vw !important;
+    text-decoration: unset !important;
+    text-align: center;
+    border-radius: 0.5vw;
 }
 
 #content-grey{display:block}
@@ -177,7 +185,7 @@ body{
 }
 .img-apply-credit{
     position: absolute;
-    top: -16vw;
+    top: -14vw;
     right: 17vw;
     z-index: 2;
 }

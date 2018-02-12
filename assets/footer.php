@@ -42,7 +42,7 @@ $(function(){
     <div class="top-f flex">
 		<div class="phone flex">
 			<img src="img/ico/5.png">
-			<h1>+371 22334455</h1>
+			<h1>80700700</h1>
 		</div>
 		<div id="socials" class="flex">
 			<div><a><img src="img/ico/14.png"></a></div>
