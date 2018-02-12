@@ -1,0 +1,97 @@
+#maks-grafiks{
+	width: 60%;
+    margin: auto;
+    position: relative;
+    margin-top: 5vw;
+    margin-bottom: 10vw;
+}
+#maks-grafiks h2 {
+  font-size: 2vw;
+  margin: 0;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 1vw;
+}
+
+#maks-grafiks p {
+  margin: 0;
+  font-size: 1.2vw;
+  margin-bottom: 1vw;
+}
+
+
+.table-grafiks div {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2vw;
+}
+
+.table-grafiks div div {
+  width: 15vw;
+  justify-content: center;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+}
+
+.money {
+  width: 12vw !important;
+}
+
+.table-grafiks h1 {
+  margin: 0;
+  font-size: 0.9vw;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.table-grafiks h3 {
+  margin: 0;
+  font-size: 1vw;
+}
+
+.table-grafiks p {
+  margin: 0 !important;
+  font-size: 0.9vw;
+}
+
+
+@media screen and (max-width: 900px) {
+#maks-grafiks {
+    width: 85%;
+    position: relative;
+    left: 0;
+    margin: auto;
+    margin-top: 15vw;
+    margin-bottom: 0;
+  }
+#maks-grafiks h2 {
+    font-size: 6vw;
+    text-align: center;
+    margin-bottom: 4vw;
+    margin-top: 4vw;
+  }
+#maks-grafiks p {
+    margin: auto;
+    font-size: 3vw;
+    margin-bottom: 3vw;
+    text-align: center;
+    width: 60vw;
+}
+.table-grafiks p {
+    width: unset !important;
+    font-size: 3vw !important;
+}
+ .table-grafiks h1 {
+    font-size: 2vw;
+    text-align: center;
+}
+ .statuss, .kopa-atm {
+    display: none !important
+}
+ .table-grafiks h3 {
+    margin: 0;
+    font-size: 2vw;
+}
+}
