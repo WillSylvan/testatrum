@@ -19,7 +19,7 @@
 		<div class="header-background"></div>
 
 		<div id="top-forms" class="flex">
-			<div class="form_ f1" onclick='pinkColor()'>
+			<div class="form_ unselectable f1" onclick='pinkColor()'>
 				<div id="first-form" class="flex" >
 					<form action="registracija.php" method="post">
 
@@ -74,7 +74,7 @@
 				</div>
 			</div>
 
-			<div class="form_ f2" onclick='violetColor()'>
+			<div class="form_ unselectable f2" onclick='violetColor()'>
 				<div id="second-form" class="flex" >
 					<form action="registracija.php" method="post">
 

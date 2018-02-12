@@ -21,7 +21,7 @@
 	background-color: red;
 }
 
-*.unselectable *{
+.unselectable *{
    -moz-user-select: -moz-none;
    -khtml-user-select: none;
    -webkit-user-select: none;
