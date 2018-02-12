@@ -1,3 +1,5 @@
+<?php include 'lang/set-lang.php';?>
+
 <link rel="stylesheet" type="text/css" href="style/header.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -42,7 +44,10 @@ $(document).ready(function(){
 	<div class="atribut head">
 		<div class="login">
 			<a href="nav_ielogots.php" class="button">Ienākt</a>
-			<h3>RU</h3>
+			<form>
+				<input type="submit" value="lv" name="lang">
+				<input type="submit" value="ru" name="lang">
+			</form>
 		</div>
 	</div>
 </div>
