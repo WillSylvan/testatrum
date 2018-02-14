@@ -3,7 +3,7 @@
 	height: 40px;
 } 
 .slider_track {
-	width: 90%;
+	width: 100%;
 	height: 3px;
 	background-color: #ddd;
 	position: relative;
@@ -13,6 +13,7 @@
 	display: -webkit-flex;
 	align-items: center;
 	-webkit-align-items: center;*/
+	position: relative;
 }
 .slider_handle {
 	width: 20px;
@@ -20,7 +21,16 @@
 	position: absolute;
 	background-color: red;
 }
-
+.click_control {
+	position: absolute;
+	top: 0;
+}
+.increase {
+	left: 100%;
+}
+.decrease {
+	right: 100%;
+}
 .unselectable *{
    -moz-user-select: -moz-none;
    -khtml-user-select: none;

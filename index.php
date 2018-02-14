@@ -32,7 +32,9 @@
 									<p>Kredīts: <span id="short_echo_money_val"></span> <span class="repeated_loan" id="short_repeated_loan" style="display: none">Atkārtots aizdevums</span></p>
 
 									<!--<input type="range" name="stickmarks" step="5" min="50" max="500" value="250" class="slider" id="short_range_money">-->
-									<div id="short_range_money"></div>
+									<div class="slider_container">
+										<div id="short_range_money"></div>
+									</div>
 									<div class="values_steps"><span>50</span><span style="opacity: 0;">100</span><span>200</span><span>300</span><span>400</span><span>500</span></div>
 
 								</div>
@@ -43,7 +45,9 @@
 									<p>Dienas: <span id="short_echo_days_val"></span></p>
 
 									<!--<input name="sloanTerms" type="range" min="10" max="30" value="10" class="slider" id="short_range_days">-->
-									<div id="short_range_days"></div>
+									<div class="slider_container">
+										<div id="short_range_days"></div>
+									</div>
 									<div class="values_steps"><span>10</span><span>15</span><span>20</span><span>25</span><span>30</span></div>
 
 								</div>

@@ -37,6 +37,19 @@ $(document).ready(function(){
 		$('#top-forms .form_').css('display','none')
 			$('#top-forms .form_:eq('+id+')').fadeIn(300)
 	})
+
+	//constructor(dom,name,start,end,step,brake,output='',side,callback)
+	short_money_slider = new slider('short_range_money',0,50,500,5,300,'short_echo_money_val',2,function(value){
+		console.log(value)
+	})
+	short_days_slider = new slider('short_range_days',1,10,30,1,0,'short_term_display',0,0)
+
+
+	long_money_slider = new slider('long_range_money',2,50,500,5,300,'long_echo_money_val',2,0)
+	
 });
+
+
+
 
 
