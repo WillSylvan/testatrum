@@ -31,6 +31,30 @@ function violetColor(){
 	}
 }
 
+
+
+
+	function calc_term (type, length){
+
+	var today = new Date()
+	var priorDate
+
+	if (type === 'short') {
+		priorDate = new Date().setDate(today.getDate()+parseInt(length))
+	}
+
+	if (type==='long') {
+		priorDate = new Date().setMonth(today.getMonth()+length)
+	}
+
+	end_date = new Date(priorDate)
+
+	return ("0"+end_date.getDate()).slice(-2)+'.'+(end_date.getMonth()+1)+'.'+end_date.getFullYear()
+}
+
+
+
+
 $(document).ready(function(){
 	$('#round-buttons button').click(function(){
 		id = $(this).index()
@@ -40,12 +64,24 @@ $(document).ready(function(){
 
 	//constructor(dom,name,start,end,step,brake,output='',side,callback)
 	short_money_slider = new slider('short_range_money',0,50,500,5,300,'short_echo_money_val',2,function(value){
-		console.log(value)
+		document.getElementById('short_echo_money_val').innerHTML = +value + " EUR"
 	})
-	short_days_slider = new slider('short_range_days',1,10,30,1,0,'short_term_display',0,0)
+
+
+	short_days_slider = new slider('short_range_days',1,10,30,1,0,'short_term_display',0,function(value){
+		date = 
+		document.getElementById('short_term_display').innerHTML = calc_term('short', value)
+		document.getElementById('short_echo_days_val').innerHTML = value
+	})
 
 
 	long_money_slider = new slider('long_range_money',2,50,500,5,300,'long_echo_money_val',2,0)
+
+	short_days_slider = new slider('long_range_days',3,10,30,1,0,'long_term_display',0,function(value){
+		date = 
+		document.getElementById('long_term_display').innerHTML = calc_term('long', value)
+		document.getElementById('long_echo_days_val').innerHTML = value
+	})
 	
 });
 

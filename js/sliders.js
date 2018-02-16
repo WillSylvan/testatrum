@@ -32,7 +32,8 @@
  		this.step = step
  		this.output = document.getElementById(output)
  		this.value = 0;
- 		callback(this.value)
+ 		this.callback = callback
+ 		//callback(00000000000000000)
  		let that = this
  		console.log(that.output+' out')
 
@@ -45,16 +46,16 @@
  		<div class="slider_wrap">
  			<div class="slider_controls">
  				<div class="click_control decrease">-</div>
-	 			<div id="${name}_track" class="slider_track">
-	 				<div id="${name}_handle" class="slider_handle"></div>
+	 			<div id="${this.name}_track" class="slider_track">
+	 				<div id="${this.name}_handle" class="slider_handle"></div>
 	 			</div>
  				<div class="click_control increase">+</div>
 	 		</div>
- 			<input type="hidden" name="${name}" id="${name}_input" value="">
+ 			<input type="hidden" name="${this.name}" id="${this.name}_input" value="">
  		<div>
  		`;
 
- 		this.dom.innerHTML = html
+ 		this.dom.insertAdjacentHTML('afterbegin', html);
  		this.domWidth = window.getComputedStyle(this.dom).width
  		console.log(this.domWidth)
 
@@ -92,6 +93,7 @@
  				//console.log(that.output,that.output)
  				that.value = calcValue(that.min,that.max,that.step,that.domWidth,pos)
  				//that.output.innerHTML = that.value
+ 				that.callback(that.value)
  				document.getElementById(that.name+"_input").value = that.value
  			}
 		  
@@ -104,20 +106,30 @@
 		});
 
 		//CLICK CONTROLS
-		console.log(this.dom.querySelectorAll(".increase"))
+		//console.log(this.dom.querySelectorAll(".increase"))
+
+
 		this.dom.querySelectorAll(".increase")[0].onclick = function(){
 			that.value += that.step
-			document.getElementById(that.name+'_handle').style.left = (that.value/(that.max-that.min))*that.domWidth
-			console.log(document.getElementById(that.name+'_handle').style.left)
+
+			document.getElementById(that.name+'_handle').style.left = ((that.value-that.min)/(that.max-that.min))*that.domWidth-10
+
+ 			document.getElementById(that.name+"_input").value = that.value
+			that.callback(that.value)
+
+
 		}
+
+
 		this.dom.querySelectorAll(".decrease")[0].onclick = function(){
 			if (that.value>that.min) {
+
 				that.value -= that.step
+
 				document.getElementById(that.name+'_handle').style.left = ((that.value-that.min)/(that.max-that.min))*that.domWidth-10
-				console.log(document.getElementById(that.name+'_handle').style.left)
-				console.log('decrease'+that.name, that.value)
-				//that.output.innerHTML = that.value
+ 				
  				document.getElementById(that.name+"_input").value = that.value
+ 				that.callback(that.value)
 				
 			}
 		}
@@ -126,8 +138,16 @@
 		//callback
 		////
 
-		document.getElementById(that.name+"_input").addEventListener('onchange',function(){})
+		// document.getElementById(that.name+"_input").addEventListener('change',function(event){
+		// console.log('sd')
+		// })
 
+
+
+		
+
+	
+		console.log(document.getElementById(that.name+"_input").value)
 		// document.getElementById(that.name+'_handle').addEventListener("mouseleave", function(){
 		// 	mu(that)
 		// });
