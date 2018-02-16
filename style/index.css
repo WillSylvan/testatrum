@@ -32,10 +32,6 @@ body{
 #content-violet{display:none}
 
 /*GENERAL-HEADLINE*/
-.slider_container {
-    width: 80%;
-    position: relative;
-}
 .headline h1{
 	text-align: center;
     font-size: 1.8vw;

@@ -2,15 +2,11 @@
     <head>
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="style/index.css">
-		<link rel="stylesheet" type="text/css" href="style/sliders.css">
 		<link rel="stylesheet" type="text/css" href="style/style.css">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title></title>
 		<link rel="icon" href="img/logo.svg">
 		<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<script type="text/javascript" src="js/sliders.js"></script>
-
-
     </head>
 
 	<body>
@@ -19,7 +15,7 @@
 		<div class="header-background"></div>
 
 		<div id="top-forms" class="flex">
-			<div class="form_ unselectable f1" onclick='pinkColor()'>
+			<div class="form_ f1" onclick='pinkColor()'>
 				<div id="first-form" class="flex" >
 					<form action="registracija.php" method="post">
 
@@ -28,49 +24,45 @@
 								<h1><?php echo $language[$lang]['short-time'] ?></h1>
 								<div id="short_echo_money_cont">
 
-									<h3> Cik vēlaties aizņemties</h3>
-									<p>Kredīts: <span id="short_echo_money_val"></span> <span class="repeated_loan" id="short_repeated_loan" style="display: none">Atkārtots aizdevums</span></p>
+									<h3><?php echo $language[$lang]['how-much'] ?></h3>
+									<p><?php echo $language[$lang]['credit'] ?><span id="short_echo_money_val"></span> <span class="repeated_loan" id="short_repeated_loan" style="display: none"><?php echo $language[$lang]['replaycredit'] ?></span></p>
 
 									<!--<input type="range" name="stickmarks" step="5" min="50" max="500" value="250" class="slider" id="short_range_money">-->
-									<div class="slider_container">
-										<div id="short_range_money"></div>
-									</div>
+									<div id="short_range_money"></div>
 									<div class="values_steps"><span>50</span><span style="opacity: 0;">100</span><span>200</span><span>300</span><span>400</span><span>500</span></div>
 
 								</div>
 
 								<div id="short_echo_days_cont">
 
-									<h3>Uz cik ilgu laiku?</h3>
-									<p>Dienas: <span id="short_echo_days_val"></span></p>
+									<h3><?php echo $language[$lang]['how-long-time'] ?></h3>
+									<p><?php echo $language[$lang]['days'] ?> <span id="short_echo_days_val"></span></p>
 
 									<!--<input name="sloanTerms" type="range" min="10" max="30" value="10" class="slider" id="short_range_days">-->
-									<div class="slider_container">
-										<div id="short_range_days"></div>
-									</div>
+									<div id="short_range_days"></div>
 									<div class="values_steps"><span>10</span><span>15</span><span>20</span><span>25</span><span>30</span></div>
 
 								</div>
 
 								<div class="flex formulas">
 									<div>
-										<h2>Kredīts:<span id="short_summa"></span></h2>
-										<h2>Kopā:<span id="short_kopa"></span></h2>
+										<h2><?php echo $language[$lang]['credit'] ?><span id="short_summa"></span></h2>
+										<h2><?php echo $language[$lang]['bilance'] ?><span id="short_kopa"></span></h2>
 									</div>
 									<div>
-										<h2>Komisija: <span id="komisija">0.00 (15.00%)</span></h2>
-										<h2>GPL: <span id="gpl">0.00</span></h2>
+										<h2><?php echo $language[$lang]['com'] ?><span id="komisija">0.00 (15.00%)</span></h2>
+										<h2><?php echo $language[$lang]['gpl'] ?><span id="gpl">0.00</span></h2>
 									</div>
 								</div>
 							</div>
 
 							<div class="info_block">
-								<h5>Atmaksas datums: <span class="pink" id="short_term_display"></span></h5>
+								<h5><?php echo $language[$lang]['pay-day'] ?><span class="pink" id="short_term_display"></span></h5>
 
-								<h4>Kredīta pagarināšana uz 30 dienām:<br><b>22.20 EUR</b></h4>
+								<h4><?php echo $language[$lang]['pay-on-30-days'] ?><br><b>22.20 <?php echo $language[$lang]['eur'] ?></b></h4>
 
-								<a href="jauzliek links" class="links">*Standartinformācija</a>
-								<input type="submit" value="SAŅEMT NAUDU" class="rose-button" onclick="creditInfo(1)">
+								<a href="jauzliek links" class="links"><?php echo $language[$lang]['stand.-info'] ?></a>
+								<input type="submit" value=<?php echo $language[$lang]['get-money'] ?> class="rose-button" onclick="creditInfo(1)">
 							</div>
 						</div>
 
@@ -78,7 +70,7 @@
 				</div>
 			</div>
 
-			<div class="form_ unselectable f2" onclick='violetColor()'>
+			<div class="form_ f2" onclick='violetColor()'>
 				<div id="second-form" class="flex" >
 					<form action="registracija.php" method="post">
 
@@ -87,8 +79,8 @@
 								<h1><?php echo $language[$lang]['long-time'] ?></h1>
 								<div id="long_echo_money_cont">
 
-									<h3> Cik vēlaties aizņemties</h3>
-									<p>Kredīts: <span id="long_echo_money_val"></span> <span class="repeated_loan" id="long_repeated_loan" style="display: none">Atkārtots aizdevums</span></p>
+									<h3><?php echo $language[$lang]['how-much'] ?></h3>
+									<p><?php echo $language[$lang]['credit'] ?><span id="long_echo_money_val"></span> <span class="repeated_loan" id="long_repeated_loan" style="display: none"><?php echo $language[$lang]['replaycredit'] ?></span></p>
 
 									<!--<input type="range" name="btickmarks" step="5" min="100" max="1000" value="250" class="slider" id="long_range_money">-->
 									<div id="long_range_money"></div>
@@ -97,8 +89,8 @@
 
 								<div id="long_echo_days_cont">
 
-									<h3>Uz cik ilgu laiku?</h3>
-									<p>Mēneši: <span id="long_echo_days_val"></span></p>
+									<h3><?php echo $language[$lang]['how-long-time'] ?></h3>
+									<p><?php echo $language[$lang]['days'] ?><span id="long_echo_days_val"></span></p>
 
 									<!--<input name="bloanTerms" type="range" min="3" max="12" value="5" class="slider" id="long_range_days">-->
 									<div id="long_range_days"></div>
@@ -109,25 +101,25 @@
 
 								<div class="flex formulas">
 									<div>
-										<h2>Kredīts:<span id="long_summa"></span></h2>
-										<h2>Kopā:<span id="long_kopa"></span></h2>
+										<h2><?php echo $language[$lang]['credit'] ?><span id="long_summa"></span></h2>
+										<h2><?php echo $language[$lang]['bilance'] ?><span id="long_kopa"></span></h2>
 									</div>
 									<div>
-										<h2>Komisija: <span id="komisija">0.00 (15.00%)</span></h2>
-										<h2>GPL: <span id="gpl">0.00</span></h2>
+										<h2><?php echo $language[$lang]['com'] ?><span id="komisija">0.00 (15.00%)</span></h2>
+										<h2><?php echo $language[$lang]['gpl'] ?><span id="gpl">0.00</span></h2>
 									</div>
 								</div>
 							</div>
 
 							<div class="info_block">
-								<h5>Kredīts jāatmaksā līdz<br>   <span class="violet" id="long_term_display">01.09.2018</span></h5>
-								<h5>Ikmēneša maksājums<br> <span class="violet">158.15 EUR</span></h5>
-								<h5>Pirmā maksājuma datums<br>   <span class="violet">19.01.2018</span></h5>
+								<h5><?php echo $language[$lang]['pay-day'] ?><br>   <span class="violet" id="long_term_display">01.09.2018</span></h5>
+								<h5><?php echo $language[$lang]['pay-on-30-days'] ?><br> <span class="violet">158.15 <?php echo $language[$lang]['eur'] ?></span></h5>
+								<h5><?php echo $language[$lang]['first-pay-day'] ?><br>   <span class="violet">19.01.2018</span></h5>
 
 
-								<a href="jauzliek links" class="links">*Standartinformācija</a>
-								<a href="grafiks.php" id="grafiks">APSKATĪT MAKSĀJUMU GRAFIKU</a>
-								<input type="submit" value="SAŅEMT NAUDU" class="violet-button" onclick="creditInfo(2)">
+								<a href="jauzliek links" class="links"><?php echo $language[$lang]['stand.-info'] ?></a>
+								<a href="grafiks.php" id="grafiks"><?php echo $language[$lang]['pay-graphic'] ?></a>
+								<input type="submit" value=<?php echo $language[$lang]['get-money'] ?> class="violet-button" onclick="creditInfo(2)">
 
 							</div>
 						</div>
@@ -147,53 +139,53 @@
 			<div class="icons_block flex">
 				<div class="icon_border">
 					<img id="img-1" src="img/grey_icons/home/1.svg" alt="Smiley face">
-					<h3>Pirmais kredīts bez komisijas</h3>
+					<h3><?php echo $language[$lang]['1-grey-pic-txt-1'] ?></h3>
 				</div>
 
 				<div class="icon_border">
 					<img id="img-2" src="img/grey_icons/home/2.svg" alt="Smiley face">
-					<h3>Neizejot no mājām</h3>
+					<h3><?php echo $language[$lang]['1-grey-pic-txt-2'] ?></h3>
 				</div>
 
 				<div class="icon_border">
 					<img id="img-3" src="img/grey_icons/home/3.svg" alt="Smiley face">
-					<h3>Tikai 15 minūšu laikā</h3>
+					<h3><?php echo $language[$lang]['1-grey-pic-txt-3'] ?></h3>
 				</div>
 
 				<div class="icon_border">
 					<img id="img-4" src="img/grey_icons/home/4.svg" alt="Smiley face">
-					<h3>Minimālas formalitātes</h3>
+					<h3><?php echo $language[$lang]['1-grey-pic-txt-4'] ?></h3>
 				</div>
 			</div>
 
 			<div class="headline">
-				<h1>Pirmais kredīts</h1>
+				<h1><?php echo $language[$lang]['first-cred'] ?></h1>
 			</div>
 
 			<div id="icons_block_sec">
 				<div class="icons_block_sec flex">
 					<div class="icon_border_sec b1">
 						<img id="img-5" src="img/grey_icons/credit_icons/6.svg" alt="Smiley face">
-						<h3>Piesakiet kredītu internetā</h3>
-						<p>Izvēlieties kredīta summu un termiņu</p>
+						<h3><?php echo $language[$lang]['2-grey-pic-txt-1'] ?></h3>
+						<p><?php echo $language[$lang]['2-grey-pic-txt-1.1'] ?></p>
 					</div>
 
 					<div class="icon_border_sec b2">
 						<img id="img-6" src="img/grey_icons/credit_icons/7.svg" alt="Smiley face">
-						<h3>Reģistrējieties</h3>
-						<p>Aizpildiet reģistrācijas anketu</p>
+						<h3><?php echo $language[$lang]['2-grey-pic-txt-2'] ?></h3>
+						<p><?php echo $language[$lang]['2-grey-pic-txt-2.1'] ?></p>
 					</div>
 
 					<div class="icon_border_sec b3">
 						<img id="img-7" src="img/grey_icons/credit_icons/5.svg" alt="Smiley face">
-						<h3>Apstipriniet reģistrāciju</h3>
-						<p>Pārskaitiet no sava bankas konta reģistrācijas maksu EUR 0.01, maksājuma mērķī norādot: <b>Piekrītu AS Lateko Līzings<br> līguma noteikumiem</b><br>Nepieciešamā informācija maksājuma veikšanai <a href="#rekviziti"><b>šeit.</b></a></p>
+						<h3><?php echo $language[$lang]['2-grey-pic-txt-3'] ?></h3>
+						<p><?php echo $language[$lang]['2-grey-pic-txt-3.1'] ?><a href="#rekviziti"><b> <?php echo $language[$lang]['there'] ?>.</b></a></p>
 					</div>
 
 					<div class="icon_border_sec b4">
 						<img id="img-8" src="img/grey_icons/credit_icons/8.svg" alt="Smiley face">
-						<h3>Saņemiet kredītu</h3>
-						<p>Lēmumu par kredīta piešķiršanu Jūs saņemsiet īsziņas veidā 15 minūšu laikā</p>
+						<h3><?php echo $language[$lang]['2-grey-pic-txt-4'] ?></h3>
+						<p><?php echo $language[$lang]['2-grey-pic-txt-4.1'] ?></p>
 					</div>
 				</div>
 			</div>
@@ -202,14 +194,14 @@
 				<div class="piesakies-background"></div>
 
 				<div class="headline">
-					<h1>Atkārtots kredīts</h1>
+					<h1><?php echo $language[$lang]['re-ply-cred'] ?></h1>
 				</div>
 
 				<div class="apply_credit">
 					<div class="img-apply-credit"><img src="img/pink/atrum_pc.svg" alt="pc"></div>
 					<div class="apply">
-						<div><h1>Piesakiet kredītu internetā!</h1></div>
-						<div><button class="button_sanemt" id="f-button">Saņēmt kredītu</button></div>
+						<div><h1><?php echo $language[$lang]['apply'] ?></h1></div>
+						<div><button class="button_sanemt" id="f-button"><?php echo $language[$lang]['get-cred'] ?></button></div>
 					</div>
 				</div>
 
@@ -218,15 +210,15 @@
 				<div class="three_icons_block flex">
 					<div class="tree_icon_border">
 						<img id="img-9" src="img/ico/1.png" alt="Smiley face">
-						<h3>Ieejiet savā profilā</h3>
+						<h3><?php echo $language[$lang]['log-in-my-profil'] ?></h3>
 					</div>
 					<div class="tree_icon_border">
 						<img id="img-10" src="img/ico/2.png" alt="Smiley face">
-						<h3>Izvēlieties kredīta summu un termiņu</h3>
+						<h3><?php echo $language[$lang]['cred-bil-n-date'] ?></h3>
 					</div>
 					<div class="tree_icon_border">
 						<img id="img-11" src="img/ico/3.png" alt="Smiley face">
-						<h3>Saņemiet kredītu</h3>
+						<h3><?php echo $language[$lang]['get-cred'] ?></h3>
 					</div>
 				</div>
 			</div>
@@ -237,52 +229,52 @@
 				<div class="apply_credit-2">
 					<div class="img-apply-credit-2"><img id="violet-mob" src="img/pink/iphone.png" alt=""></div>
 					<div class="apply-2">
-						<div><h1>Piesakiet kredītu pa telefonu!</h1></div>
-						<div><button class="button_sanemt-2" id="s-button">Zvanīt</button></div>
+						<div><h1><?php echo $language[$lang]['apply-phone'] ?></h1></div>
+						<div><button class="button_sanemt-2" id="s-button"><?php echo $language[$lang]['call'] ?></button></div>
 					</div>
 				</div>
 
 				<div class="three_icons_block-2 flex">
 					<div class="tree_icon_border-2">
 						<img id="img-12" src="img/ico/4.png" alt="Smiley face">
-						<h3>Piezvaniet mums:<br>80700700 </h3>
+						<h3><?php echo $language[$lang]['call-to-us'] ?><br>80700700 </h3>
 					</div>
 					<div class="tree_icon_border-2">
 						<img id="img-13" src="img/ico/2.png" alt="Smiley face">
-						<h3>Izvēlieties kredīta summu un termiņu</h3>
+						<h3><?php echo $language[$lang]['cred-bil-n-date'] ?></h3>
 					</div>
 					<div class="tree_icon_border-2">
 						<img id="img-14" src="img/ico/3.png" alt="Smiley face">
-						<h3>Saņemiet kredītu</h3>
+						<h3><?php echo $language[$lang]['get-cred'] ?></h3>
 					</div>
 				</div>
 			</div>
 
 			<div id="block-atmaksat">
 				<div class="headline">
-					<h1>Kā atmaksāt?</h1>
+					<h1><?php echo $language[$lang]['payback'] ?></h1>
 				</div>
 
 				<div id="icons_block_sec2">
 					<div class="icons_block_sec2 flex">
 						<div class="icon_border_sec2 b5">
-							<h3>Kā pagarināt kredītu?</h3>
-							<p>Kredīta pagarināšanai Jums ir jāpārskaita pagarinājuma maksa uz vienu no mūsu kontiem.</p>
+							<h3><?php echo $language[$lang]['how-prolong'] ?></h3>
+							<p><?php echo $language[$lang]['how-prolong-1.1'] ?></p>
 						</div>
 
 						<div class="icon_border_sec2 b6">
-							<h3>Kas jānorāda maksājuma mērķī?</h3>
-							<p>Maksājuma mērķī jānorāda līguma numurs un vārds <b>„pagarinājums”</b>. <br>Piemērs: Līguma Nr. SMXXXXXX pagarinājums.</p>
+							<h3><?php echo $language[$lang]['purpose-of-payment'] ?></h3>
+							<p><?php echo $language[$lang]['purpose-of-payment-1.1'] ?></p>
 						</div>
 
 						<div class="icon_border_sec2 b7">
-							<h3>Kā atmaksāt kredītu?</h3>
-							<p>Kredīta atmaksai Jums ir jāpārskaita kredīta atmaksas summa uz vienu no mūsu kontiem.</p>
+							<h3><?php echo $language[$lang]['credit-payback'] ?></h3>
+							<p><?php echo $language[$lang]['credit-payback-1.1'] ?></p>
 						</div>
 
 						<div class="icon_border_sec2 b8">
-							<h3>Kas jānorāda maksājuma mērķī?</h3>
-							<p>Maksājuma mērķī jānorāda līguma numurs un vārds <b>„atmaksa”</b>. <br>Piemērs: Līguma Nr. SMXXXXXX atmaksa.</p>
+							<h3><?php echo $language[$lang]['purpose-of-payment'] ?></h3>
+							<p><?php echo $language[$lang]['credit-payback-1.1'] ?></p>
 						</div>
 					</div>
 				</div>
@@ -550,27 +542,27 @@
 			<div class="icons_block flex">
 				<div class="icon_border">
 					<img id="img-1" src="img/pink/ico/1.svg" alt="Smiley face">
-					<h3>Pirmais kredīts bez komisijas</h3>
+					<h3><?php echo $language[$lang]['1-oran-pic-txt-1'] ?></h3>
 				</div>
 
 				<div class="icon_border">
 					<img id="img-2" src="img/pink/ico/2.svg" alt="Smiley face">
-					<h3>Neizejot no mājām</h3>
+					<h3><?php echo $language[$lang]['1-oran-pic-txt-2'] ?></h3>
 				</div>
 
 				<div class="icon_border">
 					<img id="img-3" src="img/pink/ico/3.svg" alt="Smiley face">
-					<h3>Tikai 15 minūšu laikā</h3>
+					<h3><?php echo $language[$lang]['1-oran-pic-txt-3'] ?></h3>
 				</div>
 
 				<div class="icon_border">
 					<img id="img-4" src="img/pink/ico/4.svg" alt="Smiley face">
-					<h3>Minimālas formalitātes</h3>
+					<h3><?php echo $language[$lang]['1-oran-pic-txt-4'] ?></h3>
 				</div>
 			</div>
 
 			<div class="headline">
-				<h1>Pirmais kredīts</h1>
+				<h1><?php echo $language[$lang]['first-cred'] ?></h1>
 			</div>
 
 			<div id="icons_block_sec">
@@ -952,23 +944,23 @@
 		
 			<div class="icons_block flex">
 				<div class="icon_border">
-					<img id="img-1" src="img/violet/ico/9.svg" alt="Smiley face">
-					<h3>Pirmais kredīts bez komisijas</h3>
+					<img id="img-1" src="img/violet/ico/1.0.svg" alt="Smiley face">
+					<h3>Ilgtermiņa kredīts līdz 1000 EUR</h3>
 				</div>
 
 				<div class="icon_border">
-					<img id="img-2" src="img/violet/ico/10.svg" alt="Smiley face">
-					<h3>Neizejot no mājām</h3>
+					<img id="img-2" src="img/violet/ico/1.2.svg" alt="Smiley face">
+					<h3>Vienādi ikmēneša maksājumi</h3>
 				</div>
 
 				<div class="icon_border">
-					<img id="img-3" src="img/violet/ico/11.svg" alt="Smiley face">
+					<img id="img-3" src="img/violet/ico/1.1.svg" alt="Smiley face">
+					<h3>Atmaksas termiņš 3-12 mēneši</h3>
+				</div>
+
+				<div class="icon_border">
+					<img id="img-4" src="img/violet/ico/11.svg" alt="Smiley face">
 					<h3>Tikai 15 minūšu laikā</h3>
-				</div>
-
-				<div class="icon_border">
-					<img id="img-4" src="img/violet/ico/12.svg" alt="Smiley face">
-					<h3>Minimālas formalitātes</h3>
 				</div>
 			</div>
 
