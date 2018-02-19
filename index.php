@@ -3,10 +3,12 @@
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="style/index.css">
 		<link rel="stylesheet" type="text/css" href="style/style.css">
+		<link rel="stylesheet" type="text/css" href="style/sliders.css">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title></title>
 		<link rel="icon" href="img/logo.svg">
 		<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/sliders.js"></script>
     </head>
 
 	<body>
@@ -15,7 +17,7 @@
 		<div class="header-background"></div>
 
 		<div id="top-forms" class="flex">
-			<div class="form_ f1" onclick='pinkColor()'>
+			<div class="form_ f1 unselectable" onclick='pinkColor()'>
 				<div id="first-form" class="flex" >
 					<form action="registracija.php" method="post">
 
@@ -28,8 +30,9 @@
 									<p><?php echo $language[$lang]['credit'] ?><span id="short_echo_money_val"></span> <span class="repeated_loan" id="short_repeated_loan" style="display: none"><?php echo $language[$lang]['replaycredit'] ?></span></p>
 
 									<!--<input type="range" name="stickmarks" step="5" min="50" max="500" value="250" class="slider" id="short_range_money">-->
-									<div id="short_range_money"></div>
-									<div class="values_steps"><span>50</span><span style="opacity: 0;">100</span><span>200</span><span>300</span><span>400</span><span>500</span></div>
+									<div class="slider_container">
+                                        <div id="short_range_money"></div>
+                                    </div>
 
 								</div>
 
@@ -39,8 +42,9 @@
 									<p><?php echo $language[$lang]['days'] ?> <span id="short_echo_days_val"></span></p>
 
 									<!--<input name="sloanTerms" type="range" min="10" max="30" value="10" class="slider" id="short_range_days">-->
-									<div id="short_range_days"></div>
-									<div class="values_steps"><span>10</span><span>15</span><span>20</span><span>25</span><span>30</span></div>
+									<div class="slider_container">
+                                        <div id="short_range_days"></div>
+                                    </div>
 
 								</div>
 
@@ -70,7 +74,7 @@
 				</div>
 			</div>
 
-			<div class="form_ f2" onclick='violetColor()'>
+			<div class="form_ f2 unselectable" onclick='violetColor()'>
 				<div id="second-form" class="flex" >
 					<form action="registracija.php" method="post">
 
@@ -83,8 +87,9 @@
 									<p><?php echo $language[$lang]['credit'] ?><span id="long_echo_money_val"></span> <span class="repeated_loan" id="long_repeated_loan" style="display: none"><?php echo $language[$lang]['replaycredit'] ?></span></p>
 
 									<!--<input type="range" name="btickmarks" step="5" min="100" max="1000" value="250" class="slider" id="long_range_money">-->
-									<div id="long_range_money"></div>
-									<div class="values_steps"><span>100</span><span>300</span><span>500</span><span>750</span><span>1000</span></div>
+									<div class="slider_container">
+                                        <div id="long_range_money"></div>
+                                    </div>
 								</div>
 
 								<div id="long_echo_days_cont">
@@ -93,8 +98,9 @@
 									<p><?php echo $language[$lang]['days'] ?><span id="long_echo_days_val"></span></p>
 
 									<!--<input name="bloanTerms" type="range" min="3" max="12" value="5" class="slider" id="long_range_days">-->
-									<div id="long_range_days"></div>
-									<div class="values_steps"><span>3</span><span>6</span><span>9</span><span>12</span></div>
+									 <div class="slider_container">
+                                        <div id="long_range_days"></div>
+                                    </div>
 
 
 								</div>

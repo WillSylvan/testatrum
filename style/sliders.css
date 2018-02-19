@@ -1,0 +1,84 @@
+.slider_wrap {
+    width: 100%;
+    height: 3vw;
+} 
+.slider_track {
+    width: 100%;
+    height: 0.5vw;
+    background-color: #ddd;
+    position: relative;
+    top: calc((3vw - 0.5vw) / 2);
+    border-radius: 0.25vw;
+}
+.slider_controls{
+    /*display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;*/
+    position: relative;
+}
+.slider_handle {
+    width: 1.1vw;
+    height: 1.1vw;
+    position: absolute;
+    top: -0.3vw;
+    background-color: red;
+    z-index: 1;
+    border-radius: 50%;
+    border: solid 0.2vw #fff;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 20px rgba(0,0,0,0.4);
+}
+.click_control {
+    position: absolute;
+    top: 0;
+    width: 1.1vw;
+    height: 1.1vw;
+    line-height: 1.1vw;
+    border-radius: 50%;
+    box-shadow: 4px 4px 20px rgba(0,0,0,0.4);
+    top: 0.95vw;
+    text-align: center;
+}
+.increase {
+    left: calc(100% + 0.5vw);
+}
+.decrease {
+    right: calc(100% + 0.5vw);
+}
+.unselectable *{
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   /*
+     Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+   -ms-user-select: none;
+   user-select: none;
+}
+.track_cover {
+    height: 100%;
+    background-color: #777;
+    width: 30px;
+    position: absolute;
+    top: 0;
+    border-radius: 0.25vw;
+    
+}
+.pos_values {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+}
+.pos_values .pos_values_wrap {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: 0;
+    display: flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
