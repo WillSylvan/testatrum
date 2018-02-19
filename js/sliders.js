@@ -19,6 +19,7 @@
     }
     function mu(a){
         a.focus = false
+        a.callback(a.value, a.focus)
     }
  class slider {
     constructor(dom,name,min,max,step,brake,output,side,values,callback){
@@ -36,7 +37,7 @@
         this.values = values
         //callback(00000000000000000)
         let that = this
-        console.log(that.output+' out')
+       // console.log(that.output+' out')
     /////
     //Slider html setup
     /////
@@ -60,7 +61,7 @@
         function place_pos_values(){
             let pos_values_html = ""; 
             for (var i = 0; i < that.values.length; i++) {
-                console.log(that.values[i] , that.max,that.min,  parseInt(that.domWidth))
+              //  console.log(that.values[i] , that.max,that.min,  parseInt(that.domWidth))
                 let pos = (that.values[i]-that.min) / (that.max-that.min) * 100 + "%"
                 pos_values_html += "<div class='pos_values_wrap' style='left:"+pos+"'><span>"+that.values[i]+"</span></div>"
                 
@@ -77,10 +78,11 @@
         function responce(){
             if (that.value<=that.max&&that.value>=that.min) {
                 let w = ((that.value-that.min)/(that.max-that.min))*that.domWidth
+                console.log(w)
                 document.getElementById(that.name+'_handle').style.left = (w - parseInt(window.getComputedStyle(document.getElementById(that.name+'_handle')).width)/2)/that.domWidth * 100 + "%"//((that.value-that.min)/(that.max-that.min))*that.domWidth-10
                 document.getElementById(that.name+"_input").value = that.value
                 document.getElementById(that.name+"_track_cover").style.width = (that.side=='left'? w : that.domWidth-w)/that.domWidth * 100 + "%"
-                that.callback(that.value)
+                that.callback(that.value, that.focus)
             }
             
         }
@@ -138,6 +140,19 @@
             that.domWidth = parseInt(window.getComputedStyle(that.dom).width)
             place_pos_values()
         })
+    }
+
+    start_val(val){
+        if (val<=this.max&&val>=this.min) {
+            this.value = val
+            let w = ((this.value-this.min)/(this.max-this.min))*parseInt(this.domWidth)
+            console.log(this.value,this.min,this.max-this.min,parseInt(this.domWidth))
+                document.getElementById(this.name+'_handle').style.left = (w - parseInt(window.getComputedStyle(document.getElementById(this.name+'_handle')).width)/2)/parseInt(this.domWidth) * 100 + "%"//((that.value-that.min)/(that.max-that.min))*that.domWidth-10
+               //console.log((w - parseInt(window.getComputedStyle(document.getElementById(this.name+'_handle')).width)/2)/this.domWidth * 100 + "%")
+                document.getElementById(this.name+"_input").value = this.value
+                document.getElementById(this.name+"_track_cover").style.width = (this.side=='left'? w : parseInt(this.domWidth)-w)/parseInt(this.domWidth) * 100 + "%"
+                this.callback(this.value, false/*this.focus*/)
+        }
     }
     
  }

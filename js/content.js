@@ -30,6 +30,48 @@ function violetColor(){
         $("#important2").css("width","70%");
     }
 }
+
+	function ajax_(request,data,callback){
+		 var createCORSRequest = function(method, url) {
+            var xhr = new XMLHttpRequest();
+            if ("withCredentials" in xhr) {
+              // Most browsers.
+              xhr.open(method, url, true);
+              xhr.setRequestHeader("Authorization", 'Basic YXRydW0ubHZfdGVzdDp0dXRLdUwyZjU5NUxUTkti');
+            } else if (typeof XDomainRequest != "undefined") {
+              // IE8 & IE9
+              xhr = new XDomainRequest();
+              xhr.open(method, url);
+            } else {
+              // CORS not supported.
+              xhr = null;
+            }
+            return xhr;
+          };
+
+
+          var url = 'http://159.148.101.219:8091/api/564382A4-81E8-4C2B-AE7D-80B88EC2FCB6/'+request;
+          //var url = 'http://159.148.101.219:8091/api/564382A4-81E8-4C2B-AE7D-80B88EC2FCB6/register';
+          var method = 'POST';
+
+
+          var xhr = createCORSRequest(method, url);
+          xhr.onload = function(response) {
+
+          console.log(response.currentTarget.response)
+
+           callback(JSON.parse(response.currentTarget.response))
+          };
+          xhr.onerror = function() {
+            console.log('error')
+          };
+          xhr.withCredentials = true;
+          xhr.send(JSON.stringify(data));
+	}
+
+
+
+
     function calc_term (type, length){
     var today = new Date()
     var priorDate
@@ -50,7 +92,7 @@ $(document).ready(function(){
             $('#top-forms .form_:eq('+id+')').fadeIn(300)
     })
     //constructor(dom,name,min,max,step,brake,output,side,callback,values)
-    short_money_slider = new slider('short_range_money',0,50,500,5,300,'short_echo_money_val','right',[50,200,300,400,500],function(response){
+    short_money_slider = new slider('short_range_money',0,50,500,5,300,'short_echo_money_val','right',[50,200,300,400,500],function(response,mu){
         document.getElementById('short_echo_money_val').innerHTML = +response + " EUR"
             if (response>300) {
                     repeated_loan.short.style.display = "block"
@@ -58,11 +100,19 @@ $(document).ready(function(){
                     repeated_loan.short.style.display = "none"
                 }
     })
-    short_days_slider = new slider('short_range_days',1,10,30,1,0,'short_term_display','left',[10,15,20,25,30],function(response){
+    short_money_slider.start_val(200)
+
+
+
+    short_days_slider = new slider('short_range_days',1,10,30,1,0,'short_term_display','right',[10,15,20,25,30],function(response,mu){
         document.getElementById('short_term_display').innerHTML = calc_term('short', response)
         document.getElementById('short_echo_days_val').innerHTML = response
     })
-    long_money_slider = new slider('long_range_money',2,100,1000,5,300,'long_echo_money_val','right',[100,300,500,750,1000],function(response){
+    short_days_slider.start_val(15)
+
+
+
+    long_money_slider = new slider('long_range_money',2,100,1000,5,300,'long_echo_money_val','right',[100,300,500,750,1000],function(response,mu){
         document.getElementById('long_echo_money_val').innerHTML = +response + " EUR"
         if (response>430) {
             repeated_loan.long.style.display = "block"
@@ -70,41 +120,64 @@ $(document).ready(function(){
             repeated_loan.long.style.display = "none"
         }
     })
-    short_days_slider = new slider('long_range_days',3,3,12,1,0,'long_term_display','right',[3,6,9,12],function(response){
-        date = 
+    long_money_slider.start_val(300)
+
+
+
+
+    long_days_slider = new slider('long_range_days',3,3,12,1,0,'long_term_display','right',[3,6,9,12],function(response,mu){
+       
         document.getElementById('long_term_display').innerHTML = calc_term('long', response)
         document.getElementById('long_echo_days_val').innerHTML = response
+        if (!mu) {
+        	
+        }
     })
+    long_days_slider.start_val(10)
     
 });
-var sendToApi_loan = function() {
-          var createCORSRequest = function(method, url) {
-            var xhr = new XMLHttpRequest();
-            if ("withCredentials" in xhr) {
-              // Most browsers.
-              xhr.open(method, url, true);
-              xhr.setRequestHeader("Authorization", 'Basic YXRydW0ubHZfdGVzdDp0dXRLdUwyZjU5NUxUTkti');
-            } else if (typeof XDomainRequest != "undefined") {
-              // IE8 & IE9
-              xhr = new XDomainRequest();
-              xhr.open(method, url);
-            } else {
-              // CORS not supported.
-              xhr = null;
-            }
-            return xhr;
-          };
-          var url = 'http://159.148.101.219:8091/api/564382A4-81E8-4C2B-AE7D-80B88EC2FCB6/GetCalculatorInformation';
-            //var url = 'http://159.148.101.219:8091/api/564382A4-81E8-4C2B-AE7D-80B88EC2FCB6/register';
-          var method = 'POST';
-          var xhr = createCORSRequest(method, url);
-          xhr.onload = function(response) {
-            console.log(response.currentTarget.response)
-          };
-          xhr.onerror = function() {
-            console.log('error')
-          };
-          xhr.withCredentials = true;
-          xhr.send(JSON.stringify({amounts:150, days:10}));
-        }
-        sendToApi_loan()
+// var sendToApi_loan = function() {
+//           var createCORSRequest = function(method, url) {
+//             var xhr = new XMLHttpRequest();
+//             if ("withCredentials" in xhr) {
+//               // Most browsers.
+//               xhr.open(method, url, true);
+//               xhr.setRequestHeader("Authorization", 'Basic YXRydW0ubHZfdGVzdDp0dXRLdUwyZjU5NUxUTkti');
+//             } else if (typeof XDomainRequest != "undefined") {
+//               // IE8 & IE9
+//               xhr = new XDomainRequest();
+//               xhr.open(method, url);
+//             } else {
+//               // CORS not supported.
+//               xhr = null;
+//             }
+//             return xhr;
+//           };
+//           var url = 'http://159.148.101.219:8091/api/564382A4-81E8-4C2B-AE7D-80B88EC2FCB6/GetLoanPreview';
+//             //var url = 'http://159.148.101.219:8091/api/564382A4-81E8-4C2B-AE7D-80B88EC2FCB6/register';
+//           var method = 'POST';
+//           var xhr = createCORSRequest(method, url);
+//           xhr.onload = function(response) {
+//             console.log(response.currentTarget.response)
+//           };
+//           xhr.onerror = function() {
+//             console.log('error')
+//           };
+//           xhr.withCredentials = true;
+//           xhr.send(JSON.stringify({  
+//   "loanData":
+//   {
+//     "type": "long",
+//     "principal": 220,
+//     "term": 3
+//   }
+// }));
+//        }
+       // sendToApi_loan()
+
+    ajax_('GetLoanPreview',{"loanData":{"type": "short","principal": 220,"term": 20}},function(a){
+    	console.log(a)
+
+    })
+
+// {"loanData":{"type": "long","principal": 220,"term": 3}}
