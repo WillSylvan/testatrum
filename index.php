@@ -591,10 +591,12 @@
 				<div class="apply_credit">
 					<div class="img-apply-credit"><img src="img/pink/atrum_pc.svg" alt="pc"></div>
 					<div class="apply">
-						<div><h1>Piesakiet kredītu internetā!</h1></div>
-						<div><button class="button_sanemt" id="f-button">Saņēmt kredītu</button></div>
+						<div><h1><?php echo $language[$lang]['apply'] ?></h1></div>
+						<div><button class="button_sanemt" id="f-button"><?php echo $language[$lang]['get-cred'] ?></button></div>
 					</div>
 				</div>
+
+	
 
 				<div id="raditajs"><img id="raditajs-img" src="img/pink/pink.png"></div>
 
