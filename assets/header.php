@@ -1,4 +1,7 @@
-<?php include 'lang/set-lang.php';?>
+<?php 
+	include 'lang/set-lang.php';
+	include 'lang/lang-header.php';
+?>
 
 <link rel="stylesheet" type="text/css" href="style/header.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,16 +37,16 @@ $(document).ready(function(){
 	</div>
 	<div class="my_nav head">
 		<ul>
-		  <li><a href="index.php#icons_block_sec">Kā saņemt?</a></li>
-		  <li><a href="index.php#block-atmaksat">Kā atmaksāt?</a></li>
-		  <li><a href="index.php#questions">Jautājumi un Atbildes</a></li>
-		  <li><a href="">Līgums</a></li>
-		  <li><a href="index.php#footer">Kontakti</a></li>
+		  <li><a href="index.php#icons_block_sec"><?php echo $language[$lang]['how-to-get'] ?></a></li>
+		  <li><a href="index.php#block-atmaksat"><?php echo $language[$lang]['how-payback'] ?></a></li>
+		  <li><a href="index.php#questions"><?php echo $language[$lang]['quest-answ'] ?></a></li>
+		  <li><a href=""><?php echo $language[$lang]['contract'] ?></a></li>
+		  <li><a href="index.php#footer"><?php echo $language[$lang]['contact'] ?></a></li>
 		</ul>
 	</div>	
 	<div class="atribut head">
 		<div class="login">
-			<a href="nav_ielogots.php" class="button">Ienākt</a>
+			<a href="nav_ielogots.php" class="button"><?php echo $language[$lang]['login'] ?></a>
 			<form>
 				<input type="submit" value="lv" name="lang" class="languages">
 				<input type="submit" value="ru" name="lang" class="languages">
