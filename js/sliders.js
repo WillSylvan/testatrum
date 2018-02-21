@@ -118,22 +118,24 @@
         }, 0);
         this.dom.addEventListener("mouseenter", function(){});
         this.dom.addEventListener("mouseleave", function(){
-            mu(that)
+            if (that.focus) {
+                mu(that)
+            }
             
         });
         //CLICK CONTROLS
         //console.log(this.dom.querySelectorAll(".increase"))
         this.dom.querySelectorAll(".increase")[0].onclick = function(){
-            that.value += that.step
-            responce()
+            if (that.value<that.max) {
+                that.value += that.step
+                responce() 
+            }
             
         }
         this.dom.querySelectorAll(".decrease")[0].onclick = function(){
             if (that.value>that.min) {
                 that.value -= that.step
-                responce()
-                
-                
+                responce() 
             }
         }
         this.dom.addEventListener('onresize',function(){

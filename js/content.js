@@ -84,14 +84,19 @@ function violetColor(){
     end_date = new Date(priorDate)
     return ("0"+end_date.getDate()).slice(-2)+'.'+(end_date.getMonth()+1)+'.'+end_date.getFullYear()
 }
+
+
 var repeated_loan = {short:document.getElementById("short_repeated_loan"),long:document.getElementById("long_repeated_loan")}
+
 $(document).ready(function(){
     $('#round-buttons button').click(function(){
         id = $(this).index()
         $('#top-forms .form_').css('display','none')
             $('#top-forms .form_:eq('+id+')').fadeIn(300)
     })
+
     //constructor(dom,name,min,max,step,brake,output,side,callback,values)
+
     short_money_slider = new slider('short_range_money',0,50,500,5,300,'short_echo_money_val','right',[50,200,300,400,500],function(response,mu){
         document.getElementById('short_echo_money_val').innerHTML = +response + " EUR"
             if (response>300) {
@@ -101,12 +106,23 @@ $(document).ready(function(){
                 }
     })
     short_money_slider.start_val(200)
+    console.log(short_money_slider.value)
 
 
 
     short_days_slider = new slider('short_range_days',1,10,30,1,0,'short_term_display','right',[10,15,20,25,30],function(response,mu){
-        document.getElementById('short_term_display').innerHTML = calc_term('short', response)
+        //document.getElementById('short_term_display').innerHTML = calc_term('short', response)
         document.getElementById('short_echo_days_val').innerHTML = response
+        console.log(short_money_slider.value, response)
+
+         if (!mu) {
+        	ajax_('GetLoanPreview',{"loanData":{"type": "short","principal": short_money_slider.value,"term": response}},function(a){
+		    	console.log(a)
+        		document.getElementById('short_term_display').innerHTML = a.payments[0].date.split('T')[0]//calc_term('long', response)
+
+		    })
+        }
+
     })
     short_days_slider.start_val(15)
 
@@ -127,13 +143,17 @@ $(document).ready(function(){
 
     long_days_slider = new slider('long_range_days',3,3,12,1,0,'long_term_display','right',[3,6,9,12],function(response,mu){
        
-        document.getElementById('long_term_display').innerHTML = calc_term('long', response)
         document.getElementById('long_echo_days_val').innerHTML = response
         if (!mu) {
-        	
+        	ajax_('GetLoanPreview',{"loanData":{"type": "short","principal": long_money_slider.value,"term": response}},function(a){
+		    	console.log(a)
+        		document.getElementById('long_term_display').innerHTML = split(a.payments[0].date)[0]//calc_term('long', response)
+
+		    })
         }
     })
     long_days_slider.start_val(10)
+    console.log(long_days_slider)
     
 });
 // var sendToApi_loan = function() {
@@ -175,9 +195,6 @@ $(document).ready(function(){
 //        }
        // sendToApi_loan()
 
-    ajax_('GetLoanPreview',{"loanData":{"type": "short","principal": 220,"term": 20}},function(a){
-    	console.log(a)
-
-    })
+    
 
 // {"loanData":{"type": "long","principal": 220,"term": 3}}
