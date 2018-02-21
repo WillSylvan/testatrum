@@ -288,7 +288,7 @@
 
 			<div id="rekviziti">
 			<div class="headline">
-				<h1>Mūsu rekvizīti:</h1>
+				<h1><?php echo $language[$lang]['rekvez'] ?></h1>
 			</div>
 
 			<div class="bank_rekv">
@@ -303,137 +303,137 @@
 				<!-- SWEDBANKA -->
 				<div class="tabcontent swed" style="display: block;">
 					<div class="saturs">
-						<h1>Saņēmējs</h1>
+						<h1><?php echo $language[$lang]['reg.nr'] ?></h1>
 						<p>LATEKO LĪZINGS AS </p>
 					</div>
 					<div class="saturs">
-						<h1>Reģ.Nr.</h1>
+						<h1><?php echo $language[$lang]['kont.nr'] ?></h1>
 						<p>40003366651</p>
 					</div>
 					<div class="saturs">
-						<h1>Konta numurs:</h1>
+						<h1><?php echo $language[$lang]['pay.reg'] ?></h1>
 						<p>LV67HABA0551033353134</p>
 					</div>
 					<div class="saturs">
-						<h1>Maksājuma mērķis reģistrācijai: </h1>
-						<p>Piekrītu AS Lateko Līzings līguma noteikumiem</p>
+						<h1><?php echo $language[$lang]['pay.cred.p-long'] ?></h1>
+						<p><?php echo $language[$lang]['accept.cred.payback'] ?></p>
 					</div>
 					<div class="saturs">
-						<h1>Maksājuma mērķis kredīta pagarinājumam:</h1>
-						<p>Līguma Nr. SMXXXXXX pagarinājums</p>
+						<h1><?php echo $language[$lang]['pay.reg.p-long'] ?></h1>
+						<p><?php echo $language[$lang]['contract.nr.p-long'] ?></p>
 					</div>
 					<div class="saturs">
-						<h1>Maksājuma mērķis kredīta atmaksai:</h1>
-						<p>Līguma Nr. SMXXXXXX atmaksa</p>
+						<h1><?php echo $language[$lang]['pay.cred.payback'] ?></h1>
+						<p><?php echo $language[$lang]['contract.nr.p-back'] ?></p>
 					</div>
 				</div>
 
 				<!-- CITADELE -->
 				<div class="tabcontent citadele">
 					<div class="saturs">
-						<h1>Saņēmējs</h1>
+						<h1><?php echo $language[$lang]['reg.nr'] ?></h1>
 						<p>LATEKO LĪZINGS AS </p>
 					</div>
 					<div class="saturs">
-						<h1>Reģ.Nr.</h1>
+						<h1><?php echo $language[$lang]['kont.nr'] ?></h1>
 						<p>40003366651</p>
 					</div>
 					<div class="saturs">
-						<h1>Konta numurs:</h1>
+						<h1><?php echo $language[$lang]['pay.reg'] ?></h1>
 						<p>LV67HABA0551033353134</p>
 					</div>
 					<div class="saturs">
-						<h1>Maksājuma mērķis reģistrācijai: </h1>
-						<p>Piekrītu AS Lateko Līzings līguma noteikumiem</p>
+						<h1><?php echo $language[$lang]['pay.cred.p-long'] ?></h1>
+						<p><?php echo $language[$lang]['accept.cred.payback'] ?></p>
 					</div>
 					<div class="saturs">
-						<h1>Maksājuma mērķis kredīta pagarinājumam:</h1>
-						<p>Līguma Nr. SMXXXXXX pagarinājums</p>
+						<h1><?php echo $language[$lang]['pay.reg.p-long'] ?></h1>
+						<p><?php echo $language[$lang]['contract.nr.p-long'] ?></p>
 					</div>
 					<div class="saturs">
-						<h1>Maksājuma mērķis kredīta atmaksai:</h1>
-						<p>Līguma Nr. SMXXXXXX atmaksa</p>
+						<h1><?php echo $language[$lang]['pay.cred.payback'] ?></h1>
+						<p><?php echo $language[$lang]['contract.nr.p-back'] ?></p>
 					</div>
 				</div>
 
 				<div class="tabcontent dnb" style="display: none;">
 					<div class="saturs">
-						<h1>Saņēmējs</h1>
+						<h1><?php echo $language[$lang]['reg.nr'] ?></h1>
 						<p>LATEKO LĪZINGS AS </p>
 					</div>
 					<div class="saturs">
-						<h1>Reģ.Nr.</h1>
+						<h1><?php echo $language[$lang]['kont.nr'] ?></h1>
 						<p>40003366651</p>
 					</div>
 					<div class="saturs">
-						<h1>Konta numurs:</h1>
+						<h1><?php echo $language[$lang]['pay.reg'] ?></h1>
 						<p>LV67HABA0551033353134</p>
 					</div>
 					<div class="saturs">
-						<h1>Maksājuma mērķis reģistrācijai: </h1>
-						<p>Piekrītu AS Lateko Līzings līguma noteikumiem</p>
+						<h1><?php echo $language[$lang]['pay.cred.p-long'] ?></h1>
+						<p><?php echo $language[$lang]['accept.cred.payback'] ?></p>
 					</div>
 					<div class="saturs">
-						<h1>Maksājuma mērķis kredīta pagarinājumam:</h1>
-						<p>Līguma Nr. SMXXXXXX pagarinājums</p>
+						<h1><?php echo $language[$lang]['pay.reg.p-long'] ?></h1>
+						<p><?php echo $language[$lang]['contract.nr.p-long'] ?></p>
 					</div>
 					<div class="saturs">
-						<h1>Maksājuma mērķis kredīta atmaksai:</h1>
-						<p>Līguma Nr. SMXXXXXX atmaksa</p>
+						<h1><?php echo $language[$lang]['pay.cred.payback'] ?></h1>
+						<p><?php echo $language[$lang]['contract.nr.p-back'] ?></p>
 					</div>
 				</div>
 
 				<div class="tabcontent nordea" style="display: none;">
 					<div class="saturs">
-						<h1>Saņēmējs</h1>
+						<h1><?php echo $language[$lang]['reg.nr'] ?></h1>
 						<p>LATEKO LĪZINGS AS </p>
 					</div>
 					<div class="saturs">
-						<h1>Reģ.Nr.</h1>
+						<h1><?php echo $language[$lang]['kont.nr'] ?></h1>
 						<p>40003366651</p>
 					</div>
 					<div class="saturs">
-						<h1>Konta numurs:</h1>
+						<h1><?php echo $language[$lang]['pay.reg'] ?></h1>
 						<p>LV67HABA0551033353134</p>
 					</div>
 					<div class="saturs">
-						<h1>Maksājuma mērķis reģistrācijai: </h1>
-						<p>Piekrītu AS Lateko Līzings līguma noteikumiem</p>
+						<h1><?php echo $language[$lang]['pay.cred.p-long'] ?></h1>
+						<p><?php echo $language[$lang]['accept.cred.payback'] ?></p>
 					</div>
 					<div class="saturs">
-						<h1>Maksājuma mērķis kredīta pagarinājumam:</h1>
-						<p>Līguma Nr. SMXXXXXX pagarinājums</p>
+						<h1><?php echo $language[$lang]['pay.reg.p-long'] ?></h1>
+						<p><?php echo $language[$lang]['contract.nr.p-long'] ?></p>
 					</div>
 					<div class="saturs">
-						<h1>Maksājuma mērķis kredīta atmaksai:</h1>
-						<p>Līguma Nr. SMXXXXXX atmaksa</p>
+						<h1><?php echo $language[$lang]['pay.cred.payback'] ?></h1>
+						<p><?php echo $language[$lang]['contract.nr.p-back'] ?></p>
 					</div>
 				</div>
 
 				<div class="tabcontent another_b">
 					<div class="saturs">
-						<h1>Saņēmējs</h1>
+						<h1><?php echo $language[$lang]['reg.nr'] ?></h1>
 						<p>LATEKO LĪZINGS AS </p>
 					</div>
 					<div class="saturs">
-						<h1>Reģ.Nr.</h1>
+						<h1><?php echo $language[$lang]['kont.nr'] ?></h1>
 						<p>40003366651</p>
 					</div>
 					<div class="saturs">
-						<h1>Konta numurs:</h1>
+						<h1><?php echo $language[$lang]['pay.reg'] ?></h1>
 						<p>LV67HABA0551033353134</p>
 					</div>
 					<div class="saturs">
-						<h1>Maksājuma mērķis reģistrācijai: </h1>
-						<p>Piekrītu AS Lateko Līzings līguma noteikumiem</p>
+						<h1><?php echo $language[$lang]['pay.cred.p-long'] ?></h1>
+						<p><?php echo $language[$lang]['accept.cred.payback'] ?></p>
 					</div>
 					<div class="saturs">
-						<h1>Maksājuma mērķis kredīta pagarinājumam:</h1>
-						<p>Līguma Nr. SMXXXXXX pagarinājums</p>
+						<h1><?php echo $language[$lang]['pay.reg.p-long'] ?></h1>
+						<p><?php echo $language[$lang]['contract.nr.p-long'] ?></p>
 					</div>
 					<div class="saturs">
-						<h1>Maksājuma mērķis kredīta atmaksai:</h1>
-						<p>Līguma Nr. SMXXXXXX atmaksa</p>
+						<h1><?php echo $language[$lang]['pay.cred.payback'] ?></h1>
+						<p><?php echo $language[$lang]['contract.nr.p-back'] ?></p>
 					</div>
 				</div>
 			</div>
@@ -441,104 +441,86 @@
 			</div>
 
 			<div class="headline">
-				<h1>Jautājumi un Atbildes</h1>
+				<h1><?php echo $language[$lang]['questions'] ?></h1>
 			</div>
 
 			<div id="questions">
-				<button class="accordion">Vai es varu saņemt kredītu?</button>
+				<button class="accordion"><?php echo $language[$lang]['q1'] ?></button>
 				<div class="panel">
-					<p>
-						Lai saņemtu kredītu, Jums jābūt:<br>
-						- Latvijas iedzīvotājam vecumā no 20 līdz 70 gadiem;<br>
-						- atvērtam bankas kontam jebkurā no Latvijas bankām;<br>
-						- pastāvīgam mobilā tālruņa pieslēgumam;<br>
-						- nedrīkst būt kavētu kredītmaksājumu vai līgumsaistību pārkāpumu.<br>
-					</p>
+
+					<p><?php echo $language[$lang]['a1'] ?></p>
 				</div>
 
-				<button class="accordion">Kas jānorāda sadaļā „maksājuma mērķis”, veicot reģistrācijas maksas pārskaitījumu?</button>
+				<button class="accordion"><?php echo $language[$lang]['q2'] ?></button>
 				<div class="panel">
-					<p>Sadaļā „maksājuma mērķis” jānorāda:  <b>Piekrītu AS Lateko Līzings līguma noteikumiem.</b></p>
+					<p><?php echo $language[$lang]['a2'] ?></p>
 				</div>
 
-				<button class="accordion">Kāda kredīta summa man ir pieejama?</button>
+				<button class="accordion"><?php echo $language[$lang]['q3'] ?></button>
 				<div class="panel">
-					<p>
-					- pirmajā reizē Jums ir pieejama kredīta summa līdz EUR 300.<br>
-					- otrajā reizē Jums ir pieejama kredīta summa līdz EUR 400.<br>
-					- trešajā reizē Jums ir pieejama kredīta summa līdz EUR 500.
-					</p>
+
+					<p><?php echo $language[$lang]['a3'] ?></p>
+
 				</div>
 
-				<button class="accordion">Cik ātri es saņemšu atbildi par kredīta piešķiršanu?</button>
+				<button class="accordion"><?php echo $language[$lang]['q4'] ?></button>
 				<div class="panel">
-					<p>Atbildi par kredīta piešķiršanu Jūs saņemsiet 15 minūšu laikā no reģistrācijas pabeigšanas brīža.</p>
+					<p><?php echo $language[$lang]['a4'] ?></p>
 				</div>
 
-				<button class="accordion">Cik ātri es saņemšu naudu savā bankas kontā?</button>
+				<button class="accordion"><?php echo $language[$lang]['q5'] ?></button>
 				<div class="panel">
-					<p>Ja Jums ir bankas konts Swedbank, Citadele, DNB banka vai Nordea Bank AB, Jūs saņemsiet naudu 10-15 minūšu<br> laikā. Ja Jums ir konts citā bankā, naudas saņemšana var ilgt 1-3 dienas.</p>
+					<p><?php echo $language[$lang]['a5'] ?></p>
 				</div>
 
-				<button class="accordion">Vai ir iespējams saņemt aizdevumu naktī vai brīvdienās?</button>
+				<button class="accordion"><?php echo $language[$lang]['q6'] ?></button>
 				<div class="panel">
-					<p>Kredītu pieteikumi tiek izskatīti darba dienās no 8.00 līdz 22.00, brīvdienās no 10.00 līdz 20.00, bet Jūs varat<br> reģistrēties un nosūtīt kredīta pieteikumu jebkurā diennakts laikā.</p>
+					<p><?php echo $language[$lang]['a6'] ?></p>
 				</div>
 
-				<button class="accordion">Kāpēc man tika atteikts kredīts?</button>
+				<button class="accordion"><?php echo $language[$lang]['q7'] ?></button>
 				<div class="panel">
-					<p>Jūs nevarēsiet saņemt kredītu, ja:<br><br>
-					- Jums ir kavēti kredītmaksājumi vai līgumsaistību pārkāpumi;<br>
-					- reģistrējoties Jūs norādījāt kļūdainu informāciju;<br>
-					- Jūsu iepriekšējais aizdevums Atrum.lv nav atmaksāts;<br>
-					- Jūs esat jaunāks par 20 vai vecāks par 70 gadiem.
-					</p>
+					<p><?php echo $language[$lang]['a7'] ?></p>
 				</div>
 
-				<button class="accordion">Kā man rīkoties, ja nevaru atmaksāt kredītu noteiktajā termiņā?</button>
+				<button class="accordion"><?php echo $language[$lang]['q8'] ?></button>
 				<div class="panel">
-					<p>Gadījumā, ja Jūs nevarat atmaksāt kredītu noteiktajā laikā, Jums ir iespēja pagarināt kredīta termiņu uz 30 dienām.<br>
-					Kredīta pagarināšanai Jums ir jāpārskaita pagarinājuma maksa uz vienu no Atrum.lv kontiem.<br>
-					Veicot pārskaitījumu maksājuma mērķī jānorāda līguma numurs un vārds „pagarinājums”.
-					</p>
+					<p><?php echo $language[$lang]['a8'] ?></p>
 				</div>
 
-				<button class="accordion">Kā es varu nomainīt savu bankas konta numuru?</button>
+				<button class="accordion"><?php echo $language[$lang]['q9'] ?></button>
 				<div class="panel">
-					<p>Bankas konta numura maiņai Jums ir jāveic maksājums EUR 0,01 apmērā no sava jaunā bankas konta uz Atrum.lv<br>
-					bankas kontu, maksājuma mērķī norādot: "Bankas konta maiņa".<br>
-					Nepieciešamā informācija maksājuma veikšanai <a href="#rekviziti"><b>šeit</b></a>.
-					</p>
+					<p><?php echo $language[$lang]['a9'] ?><a href="#rekviziti"><b><?php echo $language[$lang]['there'] ?></b></a>.</p>
 				</div>
 
-				<button class="accordion">Kā es varu nomainīt savu uzvārdu?</button>
+				<button class="accordion"><?php echo $language[$lang]['q10'] ?></button>
 				<div class="panel">
-					<p>Uzvārda maiņai Jums no sava bankas konta ir jāveic maksājums EUR 0,01 apmērā, maksājuma mērķī norādot: „Uzvārda maiņa”.</p>
+					<p><?php echo $language[$lang]['a10'] ?></p>
 				</div>
 
-				<button class="accordion">Kā es varu nomainīt savu telefona numuru?</button>
+				<button class="accordion"><?php echo $language[$lang]['q11'] ?></button>
 				<div class="panel">
-					<p>Telefona numura maiņai Jums no sava bankas konta ir jāveic maksājums EUR 0,01 apmērā, maksājuma mērķī norādot: „Telefona numura maiņa” un savu jauno telefona numuru.</p>
+					<p><?php echo $language[$lang]['a11'] ?></p>
 				</div>
 
-				<button class="accordion">Kā es varu nomainīt savu e-pasta adresi?</button>
+				<button class="accordion"><?php echo $language[$lang]['q12'] ?></button>
 				<div class="panel">
-					<p>E-pasta adreses maiņai Jums no sava bankas konta ir jāveic maksājums EUR 0,01 apmērā, maksājuma mērķī norādot: „E-pasta adreses maiņa” un savu jauno e-pasta adresi.</p>
+					<p><?php echo $language[$lang]['a12'] ?></p>
 				</div>
 
-				<button class="accordion">Kā es varu nomainīt darba vietu, deklarēto vai faktisko adresi?</button>
+				<button class="accordion"><?php echo $language[$lang]['q13'] ?></button>
 				<div class="panel">
-					<p>Darba vietas, deklarētās vai faktiskās adreses maiņai Jums no savas e-pasta adreses jānosūta uz e-pastu info@atrum.lv iesniegums brīvā formā, norādot savu vārdu, uzvārdu, personas kodu un jaunos datus.</p>
+					<p><?php echo $language[$lang]['a13'] ?></p>
 				</div>
 
-				<button class="accordion">Kā man rīkoties, ja aizmirsu savu profila paroli?</button>
+				<button class="accordion"><?php echo $language[$lang]['q14'] ?></button>
 				<div class="panel">
-					<p></p>
+					<p><?php echo $language[$lang]['a14'] ?></p>
 				</div>
 			</div>
 
 			<div class="headline">
-				<h1>Kontakti</h1>
+				<h1><?php echo $language[$lang]['contacts'] ?></h1>
 			</div>
 			
 		</div>
