@@ -98,15 +98,35 @@ $(document).ready(function(){
             $('#top-forms .form_:eq('+id+')').fadeIn(300)
     })
 
+    let short_money_slider = {value:0}
+    let short_days_slider = {value:0}
+
+    let long_money_slider = {value:0}
+    let long_days_slider = {value:0}
+
     //constructor(dom,name,min,max,step,brake,output,side,callback,values)
 
     short_money_slider = new slider('short_range_money',0,50,500,5,300,'short_echo_money_val','right',[50,200,300,400,500],function(response,mu){
         document.getElementById('short_echo_money_val').innerHTML = +response + " EUR"
-            if (response>300) {
-                    repeated_loan.short.style.display = "block"
-                }else {
-                    repeated_loan.short.style.display = "none"
-                }
+        if (response>300) {
+                repeated_loan.short.style.display = "block"
+            }else {
+                repeated_loan.short.style.display = "none"
+            }
+
+         if (!mu) {
+        	ajax_('GetLoanPreview',{"loanData":{"type": "short","principal": response,"term":short_days_slider.value}},function(a){
+		    //	console.log(a)
+        		document.getElementById('short_summa').innerHTML = short_money_slider.value + " EUR"
+        		document.getElementById('short_term_display').innerHTML = a.payments[0].date.split('T')[0]//calc_term('long', response)
+        		document.getElementById('short_kopa').innerHTML = a.payments[0].paymentTotal + " EUR"
+        		document.getElementById('short_komisija').innerHTML = a.commission + " EUR"
+
+		    })
+        }
+
+
+
     })
     short_money_slider.start_val(200)
     console.log(short_money_slider.value)
@@ -120,10 +140,11 @@ $(document).ready(function(){
 
          if (!mu) {
         	ajax_('GetLoanPreview',{"loanData":{"type": "short","principal": short_money_slider.value,"term": response}},function(a){
-		    	console.log(a)
+		    //	console.log(a)
+        		document.getElementById('short_summa').innerHTML = short_money_slider.value + " EUR"
         		document.getElementById('short_term_display').innerHTML = a.payments[0].date.split('T')[0]//calc_term('long', response)
-        		document.getElementById('short_kopa').innerHTML = a.payments[0].paymentTotal
-        		do
+        		document.getElementById('short_kopa').innerHTML = a.payments[0].paymentTotal + " EUR"
+        		document.getElementById('short_komisija').innerHTML = a.commission + " EUR"
 
 		    })
         }
@@ -140,6 +161,24 @@ $(document).ready(function(){
         }else {
             repeated_loan.long.style.display = "none"
         }
+        console.log(long_money_slider.value,response)
+        if (!mu) {
+        	ajax_('GetLoanPreview',{"loanData":{"type": "long","principal": response,"term": long_days_slider.value}},function(a){
+		    	console.log(a)
+        		document.getElementById('long_summa').innerHTML = long_money_slider.value + " EUR"
+        		document.getElementById('long_term_display').innerHTML = a.payments[a.payments.length-1].date.split('T')[0]//calc_term('long', response)
+        		document.getElementById('long_kopa').innerHTML = function()
+        		{let summ = 0 
+        			for (var i = 0; i < a.payments.length; i++) {
+        				summ += a.payments[i].paymentTotal
+        			}
+        			return summ.toFixed(2) + " EUR"
+        		}()//a.payments[0].paymentTotal + " EUR"
+        		document.getElementById('long_komisija').innerHTML = a.commission + " EUR"
+
+		    })
+        }
+
     })
     long_money_slider.start_val(300)
 
@@ -152,14 +191,14 @@ $(document).ready(function(){
         if (!mu) {
         	ajax_('GetLoanPreview',{"loanData":{"type": "short","principal": long_money_slider.value,"term": response}},function(a){
 		    	console.log(a)
-        		document.getElementById('long_term_display').innerHTML = split(a.payments[0].date)[0]//calc_term('long', response)
+        		
 
 		    })
         }
     })
 
     long_days_slider.start_val(10)
-    console.log(long_days_slider) 
+    console.log(long_days_slider)
 });
 
 

@@ -54,8 +54,8 @@
 										<h2><?php echo $language[$lang]['bilance'] ?><span id="short_kopa"></span></h2>
 									</div>
 									<div>
-										<h2><?php echo $language[$lang]['com'] ?><span id="short_komisija">0.00 (15.00%)</span></h2>
-										<h2><?php echo $language[$lang]['gpl'] ?><span id="short_gpl">0.00</span></h2>
+										<h2><?php echo $language[$lang]['com'] ?><span id="short_komisija"></span></h2>
+										<h2><?php echo $language[$lang]['gpl'] ?><span id="short_gpl"></span></h2>
 									</div>
 								</div>
 							</div>
@@ -111,8 +111,8 @@
 										<h2><?php echo $language[$lang]['bilance'] ?><span id="long_kopa"></span></h2>
 									</div>
 									<div>
-										<h2><?php echo $language[$lang]['com'] ?><span id="long_komisija">0.00 (15.00%)</span></h2>
-										<h2><?php echo $language[$lang]['gpl'] ?><span id="long_gpl">0.00</span></h2>
+										<h2><?php echo $language[$lang]['com'] ?><span id="long_komisija"></span></h2>
+										<h2><?php echo $language[$lang]['gpl'] ?><span id="long_gpl"></span></h2>
 									</div>
 								</div>
 							</div>

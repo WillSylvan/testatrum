@@ -78,7 +78,7 @@
         function responce(){
             if (that.value<=that.max&&that.value>=that.min) {
                 let w = ((that.value-that.min)/(that.max-that.min))*that.domWidth
-                console.log(w)
+                //console.log(w)
                 document.getElementById(that.name+'_handle').style.left = (w - parseInt(window.getComputedStyle(document.getElementById(that.name+'_handle')).width)/2)/that.domWidth * 100 + "%"//((that.value-that.min)/(that.max-that.min))*that.domWidth-10
                 document.getElementById(that.name+"_input").value = that.value
                 document.getElementById(that.name+"_track_cover").style.width = (that.side=='left'? w : that.domWidth-w)/that.domWidth * 100 + "%"
