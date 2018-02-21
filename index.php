@@ -9,6 +9,7 @@
 		<link rel="icon" href="img/logo.svg">
 		<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="js/sliders.js"></script>
+		<script type="text/javascript" src="js/ajax.js"></script>
     </head>
 
 	<body>

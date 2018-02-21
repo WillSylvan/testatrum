@@ -11,8 +11,14 @@
     }
 //returns value from slider
     function calcValue (min,max,step,width,now){
-        
-        return Math.round((((max-min)/width)*now+min)/step)*step;
+        let a = Math.round((((max-min)/width)*now+min)/step)*step;
+        if (a>max) {
+            a = max; 
+        }else if (a<min){
+            a = min
+        }
+
+        return a
     }
     function md(a){
         a.focus = true
@@ -77,6 +83,7 @@
     /////
         function responce(){
             if (that.value<=that.max&&that.value>=that.min) {
+
                 let w = ((that.value-that.min)/(that.max-that.min))*that.domWidth
                 //console.log(w)
                 document.getElementById(that.name+'_handle').style.left = (w - parseInt(window.getComputedStyle(document.getElementById(that.name+'_handle')).width)/2)/that.domWidth * 100 + "%"//((that.value-that.min)/(that.max-that.min))*that.domWidth-10

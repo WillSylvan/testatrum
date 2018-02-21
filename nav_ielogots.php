@@ -6,6 +6,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
 		<title></title>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/ajax.js"></script>
 
    </head>
 
@@ -43,4 +44,5 @@
 		</div>	
 		<?php include 'assets/footer.php'; ?>	
 	</body>
+	<script type="text/javascript" src="js/login.js"></script>
 </html>
