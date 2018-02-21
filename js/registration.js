@@ -51,7 +51,7 @@ $(document).ready(function() {
         //////////////////////////////////////////
 
         // Creating some variables, such as first form to show, array for fully filled form.
-        var currentForm = 2;
+        var currentForm = 1;
         $("#form-" + currentForm).show();
         var allDataForm = [],
           declaredAdress = [],
@@ -120,13 +120,17 @@ $(document).ready(function() {
         var sendToApi = function() {
           var createCORSRequest = function(method, url) {
             var xhr = new XMLHttpRequest();
+
             if ("withCredentials" in xhr) {
               // Most browsers.
               xhr.open(method, url, true);
+              xhr.setRequestHeader("Authorization", 'Basic YXRydW0ubHZfdGVzdDp0dXRLdUwyZjU5NUxUTkti');
             } else if (typeof XDomainRequest != "undefined") {
               // IE8 & IE9
               xhr = new XDomainRequest();
               xhr.open(method, url);
+              xhr.setRequestHeader("Authorization", 'Basic YXRydW0ubHZfdGVzdDp0dXRLdUwyZjU5NUxUTkti');
+
             } else {
               // CORS not supported.
               xhr = null;
@@ -139,7 +143,9 @@ $(document).ready(function() {
 
           var xhr = createCORSRequest(method, url);
 
-          xhr.onload = function(response) {};
+          xhr.onload = function(response) {
+            console.log(response)
+          };
 
           xhr.onerror = function() {
 

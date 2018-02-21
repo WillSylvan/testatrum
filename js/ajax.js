@@ -9,6 +9,8 @@
               // IE8 & IE9
               xhr = new XDomainRequest();
               xhr.open(method, url);
+              xhr.setRequestHeader("Authorization", 'Basic YXRydW0ubHZfdGVzdDp0dXRLdUwyZjU5NUxUTkti');
+
             } else {
               // CORS not supported.
               xhr = null;
@@ -25,7 +27,7 @@
           var xhr = createCORSRequest(method, url);
           xhr.onload = function(response) {
 
-          console.log(response.currentTarget.response)
+          //console.log(response.currentTarget.response)
 
            callback(JSON.parse(response.currentTarget.response))
           };

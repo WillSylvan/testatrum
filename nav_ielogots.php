@@ -31,11 +31,11 @@
 					</div>
 				</div>
 				<div id="zero-form">
-					<div><input placeholder="E-pasts:"></div>
-					<div><input placeholder="Parole:" type="password"></div>
+					<div><input placeholder="E-pasts:" id="email_input"></div>
+					<div><input placeholder="Parole:" type="password" id="pw_input"></div>
 				</div>
 				<div class="flex ielogoties-buttons">
-					<a href="sakums.php"><button class="turpinat">Ienākt</button></a>
+					<button class="turpinat" id="login_button">Ienākt</button>
 					<a href="registracija.php"><button class="turpinat">Registrācija</button></a>
 				</div>
 			</div>
