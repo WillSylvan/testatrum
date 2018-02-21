@@ -69,6 +69,9 @@ function violetColor(){
           xhr.send(JSON.stringify(data));
 	}
 
+	function fillForm(){
+
+	}
 
 
 
@@ -119,6 +122,8 @@ $(document).ready(function(){
         	ajax_('GetLoanPreview',{"loanData":{"type": "short","principal": short_money_slider.value,"term": response}},function(a){
 		    	console.log(a)
         		document.getElementById('short_term_display').innerHTML = a.payments[0].date.split('T')[0]//calc_term('long', response)
+        		document.getElementById('short_kopa').innerHTML = a.payments[0].paymentTotal
+        		do
 
 		    })
         }
@@ -152,10 +157,12 @@ $(document).ready(function(){
 		    })
         }
     })
+
     long_days_slider.start_val(10)
-    console.log(long_days_slider)
-    
+    console.log(long_days_slider) 
 });
+
+
 // var sendToApi_loan = function() {
 //           var createCORSRequest = function(method, url) {
 //             var xhr = new XMLHttpRequest();
