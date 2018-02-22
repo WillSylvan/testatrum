@@ -20,8 +20,8 @@
     $language['lv']['how-long-time'] = 'Uz cik ilgu laiku?';
     $language['ru']['how-long-time'] = 'На какой срок?';
 
-    $language['lv']['days'] = 'Dienas: ';
-    $language['ru']['days'] = 'Дни: ';
+    $language['lv']['months'] = 'Mēneši: ';
+    $language['ru']['months'] = 'Месяцы: ';
 
     $language['lv']['bilance'] = 'Kopā: ';
     $language['ru']['bilance'] = 'Всего: ';
@@ -41,8 +41,8 @@
     $language['lv']['eur'] = 'EUR';
     $language['ru']['eur'] = 'EUR';
 
-    $language['lv']['stand.-info'] = '* - NAV TULKOJUMA(Standartinformācija) -';
-    $language['ru']['stand.-info'] = '* - NAV TULKOJUMA(Standartinformācija) -';
+    $language['lv']['stand.-info'] = 'Standartinformācija';
+    $language['ru']['stand.-info'] = 'Standartinformācija';
 
     $language['lv']['get-money'] = 'Saņemt naudu';
     $language['ru']['get-money'] = 'Получить кредит';

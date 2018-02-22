@@ -20,8 +20,8 @@
     $language['lv']['how-long-time'] = 'Uz cik ilgu laiku?';
     $language['ru']['how-long-time'] = 'На какой срок?';
 
-    $language['lv']['days'] = 'Dienas: ';
-    $language['ru']['days'] = 'Дни: ';
+    $language['lv']['months'] = 'Mēneši: ';
+    $language['ru']['months'] = 'Месяцы: ';
 
     $language['lv']['bilance'] = 'Kopā: ';
     $language['ru']['bilance'] = 'Всего: ';
@@ -41,8 +41,8 @@
     $language['lv']['eur'] = 'EUR';
     $language['ru']['eur'] = 'EUR';
 
-    $language['lv']['stand.-info'] = '* - NAV TULKOJUMA(Standartinformācija) -';
-    $language['ru']['stand.-info'] = '* - NAV TULKOJUMA(Standartinformācija) -';
+    $language['lv']['stand.-info'] = 'Standartinformācija';
+    $language['ru']['stand.-info'] = 'Standartinformācija';
 
     $language['lv']['get-money'] = 'Saņemt naudu';
     $language['ru']['get-money'] = 'Получить кредит';
@@ -83,28 +83,27 @@
 
     // BILDES TEKSTI VIOLETS
 
-    // $language['lv']['2-vio-pic-txt-1'] = 'Saņemt naudu';
-    // $language['ru']['2-vio-pic-txt-1'] = 'Получить кредит';
+    $language['lv']['2-vio-pic-txt-1'] = 'Saņemt naudu';
+    $language['ru']['2-vio-pic-txt-1'] = 'Получить кредит';
 
-    // $language['lv']['2-vio-pic-txt-2'] = 'Apskatīt maksājumu grafiku';
-    // $language['ru']['2-vio-pic-txt-2'] = 'Посмотреть график платежей';
+    $language['lv']['2-vio-pic-txt-2'] = 'Apskatīt maksājumu grafiku';
+    $language['ru']['2-vio-pic-txt-2'] = 'Посмотреть график платежей';
 
-    // $language['lv']['2-vio-pic-txt-3'] = 'Pirmā maksājuma datums';
-    // $language['ru']['2-vio-pic-txt-3'] = 'Дата первого платежа';
+    $language['lv']['2-vio-pic-txt-3'] = 'Pirmā maksājuma datums';
+    $language['ru']['2-vio-pic-txt-3'] = 'Дата первого платежа';
 
-    // $language['lv']['2-vio-pic-txt-4'] = 'Pirmā maksājuma datums';
-    // $language['ru']['2-vio-pic-txt-4'] = 'Дата первого платежа';
+    $language['lv']['2-vio-pic-txt-4'] = 'Pirmā maksājuma datums';
+    $language['ru']['2-vio-pic-txt-4'] = 'Дата первого платежа';
 
 
 // ----------------------------------------------------------------------------------------->
-
 
 
     $language['lv']['re-ply-cred.vio'] = 'Atkārtots aizdevums';
     $language['ru']['re-ply-cred.vio'] = 'Повторный кредит';
 
 
-    $language['lv']['apply.vio'] = 'Piesakiet kredītu internetā';
+    $language['lv']['apply.vio'] = 'Piesakiet kredītu internetā!';
     $language['ru']['apply.vio'] = 'Оформите заявку в интернете';
 
     $language['lv']['get-cred.vio'] = 'Saņemiet kredītu';
@@ -112,6 +111,35 @@
 
 // ----------------------------------------------------------------------------------------->
 
+                        //  Violet
+
+    $language['lv']['payback.vio'] = 'Kā atmaksāt?';
+    $language['ru']['payback.vio'] = 'Как вернуть кредит?';
+
+    $language['lv']['how-prolong.vio'] = 'Kā pagarināt kredītu?';
+    $language['ru']['how-prolong.vio'] = 'Как продлить кредит?';
+
+        $language['lv']['how-prolong.vio-1.1'] = 'Kredīta pagarināšanai Jums ir jāpārskaita pagarinājuma maksa uz vienu no mūsu kontiem.';
+        $language['ru']['how-prolong.vio-1.1'] = 'Для продления срока кредита на 30 дней перечислите сумму продления на один из наших счетов.';
+
+    $language['lv']['purpose-of-payment.vio'] = 'Kas jānorāda maksājuma mērķī?';
+    $language['ru']['purpose-of-payment.vio'] = 'Что необходимо указать в цели платежа?';
+
+        $language['lv']['purpose-of-payment.vio-1.1'] = 'Maksājuma mērķī jānorāda līguma numurs un vārds <b>„pagarinājums”</b>. <br>Piemērs: Līguma Nr. AZXXXXXX pagarinājums.';
+        $language['ru']['purpose-of-payment.vio-1.1'] = 'В цели платежа необходимо указать номер договора и слово <b>„pagarinājums”</b>. <br>Пример: Līguma Nr. AZXXXXXX pagarinājums.';
+
+
+    $language['lv']['credit-payback.vio'] = 'Kā atmaksāt kredītu?';
+    $language['ru']['credit-payback.vio'] = 'Как вернуть кредит?';
+        
+        $language['lv']['credit-payback.vio-1.1'] = 'Kredīta atmaksai Jums ir jāpārskaita kredīta atmaksas summa uz vienu no mūsu kontiem.';
+        $language['ru']['credit-payback.vio-1.1'] = 'Для оплаты кредита перечислите необходимую сумму на один из наших счетов.';
+
+
+        $language['lv']['purpose-of-payment.vio-2.1'] = 'Maksājuma mērķī jānorāda līguma numurs un vārds <b>„atmaksa”</b>. <br>Piemērs: Līguma Nr. AZXXXXXX atmaksa.';
+        $language['ru']['purpose-of-payment.vio-2.1'] = 'В цели платежа необходимо указать номер договора и слово <b>„atmaksa”</b>. <br>Пример: Līguma Nr. AZXXXXXX atmaksa.';
+
+// ----------------------------------------------------------------------------------------------->
 
 
     $language['lv']['log-in-my-profil.vio'] = 'Ieejiet savā profilā';
@@ -153,8 +181,8 @@
     $language['lv']['pay.reg.vio'] = 'Maksājuma mērķis reģistrācijai: ';
     $language['ru']['pay.reg.vio'] = 'Цель платежа для регистрации: ';
 
-    $language['lv']['pay.cred.p-long'] = 'Maksājuma mērķis kredīta pagarinājumam: ';
-    $language['ru']['pay.cred.p-long'] = 'Цель платежа для продления кредита: ';
+    $language['lv']['pay.cred.p-long.vio'] = 'Maksājuma mērķis kredīta pagarinājumam: ';
+    $language['ru']['pay.cred.p-long.vio'] = 'Цель платежа для продления кредита: ';
 
     $language['lv']['pay.reg.p-long.vio'] = 'Maksājuma mērķis kredīta pagarinājumam: ';
     $language['ru']['pay.reg.p-long.vio'] = 'Цель платежа для продления кредита:';
@@ -174,12 +202,15 @@
     $language['ru']['contract.nr.p-back.vio'] = 'LĪGUMA NR. SMXXXXXX ATMAKSA';
 
 
+    $language['lv']['payback.vio'] = 'Kā atmaksāt?';
+    $language['ru']['payback.vio'] = 'Как вернуть кредит?';
+
 // -------------------------------------------------------------------------------------->
                     // Jautājumi un Atbildes! VIOLET!!
 
     
-    $language['lv']['questions.violet'] = 'Jautājumi un Atbildes';
-    $language['ru']['questions.violet'] = 'Вопросы и Oтветы';
+    $language['lv']['questions.vio'] = 'Jautājumi un Atbildes';
+    $language['ru']['questions.vio'] = 'Вопросы и Oтветы';
 
     $language['lv']['viol.q1'] = 'Vai es varu saņemt kredītu?';
     $language['ru']['viol.q1'] = 'Могу ли я получить кредит?';
@@ -209,88 +240,96 @@
     $language['lv']['viol.q3'] = 'Kāda kredīta summa man ir pieejama?';
     $language['ru']['viol.q3'] = 'Какая сумма кредита мне доступна?';
 
-        $language['lv']['viol.a3'] = '  - pirmajā reizē Jums ir pieejama kredīta summa līdz EUR 300. <br>
-                                        - otrajā reizē Jums ir pieejama kredīta summa līdz EUR 400. <br>
-                                        - trešajā reizē Jums ir pieejama kredīta summa līdz EUR 500.';
+        $language['lv']['viol.a3'] = '  - pirmajā reizē Jums ir pieejama kredīta summa līdz EUR 425. <br>
+                - otrajā reizē Jums ir pieejama kredīta summa līdz EUR 750. <br>
+                - trešajā reizē Jums ir pieejama kredīta summa līdz EUR 1000.';
 
-        $language['ru']['viol.a3'] = '  - в первый раз Вам доступна сумма кредита до EUR 300. <br>
-                                        - во второй раз Вам доступна сумма кредита до EUR 400. <br>
-                                        - в третий раз Вам доступна сумма кредита до EUR 500.';
-
-
-    $language['lv']['viol.q4'] = 'Cik ātri es saņemšu atbildi par kredīta piešķiršanu?';
-    $language['ru']['viol.q4'] = 'Kaк быстро я получу ответ на кредитную заявку?';
-
-        $language['lv']['viol.a4'] = 'Atbildi par kredīta piešķiršanu Jūs saņemsiet 15 minūšu laikā no reģistrācijas pabeigšanas brīža.';
-
-        $language['ru']['viol.a4'] = 'Ответ на кредитную заявку Вы получите в течение 15 минут с момента завершения регистрации.';
+        $language['ru']['viol.a3'] = ' - в первый раз Вам доступна сумма кредита до EUR 425. <br>
+                - во второй раз Вам доступна сумма кредита до EUR 750. <br>
+                - в третий раз Вам доступна сумма кредита до EUR 1000.';
 
 
-    $language['lv']['viol.q5'] = 'Cik ātri es saņemšu naudu savā bankas kontā?';
-    $language['ru']['viol.q5'] = 'Как быстро я получу деньги на свой банковский счет?';
+    $language['lv']['viol.q4'] = 'Uz kādu termiņu es varu saņemt kredītu?';
+    $language['ru']['viol.q4'] = 'На какой срок я могу получить кредит?';
 
-        $language['lv']['viol.a5'] = 'Ja Jums ir bankas konts Swedbank, Citadele, DNB banka vai Nordea Bank AB, Jūs saņemsiet naudu 10-15 minūšu laikā. Ja Jums ir konts citā bankā, naudas saņemšana var ilgt 1-3 dienas.';
+        $language['lv']['viol.a4'] = 'Jūs varat izvēlēties sev piemērotāko kredīta termiņu no 3 līdz 12 mēnešiem.';
 
-        $language['ru']['viol.a5'] = 'Если Ваш счет находится в Swedbank, Citadele, DNB banka или Nordea Bank AB, Вы получите деньги в течение 10-15 минут. Если Ваш счет находится в другом банке, перевод денег может занять 1-3 дня.';
-
-
-    $language['lv']['viol.q6'] = 'Vai ir iespējams saņemt aizdevumu naktī vai brīvdienās?';
-    $language['ru']['viol.q6'] = 'Могу ли я получить кредит ночью или в выходные?';
-
-        $language['lv']['viol.a6'] = 'Kredītu pieteikumi tiek izskatīti darba dienās no 8.00 līdz 22.00, brīvdienās no 10.00 līdz 20.00, bet Jūs varat <br>reģistrēties un nosūtīt kredīta pieteikumu jebkurā diennakts laikā.';
-
-        $language['ru']['viol.a6'] = 'Заявки на кредиты рассматриваются в рабочие дни с 8:00 до 22:00, в выходные дни с 10:00 до 20:00, но Вы можете <br>зарегистрироваться и отправить заявку на кредит в любое время суток.';
+        $language['ru']['viol.a4'] = 'Вы можете выбрать удобный для Вас срок кредита – от 3 до 12 месяцев.';
 
 
-    $language['lv']['viol.q7'] = 'Kāpēc man tika atteikts kredīts?';
-    $language['ru']['viol.q7'] = 'Почему мне отказали в предоставлении кредита?';
+    $language['lv']['viol.q5'] = 'Cik ātri es saņemšu atbildi par kredīta piešķiršanu?';
+    $language['ru']['viol.q5'] = 'Kaк быстро я получу ответ на кредитную заявку?';
 
-        $language['lv']['viol.a7'] = 'Jūs nevarēsiet saņemt kredītu, ja:<br>
-            - Jums ir kavēti kredītmaksājumi vai līgumsaistību pārkāpumi;<br>
-            - reģistrējoties Jūs norādījāt kļūdainu informāciju;<br>
-            - Jūsu iepriekšējais aizdevums Atrum.lv nav atmaksāts;<br>
-            - Jūs esat jaunāks par 20 vai vecāks par 70 gadiem.';
+        $language['lv']['viol.a5'] = 'Atbildi par kredīta piešķiršanu Jūs saņemsiet 15 minūšu laikā no reģistrācijas pabeigšanas brīža.';
 
-        $language['ru']['viol.a7'] = 'Кредит не будет предоставлен, если:<br>
-            - у Вас есть не выполненные вовремя кредитные обязательства или задержки по платежам;<br>
-            - при регистрации указаны ошибочные данные;<br>
-            - Вы не оплатили предыдущий кредит в Atrum.lv;<br>
-            - Вы моложе 20 или старше 70 лет.';
+        $language['ru']['viol.a5'] = 'Ответ на кредитную заявку Вы получите в течение 15 минут с момента завершения регистрации.';
 
 
-    $language['lv']['viol.q8'] = 'Kā man rīkoties, ja nevaru atmaksāt kredītu noteiktajā termiņā?';
-    $language['ru']['viol.q8'] = 'Что делать, если я не могу оплатить кредит в указанный срок?';
+    $language['lv']['viol.q6'] = 'Cik ātri es saņemšu naudu savā bankas kontā?';
+    $language['ru']['viol.q6'] = 'Как быстро я получу деньги на свой банковский счет?';
 
-        $language['lv']['viol.a8'] = 'Gadījumā, ja Jūs nevarat atmaksāt kredītu noteiktajā laikā, Jums ir iespēja pagarināt kredīta termiņu uz 30 dienām. <br>
-            Kredīta pagarināšanai Jums ir jāpārskaita pagarinājuma maksa uz vienu no Atrum.lv kontiem. <br>
-            Veicot pārskaitījumu maksājuma mērķī jānorāda līguma numurs un vārds „pagarinājums”.';
+        $language['lv']['viol.a6'] = 'Ja Jums ir bankas konts Swedbank, Citadele, DNB banka vai Nordea Bank AB, Jūs saņemsiet naudu 10-15 minūšu laikā. <br> Ja Jums ir konts citā bankā, naudas saņemšana var ilgt 1-3 dienas.';
 
-        $language['ru']['viol.a8'] = 'Если Вы не можете вернуть кредит в срок, у Вас есть возможность продлить срок оплаты кредита на 30 дней. <br>
-            Для этого Вам необходимо перечислить сумму продления на один из счетов Atrum.lv. <br>
-            В цели платежа необходимо указать номер договора и слово „pagarinājums”.';
+        $language['ru']['viol.a6'] = 'Если Ваш счет находится в Swedbank, Citadele, DNB banka или Nordea Bank AB, Вы получите деньги в течение 10-15 минут. <br> Если Ваш счет находится в другом банке, перевод денег может занять 1-3 дня.';
 
 
-    $language['lv']['viol.q9'] = 'Kā es varu nomainīt savu bankas konta numuru?';
-    $language['ru']['viol.q9'] = 'Как я могу поменять свой номер банковского счета?';
+    $language['lv']['viol.q7'] = 'Vai ir iespējams saņemt aizdevumu naktī vai brīvdienās?';
+    $language['ru']['viol.q7'] = 'Могу ли я получить кредит ночью или в выходные?';
 
-        $language['lv']['viol.a9'] = 'Bankas konta numura maiņai Jums ir jāveic maksājums EUR 0,01 apmērā no sava jaunā bankas konta uz Atrum.lv <br>
+        $language['lv']['viol.a7'] = 'Kredītu pieteikumi tiek izskatīti darba dienās no 8.00 līdz 22.00, brīvdienās no 10.00 līdz 20.00, bet Jūs varat reģistrēties un nosūtīt kredīta pieteikumu jebkurā diennakts laikā.';
+
+        $language['ru']['viol.a7'] = 'Заявки на кредиты рассматриваются в рабочие дни с 8:00 до 22:00, в выходные дни с 10:00 до 20:00, но Вы можете зарегистрироваться и отправить заявку на кредит в любое время суток.';
+
+
+    $language['lv']['viol.q8'] = 'Kāpēc man tika atteikts kredīts?';
+    $language['ru']['viol.q8'] = 'Почему мне отказали в предоставлении кредита?';
+
+        $language['lv']['viol.a8'] = 'Jūs nevarēsiet saņemt kredītu, ja: <br>
+                - Jums ir kavēti kredītmaksājumi vai līgumsaistību pārkāpumi; <br>
+                - reģistrējoties Jūs norādījāt kļūdainu informāciju; <br>
+                - Jūsu iepriekšējais aizdevums Atrum.lv nav atmaksāts; <br>
+                - Jūs esat jaunāks par 20 vai vecāks par 70 gadiem.';
+
+        $language['ru']['viol.a8'] = 'Кредит не будет предоставлен, если: <br>
+                - у Вас есть не выполненные вовремя кредитные обязательства или задержки по платежам; <br>
+                - при регистрации указаны ошибочные данные; <br>
+                - Вы не оплатили предыдущий кредит в Atrum.lv; <br>
+                - Вы моложе 20 или старше 70 лет.';
+
+
+    $language['lv']['viol.q9'] = 'Kā atmaksāt kredītu?';
+    $language['ru']['viol.q9'] = 'Как оплатить кредит?';
+
+        $language['lv']['viol.a9'] = 'Kopējā kredīta atmaksas summa tiks sadalīta vienādos ikmēneša maksājumos. Ikmēneša maksājumu skaits ir atkarīgs no Jūsu kredīta termiņa. Ikmēneša maksājumu apmērs un apmaksas datums ir pieejams Jūsu klienta profilā. <br>
+                Kredīta atmaksai Jums ir jāpārskaita ikmēneša maksājums uz vienu no Atrum.lv kontiem. <br>
+                Veicot pārskaitījumu maksājuma mērķī jānorāda līguma numurs un vārds „atmaksa”.';
+
+        $language['ru']['viol.a9'] = 'Общая сумма оплаты будет разделена на одинаковые ежемесячные платежи. Количество ежемесячных платежей зависит от срока Вашего кредита. Размер и дата ежемесячных платежей доступны в Вашем профиле клиента. <br>
+                Для оплаты ежемесячного платежа Вам необходимо перечислить сумму платежа на один из счетов Atrum.lv. <br>
+                В цели платежа необходимо указать номер договора и слово „atmaksa”.';
+
+
+    $language['lv']['viol.q10'] = 'Kā es varu nomainīt savu bankas konta numuru?';
+    $language['ru']['viol.q10'] = 'Как я могу поменять свой номер банковского счета?';
+
+    $language['lv']['viol.a10'] = 'Bankas konta numura maiņai Jums ir jāveic maksājums EUR 0,01 apmērā no sava jaunā bankas konta uz Atrum.lv <br>
             bankas kontu, maksājuma mērķī norādot: "Bankas konta maiņa".<br>
             Nepieciešamā informācija maksājuma veikšanai'; 
 
         $language['lv']['there'] = 'ŠEIT';
 
-        $language['ru']['viol.a9'] = 'Для смены номера банковского счета Вам необходимо перечислить EUR 0,01 со своего нового счета, <br> в цели платежа указав: "Bankas konta maiņa". <br>
+        $language['ru']['viol.a10'] = 'Для смены номера банковского счета Вам необходимо перечислить EUR 0,01 со своего нового счета, <br> в цели платежа указав: "Bankas konta maiņa". <br>
             Необходимая информация для произведения платежей';
 
         $language['ru']['there'] = 'ЗДЕСЬ';
 
 
-    $language['lv']['viol.q10'] = 'Kā es varu nomainīt savu uzvārdu?';
-    $language['ru']['viol.q10'] = 'Как я могу поменять свою фамилию?';
+    $language['lv']['oran.q10'] = 'Kā es varu nomainīt savu uzvārdu?';
+    $language['ru']['oran.q10'] = 'Как я могу поменять свою фамилию?';
 
-        $language['lv']['viol.a10'] = 'Uzvārda maiņai Jums no sava bankas konta ir jāveic maksājums EUR 0,01 apmērā, maksājuma mērķī norādot: „Uzvārda maiņa”.';
+        $language['lv']['oran.a10'] = 'Uzvārda maiņai Jums no sava bankas konta ir jāveic maksājums EUR 0,01 apmērā, maksājuma mērķī norādot: „Uzvārda maiņa”.';
 
-        $language['ru']['viol.a10'] = 'Для смены фамилии Вам необходимо со своего счета перечислить EUR 0,01, в цели платежа указав: "Uzvārda maiņa".';
+        $language['ru']['oran.a10'] = 'Для смены фамилии Вам необходимо со своего счета перечислить EUR 0,01, в цели платежа указав: "Uzvārda maiņa".';
 
 
     $language['lv']['viol.q11'] = 'Kā es varu nomainīt savu telefona numuru?';

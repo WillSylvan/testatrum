@@ -1,3 +1,8 @@
+<?php 
+  include 'lang/lang-reg.php';
+  include 'lang/set-lang.php';
+?>
+
 <html>
 
 <head>
@@ -10,6 +15,8 @@
   <script type="text/javascript" src="js/registration.js"></script>
   <script type="text/javascript" src="js/jquery.mask.js"></script>
   <script type="text/javascript" src="js/jquery.form-validator.min.js"></script>
+
+  
 
 
   <style>
@@ -38,7 +45,7 @@
       <?php include "assets/kredits.php"?>
     </div>
     <div id="page-content-1">
-      <h2><span>Kredīta</span> pieteikums</h2>
+      <h2><span><?php echo $language[$lang]['cred-name1'] ?></span><?php echo $language[$lang]['cred-name2'] ?></h2>
 
       <!--PIRMA FORMA-->
       <div id="form-1">
@@ -46,29 +53,29 @@
           <div class="flex">
             <div class="flex izvelne">
               <button class="div" style="background-color:rgb(250, 142, 109)"></button>
-              <p>Jauns klients</p>
+              <p><?php echo $language[$lang]['new-client'] ?></p>
             </div>
             <div class="flex izvelne">
               <button class="div" style="background-color:grey"></button>
-              <p>Esošs klients</p>
+              <p><?php echo $language[$lang]['exist-client'] ?></p>
             </div>
           </div>
           <div class="izvelne" id="stepPrev" style="margin:0;"><img src="img/back.png"></div>
         </div>
         <form id="one-form" action="javascript:void(0)">
-          <div><input name="firstName" id="name" class="input" placeholder="Vārds" data-validation="length" data-validation-length="min3" pattern="[a-zA-Z]+" value=""></div>
-          <div><input name="lastName" id="lname" class="input" placeholder="Uzvārds" data-validation="length" data-validation-length="min3" pattern="[a-zA-Z]+" value=""></div>
-          <div><input name="identityCode" id="p_code" class="input" placeholder="Personas kods" data-validation="number" data-mask="00-00" pattern="[0-9]{6}[-]{1}[0-9]{5}"> </div>
+          <div><input name="firstName" id="name" class="input" placeholder=<?php echo $language[$lang]['firstName'] ?> data-validation="length" data-validation-length="min3" pattern="[a-zA-Z]+" value=""></div>
+          <div><input name="lastName" id="lname" class="input" placeholder=<?php echo $language[$lang]['lastName'] ?> data-validation="length" data-validation-length="min3" pattern="[a-zA-Z]+" value=""></div>
+          <div><input name="identityCode" id="p_code" class="input" placeholder=<?php echo $language[$lang]['identityCode'] ?> data-validation="number" data-mask="00-00" pattern="[0-9]{6}[-]{1}[0-9]{5}"> </div>
           <div class="flex info">
-            <div><input name="phone" id="phone" class="input" placeholder="Tel." data-validation="number" pattern="[0-9]{8}"></div>
-            <div><input name="email" id="email" class="input" data-validation="email" placeholder="Epasts:" pattern="[a-zA-Z0-9]+[@]{1}[a-zA-Z0-9]+[.]{1}[a-z]+"></div>
+            <div><input name="phone" id="phone" class="input" placeholder=<?php echo $language[$lang]['phone'] ?> data-validation="number" pattern="[0-9]{8}"></div>
+            <div><input name="email" id="email" class="input" data-validation=<?php echo $language[$lang]['email'] ?> placeholder="Epasts:" pattern="[a-zA-Z0-9]+[@]{1}[a-zA-Z0-9]+[.]{1}[a-z]+"></div>
           </div>
-          <div><input name="workPlace" id="place_of_job" class="input" data-validation="length" data-validation-length="min3" placeholder="Darba vieta:"></div>
-          <div><input name="workPosition" id="position" class="input" data-validation="length" data-validation-length="min3" placeholder="Ieņemamais amats"></div>
+          <div><input name="workPlace" id="place_of_job" class="input" data-validation="length" data-validation-length="min3" placeholder=<?php echo $language[$lang]['workPlace'] ?>></div>
+          <div><input name="workPosition" id="position" class="input" data-validation="length" data-validation-length="min3" placeholder=<?php echo $language[$lang]['workPosition'] ?>></div>
           <div><input name="monthlyIncome" id="m_income" class="input" placeholder="Ikmēneša ienākumi:" data-validation="number" pattern="[0-9]+"></div>
-          <div><input name="monthlyExpenses" id="m_expenses" class="input" placeholder="Ikmēneša izdevumi:" pattern="[0-9]+"></div>
+          <div><input name="monthlyExpenses" id="m_expenses" class="input" placeholder=<?php echo $language[$lang]['monthlyIncome'] ?> pattern="[0-9]+"></div>
 
-          <div><input class="turpinat" type="submit" value="Turpināt"></div>
+          <div><input class="turpinat" type="submit" value=<?php echo $language[$lang]['cont'] ?>></div>
         </form>
       </div>
 
@@ -78,45 +85,45 @@
           <div class="flex">
             <div class="flex izvelne">
               <button class="div" style="background-color:rgb(250, 142, 109)"></button>
-              <p>Jauns klients</p>
+              <p><?php echo $language[$lang]['new-client'] ?></p>
             </div>
             <div class="flex izvelne">
               <button class="div" style="background-color:grey"></button>
-              <p>Esošs klients</p>
+              <p><?php echo $language[$lang]['exist-client'] ?></p>
             </div>
           </div>
           <div class="izvelne" id="stepPrev" style="margin:0;"><img src="img/back.png"></div>
         </div>
         <form id="two-form" action="javascript:void(0)">
           <fieldset>
-          <h2><span>DEKLARĒTĀ</span> ADRESE</h2>
-          <div><input name="city" class="input" data-validation="length" data-validation-length="min3" placeholder="Pilsēta:"></div>
-          <div><input name="street" class="input" data-validation="length" data-validation-length="min3" placeholder="Iela:"></div>
+          <h2><span><?php echo $language[$lang]['dekl'] ?></span> <?php echo $language[$lang]['adr'] ?></h2>
+          <div><input name="city" class="input" data-validation="length" data-validation-length="min3" placeholder=<?php echo $language[$lang]['city'] ?>></div>
+          <div><input name="street" class="input" data-validation="length" data-validation-length="min3" placeholder=<?php echo $language[$lang]['street'] ?>></div>
           <div class="flex info">
-            <div><input name="house" class="input" placeholder="Mājas nr."></div>
-            <div><input name="apartment" class="input" placeholder="Dzīvokļa nr.:"></div>
+            <div><input name="house" class="input" placeholder=<?php echo $language[$lang]['house-nr'] ?>></div>
+            <div><input name="apartment" class="input" placeholder=<?php echo $language[$lang]['flat-nr'] ?>></div>
           </div>
-          <div><input name="postalCode" data-validation="length" data-validation-length="min3" placeholder="Pasta indekss:"></div>
+          <div><input name="postalCode" data-validation="length" data-validation-length="min3" placeholder=<?php echo $language[$lang]['index'] ?>></div>
           <div class="flex check">
           <input name="adresCheck" id="declareChecking" class="input" type="checkbox" class="radio">
-          <p>Deklarētā dzīves vieta atšķiras no faktisko.</p>
+          <p><?php echo $language[$lang]['check'] ?></p>
         </div>
       </fieldset>
 
         <fieldset id="two-form-second" action="javascript:void(0)">
-          <h2><span>Faktiskā</span> ADRESE</h2>
-          <div><input name="city" class="input" data-validation-optional="true" data-validation="length" data-validation-length="min3" placeholder="Pilsēta:" ></div>
-          <div><input name="street" class="input" data-validation="length" data-validation-length="min3" data-validation-optional="true" placeholder="Iela:"></div>
+          <h2><span><?php echo $language[$lang]['fakt'] ?></span> <?php echo $language[$lang]['adr'] ?></h2>
+          <div><input name="city" class="input" data-validation-optional="true" data-validation="length" data-validation-length="min3" placeholder=<?php echo $language[$lang]['city'] ?> ></div>
+          <div><input name="street" class="input" data-validation="length" data-validation-length="min3" data-validation-optional="true" placeholder=<?php echo $language[$lang]['street'] ?></div>
           <div class="flex info">
-            <div><input name="house" class="input" placeholder="Mājas nr."></div>
-            <div><input name="apartment" class="input" placeholder="Dzīvokļa nr.:"></div>
+            <div><input name="house" class="input" placeholder=<?php echo $language[$lang]['house-nr'] ?>></div>
+            <div><input name="apartment" class="input" placeholder=<?php echo $language[$lang]['flat-nr'] ?>></div>
           </div>
-          <div><input name="postalCode" data-validation="length" data-validation-length="min3" data-validation-optional="true" placeholder="Pasta indekss:"></div>
+          <div><input name="postalCode" data-validation="length" data-validation-length="min3" data-validation-optional="true" placeholder=<?php echo $language[$lang]['index'] ?>></div>
 
         </fieldset>
 
 
-          <div><input class="turpinat" type="submit" value="Turpināt"></div>
+          <div><input class="turpinat" type="submit" value=<?php echo $language[$lang]['cont'] ?>></div>
         </form>
       </div>
 
@@ -126,24 +133,24 @@
           <div class="flex">
             <div class="flex izvelne">
               <button class="div" style="background-color:rgb(250, 142, 109)"></button>
-              <p>Jauns klients</p>
+              <p><?php echo $language[$lang]['new-client'] ?></p>
             </div>
             <div class="flex izvelne">
               <button class="div" style="background-color:grey"></button>
-              <p>Esošs klients</p>
+              <p><?php echo $language[$lang]['exist-client'] ?></p>
             </div>
           </div>
           <div class="izvelne" style="margin:0;"><img src="img/back.png"></div>
         </div>
         <form id="three-form" action="javascript:void(0)">
-          <div><input name="password_confirmation" autocomplete="new-password" class="input" placeholder="Parole:" type="password"></div>
-          <div><input name="password" autocomplete="new-password" class="input" placeholder="Parole atkārtoti:" type="password" data-validation="confirmation"></div>
+          <div><input name="password_confirmation" autocomplete="new-password" class="input" placeholder=<?php echo $language[$lang]['pass'] ?> type="password"></div>
+          <div><input name="password" autocomplete="new-password" class="input" placeholder=<?php echo $language[$lang]['check-pass'] ?> type="password" data-validation="confirmation"></div>
           <div class="flex check">
             <input name="check" class="input" type="checkbox" class="radio" data-validation="required">
-            <p>Piekrītu līguma nosacījumiem, atļauju apstrādāt savus personas datus un apliecinu, ka sniegtā informācija ir patiesa.</p>
+            <p><?php echo $language[$lang]['new-check2'] ?></p>
           </div>
 
-          <div><input class="turpinat" type="submit" value="Turpināt"></div>
+          <div><input class="turpinat" type="submit" value=<?php echo $language[$lang]['cont'] ?>></div>
         </form>
 
       </div>

@@ -14,8 +14,10 @@
 
 	<body>
 		<?php include 'assets/header.php'; ?>
+		
 		<?php include 'lang/lang-index-grey.php';?>
 		<?php include 'lang/lang-index-orange.php';?>
+		<?php include 'lang/lang-index-violet.php';?>
 		 
 		<div class="header-background"></div>
 
@@ -42,7 +44,7 @@
 								<div id="short_echo_days_cont">
 
 									<h3><?php echo $language[$lang]['how-long-time'] ?></h3>
-									<p><?php echo $language[$lang]['days'] ?> <span id="short_echo_days_val"></span></p>
+									<p><?php echo $language[$lang]['months'] ?> <span id="short_echo_days_val"></span></p>
 
 									<!--<input name="sloanTerms" type="range" min="10" max="30" value="10" class="slider" id="short_range_days">-->
 									<div class="slider_container">
@@ -98,7 +100,7 @@
 								<div id="long_echo_days_cont">
 
 									<h3><?php echo $language[$lang]['how-long-time'] ?></h3>
-									<p><?php echo $language[$lang]['days'] ?><span id="long_echo_days_val"></span></p>
+									<p><?php echo $language[$lang]['months'] ?><span id="long_echo_days_val"></span></p>
 
 									<!--<input name="bloanTerms" type="range" min="3" max="12" value="5" class="slider" id="long_range_days">-->
 									 <div class="slider_container">
@@ -917,27 +919,27 @@
 			<div class="icons_block flex">
 				<div class="icon_border">
 					<img id="img-1" src="img/violet/ico/1.0.svg" alt="Smiley face">
-					<h3>Ilgtermiņa kredīts līdz 1000 EUR</h3>
+					<h3><?php echo $language[$lang]['1-vio-pic-txt-1'] ?></h3>
 				</div>
 
 				<div class="icon_border">
 					<img id="img-2" src="img/violet/ico/1.2.svg" alt="Smiley face">
-					<h3>Vienādi ikmēneša maksājumi</h3>
+					<h3><?php echo $language[$lang]['1-vio-pic-txt-2'] ?></h3>
 				</div>
 
 				<div class="icon_border">
 					<img id="img-3" src="img/violet/ico/1.1.svg" alt="Smiley face">
-					<h3>Atmaksas termiņš 3-12 mēneši</h3>
+					<h3><?php echo $language[$lang]['1-vio-pic-txt-3'] ?></h3>
 				</div>
 
 				<div class="icon_border">
 					<img id="img-4" src="img/violet/ico/11.svg" alt="Smiley face">
-					<h3>Tikai 15 minūšu laikā</h3>
+					<h3><?php echo $language[$lang]['1-vio-pic-txt-4'] ?></h3>
 				</div>
 			</div>
 
 			<div class="headline">
-				<h1><?php echo $language[$lang]['first-cred'] ?></h1>
+				<h1><?php echo $language[$lang]['first-cred.vio'] ?></h1>
 			</div>
 
 			<div id="icons_block_sec">
@@ -972,14 +974,14 @@
 				<div class="piesakies-background"></div>
 
 				<div class="headline">
-					<h1><?php echo $language[$lang]['re-ply-cred'] ?></h1>
+					<h1><?php echo $language[$lang]['re-ply-cred.vio'] ?></h1>
 				</div>
 
 				<div class="apply_credit">
 					<div class="img-apply-credit"><img src="img/pink/atrum_pc.svg" alt="pc"></div>
 					<div class="apply">
-						<div><h1>Piesakiet kredītu internetā!</h1></div>
-						<div><button class="button_sanemt" id="f-button">Saņēmt kredītu</button></div>
+						<div><h1><?php echo $language[$lang]['apply.vio'] ?></h1></div>
+						<div><button class="button_sanemt" id="f-button"><?php echo $language[$lang]['get-cred.vio'] ?></button></div>
 					</div>
 				</div>
 
@@ -988,15 +990,15 @@
 				<div class="three_icons_block flex">
 					<div class="tree_icon_border">
 						<img id="img-9" src="img/violet/ico/13.png" alt="Smiley face">
-						<h3>Ieejiet savā profilā</h3>
+						<h3><?php echo $language[$lang]['log-in-my-profil.vio'] ?></h3>
 					</div>
 					<div class="tree_icon_border">
 						<img id="img-10" src="img/violet/ico/17.png" alt="Smiley face">
-						<h3>Izvēlieties kredīta summu un termiņu</h3>
+						<h3><?php echo $language[$lang]['cred-bil-n-date.vio'] ?></h3>
 					</div>
 					<div class="tree_icon_border">
 						<img id="img-11" src="img/violet/ico/18.png" alt="Smiley face">
-						<h3>Saņemiet kredītu</h3>
+						<h3><?php echo $language[$lang]['get-cred.vio'] ?></h3>
 					</div>
 				</div>
 			</div>
@@ -1007,23 +1009,23 @@
 				<div class="apply_credit-2">
 					<div class="img-apply-credit-2"><img id="violet-mob" src="img/violet/tel-violet.png" alt=""></div>
 					<div class="apply-2">
-						<div><h1>Piesakiet kredītu pa telefonu!</h1></div>
-						<div><button class="button_sanemt-2" id="s-button">Zvanīt</button></div>
+						<div><h1><?php echo $language[$lang]['apply-phone.vio'] ?></h1></div>
+						<div><button class="button_sanemt-2" id="s-button"><?php echo $language[$lang]['call.vio'] ?></button></div>
 					</div>
 				</div>
 
 				<div class="three_icons_block-2 flex">
 					<div class="tree_icon_border-2">
 						<img id="img-12" src="img/violet/ico/16.png" alt="Smiley face">
-						<h3>Piezvaniet mums:<br>80700700 </h3>
+						<h3><?php echo $language[$lang]['call-to-us.vio'] ?><br>80700700 </h3>
 					</div>
 					<div class="tree_icon_border-2">
 						<img id="img-13" src="img/violet/ico/17.png" alt="Smiley face">
-						<h3>Izvēlieties kredīta summu un termiņu</h3>
+						<h3><?php echo $language[$lang]['cred-bil-n-date.vio'] ?></h3>
 					</div>
 					<div class="tree_icon_border-2">
 						<img id="img-14" src="img/violet/ico/18.png" alt="Smiley face">
-						<h3>Saņemiet kredītu</h3>
+						<h3><?php echo $language[$lang]['get-cred.vio'] ?></h3>
 					</div>
 				</div>
 			</div>
@@ -1037,22 +1039,22 @@
 					<div class="icons_block_sec2 flex">
 						<div class="icon_border_sec2 b5">
 							<h3><?php echo $language[$lang]['how-prolong.vio'] ?></h3>
-							<p>Kredīta ikmēneša maksājumu veikšanai vai kredīta atmaksai pilnā apmērā Jums ir jāpārskaita maksājums uz vienu no mūsu kontiem.</p>
+							<p><?php echo $language[$lang]['how-prolong.vio-1.1'] ?></p>
 						</div>
 
 						<div class="icon_border_sec2 b6">
 							<h3><?php echo $language[$lang]['purpose-of-payment.vio'] ?></h3>
-							<p>Maksājuma mērķī jānorāda līguma numurs un vārds atmaksa.</p>
+							<p><?php echo $language[$lang]['purpose-of-payment.vio-1.1'] ?></p>
 						</div>
 
 						<div class="icon_border_sec2 b7">
 							<h3><?php echo $language[$lang]['credit-payback.vio'] ?></h3>
-							<p>Kredīta atmaksai Jums ir jāpārskaita kredīta atmaksas summa uz vienu no mūsu kontiem.</p>
+							<p><?php echo $language[$lang]['credit-payback.vio-1.1'] ?></p>
 						</div>
 
 						<div class="icon_border_sec2 b8">
 							<h3><?php echo $language[$lang]['purpose-of-payment.vio'] ?></h3>
-							<p>Maksājuma mērķī jānorāda līguma numurs un vārds <b>„atmaksa”</b>. <br>Piemērs: Līguma Nr. SMXXXXXX atmaksa.</p>
+							<p><?php echo $language[$lang]['purpose-of-payment.vio-2.1'] ?></p>
 						</div>
 					</div>
 				</div>
@@ -1060,7 +1062,7 @@
 
 			<div id="rekviziti">
 			<div class="headline">
-				<h1><?php echo $language[$lang]['rekvez'] ?></h1>
+				<h1><?php echo $language[$lang]['rekvez.vio'] ?></h1>
 			</div>
 
 			<div class="bank_rekv">
@@ -1216,107 +1218,80 @@
 				<h1><?php echo $language[$lang]['questions.vio'] ?></h1>
 			</div>
 
-			<div id="questions">
-				<button class="accordion">Vai es varu saņemt kredītu?</button>
+				<div id="questions">
+				<button class="accordion"><?php echo $language[$lang]['viol.q1'] ?></button>
 				<div class="panel">
-					<p>
-						Lai saņemtu kredītu, Jums jābūt:<br>
-						- Latvijas iedzīvotājam vecumā no 20 līdz 70 gadiem;<br>
-						- atvērtam bankas kontam jebkurā no Latvijas bankām;<br>
-						- pastāvīgam mobilā tālruņa pieslēgumam;<br>
-						- nedrīkst būt kavētu kredītmaksājumu vai līgumsaistību pārkāpumu.<br>
-					</p>
+					<p><?php echo $language[$lang]['viol.a1'] ?></p>
 				</div>
 
-				<button class="accordion">Kas jānorāda sadaļā „maksājuma mērķis”, veicot reģistrācijas maksas pārskaitījumu?</button>
+				<button class="accordion"><?php echo $language[$lang]['viol.q2'] ?></button>
 				<div class="panel">
-					<p>Sadaļā „maksājuma mērķis” jānorāda:  <b>Piekrītu AS Lateko Līzings līguma noteikumiem.</b></p>
+					<p><?php echo $language[$lang]['viol.a2'] ?></p>
 				</div>
 
-				<button class="accordion">Kāda kredīta summa man ir pieejama?</button>
+				<button class="accordion"><?php echo $language[$lang]['viol.q3'] ?></button>
 				<div class="panel">
-					<p>
-					- pirmajā reizē Jums ir pieejama kredīta summa līdz EUR 425.<br>
-					- otrajā reizē Jums ir pieejama kredīta summa līdz EUR 750.<br>
-					- trešajā reizē Jums ir pieejama kredīta summa līdz EUR 1000.
-					</p>
-				</div>
-				
-				<button class="accordion">Uz kādu termiņu es varu saņemt kredītu?</button>
-				<div class="panel">
-					<p>Jūs varat izvēlēties sev piemērotāko kredīta termiņu no 3 līdz 12 mēnešiem.</p>
+					<p><?php echo $language[$lang]['viol.a3'] ?></p>
 				</div>
 
-				<button class="accordion">Cik ātri es saņemšu atbildi par kredīta piešķiršanu?</button>
+				<button class="accordion"><?php echo $language[$lang]['viol.q4'] ?></button>
 				<div class="panel">
-					<p>Atbildi par kredīta piešķiršanu Jūs saņemsiet 15 minūšu laikā no reģistrācijas pabeigšanas brīža.</p>
+					<p><?php echo $language[$lang]['viol.a4'] ?></p>
 				</div>
 
-				<button class="accordion">Cik ātri es saņemšu naudu savā bankas kontā?</button>
+				<button class="accordion"><?php echo $language[$lang]['viol.q5'] ?></button>
 				<div class="panel">
-					<p>Ja Jums ir bankas konts Swedbank, Citadele, DNB banka vai Nordea Bank AB, Jūs saņemsiet naudu 10-15 minūšu<br> laikā. Ja Jums ir konts citā bankā, naudas saņemšana var ilgt 1-3 dienas.</p>
+					<p><?php echo $language[$lang]['viol.a5'] ?></p>
 				</div>
 
-				<button class="accordion">Vai ir iespējams saņemt aizdevumu naktī vai brīvdienās?</button>
+				<button class="accordion"><?php echo $language[$lang]['viol.q6'] ?></button>
 				<div class="panel">
-					<p>Kredītu pieteikumi tiek izskatīti darba dienās no 8.00 līdz 22.00, brīvdienās no 10.00 līdz 20.00, bet Jūs varat<br> reģistrēties un nosūtīt kredīta pieteikumu jebkurā diennakts laikā.</p>
+					<p><?php echo $language[$lang]['viol.a6'] ?></p>
 				</div>
 
-				<button class="accordion">Kāpēc man tika atteikts kredīts?</button>
+				<button class="accordion"><?php echo $language[$lang]['viol.q7'] ?></button>
 				<div class="panel">
-					<p>Jūs nevarēsiet saņemt kredītu, ja:<br><br>
-					- Jums ir kavēti kredītmaksājumi vai līgumsaistību pārkāpumi;<br>
-					- reģistrējoties Jūs norādījāt kļūdainu informāciju;<br>
-					- Jūsu iepriekšējais aizdevums Atrum.lv nav atmaksāts;<br>
-					- Jūs esat jaunāks par 20 vai vecāks par 70 gadiem.
-					</p>
+					<p><?php echo $language[$lang]['viol.a7'] ?></p>
 				</div>
 
-				<button class="accordion">Kā atmaksāt kredītu?</button>
+				<button class="accordion"><?php echo $language[$lang]['viol.q8'] ?></button>
 				<div class="panel">
-					<p>Kopējā kredīta atmaksas summa tiks sadalīta vienādos ikmēneša maksājumos. Ikmēneša maksājumu skaits ir atkarīgs no Jūsu kredīta termiņa. Ikmēneša maksājumu apmērs un apmaksas datums ir pieejams Jūsu klienta profilā.<br>
-					Kredīta atmaksai Jums ir jāpārskaita ikmēneša maksājums uz vienu no Atrum.lv kontiem.<br>
-					Veicot pārskaitījumu maksājuma mērķī jānorāda līguma numurs un vārds „atmaksa”.
-
-					</p>
+					<p><?php echo $language[$lang]['viol.a8'] ?></p>
 				</div>
 
-				<button class="accordion">Kā es varu nomainīt savu bankas konta numuru?</button>
+				<button class="accordion"><?php echo $language[$lang]['viol.q9'] ?></button>
 				<div class="panel">
-					<p>Bankas konta numura maiņai Jums ir jāveic maksājums EUR 0,01 apmērā no sava jaunā bankas konta uz Atrum.lv<br>
-					bankas kontu, maksājuma mērķī norādot: "Bankas konta maiņa".<br>
-					Nepieciešamā informācija maksājuma veikšanai <a href="#rekviziti"><b>šeit</b></a>.
-					</p>
+					<p><?php echo $language[$lang]['viol.a9'] ?><a href="#rekviziti"><b><?php echo $language[$lang]['there'] ?></b></a>.</p>
 				</div>
 
-				<button class="accordion">Kā es varu nomainīt savu uzvārdu?</button>
+				<button class="accordion"><?php echo $language[$lang]['viol.q10'] ?></button>
 				<div class="panel">
-					<p>Uzvārda maiņai Jums no sava bankas konta ir jāveic maksājums EUR 0,01 apmērā, maksājuma mērķī norādot: „Uzvārda maiņa”.</p>
+					<p><?php echo $language[$lang]['viol.a10'] ?></p>
 				</div>
 
-				<button class="accordion">Kā es varu nomainīt savu telefona numuru?</button>
+				<button class="accordion"><?php echo $language[$lang]['viol.q11'] ?></button>
 				<div class="panel">
-					<p>Telefona numura maiņai Jums no sava bankas konta ir jāveic maksājums EUR 0,01 apmērā, maksājuma mērķī norādot: „Telefona numura maiņa” un savu jauno telefona numuru.</p>
+					<p><?php echo $language[$lang]['viol.a11'] ?></p>
 				</div>
 
-				<button class="accordion">Kā es varu nomainīt savu e-pasta adresi?</button>
+				<button class="accordion"><?php echo $language[$lang]['viol.q12'] ?></button>
 				<div class="panel">
-					<p>E-pasta adreses maiņai Jums no sava bankas konta ir jāveic maksājums EUR 0,01 apmērā, maksājuma mērķī norādot: „E-pasta adreses maiņa” un savu jauno e-pasta adresi.</p>
+					<p><?php echo $language[$lang]['viol.a12'] ?></p>
 				</div>
 
-				<button class="accordion">Kā es varu nomainīt darba vietu, deklarēto vai faktisko adresi?</button>
+				<button class="accordion"><?php echo $language[$lang]['viol.q13'] ?></button>
 				<div class="panel">
-					<p>Darba vietas, deklarētās vai faktiskās adreses maiņai Jums no savas e-pasta adreses jānosūta uz e-pastu info@atrum.lv iesniegums brīvā formā, norādot savu vārdu, uzvārdu, personas kodu un jaunos datus.</p>
+					<p><?php echo $language[$lang]['viol.a13'] ?></p>
 				</div>
 
-				<button class="accordion">Kā man rīkoties, ja aizmirsu savu profila paroli?</button>
+				<button class="accordion"><?php echo $language[$lang]['viol.q14'] ?></button>
 				<div class="panel">
 					<p></p>
 				</div>
 			</div>
 
 			<div class="headline">
-				<h1><?php echo $language[$lang]['contacts'] ?></h1>
+				<h1><?php echo $language[$lang]['contacts.vio'] ?></h1>
 			</div>
 			
 		</div>

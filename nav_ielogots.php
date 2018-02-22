@@ -1,3 +1,9 @@
+<?php 
+  include 'lang/lang-login.php';
+  include 'lang/set-lang.php';
+?>
+
+
 <html>
     <head>     
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">	
@@ -14,13 +20,13 @@
 		<?php include 'assets/header.php'; ?>
 		<div id="page-form-content">
 			<div id="page-content-1">
-				<h2><span>Kredīta</span> pieteikums</h2>
+				<h2><span><?php echo $language[$lang]['cred-name1'] ?></span> <?php echo $language[$lang]['cred-name2'] ?></h2>
 
 				<!--ESOSS KLIENTS-->
 			<div id="form-0">
 				<div class="flex klients">
 					<div class="flex">
-						<p id="login_error" style="display: none;color: red">Nepareizs e-pasts vai parole</p>
+						<p id="login_error" style="display: none;color: red"><?php echo $language[$lang]['eror'] ?></p>
 						<!-- <div class="flex izvelne">
 							<button class="div" style="background-color:grey"></button>
 							<p>Jauns klients</p>
@@ -32,12 +38,12 @@
 					</div>
 				</div>
 				<div id="zero-form">
-					<div><input placeholder="E-pasts:" id="email_input"></div>
-					<div><input placeholder="Parole:" type="password" id="pw_input"></div>
+					<div><input placeholder=<?php echo $language[$lang]['login'] ?> id="email_input"></div>
+					<div><input placeholder=<?php echo $language[$lang]['reg'] ?> type="password" id="pw_input"></div>
 				</div>
 				<div class="flex ielogoties-buttons">
-					<button class="turpinat" id="login_button">Ienākt</button>
-					<a href="registracija.php"><button class="turpinat">Registrācija</button></a>
+					<button class="turpinat" id="login_button"><?php echo $language[$lang]['login'] ?></button>
+					<a href="registracija.php"><button class="turpinat"><?php echo $language[$lang]['reg'] ?></button></a>
 				</div>
 			</div>
 	
