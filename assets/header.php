@@ -8,6 +8,7 @@
 
 <div id="menu-mobile"><img src="img/burgers.png"></div>
 <div id="logo-mobile"><a href="index.php"><img src="img/logo.svg" alt="logo"></a></div>
+
 <script>
 $(document).ready(function(){
 	if ($('body').width() <= 900) {
@@ -46,7 +47,9 @@ $(document).ready(function(){
 	</div>	
 	<div class="atribut head">
 		<div class="login">
-			<a href="nav_ielogots.php" class="button"><?php echo $language[$lang]['login'] ?></a>
+			<a href="nav_ielogots.php" class="button" id="login_link"><?php echo $language[$lang]['login'] ?></a>
+			<a href="sakums.php" id="profile_link" style="display: none;">mans profils</a>
+			<a style="display: none;" class="button" id="loguot_link"><?php echo 'logout'//$language[$lang]['login'] ?></a>
 			<form>
 				<input type="submit" value="lv" name="lang" class="languages">
 				<input type="submit" value="ru" name="lang" class="languages">
@@ -54,3 +57,5 @@ $(document).ready(function(){
 		</div>
 	</div>
 </div>
+<script type="text/javascript" src="js/user.js">
+</script>
