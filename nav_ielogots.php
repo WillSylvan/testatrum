@@ -20,14 +20,15 @@
 			<div id="form-0">
 				<div class="flex klients">
 					<div class="flex">
-						<div class="flex izvelne">
+						<p id="login_error" style="display: none;color: red">Nepareizs e-pasts vai parole</p>
+						<!-- <div class="flex izvelne">
 							<button class="div" style="background-color:grey"></button>
 							<p>Jauns klients</p>
 						</div>
 						<div class="flex izvelne">
 							<button class="div" style="background-color:rgb(250, 142, 109)"></button>
 							<p>Esošs klients</p>
-						</div>
+						</div> -->
 					</div>
 				</div>
 				<div id="zero-form">
