@@ -68,12 +68,12 @@
           <div><input name="identityCode" id="p_code" class="input" placeholder=<?php echo $language[$lang]['identityCode'] ?> data-validation="number" data-mask="00-00" pattern="[0-9]{6}[-]{1}[0-9]{5}"> </div>
           <div class="flex info">
             <div><input name="phone" id="phone" class="input" placeholder=<?php echo $language[$lang]['phone'] ?> data-validation="number" pattern="[0-9]{8}"></div>
-            <div><input name="email" id="email" class="input" data-validation=<?php echo $language[$lang]['email'] ?> placeholder="Epasts:" pattern="[a-zA-Z0-9]+[@]{1}[a-zA-Z0-9]+[.]{1}[a-z]+"></div>
+            <div><input name="email" id="email" class="input" data-validation="email" placeholder=<?php echo $language[$lang]['email'] ?> pattern="[a-zA-Z0-9.]+[@]{1}[a-zA-Z0-9]+[.]{1}[a-z]+"></div>
           </div>
           <div><input name="workPlace" id="place_of_job" class="input" data-validation="length" data-validation-length="min3" placeholder=<?php echo $language[$lang]['workPlace'] ?>></div>
           <div><input name="workPosition" id="position" class="input" data-validation="length" data-validation-length="min3" placeholder=<?php echo $language[$lang]['workPosition'] ?>></div>
-          <div><input name="monthlyIncome" id="m_income" class="input" placeholder="Ikmēneša ienākumi:" data-validation="number" pattern="[0-9]+"></div>
-          <div><input name="monthlyExpenses" id="m_expenses" class="input" placeholder=<?php echo $language[$lang]['monthlyIncome'] ?> pattern="[0-9]+"></div>
+          <div><input name="monthlyIncome" id="m_income" class="input" placeholder=<?php echo $language[$lang]['monthlyIncome'] ?> data-validation="number" pattern="[0-9]+"></div>
+          <div><input name="monthlyExpenses" id="m_expenses" class="input" placeholder=<?php echo $language[$lang]['monthlyExpenses'] ?> pattern="[0-9]+"></div>
 
           <div><input class="turpinat" type="submit" value=<?php echo $language[$lang]['cont'] ?>></div>
         </form>
