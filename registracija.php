@@ -159,107 +159,108 @@
       <div id="form-4">
         <div id="four-form" action="javascript:void(0)">
           <div style="text-align:left ">
-            <p>Lai pabeigtu reģistrāciju, veiciet reģistrācijas maksas<br> <b>EUR 0.01</b> pārskaitījumu</p>
+            <p><?php echo $language[$lang]['cent-for-reg'] ?></p>
           </div>
           <div class="bank_rekv">
             <div class="tab">
               <button class="tablinks active" onclick="openCity(event, 'swed')"><img src="img/bank/swedbank.png"></button>
               <button class="tablinks" onclick="openCity(event, 'citadele')"><img src="img/bank/citadele.png"></button>
               <button class="tablinks" onclick="openCity(event, 'luminor')"><img src="img/bank/luminor.png"></button>
-              <button class="tablinks" onclick="openCity(event, 'another_b')"><h2>Cita banka</h2></button>
+              <button class="tablinks" onclick="openCity(event, 'another_b')"><h2><?php echo $language[$lang]['another-bank'] ?></h2></button>
             </div>
 
             <!-- SWEDBANKA -->
             <div id="swed" class="tabcontent" style="display: block;">
               <div class="saturs">
-                <h1>Saņēmējs</h1>
-                <p>Lateco līzings as</p>
+                <h1><?php echo $language[$lang]['receiver'] ?></h1>
+                <p><?php echo $language[$lang]['receiver-rekv'] ?></p>
               </div>
               <div class="saturs">
-                <h1>Reģ.Nr.</h1>
-                <p>40003366651</p>
+                <h1><?php echo $language[$lang]['reg.nr'] ?></h1>
+                <p><?php echo $language[$lang]['reg.nr-nr'] ?></p>
               </div>
               <div class="saturs">
-                <h1>Konta numurs:</h1>
-                <p>LV67HABA0551033353134</p>
+                <h1><?php echo $language[$lang]['kont.nr'] ?></h1>
+                <p><?php echo $language[$lang]['kont.nr-nr'] ?></p>
               </div>
               <div class="saturs">
-                <h1>Maksājuma mērķis kredīta atmaksai:</h1>
-                <p>Līguma Nr. SMXXXXXX pagarinājums</p>
+                <h1><?php echo $language[$lang]['pay.cred.p-long'] ?></h1>
+                <p><?php echo $language[$lang]['pay.cred.p-long-nr'] ?></p>
               </div>
               <div class="saturs">
-                <h1>Maksājuma mērķis kredīta atmaksai:</h1>
-                <p>Līguma Nr. SMXXXXXX atmaksa</p>
+                <h1><?php echo $language[$lang]['pay.cred.payback'] ?></h1>
+                <p><?php echo $language[$lang]['pay.cred.payback-nr'] ?></p>
               </div>
             </div>
 
             <!-- CITADELE -->
             <div id="citadele" class="tabcontent" style="display: none;">
-              <div class="saturs">
-                <h1>2Saņēmējs</h1>
-                <p>Lateco līzings as</p>
+               <div class="saturs">
+                <h1><?php echo $language[$lang]['receiver.2'] ?></h1>
+                <p><?php echo $language[$lang]['receiver-rekv.2'] ?></p>
               </div>
               <div class="saturs">
-                <h1>Reģ.Nr.</h1>
-                <p>40003366651</p>
+                <h1><?php echo $language[$lang]['reg.nr.2'] ?></h1>
+                <p><?php echo $language[$lang]['reg.nr-nr.2'] ?></p>
               </div>
               <div class="saturs">
-                <h1>Konta numurs:</h1>
-                <p>LV67HABA0551033353134</p>
+                <h1><?php echo $language[$lang]['kont.nr.2'] ?></h1>
+                <p><?php echo $language[$lang]['kont.nr-nr.2'] ?></p>
               </div>
               <div class="saturs">
-                <h1>Maksājuma mērķis kredīta atmaksai:</h1>
-                <p>Līguma Nr. SMXXXXXX pagarinājums</p>
+                <h1><?php echo $language[$lang]['pay.cred.p-long.2'] ?></h1>
+                <p><?php echo $language[$lang]['pay.cred.p-long-nr.2'] ?></p>
               </div>
               <div class="saturs">
-                <h1>Maksājuma mērķis kredīta atmaksai:</h1>
-                <p>Līguma Nr. SMXXXXXX atmaksa</p>
+                <h1><?php echo $language[$lang]['pay.cred.payback.2'] ?></h1>
+                <p><?php echo $language[$lang]['pay.cred.payback-nr.2'] ?></p>
               </div>
             </div>
 
             <div id="luminor" class="tabcontent" style="display: none;">
               <div class="saturs">
-                <h1>3Saņēmējs</h1>
-                <p>Lateco līzings as</p>
+                <div class="saturs">
+                <h1><?php echo $language[$lang]['receiver.3'] ?></h1>
+                <p><?php echo $language[$lang]['receiver-rekv.3'] ?></p>
               </div>
               <div class="saturs">
-                <h1>Reģ.Nr.</h1>
-                <p>40003366651</p>
+                <h1><?php echo $language[$lang]['reg.nr.3'] ?></h1>
+                <p><?php echo $language[$lang]['reg.nr-nr.3'] ?></p>
               </div>
               <div class="saturs">
-                <h1>Konta numurs:</h1>
-                <p>LV67HABA0551033353134</p>
+                <h1><?php echo $language[$lang]['kont.nr.3'] ?></h1>
+                <p><?php echo $language[$lang]['kont.nr-nr.3'] ?></p>
               </div>
               <div class="saturs">
-                <h1>Maksājuma mērķis kredīta atmaksai:</h1>
-                <p>Līguma Nr. SMXXXXXX pagarinājums</p>
+                <h1><?php echo $language[$lang]['pay.cred.p-long.3'] ?></h1>
+                <p><?php echo $language[$lang]['pay.cred.p-long-nr.3'] ?></p>
               </div>
               <div class="saturs">
-                <h1>Maksājuma mērķis kredīta atmaksai:</h1>
-                <p>Līguma Nr. SMXXXXXX atmaksa</p>
+                <h1><?php echo $language[$lang]['pay.cred.payback.3'] ?></h1>
+                <p><?php echo $language[$lang]['pay.cred.payback-nr.3'] ?></p>
               </div>
             </div>
 
             <div id="another_b" class="tabcontent" style="display: none;">
               <div class="saturs">
-                <h1>4Saņēmējs</h1>
-                <p>Lateco līzings as</p>
+                <h1><?php echo $language[$lang]['receiver.4'] ?></h1>
+                <p><?php echo $language[$lang]['receiver-rekv.4'] ?></p>
               </div>
               <div class="saturs">
-                <h1>Reģ.Nr.</h1>
-                <p>40003366651</p>
+                <h1><?php echo $language[$lang]['reg.nr.4'] ?></h1>
+                <p><?php echo $language[$lang]['reg.nr-nr.4'] ?></p>
               </div>
               <div class="saturs">
-                <h1>Konta numurs:</h1>
-                <p>LV67HABA0551033353134</p>
+                <h1><?php echo $language[$lang]['kont.nr.4'] ?></h1>
+                <p><?php echo $language[$lang]['kont.nr-nr.4'] ?></p>
               </div>
               <div class="saturs">
-                <h1>Maksājuma mērķis kredīta atmaksai:</h1>
-                <p>Līguma Nr. SMXXXXXX pagarinājums</p>
+                <h1><?php echo $language[$lang]['pay.cred.p-long.4'] ?></h1>
+                <p><?php echo $language[$lang]['pay.cred.p-long-nr.4'] ?></p>
               </div>
               <div class="saturs">
-                <h1>Maksājuma mērķis kredīta atmaksai:</h1>
-                <p>Līguma Nr. SMXXXXXX atmaksa</p>
+                <h1><?php echo $language[$lang]['pay.cred.payback.4'] ?></h1>
+                <p><?php echo $language[$lang]['pay.cred.payback-nr.4'] ?></p>
               </div>
             </div>
           </div>
@@ -281,7 +282,7 @@
               }
             });
           </script>
-          <button class="veikt">Veikt maksajumu</button>
+          <button class="veikt"><?php echo $language[$lang]['pay'] ?></button>
         </div>
       </div>
     </div>
