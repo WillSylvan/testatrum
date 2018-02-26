@@ -12,11 +12,12 @@
 			}
 		</script>
 		<style>
-		.bt3 button{background-color:rgb(255, 117, 130)}
+		/*.bt3 button{background-color:rgb(255, 117, 130)}*/
 		#main-id-content{
 			position: relative;
 			top: 10vw;
 		}
+		
 		#main-id {
 			background-image: url(img/form7.png) !important;
 			height: 43vw;
@@ -65,10 +66,10 @@
 
 		
 		
-		<div id="profils-added">
+	<!-- 	<div id="profils-added">
 			<a href="jauns_kredits"><div class="flex bt6"><button class="div"></button><p>Jauns kredīts</p></div></a>
 			<a href="kreditu_vesture.php"><div class="flex bt4"><button class="div"></button><p>Kredītu vēsture</p></div></a>
-		</div>
+		</div> -->
 		<style>.bt6 button{background-color:rgb(255, 117, 130)}</style>
 
 		<div class="main-content-credit" id="parkreditacija">

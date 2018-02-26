@@ -4,6 +4,9 @@ if(sessionStorage.accessToken != null && sessionStorage.accessToken != "undefine
 	document.getElementById('login_link').style.display = 'none'
 	document.getElementById('profile_link').style.display = 'block'
 	
+}else{
+	window.location = 'index.php'
+	
 }
 
 document.getElementById('loguot_link').onclick = function(){

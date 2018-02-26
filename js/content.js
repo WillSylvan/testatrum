@@ -70,6 +70,20 @@ $(document).ready(function(){
             $('#top-forms .form_:eq('+id+')').fadeIn(300)
     })
 
+cuculations = {long:'',short:''}
+calc_data_long = sessionStorage.accessToken != null && sessionStorage.accessToken != "undefined" && sessionStorage.accessToken != 0 ?  {'type':'long','accessToken':sessionStorage.accessToken} :{'type':'long'} 
+console.log(calc_data_long)
+ajax_('GetCalculatorInformation',calc_data_long,function(a){
+    cuculations.long = a
+    console.log(a)
+})
+calc_data_short = sessionStorage.accessToken != null && sessionStorage.accessToken != "undefined" && sessionStorage.accessToken != 0 ?  {'type':'short','accessToken':sessionStorage.accessToken} :{'type':'short'} 
+
+ajax_('GetCalculatorInformation',calc_data_short,function(a){
+    cuculations.short = a
+    console.log(a)
+})
+
 
 
     //constructor(dom,name,min,max,step,brake,output,side,values,callback)
@@ -99,7 +113,8 @@ $(document).ready(function(){
 
 
     })
-    short_money_slider.start_val(200)
+    start_short_principal = sessionStorage.short_loan_principal!='undefined' && sessionStorage.short_loan_principal!=null ? sessionStorage.short_loan_principal : 200 
+    short_money_slider.start_val(start_short_principal)
    // console.log(short_money_slider.value)
 
 
@@ -124,7 +139,9 @@ $(document).ready(function(){
         }
 
     })
-    short_days_slider.start_val(15)
+    start_short_days = sessionStorage.short_loan_term!='undefined' && sessionStorage.short_loan_term!=null ? sessionStorage.short_loan_term : 15 
+
+    short_days_slider.start_val(start_short_days)
 
 
 
@@ -160,7 +177,8 @@ $(document).ready(function(){
         }
 
     })
-    long_money_slider.start_val(300)
+    start_long_principal = sessionStorage.long_loan_principal!='undefined' && sessionStorage.long_loan_principal!=null ? sessionStorage.long_loan_principal : 300 
+    long_money_slider.start_val(start_long_principal)
 
 
 
@@ -190,8 +208,8 @@ $(document).ready(function(){
 		    })
         }
     })
-
-    long_days_slider.start_val(10)
+    start_long_days = sessionStorage.long_loan_term!='undefined' && sessionStorage.long_loan_term!=null ? sessionStorage.long_loan_term : 10 
+    long_days_slider.start_val(start_long_days)
    // console.log(long_days_slider)
 });
 

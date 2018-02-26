@@ -60,10 +60,10 @@
 		}
 		</style>
 		
-		<div id="profils-added">
+	<!-- 	<div id="profils-added">
 			<a href="jauns_kredits.php"><div class="flex bt6"><button class="div"></button><p>Jauns kredīts</p></div></a>
 			<a href="kreditu_vesture.php"><div class="flex bt4"><button class="div"></button><p>Kredītu vēsture</p></div></a>
-		</div>
+		</div> -->
 		<style>.bt4 button{background-color:rgb(255, 117, 130)}</style>
 	
 		<div id="aizdevumi">
@@ -74,18 +74,18 @@
 					<span>Īstermiņā</span> kredīti
 				</h2>
 				
-				<div class="table-aizdevumi">
-				
+				<div class="table-aizdevumi" id="isstermina_tabula">
 					<div>
 						<div><h1>Līguma nr.</h1></div>
 						<div class="statuss"><h1>Statuss</h1></div>
 						<div class="money"><h1>Kredīts</h1></div>
 						<div class="money komisija"><h1>Komisija</h1></div>
-						<div class="dienu-skaits"><h1>Nokavējuma procenti</h1></div>
+						<div class="dienu-skaits"><h1>Termiņš dienās</h1></div>
 						<div><h1>Atmaksas datums</h1></div>
 						<div class="kopa-atm"><h1>Kopējā summa</h1></div>
 					</div>
 					
+				<!-- 
 					<div class="with-borders">
 						<div class="nr"><h3>SM123456</h3></div>
 						<div class="nr statuss"><h3><span class="green">Aktīvs</span></h3><p>20.12.2017</p></div>
@@ -134,9 +134,9 @@
 						<div class="dienu-skaits"><p>30%</p></div>
 						<div><p>20.12.2017</p></div>
 						<div class="kopa-atm"><p><b>$220.00</b></p></div>
-					</div>
+					</div>-->
 					
-				</div>
+				</div> 
 				
 			</div>
 			
@@ -145,19 +145,19 @@
 					<span>Ilgtermiņa</span> kredīti
 				</h2>
 				
-				<div class="table-aizdevumi">
+				<div class="table-aizdevumi" id="ilgtermina_tabula">
 				
 					<div>
 						<div><h1>Līguma nr.</h1></div>
 						<div class="statuss"><h1>Statuss</h1></div>
 						<div class="money"><h1>Kredīts</h1></div>
 						<div class="money komisija"><h1>Procenti</h1></div>
-						<div class="dienu-skaits"><h1>Nokavējuma procenti</h1></div>
+						<div class="dienu-skaits"><h1>Termiņš mēnešos</h1></div>
 						<div><h1>Atmaksas datums</h1></div>
 						<div class="kopa-atm"><h1>Kopēja summa</h1></div>
 					</div>
 					
-					<div class="with-borders">
+					<!--<div class="with-borders">
 						<div class="nr"><h3>SM123456</h3></div>
 						<div class="nr statuss"><h3><span class="pinkc">Anulēts</span></h3><p>20.12.2017</p></div>
 						<div class="money"><p>$200</p></div>
@@ -175,7 +175,7 @@
 						<div class="dienu-skaits"><p>30%</p></div>
 						<div><p>20.12.2017</p></div>
 						<div class="kopa-atm"><p><b>$220.00</b></p></div>
-					</div>
+					</div>-->
 					
 				</div>
 				
@@ -186,8 +186,30 @@
 		<?php include 'assets/footer.php'; ?>	
 	</body>
 	<script type="text/javascript">
-		ajax_('GetActiveLoan',{
-  "accessToken": sessionStorage.accessToken
-},function(a){console.log(a)})
+		
+		ajax_('GetLoans',{
+		  "accessToken": sessionStorage.accessToken
+		},function(a){
+			console.log(a)
+			let html = {Short:'',Long:''}
+			
+			for (var i = 0; i < a.loans.length; i++) {
+				html[a.loans[i].type] += `<div class="with-borders"><div class="nr"><h3>${a.loans[i].number}</h3></div>
+						<div class="nr statuss"><h3><span class="violetc">${a.loans[i].status}</span></h3><p>${a.loans[i].dates.request.split('T')[0]}</p></div>
+						<div class="money"><p>${a.loans[i].totalAmounts.principal}</p></div>
+						<div class="money komisija"><p>${a.loans[i].totalAmounts.commission}</p></div>
+						<div class="dienu-skaits"><p>${a.loans[i].term}</p></div>
+						<div><p>${a.loans[i].dates.repaymentPlanned.split('T')[0]}</p></div>
+						<div class="kopa-atm"><p><b>${a.loans[i].totalAmounts.total}</b></p></div></div>`
+				
+			
+			}
+			document.getElementById('ilgtermina_tabula').innerHTML += html.Long
+			document.getElementById('isstermina_tabula').innerHTML += html.Short
+			console.log(html)
+		})
+
+
+
 	</script>
 </html>
