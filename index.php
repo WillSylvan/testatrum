@@ -946,26 +946,26 @@
 				<div class="icons_block_sec flex">
 					<div class="icon_border_sec b1">
 						<img id="img-5" src="img/pink/ico/5.svg" alt="Smiley face">
-						<h3>Piesakiet kredītu internetā</h3>
-						<p>Izvēlieties kredīta summu un termiņu</p>
+						<h3><?php echo $language[$lang]['2-vio-pic-txt-1'] ?></h3>
+						<p><?php echo $language[$lang]['2-vio-pic-txt-1.1'] ?></p>
 					</div>
 
 					<div class="icon_border_sec b2">
 						<img id="img-6" src="img/pink/ico/6.svg" alt="Smiley face">
-						<h3>Reģistrējieties</h3>
-						<p>Aizpildiet reģistrācijas anketu</p>
+						<h3><?php echo $language[$lang]['2-vio-pic-txt-2'] ?></h3>
+						<p><?php echo $language[$lang]['2-vio-pic-txt-2.1'] ?></p>
 					</div>
 
 					<div class="icon_border_sec b3">
 						<img id="img-7" src="img/pink/ico/7.svg" alt="Smiley face">
-						<h3>Apstipriniet reģistrāciju</h3>
-						<p>Pārskaitiet no sava bankas konta reģistrācijas maksu EUR 0.01, maksājuma mērķī norādot: <b>Piekrītu AS Lateko Līzings<br> līguma noteikumiem</b><br>Nepieciešamā informācija maksājuma veikšanai <a href="#rekviziti"><b>šeit.</b></a></p>
+						<h3><?php echo $language[$lang]['2-vio-pic-txt-3'] ?></h3>
+						<p><?php echo $language[$lang]['2-vio-pic-txt-3.1'] ?><a href="#rekviziti"><b> <?php echo $language[$lang]['there'] ?>.</b></a></p>
 					</div>
 
 					<div class="icon_border_sec b4">
 						<img id="img-8" src="img/pink/ico/8.svg" alt="Smiley face">
-						<h3>Saņemiet kredītu</h3>
-						<p>Lēmumu par kredīta piešķiršanu Jūs saņemsiet īsziņas veidā 15 minūšu laikā</p>
+						<h3><?php echo $language[$lang]['2-vio-pic-txt-4'] ?></h3>
+						<p><?php echo $language[$lang]['2-vio-pic-txt-4.1'] ?></p>
 					</div>
 				</div>
 			</div>

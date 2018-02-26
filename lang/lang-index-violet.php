@@ -83,17 +83,34 @@
 
     // BILDES TEKSTI VIOLETS
 
-    $language['lv']['2-vio-pic-txt-1'] = 'Saņemt naudu';
-    $language['ru']['2-vio-pic-txt-1'] = 'Получить кредит';
+    $language['lv']['2-vio-pic-txt-1'] = 'Piesakiet kredītu internetā';
+    $language['ru']['2-vio-pic-txt-1'] = 'Оформите заявку в интернете';
 
-    $language['lv']['2-vio-pic-txt-2'] = 'Apskatīt maksājumu grafiku';
-    $language['ru']['2-vio-pic-txt-2'] = 'Посмотреть график платежей';
+        $language['lv']['2-vio-pic-txt-1.1'] = 'Izvēlieties kredīta summu un termiņu';
+        $language['ru']['2-vio-pic-txt-1.1'] = 'Выберите сумму и срок кредита';
 
-    $language['lv']['2-vio-pic-txt-3'] = 'Pirmā maksājuma datums';
-    $language['ru']['2-vio-pic-txt-3'] = 'Дата первого платежа';
+    $language['lv']['2-vio-pic-txt-2'] = 'Reģistrējieties';
+    $language['ru']['2-vio-pic-txt-2'] = 'Зарегистрируйтесь';
 
-    $language['lv']['2-vio-pic-txt-4'] = 'Pirmā maksājuma datums';
-    $language['ru']['2-vio-pic-txt-4'] = 'Дата первого платежа';
+        $language['lv']['2-vio-pic-txt-2.1'] = 'Aizpildiet reģistrācijas anketu';
+        $language['ru']['2-vio-pic-txt-2.1'] = 'Заполните регистрационную форму';
+
+    $language['lv']['2-vio-pic-txt-3'] = 'Apstipriniet reģistrāciju';
+    $language['ru']['2-vio-pic-txt-3'] = 'Подтвердите регистрацию';
+
+        $language['lv']['2-vio-pic-txt-3.1'] = 'Pārskaitiet no sava bankas konta reģistrācijas maksu EUR 0.01, maksājuma mērķī norādot: <b> Piekrītu AS Lateko Līzings <br> līguma noteikumiem. </b><br> Nepieciešamā informācija maksājuma veikšanai ';
+        $language['ru']['2-vio-pic-txt-3.1'] = 'Перечислите со своего счета регистрационную плату EUR 0,01, в цели платежа указав: <b> Piekrītu AS Lateko Līzings <br> līguma noteikumiem. </b><br> Необходимая информация для произведения платежа';
+
+        $language['lv']['there'] = "šeit";
+        $language['ru']['there'] = "ЗДЕСЬ";
+
+    $language['lv']['2-vio-pic-txt-4'] = 'Saņemiet kredītu';
+    $language['ru']['2-vio-pic-txt-4'] = 'Получите кредит';
+
+        $language['lv']['2-vio-pic-txt-4.1'] = 'Lēmumu par kredīta piešķiršanu Jūs saņemsiet īsziņas veidā 15 minūšu laikā';
+        $language['ru']['2-vio-pic-txt-4.1'] = 'Решение о предоставлении кредита Вы получите в виде SMS в течение 15 минут';
+
+
 
 
 // ----------------------------------------------------------------------------------------->
