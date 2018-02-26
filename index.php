@@ -24,7 +24,7 @@
 		<div id="top-forms" class="flex">
 			<div class="form_ f1 unselectable" onclick='pinkColor()'>
 				<div id="first-form" class="flex" >
-					<form action="registracija.php" method="post">
+					<form action="registracija.php" id="short_form" method="post">
 
 						<div class="short_range_form flex">
 							<div class="inputs" id="important">
@@ -71,7 +71,7 @@
 								<h4><?php echo $language[$lang]['pay-on-30-days'] ?><br><b>22.20 <?php echo $language[$lang]['eur'] ?></b></h4>
 
 								<a href="jauzliek links" class="links"><?php echo $language[$lang]['stand.-info'] ?></a>
-								<input type="submit" value=<?php echo $language[$lang]['get-money'] ?> class="rose-button" onclick="creditInfo(1)">
+								<input type="button" id="submit_short" value=<?php echo $language[$lang]['get-money'] ?> class="rose-button" onclick="creditInfo(1)">
 							</div>
 						</div>
 
@@ -81,7 +81,7 @@
 
 			<div class="form_ f2 unselectable" onclick='violetColor()'>
 				<div id="second-form" class="flex" >
-					<form action="registracija.php" method="post">
+					<form action="registracija.php" id="long_form" method="post">
 
 						<div class="long_range_form flex">
 							<div class="inputs" id="important2">
@@ -130,7 +130,7 @@
 
 								<a href="jauzliek links" class="links"><?php echo $language[$lang]['stand.-info'] ?></a>
 								<a href="grafiks.php" id="grafiks"><?php echo $language[$lang]['pay-graphic'] ?></a>
-								<input type="submit" value=<?php echo $language[$lang]['get-money'] ?> class="violet-button" onclick="creditInfo(2)">
+								<input type="button"  id="submit_long" value=<?php echo $language[$lang]['get-money'] ?> class="violet-button" onclick="creditInfo(2)">
 
 							</div>
 						</div>
@@ -1299,6 +1299,6 @@
 		<?php include 'assets/footer.php'; ?>
 	</body>
 		<script type="text/javascript" src="js/content.js"></script>
-		<script type="text/javascript" src="js/loan_forms.js"></script>
+		<!-- <script type="text/javascript" src="js/loan_forms.js"></script> -->
 
 </html>

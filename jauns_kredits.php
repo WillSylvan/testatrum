@@ -3,15 +3,14 @@
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">	
 		<link rel="stylesheet" type="text/css" href="style/kredita_pieteikums.css">
 		<link rel="stylesheet" type="text/css" href="style/style.css">
+		<script type="text/javascript" src="js/ajax.js"></script>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
 		<title></title>
-   </head>
-
-	<body>
-		<?php include 'assets/profile-menu.php'; ?>
-		<?php include 'assets/header.php'; ?>
-		<?php include 'assets/profile-form.php'; ?>
-		<?php include 'assets/kredits.php'; ?>
+		<script type="text/javascript">
+			if (sessionStorage.request_loan==''||sessionStorage.request_loan=='undefined'||sessionStorage.request_loan==null||sessionStorage.request_loan==0) {
+				window.location = 'kreditu_vesture.php'
+			}
+		</script>
 		<style>
 		.bt3 button{background-color:rgb(255, 117, 130)}
 		#main-id-content{
@@ -55,6 +54,16 @@
 		}
 		}
 		</style>
+
+   </head>
+
+	<body>
+		<?php include 'assets/profile-menu.php'; ?>
+		<?php include 'assets/header.php'; ?>
+		<?php include 'assets/profile-form.php'; ?>
+		<!-- <?php include 'assets/kredits.php'; ?> -->
+
+		
 		
 		<div id="profils-added">
 			<a href="jauns_kredits"><div class="flex bt6"><button class="div"></button><p>Jauns kredīts</p></div></a>
@@ -65,36 +74,36 @@
 		<div class="main-content-credit" id="parkreditacija">
 			
 			<div id="main-content-credit-izvelne-parkreditacija">
-				<div class="parkreditacija"><h5>Pieteikties pārkreditācijai</h5></div>
+				<div class="parkreditacija"><h5>Pieteikties kredītam</h5></div>
 					
-				<div>
+				<!-- <div>
 					<p>Līguma nr.</p>
 					<h2>SM123456</h2>
-				</div>
+				</div> -->
 				
 				<div class="flex borders">
 				
 					<div class="statuss">
 						<div>
-							<p>Statuss:</p>
+							<p>kredīts:</p>
 							<p>Kopēja summa atmaksai:</p>
 						</div>
 						
 						<div>
-							<p>Samaksa par pakalpojumu:</p>
-							<p>Jaunais termiņš:</p>
+							<p >Apmaksas termiņš:</p>
+							<p >Apmaksas datums:</p>
 						</div>
 					</div>
 					
 					<div class="statuss s2">
 						<div>
-							<p><span>Aktīvs</span></p>
-							<p>300.00 EUR</p>
+							<p id="loan_amout"></p>
+							<p id="loan_total"></p>
 						</div>
 						
 						<div>
-							<p>30.00 EUR</p>
-							<p>20.12.2017</p>
+							<p id="loan_term"></p>
+							<p id="loan_final_date"></p>
 						</div>
 					</div>
 					
@@ -113,14 +122,59 @@
 					</div>
 					
 				</div>
+				<div id="payment_schedule"> </div>
 				
 				<div class="flex kredita-buttons">
-					<button>PIETEIKTIES</button>
+					<button id="request_loan_button" >PIETEIKTIES</button>
 				</div>
 				
 			</div>
 
+
 		</div>
+		<script type="text/javascript">
+
+			//console.log(sessionStorage)
+			term_scale = sessionStorage.request_loan == 'long'? 'months' : 'days'
+			document.getElementById('loan_amout').innerHTML = sessionStorage[sessionStorage.request_loan+"_loan_principal"] + " EUR"
+			document.getElementById('loan_total').innerHTML = sessionStorage[sessionStorage.request_loan+"_loan_total"] + " EUR"
+
+			document.getElementById('loan_term').innerHTML = sessionStorage[sessionStorage.request_loan+"_loan_term"] + " "+term_scale
+			document.getElementById('loan_final_date').innerHTML = sessionStorage[sessionStorage.request_loan+"_last_payment"]
+
+			payment_schedule = JSON.parse(sessionStorage.payment_schedule)
+
+			//console.log(payment_schedule)
+
+			if (sessionStorage.request_loan=='long') {
+				let schedule = "<ul>"
+				for (var i = 0; i < payment_schedule.length; i++) {
+					schedule += "<li> datums: "+payment_schedule[i].date.split('T')[0]+" summa: "+payment_schedule[i].paymentTotal+" EUR</li> "
+				}
+				schedule +="</ul>"
+				document.getElementById('payment_schedule').innerHTML = schedule
+			}
+
+			document.getElementById('request_loan_button').onclick = function(){
+				let data = {
+				  "loanData": {
+				    "type": sessionStorage.request_loan,
+				    "principal": parseInt(sessionStorage[sessionStorage.request_loan+"_loan_principal"]),
+				    "term": parseInt(sessionStorage[sessionStorage.request_loan+"_loan_term"]) 
+				  },
+				  "registrationIP": "string",
+				  "url": "string",
+				  "accessToken": sessionStorage.accessToken
+				}
+
+				ajax_('RequestLoan',data,function(a){
+					console.log(data)
+					console.log(a)
+				})
+
+			}
+
+		</script>
 		
 		<?php include 'assets/footer.php'; ?>	
 	</body>

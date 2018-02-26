@@ -153,3 +153,5 @@ function creditInfo(num) {
     localStorage.setItem("loanTerms", loanTerms)
   }
 };
+
+	alert(short_money_slider)

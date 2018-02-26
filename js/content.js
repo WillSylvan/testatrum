@@ -33,7 +33,15 @@ function violetColor(){
 
 
 
+//FORM SETUP
+    function save_loan_local(type,principal,term,last_payment, total){
+        
+        sessionStorage[type+'_loan_principal'] = principal
+        sessionStorage[type+'_loan_term'] = term
+        sessionStorage[type+'_loan_total'] = total
+        sessionStorage[type+'_last_payment'] = last_payment
 
+    }
 
     function calc_term (type, length){
     var today = new Date()
@@ -50,6 +58,10 @@ function violetColor(){
 
 
 var repeated_loan = {short:document.getElementById("short_repeated_loan"),long:document.getElementById("long_repeated_loan")}
+var  short_money_slider = {value:0}
+var  short_days_slider = {value:0}
+var  long_money_slider = {value:0}
+var  long_days_slider = {value:0}
 
 $(document).ready(function(){
     $('#round-buttons button').click(function(){
@@ -58,11 +70,7 @@ $(document).ready(function(){
             $('#top-forms .form_:eq('+id+')').fadeIn(300)
     })
 
-    let short_money_slider = {value:0}
-    let short_days_slider = {value:0}
 
-    let long_money_slider = {value:0}
-    let long_days_slider = {value:0}
 
     //constructor(dom,name,min,max,step,brake,output,side,values,callback)
 
@@ -75,12 +83,15 @@ $(document).ready(function(){
             }
 
          if (!mu) {
-        	ajax_('GetLoanPreview',{"loanData":{"type": "short","principal": response,"term":short_days_slider.value}},function(a){
-		    //	console.log(a)
+		    	console.log(response,short_days_slider.value)
+            ajax_('GetLoanPreview',{"loanData":{"type": "short","principal": response,"term":short_days_slider.value}},function(a){
+                console.log(a)
         		document.getElementById('short_summa').innerHTML = short_money_slider.value + " EUR"
         		document.getElementById('short_term_display').innerHTML = a.payments[0].date.split('T')[0]//calc_term('long', response)
         		document.getElementById('short_kopa').innerHTML = a.payments[0].paymentTotal + " EUR"
         		document.getElementById('short_komisija').innerHTML = a.commission + " EUR"
+
+                save_loan_local('short',short_money_slider.value,short_days_slider.value,a.payments[0].date.split('T')[0],a.payments[0].paymentTotal)
 
 		    })
         }
@@ -89,22 +100,25 @@ $(document).ready(function(){
 
     })
     short_money_slider.start_val(200)
-    console.log(short_money_slider.value)
+   // console.log(short_money_slider.value)
 
 
 
     short_days_slider = new slider('short_range_days',1,10,30,1,0,'short_term_display','right',[10,15,20,25,30],function(response,mu){
         //document.getElementById('short_term_display').innerHTML = calc_term('short', response)
         document.getElementById('short_echo_days_val').innerHTML = response
-        console.log(short_money_slider.value, response)
+        //console.log(short_money_slider.value, response)
 
          if (!mu) {
         	ajax_('GetLoanPreview',{"loanData":{"type": "short","principal": short_money_slider.value,"term": response}},function(a){
-		    //	console.log(a)
+		    	console.log(a)
         		document.getElementById('short_summa').innerHTML = short_money_slider.value + " EUR"
         		document.getElementById('short_term_display').innerHTML = a.payments[0].date.split('T')[0]//calc_term('long', response)
         		document.getElementById('short_kopa').innerHTML = a.payments[0].paymentTotal + " EUR"
         		document.getElementById('short_komisija').innerHTML = a.commission + " EUR"
+
+                save_loan_local('short',short_money_slider.value,short_days_slider.value,a.payments[0].date.split('T')[0],a.payments[0].paymentTotal)
+
 
 		    })
         }
@@ -121,13 +135,15 @@ $(document).ready(function(){
         }else {
             repeated_loan.long.style.display = "none"
         }
-        console.log(long_money_slider.value,response)
+       // console.log(long_money_slider.value,response)
+		    	//console.log(response,long_days_slider.value)
         if (!mu) {
-        	ajax_('GetLoanPreview',{"loanData":{"type": "long","principal": response,"term": long_days_slider.value}},function(a){
-		    	console.log(a)
+            ajax_('GetLoanPreview',{"loanData":{"type": "long","principal": response,"term": long_days_slider.value}},function(a){
+                console.log(a)
+                let total 
         		document.getElementById('long_summa').innerHTML = long_money_slider.value + " EUR"
         		document.getElementById('long_term_display').innerHTML = a.payments[a.payments.length-1].date.split('T')[0]//calc_term('long', response)
-        		document.getElementById('long_kopa').innerHTML = function()
+        		document.getElementById('long_kopa').innerHTML = total = function()
         		{let summ = 0 
         			for (var i = 0; i < a.payments.length; i++) {
         				summ += a.payments[i].paymentTotal
@@ -136,6 +152,9 @@ $(document).ready(function(){
         		}()//a.payments[0].paymentTotal + " EUR"
 
         		document.getElementById('long_komisija').innerHTML = 0//a.commission + " EUR"
+                sessionStorage.payment_schedule = JSON.stringify(a.payments)
+                save_loan_local('long',long_money_slider.value,long_days_slider.value,a.payments[a.payments.length-1].date.split('T')[0],total)
+
 
 		    })
         }
@@ -151,11 +170,12 @@ $(document).ready(function(){
         document.getElementById('long_echo_days_val').innerHTML = response
         if (!mu) {
         	ajax_('GetLoanPreview',{"loanData":{"type": "long","principal": long_money_slider.value,"term": response}},function(a){
-
+                console.log(a)
+                let total
 		    	document.getElementById('long_summa').innerHTML = long_money_slider.value + " EUR"
         		document.getElementById('long_term_display').innerHTML = a.payments[a.payments.length-1].date.split('T')[0]//calc_term('long', response)
         		
-        		document.getElementById('long_kopa').innerHTML = function()
+        		document.getElementById('long_kopa').innerHTML = total = function()
         		{let summ = 0 
         			for (var i = 0; i < a.payments.length; i++) {
         				summ += a.payments[i].paymentTotal
@@ -164,12 +184,40 @@ $(document).ready(function(){
         		}()//a.payments[0].paymentTotal + " EUR"
 
         		document.getElementById('long_komisija').innerHTML = 0//a.commission + " EUR"
+                sessionStorage.payment_schedule = JSON.stringify(a.payments)
+                save_loan_local('long',long_money_slider.value,long_days_slider.value,a.payments[a.payments.length-1].date.split('T')[0],total)
+
 		    })
         }
     })
 
     long_days_slider.start_val(10)
-    console.log(long_days_slider)
+   // console.log(long_days_slider)
 });
+
+
+
+//USER STUFF
+
+if (sessionStorage.accessToken != null && sessionStorage.accessToken != "undefined" && sessionStorage.accessToken != 0) {
+   let forms1 =  document.querySelector('#first-form form')
+   let forms2 = document.querySelector('#second-form form')
+   forms1.action = 'jauns_kredits.php'
+   forms2.action = 'jauns_kredits.php'
+   console.log(forms2)
+   console.log(short_money_slider)
+
+}
+
+document.getElementById('submit_long').onclick = function(){
+    sessionStorage.request_loan = 'long' 
+    document.getElementById('long_form').submit()
+}
+document.getElementById('submit_short').onclick = function(){
+    sessionStorage.request_loan = 'short' 
+    document.getElementById('short_form').submit()
+
+}
+
 
 
