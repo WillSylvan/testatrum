@@ -165,27 +165,170 @@
 // ------------------------------------------------------------------>
 
         $language['lv']['rekvez'] = 'Mūsu rekvizīti';
-    $language['ru']['rekvez'] = 'Наши реквизиты';
+        $language['ru']['rekvez'] = 'Наши реквизиты';
 
 
-    $language['lv']['receiver'] = 'Saņēmējs';
-    $language['ru']['receiver'] = 'Получатель';
+        $language['lv']['receiver'] = 'Saņēmējs';
+        $language['ru']['receiver'] = 'Получатель';
 
-    $language['lv']['reg.nr'] = 'Reģ. Nr.';
-    $language['ru']['reg.nr'] = 'Рег. Nr.';
+        $language['lv']['reg.nr'] = 'Reģ. Nr.';
+        $language['ru']['reg.nr'] = 'Рег. Nr.';
 
-    $language['lv']['kont.nr'] = 'Konta numurs';
-    $language['ru']['kont.nr'] = 'Номер счета';
+        $language['lv']['kont.nr'] = 'Konta numurs';
+        $language['ru']['kont.nr'] = 'Номер счета';
 
-    $language['lv']['pay.reg'] = 'Maksājuma mērķis reģistrācijai: ';
-    $language['ru']['pay.reg'] = 'Цель платежа для регистрации: ';
+        $language['lv']['pay.reg'] = 'Maksājuma mērķis reģistrācijai: ';
+        $language['ru']['pay.reg'] = 'Цель платежа для регистрации: ';
 
-    $language['lv']['pay.cred.p-long'] = 'Maksājuma mērķis kredīta pagarinājumam: ';
-    $language['ru']['pay.cred.p-long'] = 'Цель платежа для продления кредита: ';
+        $language['lv']['pay.cred.p-long'] = 'Maksājuma mērķis kredīta pagarinājumam: ';
+        $language['ru']['pay.cred.p-long'] = 'Цель платежа для продления кредита: ';
 
-    $language['lv']['pay.reg.p-long'] = 'Maksājuma mērķis kredīta pagarinājumam: ';
-    $language['ru']['pay.reg.p-long'] = 'Цель платежа для продления кредита:';
- 
-    $language['lv']['pay.cred.payback'] = 'Maksājuma mērķis kredīta atmaksai: ';
-    $language['ru']['pay.cred.payback'] = 'Цель платежа для оплаты кредита: ';
+        $language['lv']['pay.reg.p-long'] = 'Maksājuma mērķis kredīta pagarinājumam: ';
+        $language['ru']['pay.reg.p-long'] = 'Цель платежа для продления кредита:';
+        
+        $language['lv']['pay.cred.payback'] = 'Maksājuma mērķis kredīta atmaksai: ';
+        $language['ru']['pay.cred.payback'] = 'Цель платежа для оплаты кредита: ';
 
+
+        $language['lv']['cent-for-reg'] = 'Lai pabeigtu reģistrāciju, veiciet reģistrācijas maksas<br> <b>EUR 0.01</b> pārskaitījumu';
+        $language['ru']['cent-for-reg'] = 'Чтобы закончить регистрацию, внесите плату за регистрацию<br> <b>EUR 0.01</b> перевод';
+
+        $language['lv']['another-bank'] = 'Cita banka';
+        $language['ru']['another-bank'] = 'Другой банк';
+
+
+        // ---------------------------------------------------------->
+
+                                // Banku rekvezīti!
+        // 1.
+
+        $language['lv']['receiver'] = 'Saņēmējs-1';
+        $language['ru']['receiver'] = 'Получатель-1';
+
+        $language['lv']['receiver-rekv'] = 'Lateco līzings as';
+        $language['ru']['receiver-rekv'] = 'Lateco līzings as';
+
+        $language['lv']['reg.nr'] = 'Reģ. Nr.';
+        $language['ru']['reg.nr'] = 'Рег. Nr.';
+
+        $language['lv']['reg.nr-nr'] = '40003366651';
+        $language['ru']['reg.nr-nr'] = '40003366651';
+
+        $language['lv']['kont.nr'] = 'Konta numurs';
+        $language['ru']['kont.nr'] = 'Номер счета';
+
+        $language['lv']['kont.nr-nr'] = 'LV67HABA0551033353134';
+        $language['ru']['kont.nr-nr'] = 'LV67HABA0551033353134';
+
+        $language['lv']['pay.cred.p-long'] = 'Maksājuma mērķis kredīta pagarinājumam: ';
+        $language['ru']['pay.cred.p-long'] = 'Цель платежа для продления кредита: ';
+
+        $language['lv']['pay.cred.p-long-nr'] = 'Līguma Nr. SMXXXXXX pagarinājums';
+        $language['ru']['pay.cred.p-long-nr'] = 'Līguma Nr. SMXXXXXX pagarinājums';
+        
+        $language['lv']['pay.cred.payback'] = 'Maksājuma mērķis kredīta atmaksai: ';
+        $language['ru']['pay.cred.payback'] = 'Цель платежа для оплаты кредита: ';
+
+        $language['lv']['pay.cred.payback-nr'] = 'Līguma Nr. SMXXXXXX atmaksa';
+        $language['ru']['pay.cred.payback-nr'] = 'Līguma Nr. SMXXXXXX atmaksa';
+
+        // 2.
+
+        $language['lv']['receiver.2'] = 'Saņēmējs-2';
+        $language['ru']['receiver.2'] = 'Получатель-2';
+
+        $language['lv']['receiver-rekv.2'] = 'Lateco līzings as';
+        $language['ru']['receiver-rekv.2'] = 'Lateco līzings as';
+
+        $language['lv']['reg.nr.2'] = 'Reģ. Nr.';
+        $language['ru']['reg.nr.2'] = 'Рег. Nr.';
+
+        $language['lv']['reg.nr-nr.2'] = '40003366651';
+        $language['ru']['reg.nr-nr.2'] = '40003366651';
+
+        $language['lv']['kont.nr.2'] = 'Konta numurs';
+        $language['ru']['kont.nr.2'] = 'Номер счета';
+
+        $language['lv']['kont.nr-nr.2'] = 'LV67HABA0551033353134';
+        $language['ru']['kont.nr-nr.2'] = 'LV67HABA0551033353134';
+
+        $language['lv']['pay.cred.p-long.2'] = 'Maksājuma mērķis kredīta pagarinājumam: ';
+        $language['ru']['pay.cred.p-long.2'] = 'Цель платежа для продления кредита: ';
+
+        $language['lv']['pay.cred.p-long-nr.2'] = 'Līguma Nr. SMXXXXXX pagarinājums';
+        $language['ru']['pay.cred.p-long-nr.2'] = 'Līguma Nr. SMXXXXXX pagarinājums';
+        
+        $language['lv']['pay.cred.payback.2'] = 'Maksājuma mērķis kredīta atmaksai: ';
+        $language['ru']['pay.cred.payback.2'] = 'Цель платежа для оплаты кредита: ';
+
+        $language['lv']['pay.cred.payback-nr.2'] = 'Līguma Nr. SMXXXXXX atmaksa';
+        $language['ru']['pay.cred.payback-nr.2'] = 'Līguma Nr. SMXXXXXX atmaksa';
+
+        // 3.
+
+        $language['lv']['receiver.3'] = 'Saņēmējs-3';
+        $language['ru']['receiver.3'] = 'Получатель-3';
+
+        $language['lv']['receiver-rekv.3'] = 'Lateco līzings as';
+        $language['ru']['receiver-rekv.3'] = 'Lateco līzings as';
+
+        $language['lv']['reg.nr.3'] = 'Reģ. Nr.';
+        $language['ru']['reg.nr.3'] = 'Рег. Nr.';
+
+        $language['lv']['reg.nr-nr.3'] = '40003366651';
+        $language['ru']['reg.nr-nr.3'] = '40003366651';
+
+        $language['lv']['kont.nr.3'] = 'Konta numurs';
+        $language['ru']['kont.nr.3'] = 'Номер счета';
+
+        $language['lv']['kont.nr-nr.3'] = 'LV67HABA0551033353134';
+        $language['ru']['kont.nr-nr.3'] = 'LV67HABA0551033353134';
+
+        $language['lv']['pay.cred.p-long.3'] = 'Maksājuma mērķis kredīta pagarinājumam: ';
+        $language['ru']['pay.cred.p-long.3'] = 'Цель платежа для продления кредита: ';
+
+        $language['lv']['pay.cred.p-long-nr.3'] = 'Līguma Nr. SMXXXXXX pagarinājums';
+        $language['ru']['pay.cred.p-long-nr.3'] = 'Līguma Nr. SMXXXXXX pagarinājums';
+        
+        $language['lv']['pay.cred.payback.3'] = 'Maksājuma mērķis kredīta atmaksai: ';
+        $language['ru']['pay.cred.payback.3'] = 'Цель платежа для оплаты кредита: ';
+
+        $language['lv']['pay.cred.payback-nr.3'] = 'Līguma Nr. SMXXXXXX atmaksa';
+        $language['ru']['pay.cred.payback-nr.3'] = 'Līguma Nr. SMXXXXXX atmaksa';
+
+        // 4.
+
+        $language['lv']['receiver.4'] = 'Saņēmējs-4';
+        $language['ru']['receiver.4'] = 'Получатель-4';
+
+        $language['lv']['receiver-rekv.4'] = 'Lateco līzings as';
+        $language['ru']['receiver-rekv.4'] = 'Lateco līzings as';
+
+        $language['lv']['reg.nr.4'] = 'Reģ. Nr.';
+        $language['ru']['reg.nr.4'] = 'Рег. Nr.';
+
+        $language['lv']['reg.nr-nr.4'] = '40003366651';
+        $language['ru']['reg.nr-nr.4'] = '40003366651';
+
+        $language['lv']['kont.nr.4'] = 'Konta numurs';
+        $language['ru']['kont.nr.4'] = 'Номер счета';
+
+        $language['lv']['kont.nr-nr.4'] = 'LV67HABA0551033353134';
+        $language['ru']['kont.nr-nr.4'] = 'LV67HABA0551033353134';
+
+        $language['lv']['pay.cred.p-long.4'] = 'Maksājuma mērķis kredīta pagarinājumam: ';
+        $language['ru']['pay.cred.p-long.4'] = 'Цель платежа для продления кредита: ';
+
+        $language['lv']['pay.cred.p-long-nr.4'] = 'Līguma Nr. SMXXXXXX pagarinājums';
+        $language['ru']['pay.cred.p-long-nr.4'] = 'Līguma Nr. SMXXXXXX pagarinājums';
+        
+        $language['lv']['pay.cred.payback.4'] = 'Maksājuma mērķis kredīta atmaksai: ';
+        $language['ru']['pay.cred.payback.4'] = 'Цель платежа для оплаты кредита: ';
+
+        $language['lv']['pay.cred.payback-nr.4'] = 'Līguma Nr. SMXXXXXX atmaksa';
+        $language['ru']['pay.cred.payback-nr.4'] = 'Līguma Nr. SMXXXXXX atmaksa';
+
+        // ------------------------------------------------------------------------------>
+
+        $language['lv']['pay'] = 'Veikt maksājumu';
+        $language['ru']['pay'] = 'Сделать платеж';

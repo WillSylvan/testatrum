@@ -1,3 +1,9 @@
+<?php 
+  include 'lang/lang-myData.php';
+  include 'lang/set-lang.php';
+?>
+
+
 <html>
     <head>     
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">	
@@ -54,17 +60,17 @@
 				
 				<div id="main-info-about-user">
 					<div id="ielogots-header">
-						<h2>Mani dati</h2>
-						<p>Ja vēlaties nomainīt savus datus, sazinieties ar mums <b>info@atrum.lv</b></p>
+						<h2><?php echo $language[$lang]['madata'] ?></h2>
+						<p><?php echo $language[$lang]['text'] ?> <b>info@atrum.lv</b></p>
 					</div>
 					<form id="">
-						<div><input placeholder="Vārds"></div>
-						<div><input placeholder="Uzvārds"></div>
-						<div><input placeholder="Personas kods"></div>
-						<div><input placeholder="Mobilais tālrunis:"></div>
-						<div><input placeholder="E-pasta adrese:"></div>
-						<div><input placeholder="Deklarētā adrese:"></div>
-						<div><input placeholder="Faktiska adrese:"></div>
+						<div><input placeholder=<?php echo $language[$lang]['firstName'] ?>></div>
+						<div><input placeholder=<?php echo $language[$lang]['lastName'] ?>></div>
+						<div><input placeholder=<?php echo $language[$lang]['identityCode'] ?>></div>
+						<div><input placeholder=<?php echo $language[$lang]['phone'] ?>></div>
+						<div><input placeholder=<?php echo $language[$lang]['email'] ?>></div>
+						<div><input placeholder=<?php echo $language[$lang]['dekl'] ?>></div>
+						<div><input placeholder=<?php echo $language[$lang]['fakt'] ?>></div>
 					</form>
 				</div>
 	

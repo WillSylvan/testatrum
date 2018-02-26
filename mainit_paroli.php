@@ -20,6 +20,8 @@
    </head>
 
 	<body>
+		<?php include 'lang/set-lang.php'; ?>
+		<?php include 'assets/lang-change-pass.php'; ?>
 		<?php include 'assets/profile-menu.php'; ?>
 		<?php include 'assets/header.php'; ?>
 		<?php include 'assets/profile-form.php'; ?>
@@ -31,29 +33,29 @@
 			
 				<div id="change-pass">
 					<div id="ielogots-header">
-						<h2>Mainīt paroli</h2>
+						<h2><?php echo $language[$lang]['cha-pass'] ?></h2>
 					</div>
 					<form id="three-form">
-						<div><input placeholder="Pašreizējā parole:" type="password"></div>
-						<div><input placeholder="Jaunā parole:" type="password"></div>
+						<div><input placeholder=<?php echo $language[$lang]['pass-now'] ?> type="password"></div>
+						<div><input placeholder=<?php echo $language[$lang]['new-pass'] ?> type="password"></div>
 						<div class="flex alerts">
 							<div class="flex">
 								<div class="p-b"></div>
-								<div><p>5 simboli gara</p></div>
+								<div><p><?php echo $language[$lang]['5simb'] ?></p></div>
 							</div>
 							<div class="flex">
 								<div class="p-b"></div>
-								<div><p>Vismaz 1 cipars</p></div>
+								<div><p><?php echo $language[$lang]['1nr'] ?></p></div>
 							</div>
 						</div>
-						<div><input placeholder="Jaunā parole atkārtoti:" type="password"></div>
+						<div><input placeholder=<?php echo $language[$lang]['re-play-pass'] ?> type="password"></div>
 					</form>
-					<div class="border-pink"><button id="passw">Mainīt paroli</button></div>
+					<div class="border-pink"><button id="passw"><?php echo $language[$lang]['cha-pass'] ?></button></div>
 				</div>
 				
 				<div id="change-pass-2">
 					<img src="img/ok.png">
-					<h6>Jūsu parole nomainīta!</h6>
+					<h6><?php echo $language[$lang]['pass-changed'] ?></h6>
 				</div>
 				
 			</div>
