@@ -63,6 +63,12 @@ var  short_days_slider = {value:0}
 var  long_money_slider = {value:0}
 var  long_days_slider = {value:0}
 
+caulculations = {long:'',short:''}
+calc_data_long = sessionStorage.accessToken != null && sessionStorage.accessToken != "undefined" && sessionStorage.accessToken != 0 ?  {'type':'long','accessToken':sessionStorage.accessToken} :{'type':'long'} 
+console.log(calc_data_long)
+
+
+
 $(document).ready(function(){
     $('#round-buttons button').click(function(){
         id = $(this).index()
@@ -70,146 +76,159 @@ $(document).ready(function(){
             $('#top-forms .form_:eq('+id+')').fadeIn(300)
     })
 
-cuculations = {long:'',short:''}
-calc_data_long = sessionStorage.accessToken != null && sessionStorage.accessToken != "undefined" && sessionStorage.accessToken != 0 ?  {'type':'long','accessToken':sessionStorage.accessToken} :{'type':'long'} 
-console.log(calc_data_long)
-ajax_('GetCalculatorInformation',calc_data_long,function(a){
-    cuculations.long = a
-    console.log(a)
-})
-calc_data_short = sessionStorage.accessToken != null && sessionStorage.accessToken != "undefined" && sessionStorage.accessToken != 0 ?  {'type':'short','accessToken':sessionStorage.accessToken} :{'type':'short'} 
-
-ajax_('GetCalculatorInformation',calc_data_short,function(a){
-    cuculations.short = a
-    console.log(a)
-})
 
 
 
     //constructor(dom,name,min,max,step,brake,output,side,values,callback)
 
-    short_money_slider = new slider('short_range_money',0,50,500,5,300,'short_echo_money_val','right',[50,200,300,400,500],function(response,mu){
-        document.getElementById('short_echo_money_val').innerHTML = +response + " EUR"
-        if (response>300) {
-                repeated_loan.short.style.display = "block"
-            }else {
-                repeated_loan.short.style.display = "none"
+        function set_up_sliders(){
+            short_money_slider = new slider('short_range_money',0,50,500,5,300,'short_echo_money_val','right',[50,200,300,400,500],function(response,mu){
+                    document.getElementById('short_echo_money_val').innerHTML = caulculations.short.shortLoanCalculator.amounts[(response-50)/5].amount + " EUR"
+                    if (response>300) {
+                            repeated_loan.short.style.display = "block"
+                        }else {
+                            repeated_loan.short.style.display = "none"
+                        }
+        
+                     if (!mu) {
+                            console.log(short_days_slider.value-10)
+                            //console.log(a)
+                            document.getElementById('short_summa').innerHTML = short_money_slider.value + " EUR"
+                            document.getElementById('short_term_display').innerHTML =  caulculations.short.shortLoanCalculator.amounts[(response-50)/5].term[short_days_slider.value].repaymentDate.split('T')[0]//caulculations.shortLoanCalculator.amounts[].amount //a.payments[0].date.split('T')[0]//calc_term('long', response)
+                            document.getElementById('short_kopa').innerHTML = 0//a.payments[0].paymentTotal + " EUR"
+                            document.getElementById('short_komisija').innerHTML = 0//a.commission + " EUR"
+        
+                            //save_loan_local('short',short_money_slider.value,short_days_slider.value,a.payments[0].date.split('T')[0],a.payments[0].paymentTotal)
+                        //ajax_('GetLoanPreview',{"loanData":{"type": "short","principal": response,"term":short_days_slider.value}},function(a){
+        
+                       // })
+                    }
+        
+        
+        
+                })
+                start_short_principal = sessionStorage.short_loan_principal!='undefined' && sessionStorage.short_loan_principal!=null ? sessionStorage.short_loan_principal : 200 
+                short_money_slider.start_val(start_short_principal)
+               // console.log(short_money_slider.value)
+        
+        
+        
+                short_days_slider = new slider('short_range_days',1,10,30,1,0,'short_term_display','right',[10,15,20,25,30],function(response,mu){
+                    //document.getElementById('short_term_display').innerHTML = calc_term('short', response)
+                    document.getElementById('short_echo_days_val').innerHTML = response
+                    //console.log(short_money_slider.value, response)
+        
+                     if (!mu) {
+                        ajax_('GetLoanPreview',{"loanData":{"type": "short","principal": short_money_slider.value,"term": response}},function(a){
+                            console.log(a)
+                            document.getElementById('short_summa').innerHTML = short_money_slider.value + " EUR"
+                            document.getElementById('short_term_display').innerHTML = a.payments[0].date.split('T')[0]//calc_term('long', response)
+                            document.getElementById('short_kopa').innerHTML = a.payments[0].paymentTotal + " EUR"
+                            document.getElementById('short_komisija').innerHTML = a.commission + " EUR"
+        
+                            save_loan_local('short',short_money_slider.value,short_days_slider.value,a.payments[0].date.split('T')[0],a.payments[0].paymentTotal)
+        
+        
+                        })
+                    }
+        
+                })
+                start_short_days = sessionStorage.short_loan_term!='undefined' && sessionStorage.short_loan_term!=null ? sessionStorage.short_loan_term : 15 
+        
+                short_days_slider.start_val(start_short_days)
+        
+        
+        
+                long_money_slider = new slider('long_range_money',2,100,1000,5,300,'long_echo_money_val','right',[100,300,500,750,1000],function(response,mu){
+                    document.getElementById('long_echo_money_val').innerHTML = +response + " EUR"
+                    if (response>430) {
+                        repeated_loan.long.style.display = "block"
+                    }else {
+                        repeated_loan.long.style.display = "none"
+                    }
+                   // console.log(long_money_slider.value,response)
+                            //console.log(response,long_days_slider.value)
+                    if (!mu) {
+                        ajax_('GetLoanPreview',{"loanData":{"type": "long","principal": response,"term": long_days_slider.value}},function(a){
+                            console.log(a)
+                            let total 
+                            document.getElementById('long_summa').innerHTML = long_money_slider.value + " EUR"
+                            document.getElementById('long_term_display').innerHTML = a.payments[a.payments.length-1].date.split('T')[0]//calc_term('long', response)
+                            document.getElementById('long_kopa').innerHTML = total = function()
+                            {let summ = 0 
+                                for (var i = 0; i < a.payments.length; i++) {
+                                    summ += a.payments[i].paymentTotal
+                                }
+                                return summ.toFixed(2) + " EUR"
+                            }()//a.payments[0].paymentTotal + " EUR"
+        
+                            document.getElementById('long_komisija').innerHTML = 0//a.commission + " EUR"
+                            sessionStorage.payment_schedule = JSON.stringify(a.payments)
+                            save_loan_local('long',long_money_slider.value,long_days_slider.value,a.payments[a.payments.length-1].date.split('T')[0],total)
+        
+        
+                        })
+                    }
+        
+                })
+                start_long_principal = sessionStorage.long_loan_principal!='undefined' && sessionStorage.long_loan_principal!=null ? sessionStorage.long_loan_principal : 300 
+                long_money_slider.start_val(start_long_principal)
+        
+        
+        
+        
+                long_days_slider = new slider('long_range_days',3,3,12,1,0,'long_term_display','right',[3,6,9,12],function(response,mu){
+                   
+                    document.getElementById('long_echo_days_val').innerHTML = response
+                    if (!mu) {
+                        ajax_('GetLoanPreview',{"loanData":{"type": "long","principal": long_money_slider.value,"term": response}},function(a){
+                            console.log(a)
+                            let total
+                            document.getElementById('long_summa').innerHTML = long_money_slider.value + " EUR"
+                            document.getElementById('long_term_display').innerHTML = a.payments[a.payments.length-1].date.split('T')[0]//calc_term('long', response)
+                            
+                            document.getElementById('long_kopa').innerHTML = total = function()
+                            {let summ = 0 
+                                for (var i = 0; i < a.payments.length; i++) {
+                                    summ += a.payments[i].paymentTotal
+                                }
+                                return summ.toFixed(2) + " EUR"
+                            }()//a.payments[0].paymentTotal + " EUR"
+        
+                            document.getElementById('long_komisija').innerHTML = 0//a.commission + " EUR"
+                            sessionStorage.payment_schedule = JSON.stringify(a.payments)
+                            save_loan_local('long',long_money_slider.value,long_days_slider.value,a.payments[a.payments.length-1].date.split('T')[0],total)
+        
+                        })
+                    }
+                })
+                start_long_days = sessionStorage.long_loan_term!='undefined' && sessionStorage.long_loan_term!=null ? sessionStorage.long_loan_term : 10 
+                long_days_slider.start_val(start_long_days)
             }
+    data_loaded = 0
+    ajax_('GetCalculatorInformation',calc_data_long,function(a){
+        caulculations.long = a
+        sessionStorage.caulculations_long = JSON.stringify(a)
 
-         if (!mu) {
-		    	console.log(response,short_days_slider.value)
-            ajax_('GetLoanPreview',{"loanData":{"type": "short","principal": response,"term":short_days_slider.value}},function(a){
-                console.log(a)
-        		document.getElementById('short_summa').innerHTML = short_money_slider.value + " EUR"
-        		document.getElementById('short_term_display').innerHTML = a.payments[0].date.split('T')[0]//calc_term('long', response)
-        		document.getElementById('short_kopa').innerHTML = a.payments[0].paymentTotal + " EUR"
-        		document.getElementById('short_komisija').innerHTML = a.commission + " EUR"
-
-                save_loan_local('short',short_money_slider.value,short_days_slider.value,a.payments[0].date.split('T')[0],a.payments[0].paymentTotal)
-
-		    })
-        }
-
-
-
-    })
-    start_short_principal = sessionStorage.short_loan_principal!='undefined' && sessionStorage.short_loan_principal!=null ? sessionStorage.short_loan_principal : 200 
-    short_money_slider.start_val(start_short_principal)
-   // console.log(short_money_slider.value)
-
-
-
-    short_days_slider = new slider('short_range_days',1,10,30,1,0,'short_term_display','right',[10,15,20,25,30],function(response,mu){
-        //document.getElementById('short_term_display').innerHTML = calc_term('short', response)
-        document.getElementById('short_echo_days_val').innerHTML = response
-        //console.log(short_money_slider.value, response)
-
-         if (!mu) {
-        	ajax_('GetLoanPreview',{"loanData":{"type": "short","principal": short_money_slider.value,"term": response}},function(a){
-		    	console.log(a)
-        		document.getElementById('short_summa').innerHTML = short_money_slider.value + " EUR"
-        		document.getElementById('short_term_display').innerHTML = a.payments[0].date.split('T')[0]//calc_term('long', response)
-        		document.getElementById('short_kopa').innerHTML = a.payments[0].paymentTotal + " EUR"
-        		document.getElementById('short_komisija').innerHTML = a.commission + " EUR"
-
-                save_loan_local('short',short_money_slider.value,short_days_slider.value,a.payments[0].date.split('T')[0],a.payments[0].paymentTotal)
-
-
-		    })
-        }
-
-    })
-    start_short_days = sessionStorage.short_loan_term!='undefined' && sessionStorage.short_loan_term!=null ? sessionStorage.short_loan_term : 15 
-
-    short_days_slider.start_val(start_short_days)
-
-
-
-    long_money_slider = new slider('long_range_money',2,100,1000,5,300,'long_echo_money_val','right',[100,300,500,750,1000],function(response,mu){
-        document.getElementById('long_echo_money_val').innerHTML = +response + " EUR"
-        if (response>430) {
-            repeated_loan.long.style.display = "block"
-        }else {
-            repeated_loan.long.style.display = "none"
-        }
-       // console.log(long_money_slider.value,response)
-		    	//console.log(response,long_days_slider.value)
-        if (!mu) {
-            ajax_('GetLoanPreview',{"loanData":{"type": "long","principal": response,"term": long_days_slider.value}},function(a){
-                console.log(a)
-                let total 
-        		document.getElementById('long_summa').innerHTML = long_money_slider.value + " EUR"
-        		document.getElementById('long_term_display').innerHTML = a.payments[a.payments.length-1].date.split('T')[0]//calc_term('long', response)
-        		document.getElementById('long_kopa').innerHTML = total = function()
-        		{let summ = 0 
-        			for (var i = 0; i < a.payments.length; i++) {
-        				summ += a.payments[i].paymentTotal
-        			}
-        			return summ.toFixed(2) + " EUR"
-        		}()//a.payments[0].paymentTotal + " EUR"
-
-        		document.getElementById('long_komisija').innerHTML = 0//a.commission + " EUR"
-                sessionStorage.payment_schedule = JSON.stringify(a.payments)
-                save_loan_local('long',long_money_slider.value,long_days_slider.value,a.payments[a.payments.length-1].date.split('T')[0],total)
-
-
-		    })
-        }
-
-    })
-    start_long_principal = sessionStorage.long_loan_principal!='undefined' && sessionStorage.long_loan_principal!=null ? sessionStorage.long_loan_principal : 300 
-    long_money_slider.start_val(start_long_principal)
-
-
-
-
-    long_days_slider = new slider('long_range_days',3,3,12,1,0,'long_term_display','right',[3,6,9,12],function(response,mu){
-       
-        document.getElementById('long_echo_days_val').innerHTML = response
-        if (!mu) {
-        	ajax_('GetLoanPreview',{"loanData":{"type": "long","principal": long_money_slider.value,"term": response}},function(a){
-                console.log(a)
-                let total
-		    	document.getElementById('long_summa').innerHTML = long_money_slider.value + " EUR"
-        		document.getElementById('long_term_display').innerHTML = a.payments[a.payments.length-1].date.split('T')[0]//calc_term('long', response)
-        		
-        		document.getElementById('long_kopa').innerHTML = total = function()
-        		{let summ = 0 
-        			for (var i = 0; i < a.payments.length; i++) {
-        				summ += a.payments[i].paymentTotal
-        			}
-        			return summ.toFixed(2) + " EUR"
-        		}()//a.payments[0].paymentTotal + " EUR"
-
-        		document.getElementById('long_komisija').innerHTML = 0//a.commission + " EUR"
-                sessionStorage.payment_schedule = JSON.stringify(a.payments)
-                save_loan_local('long',long_money_slider.value,long_days_slider.value,a.payments[a.payments.length-1].date.split('T')[0],total)
-
-		    })
+        console.log(a)
+        if (data_loaded) {
+            set_up_sliders()
+        }else{
+            data_loaded++
         }
     })
-    start_long_days = sessionStorage.long_loan_term!='undefined' && sessionStorage.long_loan_term!=null ? sessionStorage.long_loan_term : 10 
-    long_days_slider.start_val(start_long_days)
+    calc_data_short = sessionStorage.accessToken != null && sessionStorage.accessToken != "undefined" && sessionStorage.accessToken != 0 ?  {'type':'short','accessToken':sessionStorage.accessToken} :{'type':'short'} 
+
+    ajax_('GetCalculatorInformation',calc_data_short,function(a){
+        caulculations.short = a
+        sessionStorage.caulculations_short = JSON.stringify(a)
+        console.log(a)
+          if (data_loaded) {
+            set_up_sliders()
+        }else{
+            data_loaded++
+        }
+    })
    // console.log(long_days_slider)
 });
 
@@ -229,6 +248,7 @@ if (sessionStorage.accessToken != null && sessionStorage.accessToken != "undefin
 
 document.getElementById('submit_long').onclick = function(){
     sessionStorage.request_loan = 'long' 
+
     document.getElementById('long_form').submit()
 }
 document.getElementById('submit_short').onclick = function(){
