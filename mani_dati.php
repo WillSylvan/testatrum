@@ -1,6 +1,8 @@
 <?php 
   include 'lang/lang-myData.php';
   include 'lang/set-lang.php';
+  include 'lang/lang-change-pass.php';
+  
 ?>
 
 

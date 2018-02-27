@@ -18,4 +18,10 @@
     $language['lv']['login'] = 'Ienākt';
     $language['ru']['login'] = 'Войти';
 
+    $language['lv']['logout'] = 'Iziet';
+    $language['ru']['logout'] = 'Войти';
+
+    $language['lv']['myProfle'] = 'Mans profils';
+    $language['ru']['myProfle'] = 'Мой профиль';
+
 ?>

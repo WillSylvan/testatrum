@@ -20,6 +20,8 @@
    </head>
 
 	<body>
+	
+		<?php include 'lang/lang-change-pass.php'; ?>
 		<?php include 'lang/set-lang.php'; ?>
 		<?php include 'assets/lang-change-pass.php'; ?>
 		<?php include 'assets/profile-menu.php'; ?>

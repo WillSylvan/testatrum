@@ -5,7 +5,7 @@ if(sessionStorage.accessToken != null && sessionStorage.accessToken != "undefine
 	document.getElementById('profile_link').style.display = 'block'
 	
 }else{
-	window.location = 'index.php'
+	// window.location = 'index.php'
 	
 }
 
