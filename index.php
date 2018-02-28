@@ -117,13 +117,13 @@
 									</div>
 									<div>
 										<h2><?php echo $language[$lang]['com'] ?><span id="long_komisija"></span></h2>
-										<h2><?php echo $language[$lang]['gpl'] ?><span id="long_gpl"></span></h2>
+										<!-- <h2><?php echo $language[$lang]['gpl'] ?><span id="long_gpl"></span></h2> -->
 									</div>
 								</div>
 							</div>
 
 							<div class="info_block">
-								<h5><?php echo $language[$lang]['pay-day'] ?><br>   <span class="violet" id="long_term_display">01.09.2018</span></h5>
+								<h5><?php echo "first payment date"//$language[$lang]['pay-day'] ?><br>   <span class="violet" id="long_term_display">01.09.2018</span></h5>
 								<h5><?php echo $language[$lang]['pay-on-30-days'] ?><br> <span class="violet">158.15 <?php echo $language[$lang]['eur'] ?></span></h5>
 								<h5><?php echo $language[$lang]['first-pay-day'] ?><br>   <span class="violet">19.01.2018</span></h5>
 

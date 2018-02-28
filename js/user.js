@@ -5,13 +5,13 @@ if(sessionStorage.accessToken != null && sessionStorage.accessToken != "undefine
 	document.getElementById('profile_link').style.display = 'block'
 	
 }else{
-<<<<<<< HEAD
-	// window.location = 'index.php'
+
+
 	
-=======
+
 	//window.location = 'index.php'
 
->>>>>>> 4764ebeb31c0ef007a2618a1cdbd606be0d15792
+
 }
 
 document.getElementById('loguot_link').onclick = function(){

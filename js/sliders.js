@@ -155,7 +155,7 @@
         if (val<=this.max&&val>=this.min) {
             this.value = val
             let w = ((this.value-this.min)/(this.max-this.min))*parseInt(this.domWidth)
-            console.log(this.value,this.min,this.max-this.min,parseInt(this.domWidth))
+            //console.log(this.value,this.min,this.max-this.min,parseInt(this.domWidth))
                 document.getElementById(this.name+'_handle').style.left = (w - parseInt(window.getComputedStyle(document.getElementById(this.name+'_handle')).width)/2)/parseInt(this.domWidth) * 100 + "%"//((that.value-that.min)/(that.max-that.min))*that.domWidth-10
                //console.log((w - parseInt(window.getComputedStyle(document.getElementById(this.name+'_handle')).width)/2)/this.domWidth * 100 + "%")
                 document.getElementById(this.name+"_input").value = this.value
