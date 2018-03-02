@@ -68,7 +68,7 @@
 							<div class="info_block">
 								<h5><?php echo $language[$lang]['pay-day'] ?><span class="pink" id="short_term_display"></span></h5>
 
-								<h4><?php echo $language[$lang]['pay-on-30-days'] ?><br><b>22.20 <?php echo $language[$lang]['eur'] ?></b></h4>
+								<h4><?php echo $language[$lang]['pay-on-30-days'] ?><br><b><span id="extention_pay">22.20</span> <?php echo $language[$lang]['eur'] ?></b></h4>
 
 								<a href="jauzliek links" class="links"><?php echo $language[$lang]['stand.-info'] ?></a>
 								<input type="button" id="submit_short" value=<?php echo $language[$lang]['get-money'] ?> class="rose-button" onclick="creditInfo(1)">
@@ -123,9 +123,9 @@
 							</div>
 
 							<div class="info_block">
-								<h5><?php echo "first payment date"//$language[$lang]['pay-day'] ?><br>   <span class="violet" id="long_term_display">01.09.2018</span></h5>
-								<h5><?php echo $language[$lang]['pay-on-30-days'] ?><br> <span class="violet">158.15 <?php echo $language[$lang]['eur'] ?></span></h5>
-								<h5><?php echo $language[$lang]['first-pay-day'] ?><br>   <span class="violet">19.01.2018</span></h5>
+								<!-- <h5><?php echo "first payment date"//$language[$lang]['pay-day'] ?><br>   <span class="violet" id="long_term_display">01.09.2018</span></h5> -->
+								<!-- <h5><?php echo $language[$lang]['pay-on-30-days'] ?><br> <span class="violet">158.15 <?php echo $language[$lang]['eur'] ?></span></h5> -->
+								<h5><?php echo $language[$lang]['first-pay-day'] ?><br>   <span id="long_term_display" class="violet">19.01.2018</span></h5>
 
 
 								<a href="jauzliek links" class="links"><?php echo $language[$lang]['stand.-info'] ?></a>

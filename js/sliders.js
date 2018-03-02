@@ -67,9 +67,12 @@
         function place_pos_values(){
             let pos_values_html = ""; 
             for (var i = 0; i < that.values.length; i++) {
-              //  console.log(that.values[i] , that.max,that.min,  parseInt(that.domWidth))
+               
+                if (that.values[i]>=that.min&&that.values[i]<=that.max) {
+
                 let pos = (that.values[i]-that.min) / (that.max-that.min) * 100 + "%"
                 pos_values_html += "<div class='pos_values_wrap' style='left:"+pos+"'><span>"+that.values[i]+"</span></div>"
+                }
                 
             }
             document.getElementById(that.name+'_pos_values').innerHTML= pos_values_html

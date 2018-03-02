@@ -80,93 +80,75 @@ $(document).ready(function(){
 
 
 
-    //constructor(dom,name,min,max,step,brake,output,side,values,callback)
+        function set_values_short(){ 
+            let total
+            let date
+            let credit = caulculations.short.shortLoanCalculator.amounts[(short_money_slider.value-50)/5].term[short_days_slider.value-10]
+            document.getElementById('short_summa').innerHTML = short_money_slider.value + " EUR"
+            document.getElementById('short_term_display').innerHTML =  date = credit.repaymentDate.split('T')[0]
+            document.getElementById('short_kopa').innerHTML = credit.commission + parseInt(short_money_slider.value) + " EUR"
+            document.getElementById('short_komisija').innerHTML = credit.commission + " EUR"
+            document.getElementById('extention_pay').innerHTML = credit.extensions[0].amount
+            save_loan_local('short',short_money_slider.value,short_days_slider.value,date,total)
+        }
+
+        function set_values_long(){
+            let total 
+            let date
+            let credit = caulculations.long.longLoanCalculator.amounts[(long_money_slider.value - 100) / 5].term[long_days_slider.value-3]
+            document.getElementById('long_summa').innerHTML = long_money_slider.value + " EUR"
+            document.getElementById('long_term_display').innerHTML = date = credit.firstPaymentDate.split('T')[0] 
+            document.getElementById('long_kopa').innerHTML = total = (credit.monthlyPayment * long_days_slider.value).toFixed(2) + 'EUR'
+            save_loan_local('long',long_money_slider.value,long_days_slider.value,date,total)
+        }
+
+
 
         function set_up_sliders(){
-            short_money_slider = new slider('short_range_money',0,50,500,5,300,'short_echo_money_val','right',[50,200,300,400,500],function(response,mu){
+            //constructor(dom,name,min,max,step,brake,output,side,values,callback)
+            let short_money_max = caulculations.short.shortLoanCalculator.amounts[caulculations.short.shortLoanCalculator.amounts.length-1].amount
+            let long_money_max = caulculations.long.longLoanCalculator.amounts[caulculations.long.longLoanCalculator.amounts.length-1].amount
+            let long_values = long_money_max<=425?[100,200,300,long_money_max]:[100,300,500,750,1000]
+            short_money_slider = new slider('short_range_money',0,50,short_money_max,5,300,'short_echo_money_val','right',[50,100,200,300,400,500],function(response,mu){
 
-                    document.getElementById('short_echo_money_val').innerHTML = caulculations.short.shortLoanCalculator.amounts[(response-50)/5].amount + " EUR"
+                    document.getElementById('short_echo_money_val').innerHTML = short_money_slider.value + " EUR" 
                     if (response>300) {
-                            repeated_loan.short.style.display = "block"
-                        }else {
-                            repeated_loan.short.style.display = "none"
-                        }
-        
-                     if (!mu) {
-                            let total
-                            let date
-                            console.log(short_days_slider.value)
-
-                            document.getElementById('short_summa').innerHTML = short_money_slider.value + " EUR"
-                            document.getElementById('short_term_display').innerHTML =  date = caulculations.short.shortLoanCalculator.amounts[(short_money_slider.value-50)/5].term[short_days_slider.value-10].repaymentDate.split('T')[0]//caulculations.shortLoanCalculator.amounts[].amount //a.payments[0].date.split('T')[0]//calc_term('long', response)
-                            document.getElementById('short_kopa').innerHTML = caulculations.short.shortLoanCalculator.amounts[(short_money_slider.value-50)/5].term[short_days_slider.value-10].commission + caulculations.short.shortLoanCalculator.amounts[(response-50)/5].amount + " EUR"//a.commission + " EUR"
-                            document.getElementById('short_komisija').innerHTML = caulculations.short.shortLoanCalculator.amounts[(short_money_slider.value-50)/5].term[short_days_slider.value-10].commission + " EUR"
-        
-                            save_loan_local('short',short_money_slider.value,short_days_slider.value,date,total)
-
+                         repeated_loan.short.style.display = "block"
+                    }else {
+                        repeated_loan.short.style.display = "none"
                     }
         
-        
-        
+                    if (!mu) {
+                        set_values_short()
+                    }
                 })
+
                 start_short_principal = sessionStorage.short_loan_principal!='undefined' && sessionStorage.short_loan_principal!=null ? sessionStorage.short_loan_principal : 200 
                 short_money_slider.start_val(start_short_principal)
-               // console.log(short_money_slider.value)
-        
-        
+             
         
                 short_days_slider = new slider('short_range_days',1,10,30,1,0,'short_term_display','right',[10,15,20,25,30],function(response,mu){
-                    //document.getElementById('short_term_display').innerHTML = calc_term('short', response)
                     document.getElementById('short_echo_days_val').innerHTML = short_days_slider.value
-                    //console.log(short_money_slider.value, response)
-        
-                     if (!mu) {
-                        let total
-                        let date
-                          //  console.log(caulculations.short.shortLoanCalculator.amounts[(short_money_slider.value-50)/5].term,response-10)
-                            document.getElementById('short_summa').innerHTML = short_money_slider.value + " EUR"
-                            document.getElementById('short_term_display').innerHTML = date = caulculations.short.shortLoanCalculator.amounts[(short_money_slider.value-50)/5].term[short_days_slider.value-10].repaymentDate.split('T')[0] //a.payments[0].date.split('T')[0]//calc_term('long', response)
-                            document.getElementById('short_kopa').innerHTML = caulculations.short.shortLoanCalculator.amounts[(short_money_slider.value-50)/5].term[short_days_slider.value-10].commission + caulculations.short.shortLoanCalculator.amounts[(short_money_slider.value-50)/5].amount + " EUR" //a.payments[0].paymentTotal + " EUR"
-                            document.getElementById('short_komisija').innerHTML = total = caulculations.short.shortLoanCalculator.amounts[(short_money_slider.value-50)/5].term[short_days_slider.value-10].commission + " EUR" //a.commission + " EUR"
-        
-                            save_loan_local('short',short_money_slider.value,short_days_slider.value,date,total)
-        
-        
-                        // ajax_('GetLoanPreview',{"loanData":{"type": "short","principal": short_money_slider.value,"term": response}},function(a){
-                        // })
+                    if (!mu) {
+                       set_values_short()
                     }
-        
                 })
+
                 start_short_days = sessionStorage.short_loan_term!='undefined' && sessionStorage.short_loan_term!=null ? sessionStorage.short_loan_term : 15 
-        
                 short_days_slider.start_val(start_short_days)
         
         
         
-                long_money_slider = new slider('long_range_money',2,100,1000,5,300,'long_echo_money_val','right',[100,300,500,750,1000],function(response,mu){
-                    document.getElementById('long_echo_money_val').innerHTML = +response + " EUR"
+                long_money_slider = new slider('long_range_money',2,100,long_money_max,5,300,'long_echo_money_val','right',long_values,function(response,mu){
+                    document.getElementById('long_echo_money_val').innerHTML = long_money_slider.value + " EUR"
                     if (response>430) {
                         repeated_loan.long.style.display = "block"
                     }else {
                         repeated_loan.long.style.display = "none"
                     }
-                   // console.log(long_money_slider.value,response)
-                            //console.log(response,long_days_slider.value)
-                    if (!mu) {
-                          
-                            let total 
-                            let date
-                            document.getElementById('long_summa').innerHTML = long_money_slider.value + " EUR"
-                            console.log(caulculations.long.longLoanCalculator.amounts[(long_money_slider.value - 100) / 5], (long_money_slider.value - 100) / 5, long_days_slider.value)
-                            document.getElementById('long_term_display').innerHTML = date = caulculations.long.longLoanCalculator.amounts[(long_money_slider.value - 100) / 5].term[long_days_slider.value-3].firstPaymentDate.split('T')[0] //a.payments[a.payments.length-1].date.split('T')[0]//calc_term('long', response)
-                            document.getElementById('long_kopa').innerHTML = total = (caulculations.long.longLoanCalculator.amounts[(long_money_slider.value - 100) / 5].term[long_days_slider.value-3].monthlyPayment * long_days_slider.value).toFixed(2) + 'EUR'
-        
-                            document.getElementById('long_komisija').innerHTML = 0//a.commission + " EUR"
-                            //sessionStorage.payment_schedule = JSON.stringify(a.payments)
-                            save_loan_local('long',long_money_slider.value,long_days_slider.value,date,total)
-        
-        
-                       
+
+                    if (!mu) {    
+                        set_values_long()                       
                     }
         
                 })
@@ -177,26 +159,18 @@ $(document).ready(function(){
         
         
                 long_days_slider = new slider('long_range_days',3,3,12,1,0,'long_term_display','right',[3,6,9,12],function(response,mu){
-                   
-                    document.getElementById('long_echo_days_val').innerHTML = response
+                    document.getElementById('long_echo_days_val').innerHTML = long_days_slider.value
                     if (!mu) {
-                             //console.log(long_days_slider.value-3)
-                            let total
-                            let date
-                            document.getElementById('long_summa').innerHTML = long_money_slider.value + " EUR"
-                            document.getElementById('long_term_display').innerHTML = date = caulculations.long.longLoanCalculator.amounts[(long_money_slider.value - 100) / 5].term[long_days_slider.value-3].firstPaymentDate.split('T')[0] //a.payments[a.payments.length-1].date.split('T')[0]//calc_term('long', response)
-                            
-                            document.getElementById('long_kopa').innerHTML = total = (caulculations.long.longLoanCalculator.amounts[(long_money_slider.value - 100) / 5].term[long_days_slider.value-3].monthlyPayment * long_days_slider.value).toFixed(2) + 'EUR' 
-                            document.getElementById('long_komisija').innerHTML = 0//a.commission + " EUR"
-                           
-                            save_loan_local('long',long_money_slider.value,long_days_slider.value,date,total)
-        
-
+                        set_values_long()
                     }
                 })
+
                 start_long_days = sessionStorage.long_loan_term!='undefined' && sessionStorage.long_loan_term!=null ? sessionStorage.long_loan_term : 4
                 long_days_slider.start_val(start_long_days)
+
             }
+
+
     data_loaded = 0
     ajax_('GetCalculatorInformation',calc_data_long,function(a){
         caulculations.long = a
@@ -209,6 +183,8 @@ $(document).ready(function(){
             data_loaded++
         }
     })
+
+
     calc_data_short = sessionStorage.accessToken != null && sessionStorage.accessToken != "undefined" && sessionStorage.accessToken != 0 ?  {'type':'short','accessToken':sessionStorage.accessToken} :{'type':'short'} 
 
     ajax_('GetCalculatorInformation',calc_data_short,function(a){
@@ -221,7 +197,6 @@ $(document).ready(function(){
             data_loaded++
         }
     })
-   // console.log(long_days_slider)
 });
 
 
