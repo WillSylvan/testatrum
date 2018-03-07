@@ -22,7 +22,17 @@
 		<?php include 'assets/profile-menu.php'; ?>
 		<?php include 'assets/header.php'; ?>
 		<?php include 'assets/profile-form.php'; ?>
-		<style>.bt1 button{background-color:rgb(255, 117, 130)}</style>
+		<style>.bt1 button{background-color:rgb(255, 117, 130)}
+			.name {
+				margin-right: 40px;
+			}
+			.name p {
+				text-align: right;
+			}
+			.value p {
+				text-align: left;
+			}
+	</style>
 		
 		<div id="sadalas">
 
@@ -65,7 +75,28 @@
 						<h2><?php echo $language[$lang]['madata'] ?></h2>
 						<p><?php echo $language[$lang]['text'] ?> <b>info@atrum.lv</b></p>
 					</div>
-					<form id="">
+					<div class="flex">
+						<div class="name">
+							<p><?php echo $language[$lang]['firstName'] ?>:</p>
+							<p><?php echo $language[$lang]['lastName'] ?>:</p>
+							<p><?php echo $language[$lang]['identityCode'] ?>:</p>
+							<p><?php echo $language[$lang]['phone'] ?>:</p>
+							<p><?php echo $language[$lang]['email'] ?>:</p>
+							<p><?php echo $language[$lang]['dekl'] ?>:</p>
+							<p><?php echo $language[$lang]['fakt'] ?>:</p>
+
+						</div>
+						<div class="value">
+							<p id="firstName"></p>
+							<p id="lastName"></p>
+							<p id="identityCode"></p>
+							<p id="phone"></p>
+							<p id="email"></p>
+							<p id="dekl"></p>
+							<p id="fakt"></p>
+						</div>
+					</div>
+					<!-- <form id="">
 						<div><input placeholder=<?php echo $language[$lang]['firstName'] ?>></div>
 						<div><input placeholder=<?php echo $language[$lang]['lastName'] ?>></div>
 						<div><input placeholder=<?php echo $language[$lang]['identityCode'] ?>></div>
@@ -73,7 +104,7 @@
 						<div><input placeholder=<?php echo $language[$lang]['email'] ?>></div>
 						<div><input placeholder=<?php echo $language[$lang]['dekl'] ?>></div>
 						<div><input placeholder=<?php echo $language[$lang]['fakt'] ?>></div>
-					</form>
+					</form> -->
 				</div>
 	
 			</div>
@@ -83,7 +114,17 @@
 	</body>
 		<script type="text/javascript">
 		ajax_('GetPersonalInformation',{
-  "accessToken": sessionStorage.accessToken
-},function(a){console.log(a)})
+		  "accessToken": sessionStorage.accessToken
+		},function(a){
+
+			console.log(a)
+			document.getElementById('firstName').innerHTML =  a.client.firstName
+			document.getElementById('lastName').innerHTML =  a.client.lastName
+			document.getElementById('email').innerHTML =  a.client.eMail
+			document.getElementById('identityCode').innerHTML =  a.client.identityCode
+			document.getElementById('phone').innerHTML =  a.client.phone
+			document.getElementById('dekl').innerHTML = a.client.declaredResidence.city +' '+ a.client.declaredResidence.street +' '+ a.client.declaredResidence.house +'. '+a.client.declaredResidence.apartment +' '+ a.client.declaredResidence.postalCode 
+			document.getElementById('fakt').innerHTML = a.client.actualResidence.city +' '+ a.client.actualResidence.street +' '+ a.client.actualResidence.house +'. '+a.client.actualResidence.apartment +' '+ a.client.actualResidence.postalCode 
+		})
 	</script>
 </html>

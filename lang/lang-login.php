@@ -8,7 +8,7 @@
 
 
     $language['lv']['email'] = 'E-pasts';
-    $language['ru']['email'] = 'Адрес электронной почты';
+    $language['ru']['email'] = 'Адрес&#160электронной&#160почты';
 
     $language['lv']['pass'] = 'Parole';
     $language['ru']['pass'] = 'Пароль';

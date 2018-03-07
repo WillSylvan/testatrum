@@ -12,4 +12,7 @@
     $language['lv']['cha-pass'] = 'Mainīt paroli';
     $language['ru']['cha-pass'] = 'Сменить пароль';
 
+    $language['lv']['new-credit'] = 'Jauns kredīts';
+    $language['ru']['new-credit'] = 'Новый кредит';
+
 ?>

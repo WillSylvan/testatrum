@@ -38,8 +38,8 @@
 					</div>
 				</div>
 				<div id="zero-form">
-					<div><input placeholder=<?php echo $language[$lang]['login'] ?> id="email_input"></div>
-					<div><input placeholder=<?php echo $language[$lang]['reg'] ?> type="password" id="pw_input"></div>
+					<div><input placeholder=<?php echo $language[$lang]['email'] ?> id="email_input"></div>
+					<div><input placeholder=<?php echo $language[$lang]['pass'] ?> type="password" id="pw_input"></div>
 				</div>
 				<div class="flex ielogoties-buttons">
 					<button class="turpinat" id="login_button"><?php echo $language[$lang]['login'] ?></button>

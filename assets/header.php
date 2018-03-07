@@ -48,7 +48,7 @@ $(document).ready(function(){
 	<div class="atribut head">
 		<div class="login">
 			<a href="nav_ielogots.php" class="button" id="login_link"><?php echo $language[$lang]['login'] ?></a>
-			<a href="sakums.php" id="profile_link" style="display: none;"><?php echo $language[$lang]['myProfle'] ?></a>
+			<a href="sakums.php" id="profile_link" class="button" style="display: none; margin-right: 10px;"><?php echo $language[$lang]['myProfle'] ?></a>
 			<a style="display: none;" class="button" id="loguot_link"><?php echo $language[$lang]['logout'] ?></a>
 			<form>
 				<input type="submit" value="lv" name="lang" class="languages">

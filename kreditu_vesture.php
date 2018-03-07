@@ -24,7 +24,7 @@
 		<?php include 'assets/profile-form.php'; ?>
 		<style>
 		.bt3 button{background-color:rgb(255, 117, 130)}
-		#main-id-content{
+/*		#main-id-content{
 			position: relative;
 			top: 10vw;
 		}
@@ -36,7 +36,7 @@
 			left: 6vw;
 			align-items: unset !important;
 			justify-content: center;
-		}
+		}*/
 		
 		@media screen and (max-width: 900px){
 		#main-id, #profile-added {
@@ -199,8 +199,25 @@
 			let html = {Short:'',Long:''}
 			
 			for (var i = 0; i < a.loans.length; i++) {
+				let status = ''
+				
+				switch(a.loans[i].status){
+					case 'Rejected':
+						status = <?php echo "'Atraidīts';";?>
+						break;
+					case 'Repaid':
+						status = <?php echo "'Apmaksāts';"; ?>
+						break
+					case 'Current':
+						status = <?php echo "'Aktīvs';"; ?>
+						break
+					case 'Requested':
+						status = <?php echo "'Pieprasīts';"; ?>
+
+
+				}
 				html[a.loans[i].type] += `<div class="with-borders"><div class="nr"><h3>${a.loans[i].number}</h3></div>
-						<div class="nr statuss"><h3><span class="violetc">${a.loans[i].status}</span></h3><p>${a.loans[i].dates.request.split('T')[0]}</p></div>
+						<div class="nr statuss"><h3><span class="violetc">${status}</span></h3><p>${a.loans[i].dates.request.split('T')[0]}</p></div>
 						<div class="money"><p>${a.loans[i].totalAmounts.principal}</p></div>
 						<div class="money komisija"><p>${a.loans[i].totalAmounts.commission}</p></div>
 						<div class="dienu-skaits"><p>${a.loans[i].term}</p></div>

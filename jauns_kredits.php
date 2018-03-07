@@ -8,12 +8,13 @@
 		<title></title>
 		<script type="text/javascript">
 			if (sessionStorage.request_loan==''||sessionStorage.request_loan=='undefined'||sessionStorage.request_loan==null||sessionStorage.request_loan==0) {
-				window.location = 'kreditu_vesture.php'
+				//window.location = 'kreditu_vesture.php'
 			}
+			console.log(sessionStorage)
 		</script>
 		<style>
 		/*.bt3 button{background-color:rgb(255, 117, 130)}*/
-		#main-id-content{
+	/*	#main-id-content{
 			position: relative;
 			top: 10vw;
 		}
@@ -26,7 +27,7 @@
 			left: 6vw;
 			align-items: unset !important;
 			justify-content: center;
-		}
+		}*/
 
 		@media screen and (max-width: 900px){
 		#kredits-forma{display:none}
@@ -58,7 +59,7 @@
 
    </head>
 
-	<body>
+	<body class="jauns_kredits">
 		<?php include 'assets/profile-menu.php'; ?>
 		<?php include 'assets/header.php'; ?>
 		<?php include 'assets/profile-form.php'; ?>
@@ -66,11 +67,11 @@
 
 		
 		
-	<!-- 	<div id="profils-added">
+		<!-- <div id="profils-added">
 			<a href="jauns_kredits"><div class="flex bt6"><button class="div"></button><p>Jauns kredīts</p></div></a>
 			<a href="kreditu_vesture.php"><div class="flex bt4"><button class="div"></button><p>Kredītu vēsture</p></div></a>
-		</div> -->
-		<style>.bt6 button{background-color:rgb(255, 117, 130)}</style>
+		</div>  -->
+		<style>.bt0 button{background-color:rgb(255, 117, 130)}</style>
 
 		<div class="main-content-credit" id="parkreditacija">
 			
@@ -92,7 +93,7 @@
 						
 						<div>
 							<p >Apmaksas termiņš:</p>
-							<p >Apmaksas datums:</p>
+							<p >Pirmais maksājums:</p>
 						</div>
 					</div>
 					
@@ -124,7 +125,7 @@
 					
 				</div>
 				<div id="payment_schedule"> </div>
-				
+				<p id="error_text"></p>
 				<div class="flex kredita-buttons">
 					<button id="request_loan_button" >PIETEIKTIES</button>
 				</div>
@@ -142,18 +143,24 @@
 
 			document.getElementById('loan_term').innerHTML = sessionStorage[sessionStorage.request_loan+"_loan_term"] + " "+term_scale
 			document.getElementById('loan_final_date').innerHTML = sessionStorage[sessionStorage.request_loan+"_last_payment"]
-
-			payment_schedule = JSON.parse(sessionStorage.payment_schedule)
+			
+			//payment_schedule = JSON.parse(sessionStorage.payment_schedule)
 
 			//console.log(payment_schedule)
 
 			if (sessionStorage.request_loan=='long') {
-				let schedule = "<ul>"
-				for (var i = 0; i < payment_schedule.length; i++) {
-					schedule += "<li> datums: "+payment_schedule[i].date.split('T')[0]+" summa: "+payment_schedule[i].paymentTotal+" EUR</li> "
-				}
-				schedule +="</ul>"
+
+				let ajax_data = {'loanData':{"type":sessionStorage.request_loan, 'principal':sessionStorage[sessionStorage.request_loan+"_loan_principal"], 'term':sessionStorage[sessionStorage.request_loan+"_loan_term"]}}
+					ajax_('GetLoanPreview',ajax_data, function(a){
+						console.log(a)
+					let schedule = "<ul>"
+					for (var i = 0; i < a.payments.length; i++) {
+						schedule += "<li> datums: "+a.payments[i].date.split('T')[0]+" summa: "+a.payments[i].paymentTotal+" EUR</li> "
+					}
+					schedule +="</ul>"
 				document.getElementById('payment_schedule').innerHTML = schedule
+				})
+					
 			}
 
 			document.getElementById('request_loan_button').onclick = function(){
@@ -171,6 +178,13 @@
 				ajax_('RequestLoan',data,function(a){
 					console.log(data)
 					console.log(a)
+					if(a.success){
+						window.location('sakums.php')
+					}else{
+						//window.location('sakums.php')
+						document.getElementById('error_text').innerHTML = a.errorMessage
+
+					}
 				})
 
 			}

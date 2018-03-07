@@ -59,9 +59,9 @@ function violetColor(){
 
 
 var repeated_loan = {short:document.getElementById("short_repeated_loan"),long:document.getElementById("long_repeated_loan")}
-var  short_money_slider = {value:0}
+var  short_money_slider = {value:100}
 var  short_days_slider = {value:10}
-var  long_money_slider = {value:0}
+var  long_money_slider = {value:200}
 var  long_days_slider = {value:3}
 
 caulculations = {long:'',short:''}
@@ -81,12 +81,13 @@ $(document).ready(function(){
 
 
         function set_values_short(){ 
-            let total
             let date
+         //   console.log(caulculations.short.shortLoanCalculator.amounts,(short_money_slider.value))
             let credit = caulculations.short.shortLoanCalculator.amounts[(short_money_slider.value-50)/5].term[short_days_slider.value-10]
+            let total = credit.commission + parseInt(short_money_slider.value)
             document.getElementById('short_summa').innerHTML = short_money_slider.value + " EUR"
             document.getElementById('short_term_display').innerHTML =  date = credit.repaymentDate.split('T')[0]
-            document.getElementById('short_kopa').innerHTML = credit.commission + parseInt(short_money_slider.value) + " EUR"
+            document.getElementById('short_kopa').innerHTML = total + " EUR"
             document.getElementById('short_komisija').innerHTML = credit.commission + " EUR"
             document.getElementById('extention_pay').innerHTML = credit.extensions[0].amount
             save_loan_local('short',short_money_slider.value,short_days_slider.value,date,total)
@@ -194,7 +195,7 @@ $(document).ready(function(){
           if (data_loaded) {
             set_up_sliders()
         }else{
-            data_loaded++
+            data_loaded++           
         }
     })
 });

@@ -1,10 +1,16 @@
+
+
+
+
+/*basic*/
+
 .slider_wrap {
     width: 100%;
     height: 3vw;
 } 
 .slider_track {
     width: 100%;
-    height: 0.5vw;
+    height: 0.2vw;
     background-color: #ddd;
     position: relative;
     top: calc((3vw - 0.5vw) / 2);
@@ -21,7 +27,7 @@
     width: 1.1vw;
     height: 1.1vw;
     position: absolute;
-    top: -0.3vw;
+    top: -0.45vw;
     background-color: red;
     z-index: 1;
     border-radius: 50%;
@@ -37,7 +43,7 @@
     line-height: 1.1vw;
     border-radius: 50%;
     box-shadow: 4px 4px 20px rgba(0,0,0,0.4);
-    top: 0.95vw;
+    top: 0.8vw;
     text-align: center;
 }
 .increase {
@@ -81,4 +87,29 @@
     display: flex;
     justify-content: center;
     -webkit-justify-content: center;
+}
+
+@media screen and (max-width: 900px){
+    .slider_wrap {
+        height: 9vw;
+    }
+    .slider_handle {
+        top: -1.2vw;
+        width: 3vw;
+        height: 3vw;
+    }
+    .click_control {
+        width: 3vw;
+        height: 3vw;
+        line-height: 3vw;
+        top: 2.5vw;
+    }
+    .slider_track {
+        height: 0.6vw;
+        top: calc((9vw - 1.5vw)/2);
+       
+    }
+    .pos_values_wrap {
+        margin-top: 2vw;
+    }
 }

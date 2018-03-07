@@ -611,6 +611,28 @@ button.accordion.active:after {
     justify-content: center;
 	padding-top: 3vw;
 	cursor:pointer;
+    color: #444;
+    
+}
+
+
+
+#first-form .click_control {
+    color: white;
+}
+#first-form .decrease{
+    background-color: #ff7582;
+
+}
+#first-form .increase{
+    background-color: #fd9e62;
+}
+#first-form .slider_track{
+    background: linear-gradient(90deg, #ff7582,  #fd9e62);
+}
+#first-form .slider_handle{
+    
+    background-color: #fd9e62;
 }
 
 /*SECOND FORM*/
@@ -626,6 +648,7 @@ button.accordion.active:after {
 	align-items: center;
     justify-content: center;
 	cursor:pointer;
+    color: #444;
 }
 .values_steps {
     position: relative;
@@ -641,41 +664,22 @@ button.accordion.active:after {
     font-size: 0.7vw;
 }
  
-.long_echo_money_cont .values_steps span:nth-child(2){
-    left:-3%;
+#second-form .click_control {
+    color: white;
 }
+#second-form .decrease{
+    background-color: #7577db;
 
-.long_echo_money_cont .values_steps span:nth-child(3){
-    left:-4.7%;
 }
-
-.long_echo_money_cont .values_steps span:nth-child(4){
-    left:-0.7%;
+#second-form .increase{
+    background-color: #9c57cf;
 }
-
-
-
-#short_echo_money_cont .values_steps span:nth-child(2){
-    left:-8%;
+#second-form .slider_track{
+    background: linear-gradient(90deg, #7577db,  #9c57cf);
 }
-
-#short_echo_money_cont .values_steps span:nth-child(3){
-    left:-5%;
-}
-#short_echo_money_cont .values_steps span:nth-child(4){
-    left:-3%;
-}
-#short_echo_money_cont .values_steps span:nth-child(5){
-    left:-0;
-}
-#short_echo_days_cont .values_steps span:nth-child(2){
-    left:0.7%;
-}
-#short_echo_days_cont .values_steps span:nth-child(3){
-    left:0.7%;
-}
-#short_echo_days_cont .values_steps span:nth-child(4){
-    left:1%;
+#second-form .slider_handle{
+    
+    background-color: #9c57cf;
 }
 
 

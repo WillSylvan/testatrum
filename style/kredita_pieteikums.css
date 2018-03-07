@@ -402,7 +402,8 @@ input[type=radio]:checked {
   background-image: url(../img/form5.png);
   background-size: contain;
   background-repeat: no-repeat;
-  width: 25vw;
+  background-position: center;
+  width: 16vw;
   height: 22vw;
   position: absolute;
   top: 8vw;
@@ -410,11 +411,16 @@ input[type=radio]:checked {
   align-items: center;
   justify-content: center;
 }
-
+#main-id-content{
+  width: 65%;
+}
+.sakums #first-form, #second-form {
+  padding: 3vw;
+}
 .profil-header {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 1vw;
-  width: 13vw;
+  width: 10vw;
 }
 
 #main-id h1 {
@@ -616,9 +622,7 @@ input[type=radio]:checked {
   margin: 5vw;
 }
 
-.short_range_form {
-  transform: scale(0.8);
-}
+
 
 .rose-button, .violet-button {
   margin: 1vw !important;
