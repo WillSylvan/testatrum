@@ -9,8 +9,8 @@ a{
 }
 
 .languages{
-    width: 2vw !important;
-    margin: 0vw !important;
+    width: 2vw ;
+    margin: 0vw ;
     margin-right: 0vw !important;
     margin-left: 1vw !important;
     height: auto;
@@ -109,6 +109,24 @@ a{
 }
 }
 @media screen and (max-width: 900px){
+#loguot_link{
+    margin-top: 10px;
+}
+.lang_form {
+    display: flex;
+    display: -webkit-flex;
+    width: 100%;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+.lang_form input{
+    font-size: 4vw;
+    
+}
+.languages {
+    width: unset;
+    margin: 0 10px 0 10px; 
+}
 #menu-mobile{
     display: block;
     position: fixed;
@@ -144,7 +162,7 @@ a{
     height: 160vw;
     z-index: 10;
 }
- .header:after {
+/* .header:after {
     content: '';
     width: 0;
     height: 0;
@@ -155,7 +173,7 @@ a{
     position: absolute;
     bottom: 0;
     left: 0;
-}
+}*/
 .my_nav {
     height: auto;
     width: 100%;
@@ -167,7 +185,7 @@ a{
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 30vw;
+    margin-top: 20vw;
 }
 .my_nav ul li a {
     font-size: 5vw;

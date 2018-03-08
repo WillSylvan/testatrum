@@ -91,18 +91,20 @@
 
 @media screen and (max-width: 900px){
     .slider_wrap {
-        height: 9vw;
+        height: 13vw;
+        margin-top: 2vw;
     }
     .slider_handle {
-        top: -1.2vw;
-        width: 3vw;
-        height: 3vw;
+        top: -2.2vw;
+        width: 5vw;
+        height: 5vw;
+        border-width: 1vw;
     }
     .click_control {
-        width: 3vw;
-        height: 3vw;
-        line-height: 3vw;
-        top: 2.5vw;
+        width: 5vw;
+        height: 5vw;
+        line-height: 5vw;
+        top: 1.5vw;
     }
     .slider_track {
         height: 0.6vw;
@@ -110,6 +112,6 @@
        
     }
     .pos_values_wrap {
-        margin-top: 2vw;
+        margin-top: 3vw;
     }
 }

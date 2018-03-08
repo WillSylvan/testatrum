@@ -1,5 +1,5 @@
 <?php 
-	include 'lang/set-lang.php';
+
 	include 'lang/lang-footer.php';
 ?>
 
@@ -9,8 +9,10 @@
 <script>
 
 $(function(){
-    $('#help').delay(5000)
-              .show(1000);
+	if ($(window).width()>900) {
+	    $('#help').delay(5000)
+	              .show(1000);
+	}
 });
 
 </script>

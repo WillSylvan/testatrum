@@ -19,6 +19,7 @@
    </head>
 
 	<body>
+		<?php include 'lang/lang-my-loans.php'; ?>
 		<?php include 'assets/profile-menu.php'; ?>
 		<?php include 'assets/header.php'; ?>
 		<?php include 'assets/profile-form.php'; ?>
@@ -76,7 +77,7 @@
 			<div id="istermina">
 			
 				<h2>
-					<span>Īstermiņā</span> kredīti
+					<?php echo $language[$lang]['shorttremloan']; ?>
 				</h2>
 				
 				<div class="table-aizdevumi" id="isstermina_tabula">
@@ -147,7 +148,7 @@
 			
 			<div id="ilgtermina">
 				<h2>
-					<span>Ilgtermiņa</span> kredīti
+				<?php echo $language[$lang]['longtremloan']; ?>
 				</h2>
 				
 				<div class="table-aizdevumi" id="ilgtermina_tabula">

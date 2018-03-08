@@ -970,9 +970,18 @@ input[type=radio]:checked {
   font-size: 1.3vw;
 }
 
+
+#payment_schedule li {
+  font-size: 2.5vw;
+  list-style: none;
+}
+
 @media screen and (max-width: 1300px) {}
 
 @media screen and (max-width: 900px) {
+  #passw {
+    border-radius: 2.8vw;
+  }
   #page-content-1 {
     width: 80%;
   }
@@ -989,7 +998,7 @@ input[type=radio]:checked {
     margin: 2vw;
     padding: 3vw;
     font-size: 3vw;
-    border-radius: 0.8vw;
+    border-radius: 2.8vw;
   }
   input:focus::-webkit-input-placeholder {
     font-size: 2vw;
@@ -1072,7 +1081,7 @@ input[type=radio]:checked {
     font-weight: 300;
   }
   #sadalas {
-    width: 70%;
+    width: 90%;
   }
   #ielogots-header h2 {
     font-size: 4vw;
@@ -1257,11 +1266,13 @@ input[type=radio]:checked {
     font-size: 3vw;
   }
   #first-form, #second-form {
-    background-image: url(../img/form-mobile.png)!important;
+    /*background-image: url(../img/form-mobile.png)!important;*/
+    background-image: unset;
     left: 0!important;
     right: 0!important;
     top: 0 !important
   }
+
   .form_ {
     width: 100% !important;
     height: 140vw !important;

@@ -8,6 +8,7 @@
 		<title></title>
 		<link rel="icon" href="img/logo.svg">
 		<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/hammer.js"></script>
 		<script type="text/javascript" src="js/sliders.js"></script>
 		<script type="text/javascript" src="js/ajax.js"></script>
     </head>
@@ -20,7 +21,7 @@
 		<?php include 'lang/lang-index-violet.php';?>
 		 
 		<div class="header-background"></div>
-
+		<!-- <div id="debug" style="position: fixed;z-index: 1000;width: 200px;height: 100px; background-color: white; top: 0;left: 0;"></div> -->
 		<div id="top-forms" class="flex">
 			<div class="form_ f1 unselectable" onclick='pinkColor()'>
 				<div id="first-form" class="flex" >

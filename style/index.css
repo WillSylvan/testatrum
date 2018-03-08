@@ -681,8 +681,13 @@ button.accordion.active:after {
     
     background-color: #9c57cf;
 }
+.slider_container{
+   width: 80%;
+}
 
-
+.pos_values_wrap {
+    font-size: 0.8vw;
+}
 
 /*PINK COLOR*/
 #content-pink #f-button{
@@ -727,7 +732,7 @@ button.accordion.active:after {
 
 
 @media screen and (max-width: 900px){
-.f2{display:none}
+/*.f2{display:none}*/
 #top-forms{
 	flex-wrap: wrap;
 }
@@ -737,14 +742,27 @@ button.accordion.active:after {
     margin-bottom: 4vw;
     cursor: pointer;
 }
+.slider_container{
+   width: 100%;
+}
+.pos_values_wrap {
+    font-size: 3vw;
+}
+#long_echo_money_cont p, #short_echo_money_cont p {
+    width: 100%;
+}
+
 #first-form, #second-form {
-    background-image: url(../img/form-mobile.png);
-	left: 0;
+    /*background-image: url(../img/form-mobile.png);*/
+	background-image: none;
+    left: 0;
 	right: 0;
 	top: 0;
 }
-.short_range_form{
-	display: block !important;
+
+.long_range_form,.short_range_form {
+    flex-direction: column;
+    -webkit-flex-direction: column;
 }
 .inputs {
     width: 100%;
@@ -1004,10 +1022,10 @@ button.accordion {
 #questions p {
     font-size: 3vw;
 }
-#round-buttons{
+/*#round-buttons{
     display: flex;
     justify-content: center;
-}
+}*/
 #round-buttons button{
     margin: 2.5vw;
     margin-bottom: 8vw;

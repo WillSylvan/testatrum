@@ -50,7 +50,7 @@ $(document).ready(function(){
 			<a href="nav_ielogots.php" class="button" id="login_link"><?php echo $language[$lang]['login'] ?></a>
 			<a href="sakums.php" id="profile_link" class="button" style="display: none; margin-right: 10px;"><?php echo $language[$lang]['myProfle'] ?></a>
 			<a style="display: none;" class="button" id="loguot_link"><?php echo $language[$lang]['logout'] ?></a>
-			<form>
+			<form class="lang_form">
 				<input type="submit" value="lv" name="lang" class="languages">
 				<input type="submit" value="ru" name="lang" class="languages">
 			</form>

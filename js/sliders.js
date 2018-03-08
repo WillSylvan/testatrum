@@ -87,11 +87,13 @@
         function responce(){
             if (that.value<=that.max&&that.value>=that.min) {
 
-                let w = ((that.value-that.min)/(that.max-that.min))*that.domWidth
+                let w = ((that.value-that.min)/(that.max-that.min))*parseInt(that.domWidth)
                 //console.log(w)
-                document.getElementById(that.name+'_handle').style.left = (w - parseInt(window.getComputedStyle(document.getElementById(that.name+'_handle')).width)/2)/that.domWidth * 100 + "%"//((that.value-that.min)/(that.max-that.min))*that.domWidth-10
+                document.getElementById(that.name+'_handle').style.left = (w - parseInt(window.getComputedStyle(document.getElementById(that.name+'_handle')).width)/2)/parseInt(that.domWidth) * 100 + "%"//((that.value-that.min)/(that.max-that.min))*that.domWidth-10
                 document.getElementById(that.name+"_input").value = that.value
-                document.getElementById(that.name+"_track_cover").style.width = (that.side=='left'? w : that.domWidth-w)/that.domWidth * 100 + "%"
+                document.getElementById(that.name+"_track_cover").style.width = (that.side=='left'? w : parseInt(that.domWidth)-w)/parseInt(that.domWidth) * 100 + "%"
+               // document.getElementById('debug').innerHTML = (that.side=='left'? w : that.domWidth-w)/parseInt(that.domWidth) * 100 + "%"
+                
                 that.callback(that.value, that.focus)
             }
             
@@ -100,6 +102,7 @@
     //Slider controls addEventListener setup
     /////
         //Drag controls
+        /*
         this.dom.addEventListener('mousedown', function(event) {
             that.domWidth = parseInt(window.getComputedStyle(that.dom).width)
             md(that)
@@ -111,18 +114,12 @@
             if (that.focus) {
                 let place = offset(that.dom)
                 let pos = Math.round((event.pageX-place.left)/that.step)*that.step
-                //let width = window.getComputedStyle(that.dom).width
-                //document.getElementById(that.name+'_handle').style.left = pos-10
+               
                 that.value = calcValue(that.min,that.max,that.step,that.domWidth,pos)
-                // if (pos<=0||pos>=that.domWidth) {
-                //  //console.log(pos)
-                //  mu(that)
-                // }
+                console.log(that.min,that.max,that.step,that.domWidth,pos)
+                
                 responce()
-                //console.log(that.output,that.output)
-                //that.output.innerHTML = that.value
-                //that.callback(that.value)
-                //document.getElementById(that.name+"_input").value = that.value
+                
             }
           
         }, 0);
@@ -133,6 +130,24 @@
             }
             
         });
+        */
+        //TOUCH CONTROLS
+            let hammertime = new Hammer(this.dom);
+            hammertime.on('pan tap panstart panend', function(ev) {
+                console.log(ev);
+               if (ev.type=='panstart') {
+                 that.focus = true
+               }
+               if (ev.type=='panend') {
+                 that.focus = false
+               }
+                let place = offset(that.dom)
+                let pos = Math.round((ev.center.x-place.left)/that.step)*that.step
+                that.value = calcValue(that.min,that.max,that.step,parseInt(that.domWidth),pos)
+                responce()
+
+            });
+
         //CLICK CONTROLS
         //console.log(this.dom.querySelectorAll(".increase"))
         this.dom.querySelectorAll(".increase")[0].onclick = function(){
@@ -168,3 +183,5 @@
     }
     
  }
+
+
