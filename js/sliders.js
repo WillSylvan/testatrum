@@ -136,7 +136,9 @@
             hammertime.on('pan tap panstart panend', function(ev) {
                 console.log(ev);
                if (ev.type=='panstart') {
-                 that.focus = true
+                that.focus = true
+                that.domWidth = parseInt(window.getComputedStyle(that.dom).width)
+
                }
                if (ev.type=='panend') {
                  that.focus = false

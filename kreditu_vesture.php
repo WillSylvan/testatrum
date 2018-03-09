@@ -82,13 +82,13 @@
 				
 				<div class="table-aizdevumi" id="isstermina_tabula">
 					<div>
-						<div><h1>Līguma nr.</h1></div>
-						<div class="statuss"><h1>Statuss</h1></div>
-						<div class="money"><h1>Kredīts</h1></div>
-						<div class="money komisija"><h1>Komisija</h1></div>
-						<div class="dienu-skaits"><h1>Termiņš dienās</h1></div>
-						<div><h1>Atmaksas datums</h1></div>
-						<div class="kopa-atm"><h1>Kopējā summa</h1></div>
+						<div><h1><?php echo $language[$lang]['contractNr'] ?></h1></div>
+						<div class="statuss"><h1><?php echo $language[$lang]['status'] ?></h1></div>
+						<div class="money"><h1><?php echo $language[$lang]['loan'] ?></h1></div>
+						<div class="money komisija"><h1><?php echo $language[$lang]['comission'] ?></h1></div>
+						<div class="dienu-skaits"><h1><?php echo $language[$lang]['termDays'] ?></h1></div>
+						<div><h1><?php echo $language[$lang]['payDate'] ?></h1></div>
+						<div class="kopa-atm"><h1><?php echo $language[$lang]['summ'] ?></h1></div>
 					</div>
 					
 				<!-- 
@@ -154,13 +154,13 @@
 				<div class="table-aizdevumi" id="ilgtermina_tabula">
 				
 					<div>
-						<div><h1>Līguma nr.</h1></div>
-						<div class="statuss"><h1>Statuss</h1></div>
-						<div class="money"><h1>Kredīts</h1></div>
-						<div class="money komisija"><h1>Procenti</h1></div>
-						<div class="dienu-skaits"><h1>Termiņš mēnešos</h1></div>
-						<div><h1>Atmaksas datums</h1></div>
-						<div class="kopa-atm"><h1>Kopēja summa</h1></div>
+						<div><h1><?php echo $language[$lang]['contractNr'] ?></h1></div>
+						<div class="statuss"><h1><?php echo $language[$lang]['status'] ?></h1></div>
+						<div class="money"><h1><?php echo $language[$lang]['loan'] ?></h1></div>
+						<div class="money komisija"><h1><?php echo $language[$lang]['comission'] ?></h1></div>
+						<div class="dienu-skaits"><h1><?php echo $language[$lang]['termMonths'] ?></h1></div>
+						<div><h1><?php echo $language[$lang]['payDate'] ?></h1></div>
+						<div class="kopa-atm"><h1><?php echo $language[$lang]['summ'] ?></h1></div>
 					</div>
 					
 					<!--<div class="with-borders">

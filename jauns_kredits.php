@@ -64,6 +64,7 @@
 		<?php include 'assets/header.php'; ?>
 		<?php include 'assets/profile-form.php'; ?>
 		<!-- <?php include 'assets/kredits.php'; ?> -->
+		<?php include 'lang/lang-new-loan.php'; ?>
 
 		
 		
@@ -76,7 +77,7 @@
 		<div class="main-content-credit" id="parkreditacija">
 			
 			<div id="main-content-credit-izvelne-parkreditacija">
-				<div class="parkreditacija"><h5>Pieteikties kredītam</h5></div>
+				<div class="parkreditacija"><h5><?php echo $language[$lang]['getloan'] ?></h5></div>
 					
 				<!-- <div>
 					<p>Līguma nr.</p>
@@ -87,13 +88,13 @@
 				
 					<div class="statuss">
 						<div>
-							<p>kredīts:</p>
-							<p>Kopēja summa atmaksai:</p>
+							<p><?php echo $language[$lang]['loan'] ?></p>
+							<p><?php echo $language[$lang]['totalamount'] ?></p>
 						</div>
 						
 						<div>
-							<p >Apmaksas termiņš:</p>
-							<p >Pirmais maksājums:</p>
+							<p ><?php echo $language[$lang]['term'] ?></p>
+							<p ><?php echo $language[$lang]['firstpay'] ?></p>
 						</div>
 					</div>
 					
@@ -120,14 +121,14 @@
 					
 					<div class="border-2-2">
 						<p>Eiropas pateriņa kredīta standartinformācija</p>
-						<p>Visparīgie līguma noteikumi</p>
+						<p><?php echo $language[$lang]['rules'] ?></p>
 					</div>
 					
 				</div>
 				<div id="payment_schedule"> </div>
 				<p id="error_text"></p>
 				<div class="flex kredita-buttons">
-					<button id="request_loan_button" >PIETEIKTIES</button>
+					<button id="request_loan_button" ><?php echo $language[$lang]['send'] ?></button>
 				</div>
 				
 			</div>
@@ -137,7 +138,7 @@
 		<script type="text/javascript">
 
 			//console.log(sessionStorage)
-			term_scale = sessionStorage.request_loan == 'long'? 'months' : 'days'
+			term_scale = sessionStorage.request_loan == 'long'? '<?php echo $language[$lang]['months']; ?>' : '<?php echo $language[$lang]['days'];  ?>'
 			document.getElementById('loan_amout').innerHTML = sessionStorage[sessionStorage.request_loan+"_loan_principal"] + " EUR"
 			document.getElementById('loan_total').innerHTML = sessionStorage[sessionStorage.request_loan+"_loan_total"] + " EUR"
 
@@ -155,7 +156,7 @@
 						console.log(a)
 					let schedule = "<ul>"
 					for (var i = 0; i < a.payments.length; i++) {
-						schedule += "<li> datums: "+a.payments[i].date.split('T')[0]+" summa: "+a.payments[i].paymentTotal+" EUR</li> "
+						schedule += "<li> <?php echo $language[$lang]['date'] ?>: "+a.payments[i].date.split('T')[0]+" <?php echo $language[$lang]['summ'] ?>: "+a.payments[i].paymentTotal+" EUR</li> "
 					}
 					schedule +="</ul>"
 				document.getElementById('payment_schedule').innerHTML = schedule

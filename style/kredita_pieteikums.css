@@ -971,14 +971,15 @@ input[type=radio]:checked {
 }
 
 
-#payment_schedule li {
-  font-size: 2.5vw;
-  list-style: none;
-}
 
 @media screen and (max-width: 1300px) {}
 
 @media screen and (max-width: 900px) {
+  #payment_schedule li {
+  font-size: 2.5vw;
+  list-style: none;
+}
+
   #passw {
     border-radius: 2.8vw;
   }

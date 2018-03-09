@@ -14,9 +14,9 @@ body{
 }
 #grafiks{
     position: absolute;
-    width: 30% !important;
-    left: 9vw;
-    bottom: 8vw;
+    
+    left: 0vw;
+    bottom: 2vw;
     padding: 0.2vw;
     border: 1px solid rgb(173,74,202) !important;
     background-image: none !important;
@@ -25,6 +25,7 @@ body{
     text-decoration: unset !important;
     text-align: center;
     border-radius: 0.5vw;
+    white-space: nowrap;
 }
 
 #content-grey{display:block}
@@ -552,6 +553,7 @@ button.accordion.active:after {
 .info_block{
 	width: 30%;
 	margin-top: 3vw;
+    position: relative;
 }
 .formulas div{
 	margin: 1vw;

@@ -17,8 +17,22 @@
   margin: 0;
   font-size: 1.2vw;
   margin-bottom: 1vw;
+  white-space: nowrap;
 }
 
+.violet-button{
+  background-image: -moz-linear-gradient( -177deg, rgb(173,74,202) 0%, rgb(117,119,219) 100%) !important;
+  background-image: -webkit-linear-gradient( -177deg, rgb(173,74,202) 0%, rgb(117,119,219) 100%) !important;
+  background-image: -ms-linear-gradient( -177deg, rgb(173,74,202) 0%, rgb(117,119,219) 100%) !important;
+  margin: 3vw 0vw 0vw 1vw !important;
+    padding: 0.6vw 1vw !important;
+    border: none !important;
+    border-radius: 1vw !important;
+  font-size: 0.9vw !important;
+    font-weight: 700 !important;
+    color: white !important;
+    white-space: nowrap;
+}
 
 .table-grafiks div {
   display: -webkit-flex;

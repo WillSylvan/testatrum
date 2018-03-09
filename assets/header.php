@@ -10,6 +10,7 @@
 <div id="logo-mobile"><a href="index.php"><img src="img/logo.svg" alt="logo"></a></div>
 
 <script>
+	console.log(sessionStorage)
 $(document).ready(function(){
 	if ($('body').width() <= 900) {
 		
