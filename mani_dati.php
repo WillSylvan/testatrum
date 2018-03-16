@@ -15,14 +15,18 @@
 		<title></title>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="js/ajax.js"></script>
-		
+		<script type="text/javascript">
+			if (sessionStorage.accessToken == ''||sessionStorage.accessToken == 'undefined'||sessionStorage.accessToken == 0||sessionStorage.accessToken == null) {
+				window.location = 'nav_ielogots.php'
+			}
+		</script>
    </head>
 
 	<body>
 		<?php include 'assets/profile-menu.php'; ?>
 		<?php include 'assets/header.php'; ?>
 		<?php include 'assets/profile-form.php'; ?>
-		<style>.bt1 button{background-color:rgb(255, 117, 130)}
+	<style>.bt1 button{background-color:rgb(255, 117, 130)}
 			.name {
 				margin-right: 40px;
 			}

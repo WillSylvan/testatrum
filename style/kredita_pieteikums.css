@@ -970,7 +970,9 @@ input[type=radio]:checked {
   font-size: 1.3vw;
 }
 
-
+.error{
+  color: rgb(240,5,10);
+}
 
 @media screen and (max-width: 1300px) {}
 
@@ -993,7 +995,7 @@ input[type=radio]:checked {
     margin-top: 10vw;
   }
   .klients {
-    display: none !important
+    /*display: none !important*/
   }
   input {
     margin: 2vw;
@@ -1026,7 +1028,7 @@ input[type=radio]:checked {
   .ielogoties-buttons button {
     padding: 1vw 2vw;
     width: 30vw;
-    margin: 2vw;
+    margin: 2vw auto;
     font-size: 3vw;
   }
   .ielogoties-buttons {
@@ -1427,6 +1429,16 @@ input[type=radio]:checked {
   .parkreditacija h5 {
     margin: 0;
     font-size: 3.5vw;
+  }
+  .final_check {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+  }
+  .value {
+    margin-right: auto;
+  }
+  .name {
+    margin-left: auto;
   }
 }
 

@@ -41,8 +41,8 @@ function violetColor(){
         sessionStorage[type+'_loan_term'] = term
         sessionStorage[type+'_loan_total'] = total
         sessionStorage[type+'_last_payment'] = last_payment
-        console.log(term,sessionStorage[type+'_loan_term'])
-        console.log(principal,sessionStorage[type+'_loan_principal'])
+        //console.log(term,sessionStorage[type+'_loan_term'])
+        //console.log(principal,sessionStorage[type+'_loan_principal'])
 
     }
 

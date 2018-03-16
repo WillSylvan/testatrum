@@ -34,7 +34,7 @@ $(document).ready(function() {
         //////////////////////////////////////////
 
         $('input[name="identityCode"]').mask('000000-00000'); $('input[name="phone"]').mask('00000000');
-
+        $('input[name="postalCode_"],input[name="postalCode"]  ').mask('LV-0000')
         //////////////////////////////////////////
         // Client-side validation.
         //////////////////////////////////////////
@@ -51,7 +51,7 @@ $(document).ready(function() {
         //////////////////////////////////////////
 
         // Creating some variables, such as first form to show, array for fully filled form.
-        var currentForm = 1;
+        var currentForm = 3;
         $("#form-" + currentForm).show();
         var allDataForm = [],
           declaredAdress = [],
@@ -60,19 +60,30 @@ $(document).ready(function() {
           clientIp,
           acceptTerms,
           actualResidenceSameAsDesclared,
-          loanType = localStorage.getItem("loanType"),
-          loanPrincip = localStorage.getItem("loanPrincipal"),
-          loanTerm = localStorage.getItem("loanTerms"),
+          loanType = sessionStorage['request_loan']//localStorage.getItem("loanType"),
+          loanPrincip = sessionStorage[loanType+'_loan_principal']//localStorage.getItem("loanPrincipal"),
+          loanTerm = sessionStorage[loanType+'_loan_term']//localStorage.getItem("loanTerms"),
           loanInfo = {
             type: loanType,
             principal: loanPrincip,
             term: loanTerm
           };
+          var have_loan=false;
+           if (loanInfo.term!=0&&loanInfo.term!=''&&loanInfo.term!=null&&loanInfo.term!='undefined'&&
+              loanInfo.principal!=0&&loanInfo.principal!=''&&loanInfo.principal!=null&&loanInfo.principal!='undefined'&&
+              loanInfo.type!=0&&loanInfo.type!=''&&loanInfo.type!=null&&loanInfo.type!='undefined') {
+              
+              have_loan = true
+
+              document.getElementById('credit_info').style.display = 'block';
+
+            }
 
 
         $.getJSON('https://api.ipify.org?format=json', function(data) {
           clientIp = data.ip;
         });
+
         //////////////////////////////////////////
         // Function to push current form data in to global form data array.
         //////////////////////////////////////////
@@ -83,14 +94,41 @@ $(document).ready(function() {
             allDataForm.push.apply(allDataForm, firstForm);
           } else if (currentForm === 2) {
             var secondForm = $("#two-form").serializeArray();
-            declaredAdress.push.apply(declaredAdress, secondForm);
+            // console.log(secondForm)
+           //  console.log(declaredAdress)
+          //console.log(arrayFormating(declaredAdress))
+
+            for (var key in secondForm) {
+              if (secondForm.hasOwnProperty(key)) {
+               // console.log(key)
+              }
+            }
+            for (var i = 0; i < secondForm.length; i++) {
+
+              if(secondForm[i].name.search('_')>-1){
+                declaredAdress.push({name:secondForm[i].name.replace('_',''),value:secondForm[i].value})
+              }else {
+              //  console.log(secondForm[i])
+                factAdress.push(secondForm[i])
+
+              }
+            }
+            //console.log(declaredAdress)
+            //console.log(factAdress)
+
+
+
             if ($("input[name=adresCheck]").is(":checked")) {
               actualResidenceNSameAsDesclared = false;
               var secondForm2 = $("#two-form-second").serializeArray();
-              factAdress.push.apply(factAdress, secondForm2);
+             // factAdress.push.apply(factAdress, secondForm2);
             } else {
               actualResidenceNSameAsDesclared = true;
-              factAdress.push.apply(factAdress, secondForm);
+              //factAdress.push.apply(factAdress, secondForm);
+              console.log('SAME')
+              factAdress = declaredAdress
+              console.log(declaredAdress)
+              console.log(factAdress)
             }
           } else if (currentForm === 3) {
             var thirdForm = $("input[name=password]").serializeArray();
@@ -145,6 +183,16 @@ $(document).ready(function() {
 
           xhr.onload = function(response) {
             console.log(response)
+            a = JSON.parse(response.currentTarget.response)
+            if (a.success) {
+              sessionStorage.accessToken = a.accessToken
+              console.log(a.accessToken)
+             // window.location = 'sakums.php'
+            }else{
+              console.log(a.errorMessage)
+              console.log(document.getElementById('error_mesage'))
+              document.getElementById('error_mesage').innerHTML = a.errorMessage
+            }
           };
 
           xhr.onerror = function() {
@@ -156,6 +204,7 @@ $(document).ready(function() {
           };
 
           xhr.withCredentials = true;
+          console.log(customerData)
           xhr.send(JSON.stringify(customerData));
 
         }
@@ -179,7 +228,11 @@ $(document).ready(function() {
             customerData["conditionsData"] = acceptTerm;
             customerData['registrationIP'] = clientIp;
             customerData['customerData']['actualResidenceSameAsDesclared'] = actualResidenceSameAsDesclared;
-            customerData['loanData'] = loanInfo;
+            if (have_loan) {
+              customerData['loanData'] = loanInfo;
+            }
+
+
             sendToApi();
           }
         }

@@ -31,4 +31,10 @@
 
 	$language['lv']['send'] = 'Получить';
 	$language['ru']['send'] = 'Получить';
+
+	$language['lv']['loan_Requested'] = 'Kredīts jau ir pieprasīts';
+	$language['ru']['loan_Requested'] = 'Кредит уже запрошен';
+
+	$language['lv']['request_sent'] = 'Kredīta pieprasījums saņemts';
+	$language['ru']['request_sent'] = 'запрос кредита получен';
  ?>

@@ -30,5 +30,11 @@
     $language['lv']['pass-changed'] = 'Jūsu parole nomainīta!';
     $language['ru']['pass-changed'] = 'Ваш пароль был изменен!';
 
+    $language['lv']['inncorect']='nepareiza vecā parole';
+    $language['ru']['inncorect']='неправильный старый пароль';
+    
+    $language['lv']['mismatch']='jaunā parole nesakrīt';
+    $language['ru']['mismatch']='новые пароли должны совпадать';
+
     
 ?>

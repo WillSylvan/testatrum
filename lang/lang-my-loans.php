@@ -34,5 +34,17 @@
 	$language['lv']['summ'] = 'Kopējā summa';
 	$language['ru']['summ'] = 'Общая сумма';
 
+	$language['lv']['Rejected'] = 'Atraidīts';
+	$language['ru']['Rejected'] = 'Отклонён';
+
+	$language['lv']['Apmaksāts'] = 'Apmaksāts';
+	$language['ru']['Apmaksāts'] = 'Оплачен';
+
+	$language['lv']['Current'] = 'Aktīvs';
+	$language['ru']['Current'] = 'Активный';
+
+	$language['lv']['Requested'] = 'Pieprasīts';
+	$language['ru']['Requested'] = 'Запрошен';
+
 
  ?>

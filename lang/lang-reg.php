@@ -123,7 +123,7 @@
     $language['lv']['index'] = 'Pasta&#160indekss ';
     $language['ru']['index'] = 'Почтовый&#160индекс';
 
-    $language['lv']['check'] = 'Deklarētā&#160adrese&#160sakrīt&#160ar&#160fakstisko&#160dzīvesvietu ';
+    $language['lv']['check'] = 'Deklarētā&#160adrese&#160atšķiras&#160no&#160fakstiskās&#160dzīvesvietas ';
     $language['ru']['check'] = 'Декларированный&#160адрес&#160совпадает&#160с&#160фактическим&#160местом&#160жительства';
 
     // ----------------------------->

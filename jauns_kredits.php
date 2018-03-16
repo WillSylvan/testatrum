@@ -179,14 +179,23 @@
 				ajax_('RequestLoan',data,function(a){
 					console.log(data)
 					console.log(a)
-					if(a.success){
-						window.location('sakums.php')
-					}else{
+					
+						//window.location ='sakums.php'
+					
 						//window.location('sakums.php')
-						document.getElementById('error_text').innerHTML = a.errorMessage
+						let response_text = '';
+						switch(a.errorMessage){
+							case 'RL_ALREADY_REQUESTED':
+								response_text = '<?php echo $language[$lang]['loan_Requested'] ?>'
+								break;
 
-					}
+						}
+
+						document.getElementById('error_text').innerHTML = response_text
+
+					
 				})
+
 
 			}
 

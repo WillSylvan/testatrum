@@ -41,15 +41,16 @@
 <body>
   <?php include 'assets/header.php'; ?>
   <div id="page-form-content">
-    <div class="credit_info">
+    <div class="credit_info" id="credit_info" style="display: none;">
       <?php include "assets/kredits.php"?>
     </div>
     <div id="page-content-1">
       <h2><span><?php echo $language[$lang]['cred-name1'] ?></span><?php echo $language[$lang]['cred-name2'] ?></h2>
+      <p style="font-weight: 600; color: rgb(240,10,10)" id="error_mesage"></p>
 
       <!--PIRMA FORMA-->
       <div id="form-1">
-        <div class="flex klients">
+       <!--  <div class="flex klients">
           <div class="flex">
             <div class="flex izvelne">
               <button class="div" style="background-color:rgb(250, 142, 109)"></button>
@@ -61,7 +62,7 @@
             </div>
           </div>
           <div class="izvelne" id="stepPrev" style="margin:0;"><img src="img/back.png"></div>
-        </div>
+        </div> -->
         <form id="one-form" action="javascript:void(0)">
           <div><input name="firstName" id="name" class="input" placeholder=<?php echo $language[$lang]['firstName'] ?> data-validation="length" data-validation-length="min3" pattern="[a-zA-Z]+" value=""></div>
           <div><input name="lastName" id="lname" class="input" placeholder=<?php echo $language[$lang]['lastName'] ?> data-validation="length" data-validation-length="min3" pattern="[a-zA-Z]+" value=""></div>
@@ -82,7 +83,7 @@
       <!--OTRA FORMA-->
       <div id="form-2">
         <div class="flex klients">
-          <div class="flex">
+          <!-- <div class="flex ">
             <div class="flex izvelne">
               <button class="div" style="background-color:rgb(250, 142, 109)"></button>
               <p><?php echo $language[$lang]['new-client'] ?></p>
@@ -91,19 +92,19 @@
               <button class="div" style="background-color:grey"></button>
               <p><?php echo $language[$lang]['exist-client'] ?></p>
             </div>
-          </div>
+          </div> -->
           <div class="izvelne" id="stepPrev" style="margin:0;"><img src="img/back.png"></div>
         </div>
         <form id="two-form" action="javascript:void(0)">
           <fieldset>
           <h2><span><?php echo $language[$lang]['dekl'] ?></span> <?php echo $language[$lang]['adr'] ?></h2>
-          <div><input name="city" class="input" data-validation="length" data-validation-length="min3" placeholder=<?php echo $language[$lang]['city'] ?>></div>
-          <div><input name="street" class="input" data-validation="length" data-validation-length="min3" placeholder=<?php echo $language[$lang]['street'] ?>></div>
+          <div><input name="city_" class="input" data-validation="length" data-validation-length="min3" placeholder=<?php echo $language[$lang]['city'] ?>></div>
+          <div><input name="street_" class="input" data-validation="length" data-validation-length="min3" placeholder=<?php echo $language[$lang]['street'] ?>></div>
           <div class="flex info">
-            <div><input name="house" class="input" placeholder=<?php echo $language[$lang]['house-nr'] ?>></div>
-            <div><input name="apartment" class="input" placeholder=<?php echo $language[$lang]['flat-nr'] ?>></div>
+            <div><input name="house_" class="input" placeholder=<?php echo $language[$lang]['house-nr'] ?>></div>
+            <div><input name="apartment_" class="input" placeholder=<?php echo $language[$lang]['flat-nr'] ?>></div>
           </div>
-          <div><input name="postalCode" data-validation="length" data-validation-length="min3" placeholder=<?php echo $language[$lang]['index'] ?>></div>
+          <div><input name="postalCode_" data-validation="length" data-validation-length="min3" placeholder=<?php echo $language[$lang]['index'] ?>></div>
           <div class="flex check">
           <input name="adresCheck" id="declareChecking" class="input" type="checkbox" class="radio">
           <p><?php echo $language[$lang]['check'] ?></p>
@@ -113,7 +114,7 @@
         <fieldset id="two-form-second" action="javascript:void(0)">
           <h2><span><?php echo $language[$lang]['fakt'] ?></span> <?php echo $language[$lang]['adr'] ?></h2>
           <div><input name="city" class="input" data-validation-optional="true" data-validation="length" data-validation-length="min3" placeholder=<?php echo $language[$lang]['city'] ?> ></div>
-          <div><input name="street" class="input" data-validation="length" data-validation-length="min3" data-validation-optional="true" placeholder=<?php echo $language[$lang]['street'] ?></div>
+          <div><input name="street" class="input" data-validation="length" data-validation-length="min3" data-validation-optional="true" placeholder=<?php echo $language[$lang]['street'] ?>>
           <div class="flex info">
             <div><input name="house" class="input" placeholder=<?php echo $language[$lang]['house-nr'] ?>></div>
             <div><input name="apartment" class="input" placeholder=<?php echo $language[$lang]['flat-nr'] ?>></div>
@@ -130,7 +131,7 @@
       <!--TREŠA FORMA-->
       <div id="form-3">
         <div class="flex klients">
-          <div class="flex">
+        <!--   <div class="flex">
             <div class="flex izvelne">
               <button class="div" style="background-color:rgb(250, 142, 109)"></button>
               <p><?php echo $language[$lang]['new-client'] ?></p>
@@ -139,13 +140,13 @@
               <button class="div" style="background-color:grey"></button>
               <p><?php echo $language[$lang]['exist-client'] ?></p>
             </div>
-          </div>
+          </div> -->
           <div class="izvelne" style="margin:0;"><img src="img/back.png"></div>
         </div>
         <form id="three-form" action="javascript:void(0)">
           <div><input name="password_confirmation" autocomplete="new-password" class="input" placeholder=<?php echo $language[$lang]['pass'] ?> type="password"></div>
           <div><input name="password" autocomplete="new-password" class="input" placeholder=<?php echo $language[$lang]['check-pass'] ?> type="password" data-validation="confirmation"></div>
-          <div class="flex check">
+          <div class="flex final_check check">
             <input name="check" class="input" type="checkbox" class="radio" data-validation="required">
             <p><?php echo $language[$lang]['new-check2'] ?></p>
           </div>
@@ -280,7 +281,11 @@
                 document.getElementById(cityName).style.display = "block";
                 evt.currentTarget.className += " active";
               }
+
+
+              // if (sessinoStorage.) {}
             });
+
           </script>
           <button class="veikt"><?php echo $language[$lang]['pay'] ?></button>
         </div>

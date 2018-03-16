@@ -204,16 +204,16 @@
 				
 				switch(a.loans[i].status){
 					case 'Rejected':
-						status = <?php echo "'Atraidīts';";?>
+						status = <?php echo "'".$language[$lang]['Rejected']."';";?>
 						break;
 					case 'Repaid':
-						status = <?php echo "'Apmaksāts';"; ?>
+						status = <?php echo "'".$language[$lang]['Apmaksāts']."';"; ?>
 						break
 					case 'Current':
-						status = <?php echo "'Aktīvs';"; ?>
+						status = <?php echo "'".$language[$lang]['Current']."';"; ?>
 						break
 					case 'Requested':
-						status = <?php echo "'Pieprasīts';"; ?>
+						status = <?php echo "'".$language[$lang]['Requested']."';"; ?>
 
 
 				}

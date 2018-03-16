@@ -37,9 +37,10 @@
 				<div id="change-pass">
 					<div id="ielogots-header">
 						<h2><?php echo $language[$lang]['cha-pass'] ?></h2>
+						
 					</div>
 					<form id="three-form">
-						<p id="old_error"></p>
+						<p id="old_error" class="error"></p>
 						<div><input placeholder=<?php echo $language[$lang]['pass-now'] ?> id="pwOld" type="password"></div>
 						<div class="flex alerts">
 							<div class="flex">
@@ -51,8 +52,8 @@
 								<div><p><?php echo $language[$lang]['1nr'] ?></p></div>
 							</div>
 						</div>
-						<div id="new_error"></div>
 						<div><input placeholder=<?php echo $language[$lang]['new-pass'] ?> id="pwNew1" type="password"></div>
+						<div id="new_error" class="error"></div>
 						<div><input placeholder=<?php echo $language[$lang]['re-play-pass'] ?> id="pwNew2" type="password"></div>
 					</form>
 					<div class="border-pink"><button id="passw"><?php echo $language[$lang]['cha-pass'] ?></button></div>
@@ -91,11 +92,11 @@
 					if (a.success) {
 						
 					}else if(a.validationErrors[0].Field = "oldpassword"){
-							document.getElementById('old_error').innerHTML = 'incorect old pas'
+							document.getElementById('old_error').innerHTML = '<?php echo $language[$lang]['inncorect'] ?>'
 						}
 				})
 			}else {
-				document.getElementById('new_error').innerHTML = 'new passwords has to match'
+				document.getElementById('new_error').innerHTML = '<?php echo $language[$lang]['mismatch'] ?>'
 			}
 		}		
 	</script>

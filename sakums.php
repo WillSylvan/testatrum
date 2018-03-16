@@ -29,7 +29,7 @@
    </head>
 
 	<body 	class="sakums">
-		<?php include 'lang/lang-change-pass.php'; ?>
+	
 		<?php include 'assets/profile-menu.php'; ?>
 		<?php include 'assets/header.php'; ?>
 		<?php include 'assets/profile-form.php'; ?>
