@@ -85,6 +85,15 @@ $(document).ready(function(){
             $('#top-forms .form_:eq('+id+')').fadeIn(300)
     })
 
+    function dateformat(str){
+        var parts = str.split('-');
+        // Please pay attention to the month (parts[1]); JavaScript counts months from 0:
+        // January - 0, February - 1, etc.
+    
+        //console.log(mydate.toDateString());
+        return parts[2]+'.'+parts[1]+'.'+parts[0];
+    }
+
 
 
 
@@ -94,10 +103,10 @@ $(document).ready(function(){
             let credit = caulculations.short.shortLoanCalculator.amounts[(short_money_slider.value-50)/5].term[short_days_slider.value-10]
             let total = credit.commission + parseInt(short_money_slider.value)
             document.getElementById('short_summa').innerHTML = short_money_slider.value + " EUR"
-            document.getElementById('short_term_display').innerHTML =  date = credit.repaymentDate.split('T')[0]
+            document.getElementById('short_term_display').innerHTML = date =dateformat( credit.repaymentDate.split('T')[0])
             document.getElementById('short_kopa').innerHTML = total + " EUR"
             document.getElementById('short_komisija').innerHTML = credit.commission + " EUR"
-            document.getElementById('extention_pay').innerHTML = credit.extensions[0].amount
+            document.getElementById('extention_pay').innerHTML = parseFloat(credit.extensions[0].amount).toFixed(2)
             save_loan_local('short',short_money_slider.value,short_days_slider.value,date,total)
         }
 
@@ -105,9 +114,18 @@ $(document).ready(function(){
             let total 
             let date
             let credit = caulculations.long.longLoanCalculator.amounts[(long_money_slider.value - 100) / 5].term[long_days_slider.value-3]
+            //console.log(credit)
+            total = (credit.monthlyPayment * long_days_slider.value).toFixed(2) + 'EUR'
+            d = new Date(credit.firstPaymentDate.split('T')[0] )
+            e = new Date(d.setMonth(d.getMonth()+long_days_slider.value))
+            f = []
+            f[0] =e.getDate()
+            f[1] =e.getMonth()
+            f[2] = e.getFullYear()
+            document.getElementById('monthly_pay').innerHTML = credit.monthlyPayment
             document.getElementById('long_summa').innerHTML = long_money_slider.value + " EUR"
-            document.getElementById('long_term_display').innerHTML = date = credit.firstPaymentDate.split('T')[0] 
-            document.getElementById('long_kopa').innerHTML = total = (credit.monthlyPayment * long_days_slider.value).toFixed(2) + 'EUR'
+            document.getElementById('long_term_display').innerHTML = date = dateformat(credit.firstPaymentDate.split('T')[0] )
+            document.getElementById('long_kopa').innerHTML = f[0]+'.'+f[1]+'.'+f[2]//total = (credit.monthlyPayment * long_days_slider.value).toFixed(2) + 'EUR'
             save_loan_local('long',long_money_slider.value,long_days_slider.value,date,total)
         }
 
@@ -167,7 +185,7 @@ $(document).ready(function(){
         
                 long_money_slider = new slider('long_range_money',2,100,long_money_max,5,300,'long_echo_money_val','right',long_values,function(response,mu){
                     document.getElementById('long_echo_money_val').innerHTML = long_money_slider.value + " EUR"
-                    if (response>430) {
+                    if (response>=430) {
                         repeated_loan.long.style.display = "block"
                     }else {
                         repeated_loan.long.style.display = "none"
@@ -253,3 +271,35 @@ document.getElementById('submit_short').onclick = function(){
 
 
 
+
+ document.getElementById('grafiks').onclick = function(){
+
+    sessionStorage.request_loan = 'long';
+            let ajax_data = {'loanData':{"type":"long", 'principal':sessionStorage["long_loan_principal"], 'term':sessionStorage["long_loan_term"]}}
+                    ajax_('GetLoanPreview',ajax_data, function(a){
+                        console.log(a)
+
+                         let html = `<div>
+                                        <div><h1><?php echo $language[$lang]['nr'] ?></h1></div>
+                                        <div class="pay-date"><h1><?php echo $language[$lang]['paymentDate'] ?></h1></div>
+                                        <div class="month-pay"><h1><?php echo $language[$lang]['paymentMonthly'] ?></h1></div>
+                                    </div>`
+
+
+
+                
+                    for (var i = 0; i < a.payments.length; i++) {
+                        html += `<div class="with-borders"><div><h3>${i}</h3></div>
+                        <div><p>${a.payments[i].date.split('T')[0]}</p></div>
+                        <div><p>${a.payments[i].paymentTotal} EUR</p></div></div>`//"<li> datums: "+a.payments[i].date.split('T')[0]+" summa: "+a.payments[i].paymentTotal+" EUR</li> "
+                    }
+                    
+                 document.getElementById('table-grafiks').innerHTML = html
+
+
+
+                })
+
+
+
+}

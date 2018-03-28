@@ -501,6 +501,7 @@ button.accordion.active:after {
     margin: 0;
     font-size: 0.8vw;
     width: 10vw;
+    white-space: nowrap;
 }
 .form_ h3{
 	margin: 0;

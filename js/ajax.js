@@ -1,10 +1,12 @@
 	function ajax_(request,data,callback){
+    console.log('xhr called')
 		 var createCORSRequest = function(method, url) {
             var xhr = new XMLHttpRequest();
             if ("withCredentials" in xhr) {
               // Most browsers.
               xhr.open(method, url, true);
               xhr.setRequestHeader("Authorization", 'Basic YXRydW0ubHZfdGVzdDp0dXRLdUwyZjU5NUxUTkti');
+              console.log('xhr.setRequestHeader')
             } else if (typeof XDomainRequest != "undefined") {
               // IE8 & IE9
               xhr = new XDomainRequest();
@@ -27,7 +29,7 @@
           var xhr = createCORSRequest(method, url);
           xhr.onload = function(response) {
 
-          //console.log(response.currentTarget.response)
+          console.log(response.currentTarget.response)
 
            callback(JSON.parse(response.currentTarget.response))
           };

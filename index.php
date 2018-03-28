@@ -11,6 +11,7 @@
 		<script type="text/javascript" src="js/hammer.js"></script>
 		<script type="text/javascript" src="js/sliders.js"></script>
 		<script type="text/javascript" src="js/ajax.js"></script>
+
     </head>
 
 	<body>
@@ -114,10 +115,10 @@
 								<div class="flex formulas">
 									<div>
 										<h2><?php echo $language[$lang]['credit'] ?><span id="long_summa"></span></h2>
-										<h2><?php echo $language[$lang]['bilance'] ?><span id="long_kopa"></span></h2>
+										<h2><?php echo $language[$lang]['pay-till'] ?><span id="long_kopa"></span></h2>
 									</div>
 									<div>
-										<h2><?php echo $language[$lang]['com'] ?><span id="long_komisija"></span></h2>
+										
 										<!-- <h2><?php echo $language[$lang]['gpl'] ?><span id="long_gpl"></span></h2> -->
 									</div>
 								</div>
@@ -128,9 +129,9 @@
 								<!-- <h5><?php echo $language[$lang]['pay-on-30-days'] ?><br> <span class="violet">158.15 <?php echo $language[$lang]['eur'] ?></span></h5> -->
 								<h5><?php echo $language[$lang]['first-pay-day'] ?><br>   <span id="long_term_display" class="violet">19.01.2018</span></h5>
 
-
+								<h5 id="">Ikmēneša maksājums <span id="monthly_pay"></span></h5>
 								<a href="jauzliek links" class="links"><?php echo $language[$lang]['stand.-info'] ?></a>
-								<a href="grafiks.php" id="grafiks"><?php echo $language[$lang]['pay-graphic'] ?></a>
+								<a id="grafiks"><?php echo $language[$lang]['pay-graphic'] ?></a>
 								<input type="button"  id="submit_long" value=<?php echo $language[$lang]['get-money'] ?> class="violet-button" onclick="creditInfo(2)">
 
 							</div>
@@ -140,7 +141,7 @@
 			</div>
 
 		</div>
-
+		<div id="table-grafiks"></div>
 		<div id="round-buttons" class="flex">
 			<button id="butt1"></button>
 			<button id="butt2"></button>

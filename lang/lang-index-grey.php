@@ -26,6 +26,12 @@
     $language['lv']['bilance'] = 'Kopā: ';
     $language['ru']['bilance'] = 'Всего: ';
 
+    $language['lv']['bilance'] = 'Kopā: ';
+    $language['ru']['bilance'] = 'Всего: ';
+
+    $language['lv']['pay-till'] = 'Kredīts jāatmaksā līdz ';
+    $language['ru']['pay-till'] = 'Оплатить кредить до ';
+
     $language['lv']['com'] = 'Komisija: ';
     $language['ru']['com'] = 'Комиссия: ';
 

@@ -152,14 +152,14 @@
             });
 
         //CLICK CONTROLS
-        console.log(this.dom.querySelectorAll(".increase"))
+       // console.log(this.dom.querySelectorAll(".increase"))
 
         this.dom.querySelectorAll(".increase")[0].onclick = function(){
-            console.log('aaa')
+            //console.log('aaa')
             if (that.value<that.max) {
-                console.log( that.value, that.step)
+               // console.log( that.value, that.step)
                 that.value += that.step
-                console.log( that.value)
+                //console.log( that.value)
 
                 responce() 
             }
@@ -167,10 +167,10 @@
         }
         this.dom.querySelectorAll(".decrease")[0].onclick = function(){
             if (that.value>that.min) {
-                console.log( that.value, that.step)
+               // console.log( that.value, that.step)
                 that.value -= that.step
 
-                console.log( that.value)
+               // console.log( that.value)
 
 
                 responce() 
