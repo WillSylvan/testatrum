@@ -23,6 +23,9 @@
     $language['lv']['months'] = 'Mēneši: ';
     $language['ru']['months'] = 'Месяцы: ';
 
+    $language['lv']['days'] = 'Dienas: ';
+    $language['ru']['days'] = 'Дни: ';
+
     $language['lv']['bilance'] = 'Kopā: ';
     $language['ru']['bilance'] = 'Всего: ';
 

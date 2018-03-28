@@ -332,3 +332,7 @@
 
         $language['lv']['pay'] = 'Veikt maksājumu';
         $language['ru']['pay'] = 'Сделать платеж';
+
+
+        $language['lv']['age_error'] = 'pieļaujamais vecums no 20 līdz 70 gadiem';
+        $language['ru']['age_error'] = 'допустимый возраст от 20 до 70 лет';

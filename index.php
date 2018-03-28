@@ -45,7 +45,7 @@
 								<div id="short_echo_days_cont">
 
 									<h3><?php echo $language[$lang]['how-long-time'] ?></h3>
-									<p><?php echo $language[$lang]['months'] ?> <span id="short_echo_days_val"></span></p>
+									<p><?php echo $language[$lang]['days'] ?> <span id="short_echo_days_val"></span></p>
 
 									<!--<input name="sloanTerms" type="range" min="10" max="30" value="10" class="slider" id="short_range_days">-->
 									<div class="slider_container">

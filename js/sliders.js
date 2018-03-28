@@ -50,16 +50,16 @@
         let html = 
         `
         <div class="slider_wrap">
+            <div class="click_control decrease">-</div>
             <div class="slider_controls">
-                <div class="click_control decrease">-</div>
                 <div id="${this.name}_track" class="slider_track">
                     <div id="${this.name}_handle" class="slider_handle"></div>
                     <div style="${this.side}:0;" id="${this.name}_track_cover" class="track_cover"></div>
                     <div class="pos_values" id="${this.name}_pos_values"></div>
                 </div>
-                <div class="click_control increase">+</div>
             </div>
             <input type="hidden" name="${this.name}" id="${this.name}_input" value="">
+            <div class="click_control increase">+</div>
         <div>
         `;
         this.dom.insertAdjacentHTML('afterbegin', html);
@@ -131,10 +131,11 @@
             
         });
         */
-        //TOUCH CONTROLS
-            let hammertime = new Hammer(this.dom);
+        //TOUCH CONTROLS\
+        console.log(that.dom.querySelectorAll(".slider_controls"))
+            let hammertime = new Hammer(that.dom.querySelectorAll(".slider_controls")[0]);
             hammertime.on('pan tap panstart panend', function(ev) {
-                console.log(ev);
+              //  console.log(ev);
                if (ev.type=='panstart') {
                 that.focus = true
                 that.domWidth = parseInt(window.getComputedStyle(that.dom).width)
@@ -151,17 +152,27 @@
             });
 
         //CLICK CONTROLS
-        //console.log(this.dom.querySelectorAll(".increase"))
+        console.log(this.dom.querySelectorAll(".increase"))
+
         this.dom.querySelectorAll(".increase")[0].onclick = function(){
+            console.log('aaa')
             if (that.value<that.max) {
+                console.log( that.value, that.step)
                 that.value += that.step
+                console.log( that.value)
+
                 responce() 
             }
             
         }
         this.dom.querySelectorAll(".decrease")[0].onclick = function(){
             if (that.value>that.min) {
+                console.log( that.value, that.step)
                 that.value -= that.step
+
+                console.log( that.value)
+
+
                 responce() 
             }
         }
@@ -173,7 +184,7 @@
 
     start_val(val){
         if (val<=this.max&&val>=this.min) {
-            this.value = val
+            this.value = parseInt(val)
             let w = ((this.value-this.min)/(this.max-this.min))*parseInt(this.domWidth)
             //console.log(this.value,this.min,this.max-this.min,parseInt(this.domWidth))
                 document.getElementById(this.name+'_handle').style.left = (w - parseInt(window.getComputedStyle(document.getElementById(this.name+'_handle')).width)/2)/parseInt(this.domWidth) * 100 + "%"//((that.value-that.min)/(that.max-that.min))*that.domWidth-10

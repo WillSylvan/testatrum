@@ -51,7 +51,7 @@ $(document).ready(function() {
         //////////////////////////////////////////
 
         // Creating some variables, such as first form to show, array for fully filled form.
-        var currentForm = 3;
+        var currentForm = 1;
         $("#form-" + currentForm).show();
         var allDataForm = [],
           declaredAdress = [],
@@ -190,8 +190,22 @@ $(document).ready(function() {
              // window.location = 'sakums.php'
             }else{
               console.log(a.errorMessage)
-              console.log(document.getElementById('error_mesage'))
+              console.log(a.errorMessage.substring(0,30))
               document.getElementById('error_mesage').innerHTML = a.errorMessage
+
+              if (a.errorMessage.substring(0,31)=='CONTENT_REG_IDENTITYCODEINVALID') {
+                prevStep()
+                prevStep()
+
+                document.getElementById('error_mesage').innerHTML = age_error // age_error is defined ar registration.php 
+
+              }
+              // switch(a.errorMessage){
+              //   case 'CONTENT_REG_IDENTITYCODEINVALID':
+              //     prevStep()
+              //     prevStep()
+              //     break;
+              // }
             }
           };
 
@@ -249,3 +263,4 @@ $(document).ready(function() {
         $(document).on('submit', nextStep); $(".izvelne").click(prevStep);
 
       });
+

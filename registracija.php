@@ -11,11 +11,13 @@
   <link rel="stylesheet" type="text/css" href="style/style.css">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title></title>
+  <script type="text/javascript">
+    var age_error = '<?php echo $language[$lang]['age_error']; ?>'
+  </script>
   <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="js/registration.js"></script>
   <script type="text/javascript" src="js/jquery.mask.js"></script>
   <script type="text/javascript" src="js/jquery.form-validator.min.js"></script>
-
   
 
 

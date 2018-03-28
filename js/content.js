@@ -1,4 +1,8 @@
 /*COLOR CHANGE*/
+                console.log(sessionStorage.short_loan_term)
+
+               
+
 
 function pinkColor(){
     if ($('body').width() >= 900) {
@@ -37,10 +41,10 @@ function violetColor(){
 //FORM SETUP
     function save_loan_local(type,principal,term,last_payment, total){
         
-        sessionStorage[type+'_loan_principal'] = principal
-        sessionStorage[type+'_loan_term'] = term
-        sessionStorage[type+'_loan_total'] = total
-        sessionStorage[type+'_last_payment'] = last_payment
+        sessionStorage[type+'_loan_principal'] = parseInt(principal)
+        sessionStorage[type+'_loan_term'] = parseInt(term)
+        sessionStorage[type+'_loan_total'] = parseInt(total)
+        sessionStorage[type+'_last_payment'] = parseInt(last_payment)
         //console.log(term,sessionStorage[type+'_loan_term'])
         //console.log(principal,sessionStorage[type+'_loan_principal'])
 
@@ -62,13 +66,15 @@ function violetColor(){
 
 var repeated_loan = {short:document.getElementById("short_repeated_loan"),long:document.getElementById("long_repeated_loan")}
 var  short_money_slider = {value:100}
-var  short_days_slider = {value:11}
+var  short_days_slider = {}
+        short_days_slider.value = sessionStorage.short_loan_term!='undefined' && sessionStorage.short_loan_term!=null ? sessionStorage.short_loan_term : 15
 var  long_money_slider = {value:200}
-var  long_days_slider = {value:5}
+var  long_days_slider = {}
+    long_days_slider.value = sessionStorage.long_loan_term!='undefined' && sessionStorage.long_loan_term!=null ? sessionStorage.long_loan_term : 4
 
 caulculations = {long:'',short:''}
 calc_data_long = sessionStorage.accessToken != null && sessionStorage.accessToken != "undefined" && sessionStorage.accessToken != 0 ?  {'type':'long','accessToken':sessionStorage.accessToken} :{'type':'long'} 
-console.log(calc_data_long)
+//console.log(calc_data_long)
 
 
 
@@ -109,10 +115,21 @@ $(document).ready(function(){
 
         function set_up_sliders(){
             //constructor(dom,name,min,max,step,brake,output,side,values,callback)
+            
             let short_money_max = caulculations.short.shortLoanCalculator.amounts[caulculations.short.shortLoanCalculator.amounts.length-1].amount
             let long_money_max = caulculations.long.longLoanCalculator.amounts[caulculations.long.longLoanCalculator.amounts.length-1].amount
+
+            if (sessionStorage.short_loan_principal>short_money_max) {
+                sessionStorage.short_loan_principal = short_money_max
+            }
+            if (sessionStorage.long_loan_principal>long_money_max) {
+                sessionStorage.long_loan_principal = long_money_max
+            }
+            
+                        
             let long_values = long_money_max<=425?[100,200,300,long_money_max]:[100,300,500,750,1000]
-            short_money_slider = new slider('short_range_money',0,50,short_money_max,5,300,'short_echo_money_val','right',[50,100,200,300,400,500],function(response,mu){
+
+            short_money_slider = new slider('short_range_money',0,50,short_money_max,5,300,'short_echo_money_val','right',[50,200,300,400,500],function(response,mu){
 
                     document.getElementById('short_echo_money_val').innerHTML = short_money_slider.value + " EUR" 
                     if (response>300) {
@@ -126,8 +143,10 @@ $(document).ready(function(){
                     }
                 })
 
+                
                 start_short_principal = sessionStorage.short_loan_principal!='undefined' && sessionStorage.short_loan_principal!=null ? sessionStorage.short_loan_principal : 200 
                 short_money_slider.start_val(start_short_principal)
+
              
         
                 short_days_slider = new slider('short_range_days',1,10,30,1,0,'short_term_display','right',[10,15,20,25,30],function(response,mu){
@@ -137,7 +156,11 @@ $(document).ready(function(){
                     }
                 })
 
+                //console.log(sessionStorage.short_loan_term)
                 start_short_days = sessionStorage.short_loan_term!='undefined' && sessionStorage.short_loan_term!=null ? sessionStorage.short_loan_term : 15 
+                //console.log(start_short_days+'<---------------SHORTM DAYS START')
+                //console.log(sessionStorage.short_loan_term)
+               
                 short_days_slider.start_val(start_short_days)
         
         
@@ -194,7 +217,7 @@ $(document).ready(function(){
     ajax_('GetCalculatorInformation',calc_data_short,function(a){
         caulculations.short = a
         sessionStorage.caulculations_short = JSON.stringify(a)
-        console.log(a)
+        //console.log(a)
           if (data_loaded) {
             set_up_sliders()
         }else{
@@ -212,8 +235,8 @@ if (sessionStorage.accessToken != null && sessionStorage.accessToken != "undefin
    let forms2 = document.querySelector('#second-form form')
    forms1.action = 'jauns_kredits.php'
    forms2.action = 'jauns_kredits.php'
-   console.log(forms2)
-   console.log(short_money_slider)
+  // console.log(forms2)
+  // console.log(short_money_slider)
 
 }
 
