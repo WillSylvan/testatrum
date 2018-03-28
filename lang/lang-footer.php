@@ -1,7 +1,7 @@
 <?php
 
     $language['lv']['how-much'] = 'Palīdzēt?'; 
-    $language['ru']['how-much'] = 'Помощь?'; 
+    $language['ru']['how-much'] = 'Нужна помощь?'; 
 
     $language['lv']['work-time1'] = 'P.-Pk. 08:00-22:00'; 
     $language['ru']['work-time1'] = 'Пон.-Пятн. 08:00-22:00'; 
@@ -11,7 +11,7 @@
 
 
     $language['lv']['your-question'] = 'Ierakstiet Jūsu jautājumu šeit'; 
-    $language['ru']['your-question'] = 'Напишите Ваш вопрос здесь';
+    $language['ru']['your-question'] = 'Введите свое сообщение';
 
 
 // ----------------------------------------------------------------------------->
