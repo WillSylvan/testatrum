@@ -343,7 +343,7 @@
 					</div>
 					<div class="saturs">
 						<h1><?php echo $language[$lang]['reg.nr'] ?></h1>
-						<p>40003366651</p>
+						<p>30003366651</p>
 					</div>
 					<div class="saturs">
 						<h1><?php echo $language[$lang]['kont.nr'] ?></h1>
@@ -370,7 +370,7 @@
 					</div>
 					<div class="saturs">
 						<h1><?php echo $language[$lang]['reg.nr'] ?></h1>
-						<p>40003366651</p>
+						<p>20003366651</p>
 					</div>
 					<div class="saturs">
 						<h1><?php echo $language[$lang]['kont.nr'] ?></h1>
@@ -1303,7 +1303,28 @@
 		<script type="text/javascript" src="js/content.js"></script>
 		<!-- <script type="text/javascript" src="js/loan_forms.js"></script> -->
 		<!--Start of Zendesk Chat Script-->
-		
+	
+	
+	<script>
+		function openCity(evt, cityName) {
+			var i, tabcontent, tablinks;
+			var cityN;
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			}
+			cityN = document.getElementsByClassName(cityName);
+			for (i = 0; i < cityN.length; i++) {
+				cityN[i].style.display = "block";
+			}
+			/*document.getElementsByClassName(cityName).style.display = "block";*/
+			evt.currentTarget.className += " active";
+		}
+	</script>
 	<script>
 		var acc = document.getElementsByClassName("accordion");
 		var i;
