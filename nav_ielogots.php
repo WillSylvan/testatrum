@@ -27,14 +27,14 @@
 				<div class="flex klients">
 					<div class="flex">
 						<p id="login_error" style="display: none;color: red"><?php echo $language[$lang]['eror'] ?></p>
-						<!-- <div class="flex izvelne">
-							<button class="div" style="background-color:grey"></button>
-							<p>Jauns klients</p>
+						<div class="flex izvelne">
+							<a href="registracija.php"><button class="div" style="background-color:grey"></button></a>
+							<a href="registracija.php"><p><?php echo $language[$lang]['jauns'] ?></p></a>
 						</div>
 						<div class="flex izvelne">
 							<button class="div" style="background-color:rgb(250, 142, 109)"></button>
-							<p>Esošs klients</p>
-						</div> -->
+							<p><?php echo $language[$lang]['esoss'] ?></p>
+						</div>
 					</div>
 				</div>
 				<div id="zero-form">
@@ -43,7 +43,7 @@
 				</div>
 				<div class="flex ielogoties-buttons">
 					<button class="turpinat" id="login_button"><?php echo $language[$lang]['login'] ?></button>
-					<a href="registracija.php"><button class="turpinat"><?php echo $language[$lang]['reg'] ?></button></a>
+					<!--<a href="registracija.php"><button class="turpinat"><?php echo $language[$lang]['reg'] ?></button></a>-->
 				</div>
 			</div>
 	

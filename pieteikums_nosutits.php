@@ -1,3 +1,7 @@
+<?php 
+	include 'lang/lang.php';
+
+?>
 <html>
     <head>     
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">	
@@ -15,7 +19,7 @@
 		<?php include 'assets/header.php'; ?>
 		<div id="page-form-content">
 			<div id="page-content-1">
-				<h2><span>Kredīta</span> pieteikums</h2>
+				<h2><span><?php echo $language[$lang]['cred-name3'] ?></span><?php echo $language[$lang]['cred-name4'] ?></h2>
 
                 <!--PIEKTA FORMA-->
 

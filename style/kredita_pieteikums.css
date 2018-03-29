@@ -224,7 +224,7 @@ input:focus:-ms-input-placeholder {
   padding: 0.5vw 2.5vw;
   border-radius: 1vw;
   cursor: pointer;
-  width: 30%;
+  width: auto;
 }
 
 .izvelne img {

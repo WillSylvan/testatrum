@@ -8,7 +8,7 @@
 	$language['ru']['longtremloan'] = '<span>Долгоскочный</span>  кредит';
 
 	$language['lv']['contractNr'] = 'Līguma nr.';
-	$language['ru']['contractNr'] = 'Договор нр.';
+	$language['ru']['contractNr'] = 'Номер договора';
 
 	$language['lv']['status'] = 'Statuss';
 	$language['ru']['status'] = 'Статус';
@@ -18,9 +18,9 @@
 
 	$language['lv']['comission'] = 'Komisija';
 	$language['ru']['comission'] = 'Комиссия';
-
-	$language['lv']['termDays'] = 'Termiņš dienās';
-	$language['ru']['termDays'] = 'Срок в днях';
+	
+	$language['lv']['percent'] = 'Procenti';
+	$language['ru']['percent'] = 'Проценты';
 
 	$language['lv']['termDays'] = 'Termiņš dienās';
 	$language['ru']['termDays'] = 'Срок в днях';
@@ -28,17 +28,20 @@
 	$language['lv']['termMonths'] = 'TERMIŅŠ MĒNEŠOS';
 	$language['ru']['termMonths'] = 'Срок в месяцах';
 
+	$language['lv']['term-per'] = 'Nokavējuma procenti';
+	$language['ru']['term-per'] = 'Проценты за опоздание';
+	
 	$language['lv']['payDate'] = 'Atmaksas datums';
-	$language['ru']['payDate'] = 'Дата возврата';
+	$language['ru']['payDate'] = 'Дата оплаты';
 
 	$language['lv']['summ'] = 'Kopējā summa';
 	$language['ru']['summ'] = 'Общая сумма';
 
-	$language['lv']['Rejected'] = 'Atraidīts';
-	$language['ru']['Rejected'] = 'Отклонён';
+	$language['lv']['Rejected'] = 'Atteikts';
+	$language['ru']['Rejected'] = 'Отказанный';
 
 	$language['lv']['Apmaksāts'] = 'Apmaksāts';
-	$language['ru']['Apmaksāts'] = 'Оплачен';
+	$language['ru']['Apmaksāts'] = 'Оплаченный';
 
 	$language['lv']['Current'] = 'Aktīvs';
 	$language['ru']['Current'] = 'Активный';

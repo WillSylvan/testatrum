@@ -304,29 +304,29 @@
 					<button class="tablinks" onclick="openCity(event, 'citadele')"><img src="img/bank/citadele.png"></button>
 					<button class="tablinks" onclick="openCity(event, 'dnb')"><img src="img/bank/dnb.png"></button>
 					<button class="tablinks" onclick="openCity(event, 'nordea')"><img src="img/bank/nordea.png"></button>
-					<button class="tablinks" onclick="openCity(event, 'another_b')"><h2>Cita banka</h2></button>
+					<button class="tablinks" onclick="openCity(event, 'another_b')"><h2><?php echo $language[$lang]['other-bank'] ?></h2></button>
 				</div>
 
 				<!-- SWEDBANKA -->
 				<div class="tabcontent swed" style="display: block;">
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['reg.nr'] ?></h1>
+						<h1><?php echo $language[$lang]['receiver'] ?></h1>
 						<p>LATEKO LĪZINGS AS </p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['kont.nr'] ?></h1>
+						<h1><?php echo $language[$lang]['reg.nr'] ?></h1>
 						<p>40003366651</p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['pay.reg'] ?></h1>
+						<h1><?php echo $language[$lang]['kont.nr'] ?></h1>
 						<p>LV67HABA0551033353134</p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['pay.cred.p-long'] ?></h1>
+						<h1><?php echo $language[$lang]['pay.reg'] ?></h1>
 						<p><?php echo $language[$lang]['accept.cred.payback'] ?></p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['pay.reg.p-long'] ?></h1>
+						<h1><?php echo $language[$lang]['pay.cred.p-long'] ?></h1>
 						<p><?php echo $language[$lang]['contract.nr.p-long'] ?></p>
 					</div>
 					<div class="saturs">
@@ -338,23 +338,23 @@
 				<!-- CITADELE -->
 				<div class="tabcontent citadele">
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['reg.nr'] ?></h1>
+						<h1><?php echo $language[$lang]['receiver'] ?></h1>
 						<p>LATEKO LĪZINGS AS </p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['kont.nr'] ?></h1>
+						<h1><?php echo $language[$lang]['reg.nr'] ?></h1>
 						<p>40003366651</p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['pay.reg'] ?></h1>
+						<h1><?php echo $language[$lang]['kont.nr'] ?></h1>
 						<p>LV67HABA0551033353134</p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['pay.cred.p-long'] ?></h1>
+						<h1><?php echo $language[$lang]['pay.reg'] ?></h1>
 						<p><?php echo $language[$lang]['accept.cred.payback'] ?></p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['pay.reg.p-long'] ?></h1>
+						<h1><?php echo $language[$lang]['pay.cred.p-long'] ?></h1>
 						<p><?php echo $language[$lang]['contract.nr.p-long'] ?></p>
 					</div>
 					<div class="saturs">
@@ -365,23 +365,23 @@
 
 				<div class="tabcontent dnb" style="display: none;">
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['reg.nr'] ?></h1>
+						<h1><?php echo $language[$lang]['receiver'] ?></h1>
 						<p>LATEKO LĪZINGS AS </p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['kont.nr'] ?></h1>
+						<h1><?php echo $language[$lang]['reg.nr'] ?></h1>
 						<p>40003366651</p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['pay.reg'] ?></h1>
+						<h1><?php echo $language[$lang]['kont.nr'] ?></h1>
 						<p>LV67HABA0551033353134</p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['pay.cred.p-long'] ?></h1>
+						<h1><?php echo $language[$lang]['pay.reg'] ?></h1>
 						<p><?php echo $language[$lang]['accept.cred.payback'] ?></p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['pay.reg.p-long'] ?></h1>
+						<h1><?php echo $language[$lang]['pay.cred.p-long'] ?></h1>
 						<p><?php echo $language[$lang]['contract.nr.p-long'] ?></p>
 					</div>
 					<div class="saturs">
@@ -392,23 +392,23 @@
 
 				<div class="tabcontent nordea" style="display: none;">
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['reg.nr'] ?></h1>
+						<h1><?php echo $language[$lang]['receiver'] ?></h1>
 						<p>LATEKO LĪZINGS AS </p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['kont.nr'] ?></h1>
+						<h1><?php echo $language[$lang]['reg.nr'] ?></h1>
 						<p>40003366651</p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['pay.reg'] ?></h1>
+						<h1><?php echo $language[$lang]['kont.nr'] ?></h1>
 						<p>LV67HABA0551033353134</p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['pay.cred.p-long'] ?></h1>
+						<h1><?php echo $language[$lang]['pay.reg'] ?></h1>
 						<p><?php echo $language[$lang]['accept.cred.payback'] ?></p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['pay.reg.p-long'] ?></h1>
+						<h1><?php echo $language[$lang]['pay.cred.p-long'] ?></h1>
 						<p><?php echo $language[$lang]['contract.nr.p-long'] ?></p>
 					</div>
 					<div class="saturs">
@@ -419,23 +419,23 @@
 
 				<div class="tabcontent another_b">
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['reg.nr'] ?></h1>
+						<h1><?php echo $language[$lang]['receiver'] ?></h1>
 						<p>LATEKO LĪZINGS AS </p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['kont.nr'] ?></h1>
+						<h1><?php echo $language[$lang]['reg.nr'] ?></h1>
 						<p>40003366651</p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['pay.reg'] ?></h1>
+						<h1><?php echo $language[$lang]['kont.nr'] ?></h1>
 						<p>LV67HABA0551033353134</p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['pay.cred.p-long'] ?></h1>
+						<h1><?php echo $language[$lang]['pay.reg'] ?></h1>
 						<p><?php echo $language[$lang]['accept.cred.payback'] ?></p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['pay.reg.p-long'] ?></h1>
+						<h1><?php echo $language[$lang]['pay.cred.p-long'] ?></h1>
 						<p><?php echo $language[$lang]['contract.nr.p-long'] ?></p>
 					</div>
 					<div class="saturs">
@@ -691,25 +691,25 @@
 					<button class="tablinks" onclick="openCity(event, 'citadele')"><img src="img/bank/citadele.png"></button>
 					<button class="tablinks" onclick="openCity(event, 'dnb')"><img src="img/bank/dnb.png"></button>
 					<button class="tablinks" onclick="openCity(event, 'nordea')"><img src="img/bank/nordea.png"></button>
-					<button class="tablinks" onclick="openCity(event, 'another_b')"><h2>Cita banka</h2></button>
+					<button class="tablinks" onclick="openCity(event, 'another_b')"><h2><?php echo $language[$lang]['other-bank'] ?></h2></button>
 				</div>
 
 				<!-- SWEDBANKA -->
 				<div class="tabcontent swed" style="display: block;">
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['reg.nr.oran'] ?></h1>
+						<h1><?php echo $language[$lang]['receiver'] ?></h1>
 						<p>LATEKO LĪZINGS AS </p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['kont.nr.oran'] ?></h1>
+						<h1><?php echo $language[$lang]['reg.nr.oran'] ?></h1>
 						<p>40003366651</p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['pay.reg.oran'] ?></h1>
+						<h1><?php echo $language[$lang]['kont.nr.oran'] ?></h1>
 						<p>LV67HABA0551033353134</p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['pay.cred.p-long.oran'] ?></h1>
+						<h1><?php echo $language[$lang]['pay.reg.oran'] ?></h1>
 						<p><?php echo $language[$lang]['accept.cred.payback.oran'] ?></p>
 					</div>
 					<div class="saturs">
@@ -725,19 +725,19 @@
 				<!-- CITADELE -->
 				<div class="tabcontent citadele">
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['reg.nr.oran'] ?></h1>
+						<h1><?php echo $language[$lang]['receiver'] ?></h1>
 						<p>LATEKO LĪZINGS AS </p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['kont.nr.oran'] ?></h1>
+						<h1><?php echo $language[$lang]['reg.nr.oran'] ?></h1>
 						<p>40003366651</p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['pay.reg.oran'] ?></h1>
+						<h1><?php echo $language[$lang]['kont.nr.oran'] ?></h1>
 						<p>LV67HABA0551033353134</p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['pay.cred.p-long.oran'] ?></h1>
+						<h1><?php echo $language[$lang]['pay.reg.oran'] ?></h1>
 						<p><?php echo $language[$lang]['accept.cred.payback.oran'] ?></p>
 					</div>
 					<div class="saturs">
@@ -752,19 +752,19 @@
 
 				<div class="tabcontent dnb" style="display: none;">
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['reg.nr.oran'] ?></h1>
+						<h1><?php echo $language[$lang]['receiver'] ?></h1>
 						<p>LATEKO LĪZINGS AS </p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['kont.nr.oran'] ?></h1>
+						<h1><?php echo $language[$lang]['reg.nr.oran'] ?></h1>
 						<p>40003366651</p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['pay.reg.oran'] ?></h1>
+						<h1><?php echo $language[$lang]['kont.nr.oran'] ?></h1>
 						<p>LV67HABA0551033353134</p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['pay.cred.p-long.oran'] ?></h1>
+						<h1><?php echo $language[$lang]['pay.reg.oran'] ?></h1>
 						<p><?php echo $language[$lang]['accept.cred.payback.oran'] ?></p>
 					</div>
 					<div class="saturs">
@@ -779,19 +779,19 @@
 
 				<div class="tabcontent nordea" style="display: none;">
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['reg.nr.oran'] ?></h1>
+						<h1><?php echo $language[$lang]['receiver'] ?></h1>
 						<p>LATEKO LĪZINGS AS </p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['kont.nr.oran'] ?></h1>
+						<h1><?php echo $language[$lang]['reg.nr.oran'] ?></h1>
 						<p>40003366651</p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['pay.reg.oran'] ?></h1>
+						<h1><?php echo $language[$lang]['kont.nr.oran'] ?></h1>
 						<p>LV67HABA0551033353134</p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['pay.cred.p-long.oran'] ?></h1>
+						<h1><?php echo $language[$lang]['pay.reg.oran'] ?></h1>
 						<p><?php echo $language[$lang]['accept.cred.payback.oran'] ?></p>
 					</div>
 					<div class="saturs">
@@ -806,19 +806,19 @@
 
 				<div class="tabcontent another_b">
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['reg.nr.oran'] ?></h1>
+						<h1><?php echo $language[$lang]['receiver'] ?></h1>
 						<p>LATEKO LĪZINGS AS </p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['kont.nr.oran'] ?></h1>
+						<h1><?php echo $language[$lang]['reg.nr.oran'] ?></h1>
 						<p>40003366651</p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['pay.reg.oran'] ?></h1>
+						<h1><?php echo $language[$lang]['kont.nr.oran'] ?></h1>
 						<p>LV67HABA0551033353134</p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['pay.cred.p-long.oran'] ?></h1>
+						<h1><?php echo $language[$lang]['pay.reg.oran'] ?></h1>
 						<p><?php echo $language[$lang]['accept.cred.payback.oran'] ?></p>
 					</div>
 					<div class="saturs">
@@ -1073,25 +1073,25 @@
 					<button class="tablinks" onclick="openCity(event, 'citadele')"><img src="img/bank/citadele.png"></button>
 					<button class="tablinks" onclick="openCity(event, 'dnb')"><img src="img/bank/dnb.png"></button>
 					<button class="tablinks" onclick="openCity(event, 'nordea')"><img src="img/bank/nordea.png"></button>
-					<button class="tablinks" onclick="openCity(event, 'another_b')"><h2>Cita banka</h2></button>
+					<button class="tablinks" onclick="openCity(event, 'another_b')"><h2><?php echo $language[$lang]['other-bank'] ?></h2></button>
 				</div>
 
 				<!-- SWEDBANKA -->
 				<div class="tabcontent swed" style="display: block;">
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['reg.nr.vio'] ?></h1>
+						<h1><?php echo $language[$lang]['receiver'] ?></h1>
 						<p>LATEKO LĪZINGS AS </p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['kont.nr.vio'] ?></h1>
+						<h1><?php echo $language[$lang]['reg.nr.vio'] ?></h1>
 						<p>40003366651</p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['pay.reg.vio'] ?></h1>
+						<h1><?php echo $language[$lang]['kont.nr.vio'] ?></h1>
 						<p>LV67HABA0551033353134</p>
 					</div>
 					<div class="saturs">
-						<h1><?php echo $language[$lang]['pay.cred.p-long.vio'] ?></h1>
+						<h1><?php echo $language[$lang]['pay.reg.vio'] ?></h1>
 						<p><?php echo $language[$lang]['accept.cred.payback.vio'] ?></p>
 					</div>
 					<div class="saturs">
@@ -1303,7 +1303,22 @@
 		<script type="text/javascript" src="js/content.js"></script>
 		<!-- <script type="text/javascript" src="js/loan_forms.js"></script> -->
 		<!--Start of Zendesk Chat Script-->
+		
+	<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
 
-
+		for (i = 0; i < acc.length; i++) {
+			acc[i].onclick = function() {
+				this.classList.toggle("active");
+				var panel = this.nextElementSibling;
+				if (panel.style.maxHeight){
+				panel.style.maxHeight = null;
+				} else {
+				panel.style.maxHeight = panel.scrollHeight + "px";
+				} 
+			}
+		}
+	</script>
 
 </html>

@@ -3,8 +3,8 @@
     $language['lv']['madata'] = 'Mani Dati';
     $language['ru']['madata'] = 'Мои данные';
 
-    $language['lv']['text'] = 'Ja vēlaties nomainīt savus datus, sazinieties ar mums ';
-    $language['ru']['text'] = 'Если хотите сменить данные, свяжитесь с нами';
+    $language['lv']['text'] = 'Ja vēlaties nomainīt savus datus, sazinieties ar mums.';
+    $language['ru']['text'] = 'Если Вы хотите изменить свои данные, свяжитесь с нами.';
 
     $language['lv']['firstName'] = 'Vārds';
     $language['ru']['firstName'] = 'Имя';

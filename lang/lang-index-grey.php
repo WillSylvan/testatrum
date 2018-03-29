@@ -69,7 +69,7 @@
     $language['ru']['1-grey-pic-txt-2'] = 'Не выходя из дома';
 
     $language['lv']['1-grey-pic-txt-3'] = 'Tikai 15 minūšu laikā ';
-    $language['ru']['1-grey-pic-txt-3'] = 'В течение 15 минут';
+    $language['ru']['1-grey-pic-txt-3'] = 'В течении 15 минут';
 
     $language['lv']['1-grey-pic-txt-4'] = 'Minimālas formalitātes';
     $language['ru']['1-grey-pic-txt-4'] = 'Минимум формальностей';
@@ -107,7 +107,7 @@
     $language['ru']['2-grey-pic-txt-4'] = 'Получите кредит';
 
         $language['lv']['2-grey-pic-txt-4.1'] = 'Lēmumu par kredīta piešķiršanu Jūs saņemsiet īsziņas veidā 15 minūšu laikā';
-        $language['ru']['2-grey-pic-txt-4.1'] = 'Решение о предоставлении кредита Вы получите в виде SMS в течение 15 минут';
+        $language['ru']['2-grey-pic-txt-4.1'] = 'Решение о предоставлении кредита Вы получите в виде SMS в течении 15 минут';
 
 
 // ----------------------------------------------------------------------------------------->
@@ -250,12 +250,12 @@
     $language['lv']['q3'] = 'Kāda kredīta summa man ir pieejama?';
     $language['ru']['q3'] = 'Какая сумма кредита мне доступна?';
 
-        $language['lv']['a3'] = '- pirmajā reizē Jums ir pieejama kredīta summa līdz EUR 425.<b>
-            - otrajā reizē Jums ir pieejama kredīta summa līdz EUR 750.<b>
+        $language['lv']['a3'] = '- pirmajā reizē Jums ir pieejama kredīta summa līdz EUR 425.<br>
+            - otrajā reizē Jums ir pieejama kredīta summa līdz EUR 750.<br>
             - trešajā reizē Jums ir pieejama kredīta summa līdz EUR 1000.';
 
-        $language['ru']['a3'] = '- в первый раз Вам доступна сумма кредита до EUR 425.<b>
-            - во второй раз Вам доступна сумма кредита до EUR 750.<b>
+        $language['ru']['a3'] = '- в первый раз Вам доступна сумма кредита до EUR 425.<br>
+            - во второй раз Вам доступна сумма кредита до EUR 750.<br>
             - в третий раз Вам доступна сумма кредита до EUR 1000.';
 
 
@@ -264,7 +264,7 @@
 
         $language['lv']['a4'] = 'Atbildi par kredīta piešķiršanu Jūs saņemsiet 15 minūšu laikā no reģistrācijas pabeigšanas brīža.';
 
-        $language['ru']['a4'] = 'Ответ на кредитную заявку Вы получите в течение 15 минут с момента завершения регистрации.';
+        $language['ru']['a4'] = 'Ответ на кредитную заявку Вы получите в течении 15 минут с момента завершения регистрации.';
 
 
     $language['lv']['q5'] = 'Cik ātri es saņemšu naudu savā bankas kontā?';
@@ -272,7 +272,7 @@
 
         $language['lv']['a5'] = 'Ja Jums ir bankas konts Swedbank, Citadele, DNB banka vai Nordea Bank AB, Jūs saņemsiet naudu 10-15 minūšu laikā. Ja Jums ir konts citā bankā, naudas saņemšana var ilgt 1-3 dienas.';
 
-        $language['ru']['a5'] = 'Если Ваш счет находится в Swedbank, Citadele, DNB banka или Nordea Bank AB, Вы получите деньги в течение 10-15 минут. Если Ваш счет находится в другом банке, перевод денег может занять 1-3 дня.';
+        $language['ru']['a5'] = 'Если Ваш счет находится в Swedbank, Citadele, DNB banka или Nordea Bank AB, Вы получите деньги в течении 10-15 минут. Если Ваш счет находится в другом банке, перевод денег может занять 1-3 дня.';
 
 
     $language['lv']['q6'] = 'Vai ir iespējams saņemt aizdevumu naktī vai brīvdienās?';
@@ -371,5 +371,11 @@
 
     $language['lv']['contacts'] = 'Kontakti';
     $language['ru']['contacts'] = 'Контакты';
+
+
+//------------------------------------------------------------------------>
+	
+	$language['lv']['other-bank'] = 'Cita banka';
+    $language['ru']['other-bank'] = 'Другой банк';
 
 ?>

@@ -86,7 +86,7 @@
 						<div class="statuss"><h1><?php echo $language[$lang]['status'] ?></h1></div>
 						<div class="money"><h1><?php echo $language[$lang]['loan'] ?></h1></div>
 						<div class="money komisija"><h1><?php echo $language[$lang]['comission'] ?></h1></div>
-						<div class="dienu-skaits"><h1><?php echo $language[$lang]['termDays'] ?></h1></div>
+						<div class="dienu-skaits"><h1><?php echo $language[$lang]['term-per'] ?></h1></div>
 						<div><h1><?php echo $language[$lang]['payDate'] ?></h1></div>
 						<div class="kopa-atm"><h1><?php echo $language[$lang]['summ'] ?></h1></div>
 					</div>
@@ -157,8 +157,8 @@
 						<div><h1><?php echo $language[$lang]['contractNr'] ?></h1></div>
 						<div class="statuss"><h1><?php echo $language[$lang]['status'] ?></h1></div>
 						<div class="money"><h1><?php echo $language[$lang]['loan'] ?></h1></div>
-						<div class="money komisija"><h1><?php echo $language[$lang]['comission'] ?></h1></div>
-						<div class="dienu-skaits"><h1><?php echo $language[$lang]['termMonths'] ?></h1></div>
+						<div class="money komisija"><h1><?php echo $language[$lang]['percent'] ?></h1></div>
+						<div class="dienu-skaits"><h1><?php echo $language[$lang]['term-per'] ?></h1></div>
 						<div><h1><?php echo $language[$lang]['payDate'] ?></h1></div>
 						<div class="kopa-atm"><h1><?php echo $language[$lang]['summ'] ?></h1></div>
 					</div>

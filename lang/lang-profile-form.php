@@ -10,7 +10,7 @@
     $language['ru']['my-data'] = 'Мои данные'; 
 
     $language['lv']['cha-pass'] = 'Mainīt paroli';
-    $language['ru']['cha-pass'] = 'Сменить пароль';
+    $language['ru']['cha-pass'] = 'Поменять пароль';
 
     $language['lv']['new-credit'] = 'Jauns kredīts';
     $language['ru']['new-credit'] = 'Новый кредит';

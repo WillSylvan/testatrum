@@ -68,7 +68,7 @@
     $language['ru']['1-oran-pic-txt-2'] = 'Не выходя из дома';
 
     $language['lv']['1-oran-pic-txt-3'] = 'Tikai 15 minūšu laikā ';
-    $language['ru']['1-oran-pic-txt-3'] = 'В течение 15 минут';
+    $language['ru']['1-oran-pic-txt-3'] = 'В течении 15 минут';
 
     $language['lv']['1-oran-pic-txt-4'] = 'Minimālas formalitātes';
     $language['ru']['1-oran-pic-txt-4'] = 'Минимум формальностей';
@@ -110,7 +110,7 @@
     $language['ru']['2-oran-pic-txt-4'] = 'Получите кредит';
 
         $language['lv']['2-oran-pic-txt-4.1'] = 'Lēmumu par kredīta piešķiršanu Jūs saņemsiet īsziņas veidā 15 minūšu laikā';
-        $language['ru']['2-oran-pic-txt-4.1'] = 'Решение о предоставлении кредита Вы получите в виде SMS в течение 15 минут';
+        $language['ru']['2-oran-pic-txt-4.1'] = 'Решение о предоставлении кредита Вы получите в виде SMS в течении 15 минут';
 
 
 // ------------------------------------------------------------------------------------------>
@@ -124,7 +124,7 @@
     // $language['ru']['2-oran-pic-txt-2'] = 'Не выходя из дома';
 
     // $language['lv']['2-oran-pic-txt-3'] = 'Tikai 15 minūšu laikā ';
-    // $language['ru']['2-oran-pic-txt-3'] = 'В течение 15 минут';
+    // $language['ru']['2-oran-pic-txt-3'] = 'В течении 15 минут';
 
     // $language['lv']['2-oran-pic-txt-4'] = 'Minimālas formalitātes';
     // $language['ru']['2-oran-pic-txt-4'] = 'Минимум формальностей';
@@ -164,8 +164,8 @@
     $language['lv']['call.oran'] = 'Zvanīt';
     $language['ru']['call.oran'] = 'Вызов';
 
-    $language['lv']['call-to-us.oran'] = 'Piezvaniet mums: ';
-    $language['ru']['call-to-us.oran'] = 'Позвоните нам: ';
+    $language['lv']['call-to-us.oran'] = 'Piezvaniet mums: <br> 80700700 ';
+    $language['ru']['call-to-us.oran'] = 'Позвоните нам: <br> 80700700';
 
 // --------------------------------------------------------------------------------------------->
                             //  ORANGE
@@ -286,7 +286,7 @@
 
         $language['lv']['oran.a4'] = 'Atbildi par kredīta piešķiršanu Jūs saņemsiet 15 minūšu laikā no reģistrācijas pabeigšanas brīža.';
 
-        $language['ru']['oran.a4'] = 'Ответ на кредитную заявку Вы получите в течение 15 минут с момента завершения регистрации.';
+        $language['ru']['oran.a4'] = 'Ответ на кредитную заявку Вы получите в течении 15 минут с момента завершения регистрации.';
 
 
     $language['lv']['oran.q5'] = 'Cik ātri es saņemšu naudu savā bankas kontā?';
@@ -294,7 +294,7 @@
 
         $language['lv']['oran.a5'] = 'Ja Jums ir bankas konts Swedbank, Citadele, DNB banka vai Nordea Bank AB, Jūs saņemsiet naudu 10-15 minūšu laikā. Ja Jums ir konts citā bankā, naudas saņemšana var ilgt 1-3 dienas.';
 
-        $language['ru']['oran.a5'] = 'Если Ваш счет находится в Swedbank, Citadele, DNB banka или Nordea Bank AB, Вы получите деньги в течение 10-15 минут. Если Ваш счет находится в другом банке, перевод денег может занять 1-3 дня.';
+        $language['ru']['oran.a5'] = 'Если Ваш счет находится в Swedbank, Citadele, DNB banka или Nordea Bank AB, Вы получите деньги в течении 10-15 минут. Если Ваш счет находится в другом банке, перевод денег может занять 1-3 дня.';
 
 
     $language['lv']['oran.q6'] = 'Vai ir iespējams saņemt aizdevumu naktī vai brīvdienās?';

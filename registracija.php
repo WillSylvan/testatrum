@@ -47,7 +47,7 @@
       <?php include "assets/kredits.php"?>
     </div>
     <div id="page-content-1">
-      <h2><span><?php echo $language[$lang]['cred-name1'] ?></span><?php echo $language[$lang]['cred-name2'] ?></h2>
+      <h2><span><?php echo $language[$lang]['cred-name3'] ?></span><?php echo $language[$lang]['cred-name4'] ?></h2>
       <p style="font-weight: 600; color: rgb(240,10,10)" id="error_mesage"></p>
 
       <!--PIRMA FORMA-->

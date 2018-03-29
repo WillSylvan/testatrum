@@ -1,5 +1,11 @@
 <?php 
  
+	$language['lv']['cred-name3'] = 'Kredīta ';
+    $language['lv']['cred-name4'] = 'pieteikums';
+
+    $language['ru']['cred-name3'] = 'Заявка на ';
+    $language['ru']['cred-name4'] = 'кредит';
+ 
     $language['lv']['how-much'] = 'Cik  vēlaties aizņemties?'; 
     $language['ru']['how-much'] = 'Сколько хотите занять?'; 
 
@@ -99,11 +105,11 @@
     $language['lv']['adr'] = 'adrese';
     $language['ru']['adr'] = 'адрес';
 
-    $language['lv']['fakt'] = 'Faktiskā&#160adrese';
-    $language['ru']['fakt'] = 'Фактический&#160адрес';
+    $language['lv']['fakt'] = 'Faktiskā&#160';
+    $language['ru']['fakt'] = 'Фактический&#160';
 
-    $language['lv']['dekl'] = 'Deklarētā&#160adrese';
-    $language['ru']['dekl'] = 'Декларированный&#160адрес';
+    $language['lv']['dekl'] = 'Deklarētā&#160';
+    $language['ru']['dekl'] = 'Декларированный&#160';
 
     $language['lv']['street'] = 'Iela';
     $language['ru']['street'] = 'Улица';
@@ -115,7 +121,7 @@
     $language['ru']['street'] = 'Улица';
 
     $language['lv']['house-nr'] = 'Mājas&#160numurs';
-    $language['ru']['house-nr'] = 'Номер дома';
+    $language['ru']['house-nr'] = 'Номер&#160дома';
 
     $language['lv']['flat-nr'] = 'Dzīvokļa&#160numurs';
     $language['ru']['flat-nr'] = 'Номер&#160квартиры';

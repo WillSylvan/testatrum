@@ -68,7 +68,7 @@
     $language['ru']['1-vio-pic-txt-3'] = 'Срок оплаты 3-12 месяцев';
 
     $language['lv']['1-vio-pic-txt-4'] = 'Tikai 15 minūšu laikā';
-    $language['ru']['1-vio-pic-txt-4'] = 'В течение 15 минут';
+    $language['ru']['1-vio-pic-txt-4'] = 'В течении 15 минут';
 
 
 // ----------------------------------------------------------------------------------------->
@@ -108,7 +108,7 @@
     $language['ru']['2-vio-pic-txt-4'] = 'Получите кредит';
 
         $language['lv']['2-vio-pic-txt-4.1'] = 'Lēmumu par kredīta piešķiršanu Jūs saņemsiet īsziņas veidā 15 minūšu laikā';
-        $language['ru']['2-vio-pic-txt-4.1'] = 'Решение о предоставлении кредита Вы получите в виде SMS в течение 15 минут';
+        $language['ru']['2-vio-pic-txt-4.1'] = 'Решение о предоставлении кредита Вы получите в виде SMS в течении 15 минут';
 
 
 
@@ -279,7 +279,7 @@
 
         $language['lv']['viol.a5'] = 'Atbildi par kredīta piešķiršanu Jūs saņemsiet 15 minūšu laikā no reģistrācijas pabeigšanas brīža.';
 
-        $language['ru']['viol.a5'] = 'Ответ на кредитную заявку Вы получите в течение 15 минут с момента завершения регистрации.';
+        $language['ru']['viol.a5'] = 'Ответ на кредитную заявку Вы получите в течении 15 минут с момента завершения регистрации.';
 
 
     $language['lv']['viol.q6'] = 'Cik ātri es saņemšu naudu savā bankas kontā?';
@@ -287,7 +287,7 @@
 
         $language['lv']['viol.a6'] = 'Ja Jums ir bankas konts Swedbank, Citadele, DNB banka vai Nordea Bank AB, Jūs saņemsiet naudu 10-15 minūšu laikā. <br> Ja Jums ir konts citā bankā, naudas saņemšana var ilgt 1-3 dienas.';
 
-        $language['ru']['viol.a6'] = 'Если Ваш счет находится в Swedbank, Citadele, DNB banka или Nordea Bank AB, Вы получите деньги в течение 10-15 минут. <br> Если Ваш счет находится в другом банке, перевод денег может занять 1-3 дня.';
+        $language['ru']['viol.a6'] = 'Если Ваш счет находится в Swedbank, Citadele, DNB banka или Nordea Bank AB, Вы получите деньги в течении 10-15 минут. <br> Если Ваш счет находится в другом банке, перевод денег может занять 1-3 дня.';
 
 
     $language['lv']['viol.q7'] = 'Vai ir iespējams saņemt aizdevumu naktī vai brīvdienās?';
@@ -336,7 +336,7 @@
         $language['lv']['there'] = 'ŠEIT';
 
         $language['ru']['viol.a10'] = 'Для смены номера банковского счета Вам необходимо перечислить EUR 0,01 со своего нового счета, <br> в цели платежа указав: "Bankas konta maiņa". <br>
-            Необходимая информация для произведения платежей';
+            Необходимая информация для произведения платежей ЗДЕСЬ';
 
         $language['ru']['there'] = 'ЗДЕСЬ';
 

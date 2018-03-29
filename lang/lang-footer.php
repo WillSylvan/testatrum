@@ -4,10 +4,10 @@
     $language['ru']['how-much'] = 'Нужна помощь?'; 
 
     $language['lv']['work-time1'] = 'P.-Pk. 08:00-22:00'; 
-    $language['ru']['work-time1'] = 'Пон.-Пятн. 08:00-22:00'; 
+    $language['ru']['work-time1'] = 'Пн.-Пт. 08:00-22:00'; 
 
     $language['lv']['work-time2'] = 'S.-Sv. 10:00-20:00'; 
-    $language['ru']['work-time2'] = 'Суб.-Воскр. 10:00-20:00';
+    $language['ru']['work-time2'] = 'Сб.-Вс. 10:00-20:00';
 
 
     $language['lv']['your-question'] = 'Ierakstiet Jūsu jautājumu šeit'; 

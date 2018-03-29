@@ -7,17 +7,6 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
 		<title></title>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
-
-		<!--DEMO DEMO DEMO DEMO DEMO-->
-		<script>
-		$(document).ready(function(){
-			// $("#passw").click(function () {
-			// 	$("#change-pass-2").css("display","block");
-			// 	$("#change-pass").css("display","none");
-			// });
-		});
-		</script>
-		<!--DEMO DEMO DEMO DEMO DEMO-->
    </head>
 
 	<body>
