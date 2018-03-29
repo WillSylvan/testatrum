@@ -158,8 +158,8 @@
     $language['ru']['log-in-my-profil.oran'] = 'Войдите в свой профиль';
 
 
-    $language['lv']['apply-phone.oran'] = 'Piesakiet kredītu pa telefonu!';
-    $language['ru']['apply-phone.oran'] = 'Оформите заявку по телефону!';
+    $language['lv']['apply-phone.oran'] = 'Piesakiet kredītu pa telefonu';
+    $language['ru']['apply-phone.oran'] = 'Оформите заявку по телефону';
 
     $language['lv']['call.oran'] = 'Zvanīt';
     $language['ru']['call.oran'] = 'Вызов';

@@ -387,11 +387,12 @@ body{
     font-size: 0.9vw;
 	width: 50%;
 	padding: 0.5vw;
+	
 }
 .saturs p{
 	margin: 0;
     font-size: 0.9vw;
-    text-transform: uppercase;
+    
     color: grey;
 	width: 50%;
 	padding: 0.5vw;

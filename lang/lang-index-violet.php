@@ -120,7 +120,7 @@
     $language['ru']['re-ply-cred.vio'] = 'Повторный кредит';
 
 
-    $language['lv']['apply.vio'] = 'Piesakiet kredītu internetā!';
+    $language['lv']['apply.vio'] = 'Piesakiet kredītu internetā';
     $language['ru']['apply.vio'] = 'Оформите заявку в интернете';
 
     $language['lv']['get-cred.vio'] = 'Saņemiet kredītu';
@@ -171,8 +171,8 @@
     $language['ru']['log-in-my-profil.vio'] = 'Войдите в свой профиль';
 
 
-    $language['lv']['apply-phone.vio'] = 'Piesakiet kredītu pa telefonu!';
-    $language['ru']['apply-phone.vio'] = 'Оформите заявку по телефону!';
+    $language['lv']['apply-phone.vio'] = 'Piesakiet kredītu pa telefonu';
+    $language['ru']['apply-phone.vio'] = 'Оформите заявку по телефону';
 
     $language['lv']['call.vio'] = 'Zvanīt';
     $language['ru']['call.vio'] = 'Вызов';

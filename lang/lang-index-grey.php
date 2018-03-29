@@ -136,8 +136,8 @@
     $language['ru']['log-in-my-profil'] = 'Войдите в свой профиль';
 
 
-    $language['lv']['apply-phone'] = 'Piesakiet kredītu pa telefonu!';
-    $language['ru']['apply-phone'] = 'Оформите заявку по телефону!';
+    $language['lv']['apply-phone'] = 'Piesakiet kredītu pa telefonu';
+    $language['ru']['apply-phone'] = 'Оформите заявку по телефону';
 
     $language['lv']['call'] = 'Zvanīt';
     $language['ru']['call'] = 'Вызов';

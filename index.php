@@ -214,7 +214,7 @@
 					<div class="img-apply-credit"><img src="img/pink/atrum_pc.svg" alt="pc"></div>
 					<div class="apply">
 						<div><h1><?php echo $language[$lang]['apply'] ?></h1></div>
-						<div><button class="button_sanemt" id="f-button"><?php echo $language[$lang]['get-cred'] ?></button></div>
+						<!--<div><button class="button_sanemt" id="f-button"><?php echo $language[$lang]['get-cred'] ?></button></div>-->
 					</div>
 				</div>
 
@@ -243,7 +243,7 @@
 					<div class="img-apply-credit-2"><img id="violet-mob" src="img/pink/iphone.png" alt=""></div>
 					<div class="apply-2">
 						<div><h1><?php echo $language[$lang]['apply-phone'] ?></h1></div>
-						<div><button class="button_sanemt-2" id="s-button"><?php echo $language[$lang]['call'] ?></button></div>
+						<!--<div><button class="button_sanemt-2" id="s-button"><?php echo $language[$lang]['call'] ?></button></div>-->
 					</div>
 				</div>
 
@@ -343,7 +343,7 @@
 					</div>
 					<div class="saturs">
 						<h1><?php echo $language[$lang]['reg.nr'] ?></h1>
-						<p>30003366651</p>
+						<p>40003366651</p>
 					</div>
 					<div class="saturs">
 						<h1><?php echo $language[$lang]['kont.nr'] ?></h1>
@@ -370,7 +370,7 @@
 					</div>
 					<div class="saturs">
 						<h1><?php echo $language[$lang]['reg.nr'] ?></h1>
-						<p>20003366651</p>
+						<p>40003366651</p>
 					</div>
 					<div class="saturs">
 						<h1><?php echo $language[$lang]['kont.nr'] ?></h1>
@@ -599,7 +599,7 @@
 					<div class="img-apply-credit"><img src="img/pink/atrum_pc.svg" alt="pc"></div>
 					<div class="apply">
 						<div><h1><?php echo $language[$lang]['apply.oran'] ?></h1></div>
-						<div><button class="button_sanemt" id="f-button"><?php echo $language[$lang]['get-cred.oran'] ?></button></div>
+						<!--<div><button class="button_sanemt" id="f-button"><?php echo $language[$lang]['get-cred.oran'] ?></button></div>-->
 					</div>
 				</div>
 
@@ -630,7 +630,7 @@
 					<div class="img-apply-credit-2"><img id="violet-mob" src="img/pink/iphone.png" alt=""></div>
 					<div class="apply-2">
 						<div><h1><?php echo $language[$lang]['apply-phone.oran'] ?></h1></div>
-						<div><button class="button_sanemt-2" id="s-button"><?php echo $language[$lang]['call.oran'] ?></button></div>
+						<!--<div><button class="button_sanemt-2" id="s-button"><?php echo $language[$lang]['call.oran'] ?></button></div>-->
 					</div>
 				</div>
 
@@ -983,7 +983,7 @@
 					<div class="img-apply-credit"><img src="img/pink/atrum_pc.svg" alt="pc"></div>
 					<div class="apply">
 						<div><h1><?php echo $language[$lang]['apply.vio'] ?></h1></div>
-						<div><button class="button_sanemt" id="f-button"><?php echo $language[$lang]['get-cred.vio'] ?></button></div>
+						<!--<div><button class="button_sanemt" id="f-button"><?php echo $language[$lang]['get-cred.vio'] ?></button></div>-->
 					</div>
 				</div>
 
@@ -1012,7 +1012,7 @@
 					<div class="img-apply-credit-2"><img id="violet-mob" src="img/violet/tel-violet.png" alt=""></div>
 					<div class="apply-2">
 						<div><h1><?php echo $language[$lang]['apply-phone.vio'] ?></h1></div>
-						<div><button class="button_sanemt-2" id="s-button"><?php echo $language[$lang]['call.vio'] ?></button></div>
+						<!--<div><button class="button_sanemt-2" id="s-button"><?php echo $language[$lang]['call.vio'] ?></button></div>-->
 					</div>
 				</div>
 
@@ -1039,7 +1039,7 @@
 
 				<div id="icons_block_sec2">
 					<div class="icons_block_sec2 flex">
-						<div class="icon_border_sec2 b5">
+						<!--<div class="icon_border_sec2 b5">
 							<h3><?php echo $language[$lang]['how-prolong.vio'] ?></h3>
 							<p><?php echo $language[$lang]['how-prolong.vio-1.1'] ?></p>
 						</div>
@@ -1047,7 +1047,7 @@
 						<div class="icon_border_sec2 b6">
 							<h3><?php echo $language[$lang]['purpose-of-payment.vio'] ?></h3>
 							<p><?php echo $language[$lang]['purpose-of-payment.vio-1.1'] ?></p>
-						</div>
+						</div>-->
 
 						<div class="icon_border_sec2 b7">
 							<h3><?php echo $language[$lang]['credit-payback.vio'] ?></h3>
