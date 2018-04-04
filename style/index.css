@@ -9,14 +9,15 @@ body{
     display: -webkit-flex;
     display: flex;
 }
+
 #round-buttons{
 	display:none;
 }
 #grafiks{
-    position: absolute;
+    position:relative;
     
-    left: 0vw;
-    bottom: 2vw;
+    
+    top: 15px;
     padding: 0.2vw;
     border: 1px solid rgb(173,74,202) !important;
     background-image: none !important;
@@ -26,6 +27,7 @@ body{
     text-align: center;
     border-radius: 0.5vw;
     white-space: nowrap;
+    margin-top: 15px;
 }
 
 #content-grey{display:block}

@@ -29,7 +29,7 @@
           var xhr = createCORSRequest(method, url);
           xhr.onload = function(response) {
 
-          console.log(response.currentTarget.response)
+          //console.log(response.currentTarget.response)
 
            callback(JSON.parse(response.currentTarget.response))
           };

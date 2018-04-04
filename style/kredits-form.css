@@ -66,6 +66,72 @@
     font-weight: 700;
 	background-color: transparent;
 }
+.hidden{
+    display: none;
+}
+#table-grafiks-wrap{
+
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 300;
+    justify-content: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    flex-direction: column;
+}
+#table-grafiks {
+    background-color: #fff;
+    max-width: 900px;
+    min-width: 500px;
+    width: 50vw; 
+    max-height: 70vh;
+    overflow: scroll;
+    box-sizing: border-box;
+    padding: calc(15px + 2vw);
+}
+#table-grafiks h1 {
+    font-weight: 400;
+    font-size: calc(0.8vw + 8px)
+}
+#table-grafiks-wrap .controlls {
+    color: #fff;
+    max-width: 900px;
+    min-width: 500px;
+    width: 50vw;
+    position: relative;
+}
+.with-borders {
+    border: none !important;
+    border-bottom: solid 1px #ccc !important;
+    border-radius: 0 !important;
+}
+#close_table {
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-image: url(../img/close.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+#table-grafiks-wrap .cell{
+    width: 40%;
+
+}
+#table-grafiks-wrap .cell:nth-child(1){
+    width: 8%;
+    min-width: 15px;
+}
+
 @media screen and (max-width: 900px){
     #kredits-forma{
         display: none;

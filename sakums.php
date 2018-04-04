@@ -2,7 +2,7 @@
     <head>     
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">	
 		<link rel="stylesheet" type="text/css" href="style/index.css">
-		<link rel="stylesheet" type="text/css" href="style/kredita_pieteikums.css">
+		<!-- <link rel="stylesheet" type="text/css" href="style/kredita_pieteikums.css"> -->
 		<link rel="stylesheet" type="text/css" href="style/style.css">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
 		<title></title>
@@ -11,6 +11,7 @@
 		<script type="text/javascript" src="js/hammer.js"></script>
 		<script type="text/javascript" src="js/sliders.js"></script>
 		<script type="text/javascript" src="js/ajax.js"></script>
+		<link rel="stylesheet" type="text/css" href="style/kredits-form.css">
 		
 		<!--DEMO DEMO DEMO DEMO DEMO-->
 		<script>
@@ -43,122 +44,129 @@
 		
 			<div class="sadalas mani_krediti" id="main-content-credit-izvelne">
 				<div id="top-forms" class="flex">
-					<div class="form_ f1 unselectable" onclick='pinkColor()'>
-						<div id="first-form" class="flex" >
-							<form action="registracija.php" id="short_form" method="post">
+			<div class="form_ f1 unselectable" onclick='pinkColor()'>
+				<div id="first-form" class="flex" >
+					<form action="registracija.php" id="short_form" method="post">
 
-								<div class="short_range_form flex">
-									<div class="inputs" id="important">
-										<h1><?php echo $language[$lang]['short-time'] ?></h1>
-										<div id="short_echo_money_cont">
+						<div class="short_range_form flex">
+							<div class="inputs" id="important">
+								<h1><?php echo $language[$lang]['short-time'] ?></h1>
+								<h2><?php echo $language[$lang]['credit-head-short']; ?></h2>
+								<div id="short_echo_money_cont">
 
-											<h3><?php echo $language[$lang]['how-much'] ?></h3>
-											<p><?php echo $language[$lang]['credit'] ?><span id="short_echo_money_val"></span> <span class="repeated_loan" id="short_repeated_loan" style="display: none"><?php echo $language[$lang]['replaycredit'] ?></span></p>
+									<h3><?php echo $language[$lang]['how-much'] ?></h3>
+									<p><?php echo $language[$lang]['credit'] ?><span id="short_echo_money_val"></span> <span class="repeated_loan" id="short_repeated_loan" style="display: none"><?php echo $language[$lang]['replaycredit'] ?></span></p>
 
-											<!--<input type="range" name="stickmarks" step="5" min="50" max="500" value="250" class="slider" id="short_range_money">-->
-											<div class="slider_container">
-		                                        <div id="short_range_money"></div>
-		                                    </div>
+									<!--<input type="range" name="stickmarks" step="5" min="50" max="500" value="250" class="slider" id="short_range_money">-->
+									<div class="slider_container">
+                                        <div id="short_range_money"></div>
+                                    </div>
 
-										</div>
-
-										<div id="short_echo_days_cont">
-
-											<h3><?php echo $language[$lang]['how-long-time'] ?></h3>
-											<p><?php echo $language[$lang]['months'] ?> <span id="short_echo_days_val"></span></p>
-
-											<!--<input name="sloanTerms" type="range" min="10" max="30" value="10" class="slider" id="short_range_days">-->
-											<div class="slider_container">
-		                                        <div id="short_range_days"></div>
-		                                    </div>
-
-										</div>
-
-										<div class="flex formulas">
-											<div>
-												<h2><?php echo $language[$lang]['credit'] ?><span id="short_summa"></span></h2>
-												<h2><?php echo $language[$lang]['bilance'] ?><span id="short_kopa"></span></h2>
-											</div>
-											<div>
-												<h2><?php echo $language[$lang]['com'] ?><span id="short_komisija"></span></h2>
-												<h2><?php echo $language[$lang]['gpl'] ?><span id="short_gpl"></span></h2>
-											</div>
-										</div>
-									</div>
-
-									<div class="info_block">
-										<h5><?php echo $language[$lang]['pay-day'] ?><span class="pink" id="short_term_display"></span></h5>
-
-										<h4><?php echo $language[$lang]['pay-on-30-days'] ?><br><b><span id="extention_pay">22.20</span> <?php echo $language[$lang]['eur'] ?></b></h4>
-
-										<a href="jauzliek links" class="links"><?php echo $language[$lang]['stand.-info'] ?></a>
-										<input type="button" id="submit_short" value=<?php echo $language[$lang]['get-money'] ?> class="rose-button" onclick="creditInfo(1)">
-									</div>
 								</div>
 
-							</form>
-						</div>
-					</div>
+								<div id="short_echo_days_cont">
 
-					<div class="form_ f2 unselectable" onclick='violetColor()'>
-						<div id="second-form" class="flex" >
-							<form action="registracija.php" id="long_form" method="post">
+									<h3><?php echo $language[$lang]['how-long-time'] ?></h3>
+									<p><?php echo $language[$lang]['days'] ?> <span id="short_echo_days_val"></span></p>
 
-								<div class="long_range_form flex">
-									<div class="inputs" id="important2">
-										<h1><?php echo $language[$lang]['long-time'] ?></h1>
-										<div id="long_echo_money_cont">
+									<!--<input name="sloanTerms" type="range" min="10" max="30" value="10" class="slider" id="short_range_days">-->
+									<div class="slider_container">
+                                        <div id="short_range_days"></div>
+                                    </div>
 
-											<h3><?php echo $language[$lang]['how-much'] ?></h3>
-											<p><?php echo $language[$lang]['credit'] ?><span id="long_echo_money_val"></span> <span class="repeated_loan" id="long_repeated_loan" style="display: none"><?php echo $language[$lang]['replaycredit'] ?></span></p>
+								</div>
 
-											<!--<input type="range" name="btickmarks" step="5" min="100" max="1000" value="250" class="slider" id="long_range_money">-->
-											<div class="slider_container">
-		                                        <div id="long_range_money"></div>
-		                                    </div>
-										</div>
-
-										<div id="long_echo_days_cont">
-
-											<h3><?php echo $language[$lang]['how-long-time'] ?></h3>
-											<p><?php echo $language[$lang]['months'] ?><span id="long_echo_days_val"></span></p>
-
-											<!--<input name="bloanTerms" type="range" min="3" max="12" value="5" class="slider" id="long_range_days">-->
-											 <div class="slider_container">
-		                                        <div id="long_range_days"></div>
-		                                    </div>
-
-
-										</div>
-
-										<div class="flex formulas">
-											<div>
-												<h2><?php echo $language[$lang]['credit'] ?><span id="long_summa"></span></h2>
-												<h2><?php echo $language[$lang]['bilance'] ?><span id="long_kopa"></span></h2>
-											</div>
-											<div>
-												<h2><?php echo $language[$lang]['com'] ?><span id="long_komisija"></span></h2>
-												<!-- <h2><?php echo $language[$lang]['gpl'] ?><span id="long_gpl"></span></h2> -->
-											</div>
-										</div>
+								<div class="flex formulas">
+									<div>
+										<h2><?php echo $language[$lang]['credit'] ?><span id="short_summa"></span></h2>
+										<h2><?php echo $language[$lang]['bilance'] ?><span id="short_kopa"></span></h2>
 									</div>
-
-									<div class="info_block">
-										<!-- <h5><?php echo "first payment date"//$language[$lang]['pay-day'] ?><br>   <span class="violet" id="long_term_display">01.09.2018</span></h5> -->
-										<!-- <h5><?php echo $language[$lang]['pay-on-30-days'] ?><br> <span class="violet">158.15 <?php echo $language[$lang]['eur'] ?></span></h5> -->
-										<h5><?php echo $language[$lang]['first-pay-day'] ?><br>   <span id="long_term_display" class="violet">19.01.2018</span></h5>
-
-
-										<a href="jauzliek links" class="links"><?php echo $language[$lang]['stand.-info'] ?></a>
-										<a href="grafiks.php" id="grafiks"><?php echo $language[$lang]['pay-graphic'] ?></a>
-										<input type="button"  id="submit_long" value=<?php echo $language[$lang]['get-money'] ?> class="violet-button" onclick="creditInfo(2)">
-
+									<div>
+										<h2><?php echo $language[$lang]['com'] ?><span id="short_komisija"></span></h2>
+										<h2><?php echo $language[$lang]['gpl'] ?><span id="short_gpl"></span></h2>
 									</div>
 								</div>
-							</form>
-						</div>
-					</div>
+							</div>
 
+							<div class="info_block">
+								<h5><?php echo $language[$lang]['pay-day'] ?><span class="pink" id="short_term_display"></span></h5>
+
+								<h4><?php echo $language[$lang]['pay-on-30-days'] ?><br><b><span id="extention_pay">22.20</span> <?php echo $language[$lang]['eur'] ?></b></h4>
+
+								<a href="jauzliek links" class="links"><?php echo $language[$lang]['stand.-info'] ?></a>
+								<input type="button" id="submit_short" value=<?php echo $language[$lang]['get-money'] ?> class="rose-button" onclick="creditInfo(1)">
+							</div>
+						</div>
+
+					</form>
+				</div>
+			</div>
+
+			<div class="form_ f2 unselectable" onclick='violetColor()'>
+				<div id="second-form" class="flex" >
+					<form action="registracija.php" id="long_form" method="post">
+
+						<div class="long_range_form flex">
+							<div class="inputs" id="important2">
+								<h1><?php echo $language[$lang]['long-time'] ?></h1>
+								<h2><?php echo $language[$lang]['credit-head-long']; ?></h2>
+								<div id="long_echo_money_cont">
+
+									<h3><?php echo $language[$lang]['how-much'] ?></h3>
+									<p><?php echo $language[$lang]['credit'] ?><span id="long_echo_money_val"></span> <span class="repeated_loan" id="long_repeated_loan" style="display: none"><?php echo $language[$lang]['replaycredit'] ?></span></p>
+
+									<!--<input type="range" name="btickmarks" step="5" min="100" max="1000" value="250" class="slider" id="long_range_money">-->
+									<div class="slider_container">
+                                        <div id="long_range_money"></div>
+                                    </div>
+								</div>
+
+								<div id="long_echo_days_cont">
+
+									<h3><?php echo $language[$lang]['how-long-time'] ?></h3>
+									<p><?php echo $language[$lang]['months'] ?><span id="long_echo_days_val"></span></p>
+
+									<!--<input name="bloanTerms" type="range" min="3" max="12" value="5" class="slider" id="long_range_days">-->
+									 <div class="slider_container">
+                                        <div id="long_range_days"></div>
+                                    </div>
+
+
+								</div>
+
+								<div class="flex formulas">
+									<div>
+										<h2><?php echo $language[$lang]['credit'] ?><span id="long_summa"></span></h2>
+										<h2><?php echo $language[$lang]['pay-till'] ?><span id="long_kopa"></span></h2>
+									</div>
+									<div>
+										
+										<!-- <h2><?php echo $language[$lang]['gpl'] ?><span id="long_gpl"></span></h2> -->
+									</div>
+								</div>
+							</div>
+
+							<div class="info_block">
+								<!-- <h5><?php echo "first payment date"//$language[$lang]['pay-day'] ?><br>   <span class="violet" id="long_term_display">01.09.2018</span></h5> -->
+								<!-- <h5><?php echo $language[$lang]['pay-on-30-days'] ?><br> <span class="violet">158.15 <?php echo $language[$lang]['eur'] ?></span></h5> -->
+								<h5><?php echo $language[$lang]['first-pay-day'] ?><br>   <span id="long_term_display" class="violet">19.01.2018</span></h5>
+
+								<h5 id="">Ikmēneša maksājums<span id="monthly_pay"></span></h5>
+								<a href="jauzliek links" class="links"><?php echo $language[$lang]['stand.-info'] ?></a>
+								<a id="grafiks"><?php echo $language[$lang]['pay-graphic'] ?></a>
+								<input type="button"  id="submit_long" style="position:  relative; top: 1.9vw;" value=<?php echo $language[$lang]['get-money'] ?> class="violet-button" onclick="creditInfo(2)">
+
+							</div>
+						</div>
+					</form>
+				</div>
+			</div> 
+			<div id="table-grafiks-wrap" class="hidden">
+				<div class="controlls flex">
+					<div class="exit" id="close_table"></div>
+				</div>
+				<div id="table-grafiks"></div>
+			</div>
 		</div>
 
 			</div>
@@ -415,4 +423,42 @@
 		<?php include 'assets/footer.php'; ?>	
 	</body>
 	<script type="text/javascript" src="js/content.js"></script>
+	<script type="text/javascript">
+		 document.getElementById('grafiks').onclick = function(){
+
+    sessionStorage.request_loan = 'long';
+            let ajax_data = {'loanData':{"type":"long", 'principal':sessionStorage["long_loan_principal"], 'term':sessionStorage["long_loan_term"]}}
+                    ajax_('GetLoanPreview',ajax_data, function(a){
+                       	console.log(a)
+                       	//a = JSON.parse(a)
+
+
+                         let html = `<div class="flex">
+                                        <div class="cell"><h1><?php echo $language[$lang]['nr'] ?></h1></div>
+                                        <div class="pay-date cell"><h1><?php echo $language[$lang]['paymentDate'] ?></h1></div>
+                                        <div class="month-pay cell"><h1><?php echo $language[$lang]['paymentMonthly'] ?></h1></div>
+                                    </div>`
+
+
+
+                
+                    for (var i = 0; i < a.payments.length; i++) {
+                        html += `<div class="with-borders flex"><div class="cell"><h3>${(i+1)}</h3></div>
+                        <div class="cell"><p>${a.payments[i].date.split('T')[0]}</p></div>
+                        <div class="cell"><p>${a.payments[i].paymentTotal} EUR</p></div></div>`//"<li> datums: "+a.payments[i].date.split('T')[0]+" summa: "+a.payments[i].paymentTotal+" EUR</li> "
+                    }
+                    
+                 document.getElementById('table-grafiks').innerHTML = html
+                 document.getElementById('table-grafiks-wrap').classList.remove("hidden")
+                 document.getElementById('table-grafiks-wrap').classList.add("flex")
+
+                 
+                 document.getElementById('close_table').onclick = function(){
+                 	document.getElementById('table-grafiks-wrap').classList.add("hidden")
+                 	document.getElementById('table-grafiks-wrap').classList.remove("flex")
+                 }
+                 // document.getElementById('table-grafiks-wrap').style.display = '-webkit-flex';
+                })
+}
+	</script>
 </html>

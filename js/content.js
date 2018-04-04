@@ -8,8 +8,8 @@ function pinkColor(){
     if ($('body').width() >= 900) {
         $("#first-form").css({"background-image":"url(img/form3.png)","z-index":"200"});
         $("#second-form").css({"background-image":"none","z-index":"-1"});
-        $("#first-form").animate({"left":"4vw","zoom":"1","width":"120%","height":"105%","z-index":"2"},800);
-        $("#second-form").animate({"zoom":"0.8","right":"2.5vw","width":"100%","height":"100%","top":"3vw"},800);
+        $("#first-form").animate({"left":"4vw","zoom":"1","width":"120%","height":"105%","top":"0vw","z-index":"2"},800);
+        $("#second-form").animate({"zoom":"0.8","right":"2.5vw","width":"100%","height":"100%","top":"7vw"},800);
         $("#footer").css("background-image","url(img/pink/footer_background_istermina.jpg)");
         $("#important").css({"width":"60%","margin-left":"0"});
        // $("#important2").css("width","50%");
@@ -24,7 +24,7 @@ function violetColor(){
     if ($('body').width() >= 900) {
         $("#first-form").css({"background-image":"none","z-index":"-1"});
         $("#second-form").css({"background-image":"url(img/form4.png)","z-index":"200"});
-        $("#first-form").animate({"zoom":"0.8","z-index":"-1","left":"2.5vw","width":"100%","height":"100%"},800);
+        $("#first-form").animate({"zoom":"0.8","z-index":"-1","left":"2.5vw","width":"100%","height":"100%","top":"4.4vw"},800);
         $("#second-form").animate({"right":"16vw","zoom":"1","width":"120%","height":"125%","top":"0vw"},800);
        // $("#grafiks").css("bottom","12vw");
         $("#footer").css("background-image","url(img/violet/backgound-footer-violet.jpg)");
@@ -91,6 +91,11 @@ $(document).ready(function(){
         // January - 0, February - 1, etc.
     
         //console.log(mydate.toDateString());
+        for (var i = 0; i < parts.length; i++) {
+            if (parts[i].length<2) {
+                parts[i] = '0' + parts[i]
+            }
+        }
         return parts[2]+'.'+parts[1]+'.'+parts[0];
     }
 
@@ -266,40 +271,8 @@ document.getElementById('submit_long').onclick = function(){
 document.getElementById('submit_short').onclick = function(){
     sessionStorage.request_loan = 'short' 
     document.getElementById('short_form').submit()
-
 }
 
 
 
 
- document.getElementById('grafiks').onclick = function(){
-
-    sessionStorage.request_loan = 'long';
-            let ajax_data = {'loanData':{"type":"long", 'principal':sessionStorage["long_loan_principal"], 'term':sessionStorage["long_loan_term"]}}
-                    ajax_('GetLoanPreview',ajax_data, function(a){
-                        console.log(a)
-
-                         let html = `<div>
-                                        <div><h1><?php echo $language[$lang]['nr'] ?></h1></div>
-                                        <div class="pay-date"><h1><?php echo $language[$lang]['paymentDate'] ?></h1></div>
-                                        <div class="month-pay"><h1><?php echo $language[$lang]['paymentMonthly'] ?></h1></div>
-                                    </div>`
-
-
-
-                
-                    for (var i = 0; i < a.payments.length; i++) {
-                        html += `<div class="with-borders"><div><h3>${i}</h3></div>
-                        <div><p>${a.payments[i].date.split('T')[0]}</p></div>
-                        <div><p>${a.payments[i].paymentTotal} EUR</p></div></div>`//"<li> datums: "+a.payments[i].date.split('T')[0]+" summa: "+a.payments[i].paymentTotal+" EUR</li> "
-                    }
-                    
-                 document.getElementById('table-grafiks').innerHTML = html
-
-
-
-                })
-
-
-
-}

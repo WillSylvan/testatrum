@@ -1,5 +1,5 @@
 <?php 
-	$language['lv']['paymentGraf'] = 'Maksājuma grafiks';
+	$language['lv']['paymentGraf'] = 'Maksājumu grafiks';
 	$language['ru']['paymentGraf'] = 'График платежей';
 
 

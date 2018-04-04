@@ -3,6 +3,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="style/index.css">
 		<link rel="stylesheet" type="text/css" href="style/style.css">
+		<link rel="stylesheet" type="text/css" href="style/kredits-form.css">
 		<link rel="stylesheet" type="text/css" href="style/sliders.css">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title></title>
@@ -20,8 +21,52 @@
 		<?php include 'lang/lang-index-grey.php';?>
 		<?php include 'lang/lang-index-orange.php';?>
 		<?php include 'lang/lang-index-violet.php';?>
+		<?php include 'lang/lang-kredit-formas.php' ?>
 		 
 		<div class="header-background"></div>
+		<div id="go_up" class="">
+		</div>
+		<script type="text/javascript">
+			$(function(){
+
+				let visable = 0
+				let el =  document.getElementById('go_up')
+				$(window).scroll(function(){
+
+					b = $('html, body').scrollTop()
+					w = $(window).scrollTop()
+					let x  = 0 
+					if (w==0&&b==0) {
+						let x = 0
+					}else if (w!=0) {
+						x = w	
+					}else if(b!=0){
+						x = b
+					}else{
+						x = 0
+					}
+
+					console.log(x)
+
+					if (x>50) {
+						if (!visable) {
+							el.style.display = 'block';
+							visable = 1;
+						}
+					}else{
+						el.style.display = 'none';
+						visable = 0;
+					}
+
+				})	
+
+				el.onclick = function(){
+					$('html, body').scrollTop(0)
+					$(window).scrollTop(0)
+				}
+			})
+			
+		</script>
 		<!-- <div id="debug" style="position: fixed;z-index: 1000;width: 200px;height: 100px; background-color: white; top: 0;left: 0;"></div> -->
 		<div id="top-forms" class="flex">
 			<div class="form_ f1 unselectable" onclick='pinkColor()'>
@@ -31,6 +76,7 @@
 						<div class="short_range_form flex">
 							<div class="inputs" id="important">
 								<h1><?php echo $language[$lang]['short-time'] ?></h1>
+								<h2><?php echo $language[$lang]['credit-head-short']; ?></h2>
 								<div id="short_echo_money_cont">
 
 									<h3><?php echo $language[$lang]['how-much'] ?></h3>
@@ -88,6 +134,7 @@
 						<div class="long_range_form flex">
 							<div class="inputs" id="important2">
 								<h1><?php echo $language[$lang]['long-time'] ?></h1>
+								<h2><?php echo $language[$lang]['credit-head-long']; ?></h2>
 								<div id="long_echo_money_cont">
 
 									<h3><?php echo $language[$lang]['how-much'] ?></h3>
@@ -129,19 +176,24 @@
 								<!-- <h5><?php echo $language[$lang]['pay-on-30-days'] ?><br> <span class="violet">158.15 <?php echo $language[$lang]['eur'] ?></span></h5> -->
 								<h5><?php echo $language[$lang]['first-pay-day'] ?><br>   <span id="long_term_display" class="violet">19.01.2018</span></h5>
 
-								<h5 id="">Ikmēneša maksājums <span id="monthly_pay"></span></h5>
+								<h5 id="">Ikmēneša maksājums<span id="monthly_pay"></span></h5>
 								<a href="jauzliek links" class="links"><?php echo $language[$lang]['stand.-info'] ?></a>
 								<a id="grafiks"><?php echo $language[$lang]['pay-graphic'] ?></a>
-								<input type="button"  id="submit_long" value=<?php echo $language[$lang]['get-money'] ?> class="violet-button" onclick="creditInfo(2)">
+								<input type="button"  id="submit_long" style="position:  relative; top: 1.9vw;" value=<?php echo $language[$lang]['get-money'] ?> class="violet-button" onclick="creditInfo(2)">
 
 							</div>
 						</div>
 					</form>
 				</div>
+			</div> 
+			<div id="table-grafiks-wrap" class="hidden">
+				<div class="controlls flex">
+					<div class="exit" id="close_table"></div>
+				</div>
+				<div id="table-grafiks"></div>
 			</div>
-
 		</div>
-		<div id="table-grafiks"></div>
+		
 		<div id="round-buttons" class="flex">
 			<button id="butt1"></button>
 			<button id="butt2"></button>
@@ -1340,6 +1392,42 @@
 				} 
 			}
 		}
+	</script>
+	<script type="text/javascript">
+		 document.getElementById('grafiks').onclick = function(){
+
+    sessionStorage.request_loan = 'long';
+            let ajax_data = {'loanData':{"type":"long", 'principal':sessionStorage["long_loan_principal"], 'term':sessionStorage["long_loan_term"]}}
+                    ajax_('GetLoanPreview',ajax_data, function(a){
+                        console.log(a)
+
+                         let html = `<div class="flex">
+                                        <div class="cell"><h1><?php echo $language[$lang]['nr'] ?></h1></div>
+                                        <div class="pay-date cell"><h1><?php echo $language[$lang]['paymentDate'] ?></h1></div>
+                                        <div class="month-pay cell"><h1><?php echo $language[$lang]['paymentMonthly'] ?></h1></div>
+                                    </div>`
+
+
+
+                
+                    for (var i = 0; i < a.payments.length; i++) {
+                        html += `<div class="with-borders flex"><div class="cell"><h3>${(i+1)}</h3></div>
+                        <div class="cell"><p>${a.payments[i].date.split('T')[0]}</p></div>
+                        <div class="cell"><p>${a.payments[i].paymentTotal} EUR</p></div></div>`//"<li> datums: "+a.payments[i].date.split('T')[0]+" summa: "+a.payments[i].paymentTotal+" EUR</li> "
+                    }
+                    
+                 document.getElementById('table-grafiks').innerHTML = html
+                 document.getElementById('table-grafiks-wrap').classList.remove("hidden")
+                 document.getElementById('table-grafiks-wrap').classList.add("flex")
+
+                 
+                 document.getElementById('close_table').onclick = function(){
+                 	document.getElementById('table-grafiks-wrap').classList.add("hidden")
+                 	document.getElementById('table-grafiks-wrap').classList.remove("flex")
+                 }
+                 // document.getElementById('table-grafiks-wrap').style.display = '-webkit-flex';
+                })
+}
 	</script>
 
 </html>
