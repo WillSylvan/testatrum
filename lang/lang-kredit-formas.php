@@ -4,7 +4,7 @@
     $language['ru']['short-time'] = '<span class="pink">Краткосрочный</span> кредит'; 
 
 	$language['lv']['long-time'] = '<span class="violet">Ilgtermiņa</span> kredīts'; 
-    $language['ru']['long-time'] = '<span class="violet">Долгоскочный</span> кредит'; 
+    $language['ru']['long-time'] = '<span class="violet">Долгосрочный</span> кредит'; 
     
     $language['lv']['how-much'] = 'Cik  vēlaties aizņemties?'; 
     $language['ru']['how-much'] = 'Сколько хотите занять?'; 
